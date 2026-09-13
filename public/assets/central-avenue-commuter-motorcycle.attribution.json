@@ -1,0 +1,86 @@
+{
+  "revision": 1,
+  "license": "CC0 original code-generated geometry/materials; no source photograph pixels",
+  "source": "Unoccupied dark motorcycle on the apron outside the north/right Avinash boundary in private avinash-west.jpg",
+  "sourceSha256": "9454a6e8e1ad98ee3fe917cdeb6d47be95d6808a4d21888e1489fb1b83fcb909",
+  "observed": [
+    "Parked unoccupied small dark motorcycle beside boundary, separate wheels, elongated saddle, bright mechanical parts, raised mirrors"
+  ],
+  "inferred": [
+    "Commuter motorcycle class; exact make/year/variant not identified",
+    "1.32m wheelbase, .315m tyre radius, tank/frame/engine/headlamp construction and materials",
+    "Seven-degree parked lean and side stand arrangement; exact source pose/position unknown"
+  ],
+  "coordinates": "Blender +Y forward/Z up; exported glTF -Z forward/+Y up; parked lean baked, contact plane at Y=0 in glTF",
+  "parkedLeanDegrees": -7,
+  "supportLift": -0.0,
+  "contactsBlender": [
+    {
+      "part": "Rear tyre",
+      "point": [
+        -1.1175870895385742e-08,
+        -0.6399999856948853,
+        0.0
+      ]
+    },
+    {
+      "part": "Front tyre",
+      "point": [
+        -1.1175870895385742e-08,
+        0.6800000071525574,
+        0.0
+      ]
+    },
+    {
+      "part": "Side stand foot",
+      "point": [
+        -0.33,
+        -0.28,
+        0
+      ]
+    }
+  ],
+  "contactsGLTF": [
+    {
+      "part": "Rear tyre",
+      "point": [
+        -1.1175870895385742e-08,
+        0.0,
+        0.6399999856948853
+      ]
+    },
+    {
+      "part": "Front tyre",
+      "point": [
+        -1.1175870895385742e-08,
+        0.0,
+        -0.6800000071525574
+      ]
+    },
+    {
+      "part": "Side stand foot",
+      "point": [
+        -0.33,
+        0,
+        0.28
+      ]
+    }
+  ],
+  "boundsBlender": {
+    "min": [
+      -0.5849624872207642,
+      -1.00600004196167,
+      0.0
+    ],
+    "max": [
+      0.27513834834098816,
+      1.0088924169540405,
+      1.3330564498901367
+    ]
+  },
+  "triangles": 31544,
+  "batches": 8,
+  "sha256": "9f87ddfa20ffe0e9f2b9ea8258011e6d865faf7a3064f8e7b24f60e283a5252e",
+  "bytes": 1219320,
+  "limits": "Partial photograph-informed vehicle class, not manufacturer replica or present-day occupancy; no rider or registration reproduced"
+}

@@ -1,0 +1,147 @@
+{
+  "gateLeft": -0.6,
+  "gateRight": 4.75,
+  "gateZ": 8.35,
+  "gateY": 0.015,
+  "coordinates": "Prashanth-local XYZ; copied from actual positive-side shoulder outer edge",
+  "points": [
+    {
+      "kind": "intersection",
+      "roadRows": [
+        120,
+        119
+      ],
+      "point": [
+        -0.6,
+        -0.0430000014603138,
+        9.315365637416692
+      ]
+    },
+    {
+      "row": 119,
+      "point": [
+        -0.4789517624355284,
+        -0.0430000014603138,
+        9.323113706805941
+      ],
+      "kind": "existing-road-edge-vertex"
+    },
+    {
+      "row": 118,
+      "point": [
+        0.020530857865402652,
+        -0.0430000014603138,
+        9.36345740102098
+      ],
+      "kind": "existing-road-edge-vertex"
+    },
+    {
+      "row": 117,
+      "point": [
+        0.5200046419662598,
+        -0.0430000014603138,
+        9.402476221524438
+      ],
+      "kind": "existing-road-edge-vertex"
+    },
+    {
+      "row": 116,
+      "point": [
+        1.0193056912643144,
+        -0.0430000014603138,
+        9.429376555370254
+      ],
+      "kind": "existing-road-edge-vertex"
+    },
+    {
+      "row": 115,
+      "point": [
+        1.518334015149911,
+        -0.0430000014603138,
+        9.435424144431494
+      ],
+      "kind": "existing-road-edge-vertex"
+    },
+    {
+      "row": 114,
+      "point": [
+        2.017019437869621,
+        -0.0430000014603138,
+        9.41665810276615
+      ],
+      "kind": "existing-road-edge-vertex"
+    },
+    {
+      "row": 113,
+      "point": [
+        2.515402392790122,
+        -0.0430000014603138,
+        9.375241143891543
+      ],
+      "kind": "existing-road-edge-vertex"
+    },
+    {
+      "row": 112,
+      "point": [
+        3.01358718687559,
+        -0.0430000014603138,
+        9.31880245666295
+      ],
+      "kind": "existing-road-edge-vertex"
+    },
+    {
+      "row": 111,
+      "point": [
+        3.511714244102393,
+        -0.0430000014603138,
+        9.258239012724488
+      ],
+      "kind": "existing-road-edge-vertex"
+    },
+    {
+      "row": 110,
+      "point": [
+        4.00993020789425,
+        -0.0430000014603138,
+        9.204365848336352
+      ],
+      "kind": "existing-road-edge-vertex"
+    },
+    {
+      "row": 109,
+      "point": [
+        4.508336923640734,
+        -0.0430000014603138,
+        9.164956889006362
+      ],
+      "kind": "existing-road-edge-vertex"
+    },
+    {
+      "kind": "intersection",
+      "roadRows": [
+        109,
+        108
+      ],
+      "point": [
+        4.75,
+        -0.0430000014603138,
+        9.154201274605356
+      ]
+    }
+  ],
+  "midpoint": {
+    "kind": "intersection",
+    "roadRows": [
+      114,
+      113
+    ],
+    "point": [
+      2.075,
+      -0.0430000014603138,
+      9.411839762705416
+    ]
+  },
+  "limits": "Preserves actual float32 road-edge geometry; no photographic survey asserted. Connect every listed vertex, not only end corners.",
+  "sourceSnapshotSha256": "a5b62fe3d269c998b32e74d77aa5dbe3e149cf6fffd0a3cdf07a45cde110013d",
+  "roadGeneration": "Revision9 shoulder: length/ceil(length/.5) rows, six cross subdivisions, outerY\u2212.043; revision10 road geometry retained"
+}

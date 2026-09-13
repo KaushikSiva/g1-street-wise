@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="data:," />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#07100f" />
+    <meta name="description" content="Explore a geographically anchored Three.js reconstruction of Kodambakkam, Chennai." />
+    <title>Kodambakkam — Chennai Field Study</title>
+  </head>
+  <body>
+    <div id="app">
+      <main id="world" aria-label="Interactive 3D map of Chennai"></main>
+      <canvas id="character-layer" aria-hidden="true"></canvas>
+
+      <div id="loading" class="loading-screen" aria-live="polite">
+        <div class="loading-mark" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </div>
+        <p class="eyebrow">UNITREE G1 / CITY LINK</p>
+        <h1>Chennai<br /><em>is online.</em></h1>
+        <div class="load-track"><span id="load-progress"></span></div>
+        <p id="load-status">Connecting to Kodambakkam terrain…</p>
+      </div>
+
+      <header class="topbar hud-layer">
+        <button id="brand-button" class="brand" type="button" aria-label="Open game menu">
+          <span class="brand-signal"></span>
+          <span>MAA<span class="slash">//</span>G1</span>
+        </button>
+        <div class="district">
+          <span id="district-name">KODAMBAKKAM</span>
+          <small id="mesh-source">OSM BUILDING PARTS / AERIAL</small>
+        </div>
+        <div class="telemetry">
+          <span class="online-dot"></span>
+          <span id="mode-label">BIPED</span>
+          <b id="speed-readout">00</b><small>KM/H</small>
+        </div>
+      </header>
+
+      <aside class="mission hud-layer" aria-label="Current objective">
+        <span class="mission-index">01</span>
+        <div>
+          <p>FIELD TEST</p>
+          <strong id="mission-copy">Reach a vehicle</strong>
+        </div>
+        <span id="mission-distance" class="mission-distance">—</span>
+      </aside>
+
+      <aside class="radar-wrap hud-layer" aria-label="Minimap">
+        <div id="minimap"></div>
+        <div class="radar-scan"></div>
+        <div id="radar-arrow" class="radar-arrow"></div>
+        <span class="radar-north">N</span>
+        <div class="radar-meta">
+          <span id="coords">13.0517 / 80.2307</span>
+          <button id="expand-map" type="button">MAP</button>
+        </div>
+      </aside>
+
+      <section id="interaction" class="interaction hud-layer" aria-live="polite">
+        <kbd>V</kbd>
+        <span id="interaction-copy">ENTER VEHICLE</span>
+      </section>
+
+      <section class="status-rail hud-layer" aria-label="Robot status">
+        <div class="battery"><span id="battery-fill"></span></div>
+        <p><span>G1</span> / 29 DOF</p>
+        <p id="altitude-readout">ALT 08 M</p>
+      </section>
+
+      <section class="coin-counter hud-layer" aria-label="Collected city tokens">
+        <span class="coin-icon">◎</span>
+        <b id="coin-count">00</b>
+        <small>CITY TOKENS</small>
+      </section>
+
+      <div class="controls hud-layer" aria-label="Keyboard controls">
+        <span><kbd>WASD</kbd> MOVE</span>
+        <span><kbd>SHIFT</kbd> SPRINT</span>
+        <span><kbd>SPACE</kbd> JUMP / CLIMB</span>
+        <span><kbd>V</kbd> VEHICLE</span>
+        <span><kbd>H</kbd> GLIDER</span>
+        <span><kbd>C</kbd> CAMERA</span>
+      </div>
+
+      <button id="camera-link" class="camera-link hud-layer" type="button">
+        <span></span> CLICK TO LINK CAMERA
+      </button>
+
+      <div class="mobile-controls hud-layer" aria-label="Touch controls">
+        <div class="dpad">
+          <button type="button" data-key="KeyW" aria-label="Move forward">↑</button>
+          <button type="button" data-key="KeyA" aria-label="Turn left">←</button>
+          <button type="button" data-key="KeyS" aria-label="Move backward">↓</button>
+          <button type="button" data-key="KeyD" aria-label="Turn right">→</button>
+        </div>
+        <div class="action-pad">
+          <button type="button" data-action="jump">JUMP</button>
+          <button type="button" data-action="vehicle">CAR</button>
+          <button type="button" data-action="glider">GLIDE</button>
+        </div>
+      </div>
+
+      <dialog id="city-menu" class="city-menu">
+        <form method="dialog">
+          <div class="menu-heading">
+            <div>
+              <p class="eyebrow">FAST TRAVEL / CHENNAI GRID</p>
+              <h2>Go anywhere.</h2>
+            </div>
+            <button class="close-menu" value="close" aria-label="Close menu">×</button>
+          </div>
+          <div class="destinations">
+            <button type="button" data-destination="kodambakkam"><span>01</span><b>Kodambakkam</b><small>Arcot Road</small></button>
+            <button type="button" data-destination="marina"><span>02</span><b>Marina</b><small>Bay of Bengal</small></button>
+            <button type="button" data-destination="tnagar"><span>03</span><b>T. Nagar</b><small>Pondy Bazaar</small></button>
+            <button type="button" data-destination="besantnagar"><span>04</span><b>Besant Nagar</b><small>Elliot's Beach</small></button>
+            <button type="button" data-destination="guindy"><span>05</span><b>Guindy</b><small>Kathipara</small></button>
+          </div>
+          <div class="menu-foot">
+            <p>Global aerial imagery streams from Esri. Streets and textured building parts come from OpenStreetMap, with public elevation terrain underneath.</p>
+            <span>ESC TO RETURN</span>
+          </div>
+        </form>
+      </dialog>
+
+      <div id="toast" class="toast" role="status"></div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

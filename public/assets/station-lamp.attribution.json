@@ -1,0 +1,107 @@
+{
+  "asset": "station-lamp.glb",
+  "revision": 2,
+  "status": "Integrated narrow-housing hypothesis; photo-informed, not surveyed",
+  "source_blend": "assets/source/station-lamp.blend",
+  "generator": "scripts/build_station_lamp.py",
+  "references": [
+    "public/reference/station-2018.jpg",
+    "artifacts/checkpoint-018/photo.png"
+  ],
+  "authorship": "Original procedural Blender geometry and procedural texture pixels; no third-party donor, AI image or photograph texture",
+  "geometry_status": "Visible arm/fixture arrangement photo-informed. Dimensions, fixture construction and hidden mounts inferred; no manufacturer identification or survey claim.",
+  "origin": "Pole base on ground, glTF Y up",
+  "triangles": 2644,
+  "materials": 3,
+  "draw_calls": 3,
+  "texture_resolution": [
+    512,
+    512
+  ],
+  "bytes": 2805116,
+  "gltf_bounds": {
+    "min": [
+      -0.14000000059604645,
+      0.0,
+      -0.9528244733810425
+    ],
+    "max": [
+      3.806999921798706,
+      7.349999904632568,
+      0.9528244733810425
+    ]
+  },
+  "fixture": {
+    "local_center": [
+      2.63856817,
+      6.66310771,
+      0
+    ],
+    "length_m": 1.93822446,
+    "housing_width_m": 0.09744,
+    "width_status": "Width narrowed after matched scene showed oversized diffuser; inferred, not a measured fixture",
+    "local_yaw_radians": 0.22902447,
+    "construction": "Unlit opaque dirty diffuser in formed metal pan; hypothetical hidden mounting details"
+  },
+  "suggested_existing_group_transform": {
+    "position": [
+      20.846,
+      1.05,
+      -165.497
+    ],
+    "rotation_y": -0.43195,
+    "scale": [
+      1.039,
+      0.76407,
+      1
+    ],
+    "camera_change": false
+  },
+  "reference_landmarks_1200x900": {
+    "lower_arm_tip": [
+      299,
+      163
+    ],
+    "lower_pole_join": [
+      757,
+      166
+    ],
+    "upper_arm_tip": [
+      325,
+      155
+    ],
+    "upper_pole_join": [
+      749,
+      139
+    ],
+    "fixture_far_end": [
+      455,
+      119
+    ],
+    "fixture_near_end": [
+      434,
+      215
+    ],
+    "fixture_mid_image": [
+      445,
+      167
+    ]
+  },
+  "fixed_camera_projected_fixture_axis_endpoints_1200x900": [
+    [
+      455,
+      119
+    ],
+    [
+      434,
+      215
+    ]
+  ],
+  "limitations": [
+    "Axis endpoint fit does not calibrate fixture size or camera.",
+    "Existing nonuniform group scale yields an approximately 5.616m world pole; source upright height is 7.35m.",
+    "Overall pole center remains several pixels right of the approximate photo pick under unchanged transform.",
+    "Fixture shell thickness and unlit diffuser appearance require integrated screenshot review.",
+    "Base, collars, bolt layouts and wiring are plausible completion, not established source facts."
+  ]
+}

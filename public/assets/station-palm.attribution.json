@@ -1,0 +1,260 @@
+{
+  "asset": "station-palm.glb",
+  "revision": 3,
+  "generator": "scripts/build_station_palm.py",
+  "source_blend": "assets/source/station-palm.blend",
+  "references": [
+    "public/reference/station-2018.jpg",
+    "public/reference/high-road-2017.jpg"
+  ],
+  "authorship": "Original procedural geometry, original procedural PBR textures. No third-party donor or photograph pixels embedded.",
+  "geometry_status": "Pinnate palm form inferred from partly occluded station fronds; exact species, dimensions, trunk form and actual location unverified. Not an identified actual tree.",
+  "triangles": 24208,
+  "leaflets": 1394,
+  "fronds": 23,
+  "materials": 3,
+  "draw_calls": 3,
+  "texture_resolution": [
+    512,
+    512
+  ],
+  "gltf_bounds": {
+    "min": [
+      -3.361981153488159,
+      0.0,
+      -3.0915772914886475
+    ],
+    "max": [
+      4.145288944244385,
+      9.204516410827637,
+      3.571254253387451
+    ]
+  },
+  "height_m": 9.204516410827637,
+  "origin": "Stem base at ground, glTF Y up",
+  "bytes": 3427340,
+  "normal_texture_checks": [
+    {
+      "name": "station-palm Living pinnate foliage normal",
+      "mean_rgb": [
+        0.4999969182063069,
+        0.499999416458877,
+        1.0
+      ],
+      "blue_min": 1.0,
+      "colorspace": "Non-Color"
+    },
+    {
+      "name": "station-palm Ringed fibrous trunk normal",
+      "mean_rgb": [
+        0.5000001494790922,
+        0.5000010320952697,
+        1.0
+      ],
+      "blue_min": 1.0,
+      "colorspace": "Non-Color"
+    },
+    {
+      "name": "station-palm Senescent foliage and petiole sheaths normal",
+      "mean_rgb": [
+        0.49999723235782767,
+        0.5000003589134394,
+        1.0
+      ],
+      "blue_min": 1.0,
+      "colorspace": "Non-Color"
+    }
+  ],
+  "limitations": [
+    "Thin leaflets require antialiasing at distance; opaque geometry removes alpha-cutout fringes but cannot eliminate subpixel geometry.",
+    "Single asset represents one inferred age and form; avoid obvious repeated placements.",
+    "Leaflets use double-sided folded surfaces, not volumetric thickness.",
+    "No species identification, tree survey, photogrammetry, or measured trunk is claimed."
+  ],
+  "frond_parameters": [
+    {
+      "index": 0,
+      "age": "young",
+      "azimuth_rad": 6.184314490644509,
+      "reach_m": 0.7710179668140286,
+      "rise_m": 2.6983124926801696,
+      "tip_drop_m": 0.15713096715214572
+    },
+    {
+      "index": 1,
+      "age": "young",
+      "azimuth_rad": 2.3249371960923173,
+      "reach_m": 1.229669105229807,
+      "rise_m": 2.714207603129852,
+      "tip_drop_m": 0.391073726546636
+    },
+    {
+      "index": 2,
+      "age": "young",
+      "azimuth_rad": 4.727487442329567,
+      "reach_m": 1.1654310050339425,
+      "rise_m": 2.6856311505105173,
+      "tip_drop_m": 0.13756337683656022
+    },
+    {
+      "index": 3,
+      "age": "young",
+      "azimuth_rad": 0.8603694884747952,
+      "reach_m": 1.3396548984252452,
+      "rise_m": 2.7045337655791193,
+      "tip_drop_m": 0.406768337294527
+    },
+    {
+      "index": 4,
+      "age": "young",
+      "azimuth_rad": 3.352342021509873,
+      "reach_m": 1.281020757734812,
+      "rise_m": 3.0724386637521697,
+      "tip_drop_m": 0.26753276600550285
+    },
+    {
+      "index": 5,
+      "age": "young",
+      "azimuth_rad": 5.691784331307138,
+      "reach_m": 1.1864583397300197,
+      "rise_m": 2.8360379854439755,
+      "tip_drop_m": 0.3858446999496716
+    },
+    {
+      "index": 6,
+      "age": "mature",
+      "azimuth_rad": 1.7517201717529947,
+      "reach_m": 2.8961457718619146,
+      "rise_m": 2.448456232928338,
+      "tip_drop_m": 2.6418797160150023
+    },
+    {
+      "index": 7,
+      "age": "mature",
+      "azimuth_rad": 4.132087978732802,
+      "reach_m": 2.641516322036142,
+      "rise_m": 2.3966719608571516,
+      "tip_drop_m": 2.5750314203334916
+    },
+    {
+      "index": 8,
+      "age": "mature",
+      "azimuth_rad": 0.27142925042753774,
+      "reach_m": 3.4446109667775846,
+      "rise_m": 2.4175549529891787,
+      "tip_drop_m": 2.505970185592914
+    },
+    {
+      "index": 9,
+      "age": "mature",
+      "azimuth_rad": 2.6257724434470298,
+      "reach_m": 2.9663680343415755,
+      "rise_m": 2.6029737758255376,
+      "tip_drop_m": 2.2551467236607197
+    },
+    {
+      "index": 10,
+      "age": "mature",
+      "azimuth_rad": 5.204027256635609,
+      "reach_m": 3.176973948948733,
+      "rise_m": 2.2832446367967876,
+      "tip_drop_m": 1.9055678215562577
+    },
+    {
+      "index": 11,
+      "age": "mature",
+      "azimuth_rad": 1.2167032095456598,
+      "reach_m": 2.7571142567776583,
+      "rise_m": 2.150869431558796,
+      "tip_drop_m": 2.3157818314403915
+    },
+    {
+      "index": 12,
+      "age": "mature",
+      "azimuth_rad": 3.717862612964055,
+      "reach_m": 2.7295051441280487,
+      "rise_m": 2.276979633986872,
+      "tip_drop_m": 1.92803472430716
+    },
+    {
+      "index": 13,
+      "age": "mature",
+      "azimuth_rad": 6.154549146923387,
+      "reach_m": 2.9047239403068454,
+      "rise_m": 1.537747347531519,
+      "tip_drop_m": 2.736298769831051
+    },
+    {
+      "index": 14,
+      "age": "mature",
+      "azimuth_rad": 2.320451746004977,
+      "reach_m": 2.8504239162552785,
+      "rise_m": 1.2277224340829285,
+      "tip_drop_m": 2.4427817624304784
+    },
+    {
+      "index": 15,
+      "age": "mature",
+      "azimuth_rad": 4.489612490676869,
+      "reach_m": 2.8778627732378683,
+      "rise_m": 1.1171169598611614,
+      "tip_drop_m": 2.2750946187640237
+    },
+    {
+      "index": 16,
+      "age": "mature",
+      "azimuth_rad": 0.6065694189245079,
+      "reach_m": 3.4096173274868558,
+      "rise_m": 1.3330956336532103,
+      "tip_drop_m": 2.9281154394002806
+    },
+    {
+      "index": 17,
+      "age": "mature",
+      "azimuth_rad": 2.960869331526858,
+      "reach_m": 3.458547128480767,
+      "rise_m": 1.3463799176453608,
+      "tip_drop_m": 2.3204742949279673
+    },
+    {
+      "index": 18,
+      "age": "mature",
+      "azimuth_rad": 5.414143962697949,
+      "reach_m": 3.341200810707676,
+      "rise_m": 1.239672857960187,
+      "tip_drop_m": 2.932589751155075
+    },
+    {
+      "index": 19,
+      "age": "mature",
+      "azimuth_rad": 1.6618500262629468,
+      "reach_m": 2.726833160864572,
+      "rise_m": 1.1751928824331193,
+      "tip_drop_m": 2.219207492773833
+    },
+    {
+      "index": 20,
+      "age": "dry",
+      "azimuth_rad": 4.1359771959521225,
+      "reach_m": 1.6202373889805692,
+      "rise_m": 0.21999688493169695,
+      "tip_drop_m": 2.188684087680155
+    },
+    {
+      "index": 21,
+      "age": "dry",
+      "azimuth_rad": 0.13304614101949852,
+      "reach_m": 1.9225856224543734,
+      "rise_m": 0.2607329324566493,
+      "tip_drop_m": 2.4048738179601292
+    },
+    {
+      "index": 22,
+      "age": "dry",
+      "azimuth_rad": 2.613383114347677,
+      "reach_m": 1.680845319901226,
+      "rise_m": 0.21002866545628235,
+      "tip_drop_m": 2.472948984922095
+    }
+  ]
+}

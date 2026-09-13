@@ -1,0 +1,46 @@
+{
+  "name": "chennai-gta",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "test:smoke": "node scripts/smoke.mjs",
+    "test:clearance": "node scripts/check-station-object-clearance.mjs",
+    "test:central-avenue": "node scripts/check-central-avenue.mjs",
+    "capture": "node scripts/capture.mjs",
+    "publish:here": "node scripts/publish.mjs",
+    "checkpoint": "node scripts/checkpoint.mjs",
+    "test:assets": "python3 scripts/check-assets.py",
+    "test:lakshmi-windows": "node scripts/check-lakshmi-windows.mjs",
+    "test:encaarpus": "node scripts/check-encaarpus.mjs",
+    "test:central-lighting": "node scripts/check-central-lighting.mjs",
+    "test:encaarpus-occlusion": "node scripts/check-encaarpus-occlusion.mjs",
+    "test:encaarpus-entry": "node scripts/check-encaarpus-entry.mjs",
+    "test:avinash": "node scripts/check-avinash.mjs",
+    "test:prashanth": "node scripts/check-prashanth.mjs",
+    "test:surya": "node scripts/check-surya.mjs",
+    "test:malles": "node scripts/check-malles.mjs",
+    "test:vasanth": "node scripts/check-vasanth.mjs",
+    "test:frontage-barriers": "node scripts/check-frontage-barriers.mjs",
+    "test:vasanth-ground": "node scripts/check-vasanth-ground.mjs",
+    "test:landmark-navigation": "node scripts/check-landmark-navigation.mjs",
+    "test:rams-ground": "node scripts/check-rams-ground.mjs",
+    "test:vasanth-ac": "node scripts/check-vasanth-ac.mjs",
+    "test:vasanth-gate": "node scripts/check-vasanth-gate.mjs",
+    "test:vasanth-passage": "node scripts/check-vasanth-passage.mjs"
+  },
+  "dependencies": {
+    "maplibre-gl": "^6.6.0",
+    "three": "^0.185.1",
+    "urdf-loader": "^0.13.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "@types/three": "^0.185.0",
+    "typescript": "^7.0.2",
+    "vite": "^8.2.2"
+  }
+}

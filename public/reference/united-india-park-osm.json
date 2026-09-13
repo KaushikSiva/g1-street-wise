@@ -1,0 +1,100 @@
+{
+  "sourceUrl": "https://api.openstreetmap.org/api/0.6/map?bbox=80.22465,13.05085,80.22770,13.05330",
+  "acquiredAt": "2026-09-09",
+  "copyright": "\u00a9 OpenStreetMap contributors",
+  "license": "ODbL-1.0",
+  "licenseUrl": "https://opendatacommons.org/licenses/odbl/1-0/",
+  "elements": [
+    {
+      "type": "way",
+      "id": 27191741,
+      "tags": {
+        "leisure": "park",
+        "name": "Circular Park"
+      },
+      "geometry": [
+        {
+          "lat": 13.0521901,
+          "lon": 80.2253257
+        },
+        {
+          "lat": 13.0521233,
+          "lon": 80.2252938
+        },
+        {
+          "lat": 13.0520501,
+          "lon": 80.2252851
+        },
+        {
+          "lat": 13.0519781,
+          "lon": 80.2253005
+        },
+        {
+          "lat": 13.0519144,
+          "lon": 80.2253386
+        },
+        {
+          "lat": 13.0518634,
+          "lon": 80.2253993
+        },
+        {
+          "lat": 13.051835,
+          "lon": 80.225474
+        },
+        {
+          "lat": 13.0518327,
+          "lon": 80.2255541
+        },
+        {
+          "lat": 13.0518566,
+          "lon": 80.2256305
+        },
+        {
+          "lat": 13.051904,
+          "lon": 80.2256943
+        },
+        {
+          "lat": 13.0519694,
+          "lon": 80.225738
+        },
+        {
+          "lat": 13.0520454,
+          "lon": 80.2257568
+        },
+        {
+          "lat": 13.052123,
+          "lon": 80.2257485
+        },
+        {
+          "lat": 13.0521935,
+          "lon": 80.225714
+        },
+        {
+          "lat": 13.0522461,
+          "lon": 80.2256609
+        },
+        {
+          "lat": 13.0522796,
+          "lon": 80.2255936
+        },
+        {
+          "lat": 13.0522907,
+          "lon": 80.2255189
+        },
+        {
+          "lat": 13.0522783,
+          "lon": 80.2254444
+        },
+        {
+          "lat": 13.0522435,
+          "lon": 80.2253778
+        },
+        {
+          "lat": 13.0521901,
+          "lon": 80.2253257
+        }
+      ]
+    }
+  ],
+  "limitations": "Contributor park boundary; not cadastral or as-built survey. Terrain, paths, landscaping and fixtures are unverified."
+}

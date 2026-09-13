@@ -1,0 +1,122 @@
+{
+  "license": "CC0-1.0",
+  "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "sourceType": "Original procedural Blender geometry and PBR textures; reference-informed",
+  "photographPixelsEmbedded": false,
+  "visualReferences": [
+    {
+      "author": "Gowtham Sampath",
+      "url": "https://commons.wikimedia.org/wiki/File:Kodambakkam_Railway_Station.jpg",
+      "license": "CC-BY-SA-4.0",
+      "capturedAt": "2018-11-16"
+    },
+    {
+      "author": "Sameer2905",
+      "url": "https://commons.wikimedia.org/wiki/File:Kodambakkam_railway_station_(June_2025).jpg",
+      "license": "CC-BY-SA-4.0",
+      "capturedAt": "2025-06-02"
+    }
+  ],
+  "nominalBodyMetres": {
+    "length": 20.8,
+    "width": 3.2,
+    "roofHeightAboveRail": 3.89
+  },
+  "coordinateSystem": "glTF Y-up, length along Z, origin center at railhead; wheel flanges extend below origin",
+  "asset": "/assets/chennai-emu-foreground.glb",
+  "title": "Foreground Chennai EMU bay arrangement study",
+  "accuracy": "Photo-informed unsurveyed variant; vehicle identity, dimensions, hidden side and position unverified",
+  "sha256": "be097cb0df5cefb20f962eb1e2b6af90be4f74c9f4c9551d712e7d418eb19f23",
+  "construction": {
+    "asset": "emu-foreground-candidate.glb",
+    "status": "Integrated inferred foreground variant after fixed-camera layout comparison; no photographic pass",
+    "generator": "scripts/build_emu_coach.py --foreground-candidate",
+    "authorship": "Original procedural geometry and texture pixels; photograph crops used for review only",
+    "reference": "public/reference/station-2018.jpg",
+    "limitations": [
+      "The narrow inset bay function and exact coach type are unverified.",
+      "All dimensions and phase -13 inference depend on the current camera and body assumptions.",
+      "Only +X side end bays vary; opposite side remains generic and is not a claimed reconstruction."
+    ],
+    "triangles": 77126,
+    "draw_calls": 10,
+    "bytes": 4655472,
+    "gltf_bounds": {
+      "min": [
+        -1.8899999856948853,
+        -0.02599996328353882,
+        -11.039999961853027
+      ],
+      "max": [
+        1.8900001049041748,
+        4.0,
+        11.039999961853027
+      ]
+    },
+    "coordinate_system": "glTF Y up, length along Z, origin railhead at center; original body/wheel/roof dimensions retained",
+    "changes": [
+      "Actual end passage opening with returns and folded U bellows",
+      "Lower louver field with slanted formed blades and blank upper leaf",
+      "Closed door grips, pads, latch and modest pressed lower borders",
+      "Small-edge bevel and hidden suspension resolution reductions offset detail cost",
+      "Photographed +X side end bay rearranged with paired leaf, narrow inset panel and following barred window",
+      "Foreground bay uses one subdued footboard instead of three prominent steps"
+    ],
+    "foreground_layout_gltf": {
+      "side": "+X only",
+      "paired_leaf_center_z": 8.95,
+      "paired_opening_width": 1.04,
+      "narrow_bay_center_z": 9.95,
+      "narrow_opening_width": 0.44,
+      "following_window_center_z": 7.35,
+      "following_window_width": 1.18,
+      "body_end_z": 10.35,
+      "bay_envelopes": [
+        [
+          6.76,
+          7.94,
+          "window"
+        ],
+        [
+          8.43,
+          9.47,
+          "paired leaf"
+        ],
+        [
+          9.73,
+          10.17,
+          "narrow inset bay"
+        ]
+      ],
+      "full_trim_intervals": [
+        [
+          6.72,
+          7.98
+        ],
+        [
+          8.34,
+          9.56
+        ],
+        [
+          9.7185,
+          10.1815
+        ]
+      ],
+      "minimum_interbay_trim_clearance_m": 0.1585
+    }
+  },
+  "placement": {
+    "position": [
+      19.695,
+      0.37,
+      -175
+    ],
+    "rotationY": -0.206,
+    "otherCoachCentersZ": [
+      -153,
+      -131,
+      -109
+    ],
+    "status": "Longitudinal phase inferred from same-source photo; not survey evidence"
+  }
+}

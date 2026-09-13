@@ -1,0 +1,21 @@
+{
+  "revision": 1,
+  "source": "Frankleen Seeralan January 2024, Google photo CIHM0ogKEICAgICtsaaHCA",
+  "observed": [
+    "White compact hatchback parked rear-facing under central bay",
+    "Dark rear glass, white tailgate, corner rear lamps",
+    "Suzuki emblem visible; model name obscured"
+  ],
+  "identity": "Suzuki-badged compact hatchback class; exact model/year unidentified",
+  "inferred": [
+    "3.43m body length, approximately 1.52m body width, 1.49m roof height",
+    "Pose local x0.20, z-3.55; parking floor55mm",
+    "Wheelbase, wheel size, entire unseen front/sides, cabin, hardware and material response"
+  ],
+  "plate": "Blank; source registration is not reproduced",
+  "license": "CC0 original geometry and materials; no source photograph pixels",
+  "sha256": "b85c46b71aad26e9dcdf135e3ef1103ae3e2ef78381e3d6916558608fe511d23",
+  "bytes": 810860,
+  "triangles": 18800,
+  "limits": "Photo-informed reconstruction of partially occluded vehicle, not a verified model replica or current vehicle presence"
+}

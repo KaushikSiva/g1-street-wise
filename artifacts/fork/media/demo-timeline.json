@@ -1,0 +1,50 @@
+[
+  {
+    "start": 0,
+    "end": 12,
+    "screen": "Hero, Kanakadhara frontage, robot and parked van",
+    "text": "Streets are harder than laboratories. A parked van can hide a pedestrian, and a robot that simply keeps walking can make the wrong decision. This is STREETWISE."
+  },
+  {
+    "start": 12,
+    "end": 27,
+    "screen": "Before RL, pedestrian test, then freeze at violation",
+    "text": "We recreated a Central Avenue encounter beside Kanakadhara in Chennai. First, an official Unitree walking policy follows a constant forward command. The pedestrian emerges, and the robot enters the clearance envelope."
+  },
+  {
+    "start": 27,
+    "end": 43,
+    "screen": "Same seed after RL; replay completion",
+    "text": "Now replay the same encounter with trained navigation. PPO has learned when to slow down and wait before proceeding. The walking policy itself stays frozen. Every robot joint you see comes from recorded MuJoCo physics."
+  },
+  {
+    "start": 43,
+    "end": 58,
+    "screen": "Actual W&B learning graph and held-out comparison",
+    "text": "These are actual training measurements from Weights and Biases. On sixty-four unseen pedestrian encounters, completed crossings rise from forty-two to sixty-four. Clearance violations fall from twenty-two to zero, with no robot falls."
+  },
+  {
+    "start": 58,
+    "end": 78,
+    "screen": "Moving-car before/after, road-defect avoidance",
+    "text": "We then broadened training on a molab Blackwell GPU. The robot now chooses lateral movement as well as speed, facing moving cars and a marked road-defect zone. On the mixed held-out test, completion rises from twenty-eight to sixty-four out of sixty-four."
+  },
+  {
+    "start": 78,
+    "end": 96,
+    "screen": "Three possible futures, run encounter, update model",
+    "text": "A second experiment asks: what might happen next? The learned world model predicts three action-conditioned futures, compares its prediction with a separate simulator, and updates from experience. A Weave-traced analyst selects the training focus; validation controls promotion."
+  },
+  {
+    "start": 96,
+    "end": 108,
+    "screen": "marimo graphs, SDK evidence, architecture",
+    "text": "Marimo exposes the experiment and its evidence. The official Unitree SDK exchanges checked commands and feedback with simulated joints. Code, selected checkpoints and startup instructions are included, so judges can inspect and rerun the work."
+  },
+  {
+    "start": 108,
+    "end": 118,
+    "screen": "Closing image, repository URL, limits",
+    "text": "This is simulation, not a physical robot safety claim. STREETWISE helps teams discover navigation mistakes before street deployment. Robots that learn the street before they enter it."
+  }
+]

@@ -1,0 +1,2 @@
+import {bootstrap,evaluate,improve} from './learning.ts';
+self.onmessage=(event)=>{const {id,type,model,episodes,focus}=event.data;try{if(type==='bootstrap'){const model=bootstrap();self.postMessage({id,result:{model,test:evaluate(model)}});}else if(type==='improve')self.postMessage({id,result:improve(model,episodes,focus)});else if(type==='evaluate')self.postMessage({id,result:evaluate(model)});else throw new Error('Unknown worker task');}catch(error){self.postMessage({id,error:error instanceof Error?error.message:String(error)});}};

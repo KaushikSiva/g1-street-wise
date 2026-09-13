@@ -1,0 +1,103 @@
+1
+00:00:00,000 --> 00:00:04,000
+Streets are harder than laboratories. A parked van can hide a pedestrian,
+
+2
+00:00:04,000 --> 00:00:08,000
+and a robot that simply keeps walking can make the wrong decision.
+
+3
+00:00:08,000 --> 00:00:12,000
+This is STREETWISE.
+
+4
+00:00:12,000 --> 00:00:17,000
+We recreated a Central Avenue encounter beside Kanakadhara in Chennai. First, an
+
+5
+00:00:17,000 --> 00:00:22,000
+official Unitree walking policy follows a constant forward command. The pedestrian emerges,
+
+6
+00:00:22,000 --> 00:00:27,000
+and the robot enters the clearance envelope.
+
+7
+00:00:27,000 --> 00:00:32,333
+Now replay the same encounter with trained navigation. PPO has learned when
+
+8
+00:00:32,333 --> 00:00:37,666
+to slow down and wait before proceeding. The walking policy itself stays
+
+9
+00:00:37,666 --> 00:00:43,000
+frozen. Every robot joint you see comes from recorded MuJoCo physics.
+
+10
+00:00:43,000 --> 00:00:48,000
+These are actual training measurements from Weights and Biases. On sixty-four unseen
+
+11
+00:00:48,000 --> 00:00:53,000
+pedestrian encounters, completed crossings rise from forty-two to sixty-four. Clearance violations fall
+
+12
+00:00:53,000 --> 00:00:58,000
+from twenty-two to zero, with no robot falls.
+
+13
+00:00:58,000 --> 00:01:03,000
+We then broadened training on a molab Blackwell GPU. The robot now
+
+14
+00:01:03,000 --> 00:01:08,000
+chooses lateral movement as well as speed, facing moving cars and a
+
+15
+00:01:08,000 --> 00:01:13,000
+marked road-defect zone. On the mixed held-out test, completion rises from twenty-eight
+
+16
+00:01:13,000 --> 00:01:18,000
+to sixty-four out of sixty-four.
+
+17
+00:01:18,000 --> 00:01:22,500
+A second experiment asks: what might happen next? The learned world model
+
+18
+00:01:22,500 --> 00:01:27,000
+predicts three action-conditioned futures, compares its prediction with a separate simulator, and
+
+19
+00:01:27,000 --> 00:01:31,500
+updates from experience. A Weave-traced analyst selects the training focus; validation controls
+
+20
+00:01:31,500 --> 00:01:36,000
+promotion.
+
+21
+00:01:36,000 --> 00:01:40,000
+Marimo exposes the experiment and its evidence. The official Unitree SDK exchanges
+
+22
+00:01:40,000 --> 00:01:44,000
+checked commands and feedback with simulated joints. Code, selected checkpoints and startup
+
+23
+00:01:44,000 --> 00:01:48,000
+instructions are included, so judges can inspect and rerun the work.
+
+24
+00:01:48,000 --> 00:01:51,333
+This is simulation, not a physical robot safety claim. STREETWISE helps teams
+
+25
+00:01:51,333 --> 00:01:54,666
+discover navigation mistakes before street deployment. Robots that learn the street before
+
+26
+00:01:54,666 --> 00:01:58,000
+they enter it.

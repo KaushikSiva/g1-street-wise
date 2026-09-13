@@ -1,0 +1,25 @@
+{
+  "revision": 2,
+  "asset": "station-luggage-trolley.glb",
+  "bytes": 1751048,
+  "sha256": "ebd23d66cd8d0c0932e401e296bf02e2aaa3e90429a3bc436265955e7cff298d",
+  "triangles": 17468,
+  "materials": 3,
+  "source": "assets/source/station-trolley-v2/station-trolley-v2.blend",
+  "generator": "scripts/build_station_trolley_v2.py",
+  "reference": "station-2018.jpg, Gowtham Sampath, Wikimedia Commons, CC BY-SA 4.0; visual construction reference only, no photographic texture",
+  "geometry_status": "Photo-informed inferred dimensions and hidden construction; not measured",
+  "position": [
+    22.781241,
+    1.05,
+    -166.937995
+  ],
+  "rotationY": 1.3351084071,
+  "scale": [
+    1,
+    1,
+    1
+  ],
+  "validation": "scripts/check-station-object-clearance.mjs; minimum 25 mm sign surface clearance; reference camera and platform height fixed",
+  "visual_status": "Local construction correction; no independent photographic pass"
+}

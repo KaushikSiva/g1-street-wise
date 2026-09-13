@@ -1,0 +1,61 @@
+{
+  "status": "Integrated revision2: continuous reveal and source-supported sash proportion; photographic review failed",
+  "buildingOsmWay": 1095927870,
+  "source": "Victor Livingstone October 2018 Google photograph CIHM0ogKEICAgICkv6CP_wE",
+  "sourcePixels": "Upper left visible window, x0\u2013165,y297\u2013690 in 1088\u00d71920 photograph",
+  "observed": [
+    "Pale metallic outward-open right casement",
+    "Dark diagonal diamond security grille behind leaf",
+    "Projecting pale hood with muted brown front band",
+    "White adjacent plaster"
+  ],
+  "inferred": [
+    "All metre values and depth",
+    "Opening left edge cropped from reference; width 1.41m is hypothetical",
+    "Leaf width and opening angle fitted to four manual corners under conditional1500px camera",
+    "Hidden room geometry and reflection material",
+    "Grille spacing .29m and6mm bar radius"
+  ],
+  "apertureLocal": {
+    "x0": -4.55,
+    "x1": -3.14,
+    "y0": 4.88,
+    "y1": 6.58,
+    "z": 0
+  },
+  "placement": "Inherit Govindam bay transform; glTF +Y up,+Z outward",
+  "glassRuntime": "Set transmitting glass mesh.castShadow=false; retain MeshPhysicalMaterial transmission. An additional scene transmission pass is required.",
+  "triangles": 2612,
+  "materials": 5,
+  "bytes": 284048,
+  "sha256": "8ff7c69c23eb102822221d022d845a50c3d427c51be2ac993f9bd59921c49d56",
+  "license": "CC0 original geometry/material factors. No source photo pixels embedded.",
+  "limits": "Source insert may be glass or insect screen; neither identity confirmed. Whole scene reflections/illumination incomplete. Exact physical measurements and full facade unverified.",
+  "revision": 2,
+  "apertureUnchanged": true,
+  "changes": [
+    "Continuous non-overlapping plaster ring removes corner overlap artifact",
+    "Conditional four-corner source fit reduces open-leaf width and projection",
+    "Separate thin profiles, retaining lip, hinge leaves and source-visible latch tab",
+    "Clearer physical glass; source insert identity still uncertain"
+  ],
+  "AO": {
+    "resolution": [
+      512,
+      512
+    ],
+    "uvIslands": 46,
+    "overlapPixels": 0,
+    "foreignIslandTexelsWithin4PixelPadding": 0
+  },
+  "cost": {
+    "referenceCalls": 247,
+    "referenceSubmittedTriangles": 487655
+  },
+  "review": {
+    "packet": "govindam-window-002",
+    "renderProbability": 2,
+    "photoProbability": 99,
+    "result": "Failed; plaster, pane optics, aliasing and illumination remain unresolved; judgment percentages are not calibrated scores"
+  }
+}

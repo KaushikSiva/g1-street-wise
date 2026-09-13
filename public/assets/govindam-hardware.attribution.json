@@ -1,0 +1,66 @@
+{
+  "status": "Installed reference-informed study; dimensions and placement remain inferred, no photographic pass",
+  "license": "CC0 original geometry and procedural wear; no photo pixels or textures",
+  "reference": {
+    "photoId": "CIHM0ogKEICAgICkv6CP_wE",
+    "photographer": "Victor Livingstone",
+    "date": "2018-10",
+    "privatePhoto": "united-india-govindam-full-photo-private.jpg",
+    "nativeDimensions": [
+      1088,
+      1920
+    ],
+    "redCabinetPixelRegion": [
+      771,
+      1221,
+      878,
+      1346
+    ],
+    "conduitWirePixelRegion": [
+      358,
+      980,
+      1088,
+      1420
+    ]
+  },
+  "observed": [
+    "red projecting cabinet with darker left return",
+    "pale rectangular notice plate",
+    "irregular pale vertical enamel scrapes",
+    "small right edge fitting",
+    "pale conduit and thin sagging wires near entrance"
+  ],
+  "inferred": [
+    "all metric dimensions and depths",
+    "hinge construction and second hinge",
+    "notice mounting thickness",
+    "wire depth and endpoint correspondence",
+    "paint reflectance and individual wear positions"
+  ],
+  "limitations": [
+    "notice wording not legible enough to transcribe; panel is blank",
+    "wires are visible partial segments, not complete utility routing",
+    "not a measured camera fit",
+    "no repeated adjacent windows or invented full facade"
+  ],
+  "assembly": {
+    "blenderAxes": "X across, Y into building, Z up",
+    "gltfAxes": "X across, Y up, +Z toward street",
+    "pose": "apply identical transform as retained Govindam bay",
+    "retainedBayUnmodified": true,
+    "doorSkinAlignedToExistingCabinet": true,
+    "existingCabinetCenterBlender": [
+      1.12,
+      -0.33,
+      1.98
+    ],
+    "existingCabinetDimensionsBlender": [
+      0.43,
+      0.2,
+      0.61
+    ]
+  },
+  "bytes": 133208,
+  "sha256": "56838587a1dbce06539c6ca28c38c8ac6e54cf0b93cec514c897a6f7776ab44f",
+  "assetPath": "/assets/govindam-hardware.glb"
+}

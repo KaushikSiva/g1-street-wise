@@ -1,0 +1,319 @@
+{
+  "revision": 2,
+  "wayId": 354839754,
+  "atlas": "/assets/textures/encaarpus_visibility.png",
+  "uvBuffer": "/assets/encaarpus-visibility-uv1.bin",
+  "size": [
+    2048,
+    2048
+  ],
+  "channel": 1,
+  "bindings": [
+    {
+      "name": "Encaarpus entrance stone",
+      "vertexCount": 31392,
+      "byteOffset": 0,
+      "positionSha256": "91e2e6a6e9462de4634101c0bd1d59a5f2aa805be76113d261bec88513d5ae4c",
+      "normalSha256": "0bc070530793d135d9db884e61cf34f8b8b7896d7e758df4a2a32087ad07b42d"
+    },
+    {
+      "name": "Encaarpus parking concrete",
+      "vertexCount": 180,
+      "byteOffset": 251136,
+      "positionSha256": "f92319f85fc76ea7fee72e13127c537c68c506f59f827bc868446272039961fc",
+      "normalSha256": "ea139b3db70e0e22e0bd0b2b3804adbd0f5913b1d150e746dc44d6e0f63d9b8f"
+    },
+    {
+      "name": "Encaarpus cream plaster",
+      "vertexCount": 26796,
+      "byteOffset": 252576,
+      "positionSha256": "84dd24c525a1fe092ea5c93f9dc3157cef97d0677bd3bca3965d8f45864a97ea",
+      "normalSha256": "384ace95d48b76fd1c05f163542e678a872c4465f58787273e42530e6d086d2a"
+    },
+    {
+      "name": "Encaarpus grey piers",
+      "vertexCount": 1404,
+      "byteOffset": 466944,
+      "positionSha256": "772622527d5261c8482075f1295b874cd8d2c50ecc04c4d260b1803f244b6e05",
+      "normalSha256": "ee3174945f045bea2393852413afa6783a53619bd309f1759b21a71025a71c7c"
+    },
+    {
+      "name": "Encaarpus ochre flank plaster",
+      "vertexCount": 72,
+      "byteOffset": 478176,
+      "positionSha256": "a2bc3b344ea4751b300be876cc6005e2a4dfc72152d878e4cc35becb2ed0b985",
+      "normalSha256": "e929c11416153a80c919f292752535694d810c974d1e86244397bc59a1668410"
+    },
+    {
+      "name": "Encaarpus unobserved room interior",
+      "vertexCount": 3024,
+      "byteOffset": 478752,
+      "positionSha256": "637436df67e5a17d0e02cb02163acc68563c5619460bbe7de1c627d38621edf0",
+      "normalSha256": "790853b70cbd0555ac9cdf7587bfc348c89ccefb76909dd218cc9eaa1f19b4b4"
+    },
+    {
+      "name": "Encaarpus cream casements",
+      "vertexCount": 8424,
+      "byteOffset": 502944,
+      "positionSha256": "135b155589f1665d9fac2cc6bddc04f9cfc3b09b999a192e44b399bbf69642ac",
+      "normalSha256": "221c0c8f8fcd1db76d747400d7ce81c148512ec9a71bc2ff115bf08540ed709b"
+    },
+    {
+      "name": "Encaarpus coral panels",
+      "vertexCount": 1212,
+      "byteOffset": 570336,
+      "positionSha256": "a59c9fec23eac01a94f53110a625f69997de3f3d92cea0f329c5abb597f2e852",
+      "normalSha256": "a0196439b04f6017bc17af11022d4db5f836ab0cf512d11ad32ce73a376c01b7"
+    },
+    {
+      "name": "Encaarpus parked hatchback cabin interior",
+      "vertexCount": 3384,
+      "byteOffset": 580032,
+      "positionSha256": "f21a705172177a791cf37f503c4643b82559968098baee464fda6bd9c5c62866",
+      "normalSha256": "a766f18fa2860e9b5decd00d48230ce4f5649bf311fad581d5f80485685cbe97"
+    },
+    {
+      "name": "Encaarpus parked hatchback indicator amber",
+      "vertexCount": 360,
+      "byteOffset": 607104,
+      "positionSha256": "fbac523d381d07a5ff0c10e3727c4ff76d7b2cc7b522fb85b46815572923360f",
+      "normalSha256": "82050c6eb80228b09de80212340ffbe3c538d598f532f4dfb96e366a0934c2eb"
+    },
+    {
+      "name": "Encaarpus parked hatchback lamp pale lens",
+      "vertexCount": 2052,
+      "byteOffset": 609984,
+      "positionSha256": "f3af36b1e27f3fe43c5d95ba0360166b45fe827dd8633b6a9a6d879ab32f0fc4",
+      "normalSha256": "c690fd221b863725efd471be359fbd67eaf60cd376596b43390e942b06d76275"
+    },
+    {
+      "name": "Encaarpus parked hatchback rear lamp red",
+      "vertexCount": 2424,
+      "byteOffset": 626400,
+      "positionSha256": "4383143ce3f4764f78219008a1105545c1b2b7755789cfe15fc5a77eb9b1e7af",
+      "normalSha256": "a8c9965b78b1ac60a31e1a93674d76455fd1b45f2fb171d9957acfcf14f3e8d9"
+    },
+    {
+      "name": "Encaarpus parked hatchback rubber and trim",
+      "vertexCount": 31092,
+      "byteOffset": 645792,
+      "positionSha256": "511bd71d6377830a00998eefa4cf6b09dcdad7e3f140acb02053ad98eca6cf85",
+      "normalSha256": "135eefeabff6bf5e8738ea16fc524d72c6bedb70cd28e0eabf692cc4252c50c8"
+    },
+    {
+      "name": "Encaarpus parked hatchback wheel and emblem",
+      "vertexCount": 7020,
+      "byteOffset": 894528,
+      "positionSha256": "4cbd812a0844e135b4bbc8f493f0a6f6d26be16214a790c3dd1139bf226a6d8a",
+      "normalSha256": "6a08c90197444c0214011984678973f52f49b81471bed30bc369f0e487fb7def"
+    },
+    {
+      "name": "Encaarpus parked hatchback white body",
+      "vertexCount": 9960,
+      "byteOffset": 950688,
+      "positionSha256": "38ec6064cc13d7a345d67061801e2a53a3e55eaf77aae87aafb75e4dca4e8626",
+      "normalSha256": "17205ca9d4736f59b39ed257423e613f0bb3243ca39600545e44881531b6ddd9"
+    }
+  ],
+  "method": "Cycles AO scalar via emission bake; exact runtime surface geometry, no light/color/photo bake",
+  "radiusMeters": 30,
+  "aoRays": 16,
+  "cyclesSamples": 256,
+  "paddingPixels": 4,
+  "excludedOccluders": [
+    "Glass (runtime castShadow=false)"
+  ],
+  "includedOccluders": "All other geometry in the Encaarpus frontage model; no additional hidden bake-only walls",
+  "scope": "Scalar visibility for indirect illumination only; direct sunlight and shadows remain dynamic",
+  "limits": "Finite-distance local-model AO, not directional sky transport or multiple-bounce GI. Neighboring buildings, vegetation and the wider ground are omitted. Building dimensions and hidden parking/room layout remain inferred.",
+  "license": "CC0 original computed visibility and UV data; no photograph input",
+  "inputSha256": "759a65c9bdd743362a6fe0429232f56dfcc15124b57cac52c258a31e5a1fd00e",
+  "uvSha256": "9f02202a032a49394374686abf42cc51755396b081da8a032b8ab16884a22313",
+  "atlasSha256": "b250047ed81dc224813e54ba5e608644407d0a31ddccd32667986c8619b8fca0",
+  "elapsedSeconds": 78.38159662502585,
+  "hashConvention": "Float32 little endian, zero signs canonicalized before hashing",
+  "controls": [
+    {
+      "name": "forecourt",
+      "point": [
+        0.0,
+        0.055,
+        2.0
+      ],
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "uv": [
+        0.7408976958152796,
+        0.24551721938414953
+      ],
+      "visibility": 0.4408454987165223,
+      "independentRayVisibility": 0.4384765625,
+      "atlasError": 0.0023689362165222883
+    },
+    {
+      "name": "covered floor",
+      "point": [
+        0.0,
+        0.055,
+        -6.0
+      ],
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "uv": [
+        0.03192032643742793,
+        0.29349522292613983
+      ],
+      "visibility": 0.0392156862745098,
+      "independentRayVisibility": 0.03857421875,
+      "atlasError": 0.0006414675245098034
+    },
+    {
+      "name": "parking rear",
+      "point": [
+        0.0,
+        1.4,
+        -8.4
+      ],
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "uv": [
+        0.15682803081368948,
+        0.29239918291568756
+      ],
+      "visibility": 0.10285516810592826,
+      "independentRayVisibility": 0.10400390625,
+      "atlasError": 0.001148738144071737
+    },
+    {
+      "name": "parking ceiling",
+      "point": [
+        0.0,
+        2.9,
+        -5.0
+      ],
+      "normal": [
+        0,
+        -1,
+        0
+      ],
+      "uv": [
+        0.042423415313768635,
+        0.03138954999119424
+      ],
+      "visibility": 0.04483612363176835,
+      "independentRayVisibility": 0.04443359375,
+      "atlasError": 0.00040252988176835147
+    },
+    {
+      "name": "roof",
+      "point": [
+        0.0,
+        15.52,
+        -4.0
+      ],
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "uv": [
+        0.12742738737571857,
+        0.15145983905908925
+      ],
+      "visibility": 0.984313725490196,
+      "independentRayVisibility": 0.984375,
+      "atlasError": 6.127450980397686e-05
+    },
+    {
+      "name": "front plaster",
+      "point": [
+        -4.175190906,
+        3.56,
+        0.0
+      ],
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "uv": [
+        0.46543234555472235,
+        0.21154978136988414
+      ],
+      "visibility": 0.6626926055762781,
+      "independentRayVisibility": 0.661865234375,
+      "atlasError": 0.000827371201278071
+    },
+    {
+      "name": "car roof",
+      "point": [
+        -0.35555553436279297,
+        1.516518473625183,
+        -3.0366666316986084
+      ],
+      "normal": [
+        -0.5717146992683411,
+        0.8202879428863525,
+        0.016432737931609154
+      ],
+      "uv": [
+        0.4990416468264964,
+        0.1512158964442716
+      ],
+      "visibility": 0.05001973570142106,
+      "independentRayVisibility": 0.09228515625,
+      "atlasError": 0.04226542054857894
+    },
+    {
+      "name": "car hatch",
+      "point": [
+        -0.28670835494995117,
+        0.6516666412353516,
+        -1.7960938215255737
+      ],
+      "normal": [
+        -0.09956926107406616,
+        0.11395561695098877,
+        0.988483726978302
+      ],
+      "uv": [
+        0.3805452683722072,
+        0.657995025365443
+      ],
+      "visibility": 0.274402744691815,
+      "independentRayVisibility": 0.285400390625,
+      "atlasError": 0.010997645933184974
+    },
+    {
+      "name": "car rear lamp",
+      "point": [
+        -0.4611383378505707,
+        0.790854275226593,
+        -1.763984203338623
+      ],
+      "normal": [
+        -0.3890705406665802,
+        0.12034028023481369,
+        0.9133139252662659
+      ],
+      "uv": [
+        0.9029230673475047,
+        0.7098793986987545
+      ],
+      "visibility": 0.21055799332080005,
+      "independentRayVisibility": 0.2529296875,
+      "atlasError": 0.04237169417919995
+    }
+  ],
+  "normalField": "Runtime split corner normals retained in bake; car probes use interpolated shading normals",
+  "islandMargin": 0.0035
+}

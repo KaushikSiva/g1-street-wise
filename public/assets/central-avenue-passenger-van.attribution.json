@@ -1,0 +1,36 @@
+{
+  "revision": 2,
+  "source": [
+    "Private panorama jA1SRlYEzW_-i3dxbqIi3A Avinash west view",
+    "Private panorama Vu0xhoBfuQb7XsmcWslizA street-context thumbnail"
+  ],
+  "observed": [
+    "White tall passenger van parked parallel to the Avinash side of Central Avenue, front toward north",
+    "Three long rounded passenger window bays, shorter cab window, blue-green curtains",
+    "Rear twin doors with two glazed openings and vertical tail lamps",
+    "Dark rubbing strip, short bonnet, black mirrors, silver wheels",
+    "Rounded shoulder and rear roof crown above the passenger window band"
+  ],
+  "inferred": [
+    "6.1m overall length, 2.1m body width, 2.65m roof height",
+    "3.66m wheelbase, 0.375m tyre radius",
+    "Exact front, interior, hidden side construction, hardware, material response and parking position",
+    "2.40m roof/body seam, 0.25m side/rear crown radius and 0.48m front runout; corner seam construction"
+  ],
+  "identity": "Source shows a Traveller-style passenger van; no exact variant/year or dimensions verified",
+  "plate": "Blank; no identifying registration reproduced",
+  "license": "CC0 original geometry and materials; no source photograph pixels",
+  "sha256": "ba137345230f394bc1a7cfff489c3615abfdc01ecd858328f7eb917ed949f7ff",
+  "bytes": 2256524,
+  "triangles": 37534,
+  "batches": 9,
+  "roofShell": {
+    "nonManifoldEdges": 0,
+    "seamHeight": 2.4,
+    "crownHeight": 2.65,
+    "sideRearRadius": 0.25,
+    "frontRunout": 0.48,
+    "skinThickness": 0.025
+  },
+  "limits": "Partial photo-informed vehicle study, not a manufacturer model replica or current occupancy claim"
+}

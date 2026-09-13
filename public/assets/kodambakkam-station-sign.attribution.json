@@ -1,0 +1,24 @@
+{
+  "asset": "/assets/kodambakkam-station-sign.glb",
+  "title": "Kodambakkam station nameboard — photo-informed Blender reconstruction",
+  "license": "CC-BY-SA-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "source": {
+    "title": "Kodambakkam Railway Station",
+    "author": "Gowtham Sampath",
+    "capturedAt": "2018-11-16",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kodambakkam_Railway_Station.jpg",
+    "license": "CC-BY-SA-4.0"
+  },
+  "attribution": "Station sign photo texture: Gowtham Sampath, Wikimedia Commons, CC BY-SA 4.0. Cropped, perspective-rectified and projected onto an estimated Blender reconstruction; derivative model and textures CC BY-SA 4.0.",
+  "changes": [
+    "Only the inset sign face, a narrow upright surface sample and yellow border sample were extracted",
+    "Sign face perspective corrected using four manually selected corners",
+    "Original Tamil, Hindi and English lettering retained directly from the source photograph",
+    "Photo textures projected onto original extruded concrete geometry; no photographic surroundings included",
+    "Hidden surfaces, depth, exact size, support curves and edge details estimated"
+  ],
+  "estimatedDimensionsMetres": { "width": 3.45, "height": 3.85, "depth": 0.22, "insetWidth": 3.03, "insetHeight": 1.54 },
+  "coordinates": "glTF Y-up, front faces +Z, origin at ground-level center between posts",
+  "accuracy": "Unsurveyed; no verified sign location, real measurements, matched camera calibration or blind fidelity pass"
+}

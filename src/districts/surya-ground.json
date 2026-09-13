@@ -1,0 +1,88 @@
+{
+  "gateLeft": -11.8,
+  "gateRight": -8.48,
+  "gateZ": 8.4,
+  "groundY": -0.043,
+  "points": [
+    {
+      "kind": "intersection",
+      "rows": [
+        148,
+        149
+      ],
+      "point": [
+        -11.8,
+        -0.0430000014603138,
+        9.918920431526109
+      ]
+    },
+    {
+      "row": 149,
+      "point": [
+        -11.387401012995511,
+        -0.0430000014603138,
+        9.90379788060821
+      ],
+      "kind": "existing-road-edge-vertex"
+    },
+    {
+      "row": 150,
+      "point": [
+        -10.888912560484286,
+        -0.0430000014603138,
+        9.883614361034205
+      ],
+      "kind": "existing-road-edge-vertex"
+    },
+    {
+      "row": 151,
+      "point": [
+        -10.390655292983794,
+        -0.0430000014603138,
+        9.857637574391475
+      ],
+      "kind": "existing-road-edge-vertex"
+    },
+    {
+      "row": 152,
+      "point": [
+        -9.892811096858921,
+        -0.0430000014603138,
+        9.821251215921507
+      ],
+      "kind": "existing-road-edge-vertex"
+    },
+    {
+      "row": 153,
+      "point": [
+        -9.395505849433505,
+        -0.0430000014603138,
+        9.771223376634424
+      ],
+      "kind": "existing-road-edge-vertex"
+    },
+    {
+      "row": 154,
+      "point": [
+        -8.898729199077977,
+        -0.0430000014603138,
+        9.707631169697152
+      ],
+      "kind": "existing-road-edge-vertex"
+    },
+    {
+      "kind": "intersection",
+      "rows": [
+        154,
+        155
+      ],
+      "point": [
+        -8.48,
+        -0.0430000014603138,
+        9.646286618328912
+      ]
+    }
+  ],
+  "source": "Actual existing negative-side Central Avenue shoulder outer edge, Float32 mesh vertices; Surya-local coordinates",
+  "limits": "Matches current inferred road generation, not a surveyed road edge"
+}

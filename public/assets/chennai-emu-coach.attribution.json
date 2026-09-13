@@ -1,0 +1,63 @@
+{
+  "asset": "/assets/chennai-emu-coach.glb",
+  "title": "Chennai suburban cream-and-green trailer coach study",
+  "license": "CC0-1.0",
+  "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "sourceType": "Original procedural Blender geometry and PBR textures; reference-informed",
+  "photographPixelsEmbedded": false,
+  "visualReferences": [
+    {
+      "author": "Gowtham Sampath",
+      "url": "https://commons.wikimedia.org/wiki/File:Kodambakkam_Railway_Station.jpg",
+      "license": "CC-BY-SA-4.0",
+      "capturedAt": "2018-11-16"
+    },
+    {
+      "author": "Sameer2905",
+      "url": "https://commons.wikimedia.org/wiki/File:Kodambakkam_railway_station_(June_2025).jpg",
+      "license": "CC-BY-SA-4.0",
+      "capturedAt": "2025-06-02"
+    }
+  ],
+  "nominalBodyMetres": {
+    "length": 20.8,
+    "width": 3.2,
+    "roofHeightAboveRail": 3.89
+  },
+  "coordinateSystem": "glTF Y-up, length along Z, origin center at railhead; wheel flanges extend below origin",
+  "accuracy": "Unsurveyed type-level approximation; no verified vehicle identity or blind fidelity pass",
+  "constructionRevision": {
+    "generator": "scripts/build_emu_coach.py --candidate",
+    "authorship": "Original procedural geometry and texture pixels; photograph crops used for review only",
+    "reference": "public/reference/station-2018.jpg",
+    "limitations": [
+      "Photo shows different coach arrangements; current bay placement is not corrected by this geometry revision.",
+      "Rubber fold count, end passage structure and hidden mounting dimensions inferred.",
+      "No exact coach identity, manufacturer or readable serial text claimed."
+    ],
+    "triangles": 76340,
+    "draw_calls": 10,
+    "bytes": 4604096,
+    "gltf_bounds": {
+      "min": [
+        -1.8899999856948853,
+        -0.02599996328353882,
+        -11.039999961853027
+      ],
+      "max": [
+        1.8900001049041748,
+        4.0,
+        11.039999961853027
+      ]
+    },
+    "coordinate_system": "glTF Y up, length along Z, origin railhead at center; original body/wheel/roof dimensions retained",
+    "changes": [
+      "Actual end passage opening with returns and folded U bellows",
+      "Lower louver field with slanted formed blades and blank upper leaf",
+      "Closed door grips, pads, latch and modest pressed lower borders",
+      "Small-edge bevel and hidden suspension resolution reductions offset detail cost"
+    ],
+    "status": "Integrated candidate; coach variant and longitudinal placement remain inferred"
+  },
+  "sha256": "044ae8fd673b65ce6c2fabe73882b01fc968ee964e2efa3fe803b0bce8638af6"
+}

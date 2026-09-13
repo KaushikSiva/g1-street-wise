@@ -1,0 +1,396 @@
+{
+  "source": "https://wandb.ai/kaushik-siva88/Unitree%20G1/runs/8upngyv4",
+  "runId": "8upngyv4",
+  "rows": [
+    {
+      "_step": 0,
+      "step": 0,
+      "validation/success_rate": 0,
+      "validation/mean_return": -0.7610414773090781
+    },
+    {
+      "validation/success_rate": 0.6875,
+      "validation/mean_return": 8.030174819343898,
+      "_step": 2048,
+      "step": 2048
+    },
+    {
+      "validation/mean_return": 8.030174819343898,
+      "_step": 4096,
+      "step": 4096,
+      "validation/success_rate": 0.6875
+    },
+    {
+      "validation/success_rate": 0.6875,
+      "validation/mean_return": 8.030174819343898,
+      "_step": 6144,
+      "step": 6144
+    },
+    {
+      "_step": 8192,
+      "step": 8192,
+      "validation/success_rate": 0.875,
+      "validation/mean_return": 14.659401981732225
+    },
+    {
+      "_step": 10240,
+      "step": 10240,
+      "validation/success_rate": 0.6875,
+      "validation/mean_return": 8.030174819343898
+    },
+    {
+      "validation/mean_return": 8.030174819343898,
+      "_step": 12288,
+      "step": 12288,
+      "validation/success_rate": 0.6875
+    },
+    {
+      "validation/success_rate": 0.40625,
+      "validation/mean_return": 7.856617905574393,
+      "_step": 14336,
+      "step": 14336
+    },
+    {
+      "step": 16384,
+      "validation/success_rate": 1,
+      "validation/mean_return": 18.1990203260686,
+      "_step": 16384
+    },
+    {
+      "_step": 18432,
+      "step": 18432,
+      "validation/success_rate": 0.875,
+      "validation/mean_return": 14.183979358819698
+    },
+    {
+      "_step": 20480,
+      "step": 20480,
+      "validation/success_rate": 0.6875,
+      "validation/mean_return": 8.030174819343898
+    },
+    {
+      "step": 22528,
+      "validation/success_rate": 0.875,
+      "validation/mean_return": 14.177744726179649,
+      "_step": 22528
+    },
+    {
+      "validation/success_rate": 0.875,
+      "validation/mean_return": 14.180032476598193,
+      "_step": 24576,
+      "step": 24576
+    },
+    {
+      "validation/mean_return": 14.1781669064642,
+      "_step": 26624,
+      "step": 26624,
+      "validation/success_rate": 0.875
+    },
+    {
+      "_step": 28672,
+      "step": 28672,
+      "validation/success_rate": 0.875,
+      "validation/mean_return": 14.176173997887641
+    },
+    {
+      "_step": 30720,
+      "step": 30720,
+      "validation/success_rate": 0.875,
+      "validation/mean_return": 14.171683970991346
+    },
+    {
+      "step": 32768,
+      "validation/success_rate": 0.875,
+      "validation/mean_return": 14.178825909685337,
+      "_step": 32768
+    },
+    {
+      "_step": 34816,
+      "step": 34816,
+      "validation/success_rate": 0.875,
+      "validation/mean_return": 14.178681818639152
+    },
+    {
+      "_step": 36864,
+      "step": 36864,
+      "validation/success_rate": 0.875,
+      "validation/mean_return": 14.174618185913376
+    },
+    {
+      "validation/mean_return": 14.178971333578211,
+      "_step": 38912,
+      "step": 38912,
+      "validation/success_rate": 0.875
+    },
+    {
+      "_step": 40960,
+      "step": 40960,
+      "validation/success_rate": 0.875,
+      "validation/mean_return": 14.1781669064642
+    },
+    {
+      "validation/mean_return": 14.185106798971542,
+      "_step": 43008,
+      "step": 43008,
+      "validation/success_rate": 0.875
+    },
+    {
+      "_step": 45056,
+      "step": 45056,
+      "validation/success_rate": 0.875,
+      "validation/mean_return": 14.176233535087862
+    },
+    {
+      "step": 47104,
+      "validation/success_rate": 0.875,
+      "validation/mean_return": 14.176233535087862,
+      "_step": 47104
+    },
+    {
+      "_step": 49152,
+      "step": 49152,
+      "validation/success_rate": 0.875,
+      "validation/mean_return": 14.176233535087862
+    },
+    {
+      "step": 51200,
+      "validation/success_rate": 0.875,
+      "validation/mean_return": 14.182584325173996,
+      "_step": 51200
+    },
+    {
+      "_step": 53248,
+      "step": 53248,
+      "validation/success_rate": 0.875,
+      "validation/mean_return": 14.174815897477638
+    },
+    {
+      "_step": 55296,
+      "step": 55296,
+      "validation/success_rate": 0.875,
+      "validation/mean_return": 14.176233535087862
+    },
+    {
+      "_step": 57344,
+      "step": 57344,
+      "validation/success_rate": 0.875,
+      "validation/mean_return": 14.176233535087862
+    },
+    {
+      "validation/mean_return": 14.176233535087862,
+      "_step": 59392,
+      "step": 59392,
+      "validation/success_rate": 0.875
+    },
+    {
+      "validation/mean_return": 14.176233535087862,
+      "_step": 61440,
+      "step": 61440,
+      "validation/success_rate": 0.875
+    },
+    {
+      "_step": 63488,
+      "step": 63488,
+      "validation/success_rate": 0.875,
+      "validation/mean_return": 14.177744726179649
+    },
+    {
+      "validation/success_rate": 0.875,
+      "validation/mean_return": 14.181058072751188,
+      "_step": 65536,
+      "step": 65536
+    },
+    {
+      "_step": 67584,
+      "step": 67584,
+      "validation/success_rate": 0.875,
+      "validation/mean_return": 14.195566480110891
+    },
+    {
+      "_step": 69632,
+      "step": 69632,
+      "validation/success_rate": 0.90625,
+      "validation/mean_return": 15.274400276524362
+    },
+    {
+      "_step": 71680,
+      "step": 71680,
+      "validation/success_rate": 0.875,
+      "validation/mean_return": 14.161922975188798
+    },
+    {
+      "validation/mean_return": 17.392900321156258,
+      "_step": 73728,
+      "step": 73728,
+      "validation/success_rate": 0.96875
+    },
+    {
+      "_step": 75776,
+      "step": 75776,
+      "validation/success_rate": 1,
+      "validation/mean_return": 18.41811142139534
+    },
+    {
+      "_step": 77824,
+      "step": 77824,
+      "validation/success_rate": 0.96875,
+      "validation/mean_return": 17.36269687184604
+    },
+    {
+      "_step": 79872,
+      "step": 79872,
+      "validation/success_rate": 0.9375,
+      "validation/mean_return": 16.282942100943785
+    },
+    {
+      "_step": 81920,
+      "step": 81920,
+      "validation/success_rate": 0.96875,
+      "validation/mean_return": 17.382413689882696
+    },
+    {
+      "step": 83968,
+      "validation/success_rate": 0.96875,
+      "validation/mean_return": 17.362854855504388,
+      "_step": 83968
+    },
+    {
+      "_step": 86016,
+      "step": 86016,
+      "validation/success_rate": 0.96875,
+      "validation/mean_return": 17.357498494007494
+    },
+    {
+      "_step": 88064,
+      "step": 88064,
+      "validation/success_rate": 0.96875,
+      "validation/mean_return": 17.343948349744796
+    },
+    {
+      "_step": 90112,
+      "step": 90112,
+      "validation/success_rate": 1,
+      "validation/mean_return": 18.420768943833718
+    },
+    {
+      "_step": 92160,
+      "step": 92160,
+      "validation/success_rate": 0.96875,
+      "validation/mean_return": 17.36201835313144
+    },
+    {
+      "_step": 94208,
+      "step": 94208,
+      "validation/success_rate": 1,
+      "validation/mean_return": 18.463282657686744
+    },
+    {
+      "_step": 96256,
+      "step": 96256,
+      "validation/success_rate": 1,
+      "validation/mean_return": 18.418926680008404
+    },
+    {
+      "_step": 98304,
+      "step": 98304,
+      "validation/success_rate": 1,
+      "validation/mean_return": 18.459446122123104
+    },
+    {
+      "validation/mean_return": 18.44146070847757,
+      "_step": 100352,
+      "step": 100352,
+      "validation/success_rate": 1
+    },
+    {
+      "_step": 102400,
+      "step": 102400,
+      "validation/success_rate": 0.9375,
+      "validation/mean_return": 16.305279038346114
+    },
+    {
+      "validation/success_rate": 1,
+      "validation/mean_return": 18.447804904001984,
+      "_step": 104448,
+      "step": 104448
+    },
+    {
+      "validation/mean_return": 18.440719371437694,
+      "_step": 106496,
+      "step": 106496,
+      "validation/success_rate": 1
+    },
+    {
+      "_step": 108544,
+      "step": 108544,
+      "validation/success_rate": 1,
+      "validation/mean_return": 18.413107087409195
+    },
+    {
+      "step": 110592,
+      "validation/success_rate": 1,
+      "validation/mean_return": 18.403188466511804,
+      "_step": 110592
+    },
+    {
+      "step": 112640,
+      "validation/success_rate": 0.96875,
+      "validation/mean_return": 17.333550349056175,
+      "_step": 112640
+    },
+    {
+      "validation/success_rate": 1,
+      "validation/mean_return": 18.3957150898624,
+      "_step": 114688,
+      "step": 114688
+    },
+    {
+      "_step": 116736,
+      "step": 116736,
+      "validation/success_rate": 1,
+      "validation/mean_return": 18.39250743413406
+    },
+    {
+      "validation/mean_return": 18.43790462009829,
+      "_step": 118784,
+      "step": 118784,
+      "validation/success_rate": 1
+    },
+    {
+      "step": 120832,
+      "validation/success_rate": 1,
+      "validation/mean_return": 18.42538078622904,
+      "_step": 120832
+    },
+    {
+      "_step": 122880,
+      "step": 122880,
+      "validation/success_rate": 1,
+      "validation/mean_return": 18.41613285819922
+    },
+    {
+      "validation/success_rate": 1,
+      "validation/mean_return": 18.42810542312735,
+      "_step": 124928,
+      "step": 124928
+    },
+    {
+      "_step": 126976,
+      "step": 126976,
+      "validation/success_rate": 1,
+      "validation/mean_return": 18.411898501702574
+    },
+    {
+      "_step": 129024,
+      "step": 129024,
+      "validation/success_rate": 0.96875,
+      "validation/mean_return": 17.32680839108542
+    },
+    {
+      "_step": 131072,
+      "step": 131072,
+      "validation/success_rate": 1,
+      "validation/mean_return": 18.39021982756455
+    }
+  ]
+}

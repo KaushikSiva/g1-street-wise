@@ -1,0 +1,324 @@
+{
+  "version": 1,
+  "accessedAt": "2026-09-09",
+  "focus": "Kodambakkam railway station and nearby streets, Chennai",
+  "origin": [
+    80.2306892,
+    13.0516624
+  ],
+  "coordinateSystem": "WGS84 lon/lat; local scene x east metres, z south metres",
+  "validationStatus": "Reference foundation only; no validated 1:1 or indistinguishable result",
+  "sources": [
+    {
+      "id": "station-2018",
+      "type": "photograph",
+      "path": "/reference/station-2018.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kodambakkam_Railway_Station.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Kodambakkam_Railway_Station.jpg",
+      "author": "Gowtham Sampath",
+      "capturedAt": "2018-11-16",
+      "license": "CC-BY-SA-4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "None; original bytes retained",
+      "cameraCoordinate": [
+        80.230876,
+        13.053207
+      ],
+      "cameraCoordinateSystem": "WGS84 longitude, latitude",
+      "cameraCalibration": "Uncalibrated: no verified height, direction, focal length equivalence, or control points",
+      "sha256": "811f5c2ce4b4cc922fc19a2ef84f08220bc1c7b502c4201ef8eb73ca8aef372f",
+      "bytes": 1896611
+    },
+    {
+      "id": "station-2025",
+      "type": "photograph",
+      "path": "/reference/station-2025.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kodambakkam_railway_station_(June_2025).jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/1/18/Kodambakkam_railway_station_(June_2025).jpg",
+      "author": "Sameer2905",
+      "capturedAt": "2025-06-02",
+      "license": "CC-BY-SA-4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "None; original bytes retained",
+      "cameraCoordinate": null,
+      "cameraCoordinateSystem": null,
+      "cameraCalibration": "Uncalibrated: no verified height, direction, focal length equivalence, or control points",
+      "sha256": "45fe3752fe191b183bcb3e5cfdbffff637a32a18a23e56aa8619b8215ad83622",
+      "bytes": 1734123
+    },
+    {
+      "id": "overbridge-2008",
+      "type": "photograph",
+      "path": "/reference/overbridge-2008.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kodambakkam_overbridge.JPG",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Kodambakkam_overbridge.JPG",
+      "author": "L.vivian.richard",
+      "capturedAt": "2008-02-24",
+      "license": "Public domain",
+      "licenseUrl": "https://commons.wikimedia.org/wiki/Template:PD-self",
+      "changes": "None; original bytes retained",
+      "cameraCoordinate": null,
+      "cameraCoordinateSystem": null,
+      "cameraCalibration": "Uncalibrated: no verified height, direction, focal length equivalence, or control points",
+      "sha256": "de7469a3a976cbf8b06fdfea64ec5260bd7a761bf032fc39a036e6d95fb2e78b",
+      "bytes": 3228160
+    },
+    {
+      "id": "high-road-2017",
+      "type": "photograph",
+      "path": "/reference/high-road-2017.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kodambakkam_High_Road.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Kodambakkam_High_Road.jpg",
+      "author": "Gteamindia",
+      "capturedAt": "2017-11-01",
+      "license": "CC-BY-SA-4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "None; original bytes retained",
+      "cameraCoordinate": null,
+      "cameraCoordinateSystem": null,
+      "cameraCalibration": "Uncalibrated: no verified height, direction, focal length equivalence, or control points",
+      "sha256": "8b9f468463420eaa74d60ad2b8d1509d5688d6ed9c138a16158c8e56f3af3ed9",
+      "bytes": 3046469
+    },
+    {
+      "id": "kodambakkam-osm",
+      "type": "map-geometry",
+      "path": "/reference/kodambakkam-osm.json",
+      "sourceUrl": "https://overpass.kumi.systems/api/interpreter",
+      "license": "ODbL-1.0",
+      "licenseUrl": "https://opendatacommons.org/licenses/odbl/1-0/",
+      "attribution": "\u00a9 OpenStreetMap contributors",
+      "dataTimestamp": "2026-07-15T15:22:01Z",
+      "bboxSouthWestNorthEast": [
+        13.049,
+        80.225,
+        13.057,
+        80.235
+      ],
+      "elementCount": 1414,
+      "buildingWays": 1175,
+      "highwayWays": 225,
+      "railwayElements": 14,
+      "heightTags": 0,
+      "buildingLevelsTags": 22,
+      "coverageWarning": "Incomplete volunteered outlines. No parcel boundaries or verified facades/heights. The 22 levels tags include one invalid nonnumeric value."
+    },
+    {
+      "id": "esri-world-imagery",
+      "type": "satellite-aerial-service",
+      "sourceUrl": "https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer",
+      "metadataPath": "/reference/esri-world-imagery-service.json",
+      "attribution": "Source: Esri, Vantor, Earthstar Geographics, and the GIS User Community",
+      "license": "Provider terms apply; not an open redistribution license",
+      "termsUrl": "https://goto.arcgisonline.com/maps/World_Imagery",
+      "localImageryDownloaded": false,
+      "captureDate": null,
+      "localResolutionMeters": null,
+      "warning": "Service metadata verifies availability, not capture date or local accuracy. Raster aerial imagery contains no facade geometry.",
+      "termsSummaryUrl": "https://goto.arcgis.com/termsofuse/viewsummary",
+      "restriction": "Official FAQ dated 2025-04-21 prohibits downloading, redistribution and self-hosting. Public REST capability is not a redistribution license. No image downloaded."
+    },
+    {
+      "id": "housing-21041426",
+      "type": "property-listing",
+      "sourceUrl": "https://housing.com/in/buy/resale/page/21041426-7-bhk-independent-house-in-kodambakkam-for-rs-22000000",
+      "status": "Advertised for sale; inspected 2026-09-08",
+      "updatedAt": "2026-09-03",
+      "reportedBuiltUpSquareFeet": 3000,
+      "reportedLotSquareFeet": null,
+      "coordinate": null,
+      "license": "No redistribution license established",
+      "imagesDownloaded": false,
+      "warning": "Vengeeswarar Nagar heading versus VOC Nagar description; exact location unresolved; built-up area is not footprint area."
+    },
+    {
+      "id": "hanureddy-324047",
+      "type": "property-listing",
+      "sourceUrl": "https://hanureddyrealty.com/residential-property-details/Independent-House-for-Sale-at-Kodambakkam/324047/",
+      "status": "Search-index evidence only; full-page access failed",
+      "reportedBuiltUpSquareFeet": 2000,
+      "reportedLotSquareFeet": 2160,
+      "coordinate": null,
+      "license": "No redistribution license established",
+      "imagesDownloaded": false
+    },
+    {
+      "id": "housing-20159929",
+      "type": "historical-property-listing",
+      "sourceUrl": "https://housing.com/in/buy/resale/page/20159929-4-bhk-independent-house-in-kodambakkam-for-rs-75000000",
+      "status": "Historical search-index evidence; current URL redirects, not proof of sale",
+      "reportedBuiltUpSquareFeet": [
+        2700,
+        3000
+      ],
+      "reportedLotSquareFeet": 4200,
+      "coordinate": null,
+      "license": "No redistribution license established",
+      "imagesDownloaded": false,
+      "warning": "Conflicting built-up areas; no parcel match."
+    },
+    {
+      "id": "ashok-nandana-sold-claim",
+      "type": "sold-property-claim",
+      "sourceUrl": "https://hanureddyrealty.com/realtor/rajesh/",
+      "status": "Realtor reports sold flat; no transaction record verified",
+      "reportedApartmentSquareFeet": 957,
+      "coordinate": null,
+      "license": "No redistribution license established",
+      "imagesDownloaded": false,
+      "warning": "No sale date or exact parcel; apartment area cannot establish footprint."
+    },
+    {
+      "title": "Kodambakkam Sentinel-2 true-colour regional context",
+      "path": "/reference/kodambakkam-aerial.jpg",
+      "provider": "Copernicus Sentinel-2 via Element 84 Earth Search / AWS Open Data",
+      "sourceUrl": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/44/P/MV/2026/7/S2A_44PMV_20260715_0_L2A/TCI.tif",
+      "searchUrl": "https://earth-search.aws.element84.com/v1/search?collections=sentinel-2-l2a&bbox=80.225%2C13.049%2C80.235%2C13.057&datetime=2025-01-01T00%3A00%3A00Z%2F2026-09-08T00%3A00%3A00Z&limit=30&query=%7B%22eo%3Acloud_cover%22%3A+%7B%22lt%22%3A+5%7D%7D",
+      "stacItemId": "S2A_44PMV_20260715_0_L2A",
+      "capturedAt": "2026-07-15T05:15:29.390000Z",
+      "accessedAt": "2026-09-08",
+      "sourcePixelSizeMeters": [
+        10.0,
+        10.0
+      ],
+      "sourceProjection": "EPSG:32644",
+      "projection": "EPSG:3857",
+      "boundsWgs84WestSouthEastNorth": [
+        80.225,
+        13.049,
+        80.235,
+        13.057
+      ],
+      "boundsWebMercatorXminYminXmaxYmax": [
+        8930606.148890372,
+        1465330.9601700092,
+        8931719.343798304,
+        1466245.1369977954
+      ],
+      "width": 109,
+      "height": 90,
+      "outputProjectedPixelSizeMeters": [
+        10.212797320473495,
+        10.157520308736194
+      ],
+      "orientation": "north up; top-left northwest; pixel corners span stated bounds",
+      "sceneCloudCoverPercent": 0.835508,
+      "localCloudCoverPercent": null,
+      "attribution": "Contains modified Copernicus Sentinel data 2026. COG distribution: Element 84 / AWS Open Data.",
+      "license": "Copernicus Sentinel free, full and open data terms",
+      "licenseUrl": "https://sentinels.copernicus.eu/documents/247904/690755/Sentinel_Data_Legal_Notice",
+      "registryUrl": "https://registry.opendata.aws/sentinel-2-l2a-cogs/",
+      "changes": "Windowed true-colour COG reprojected UTM to Web Mercator using bilinear resampling, encoded JPEG quality 95. No invented detail or AI upscaling.",
+      "limitation": "10-metre imagery is regional context only. Cannot resolve individual lots, facades, tree trunks, pavement or signs. No surveyed 1:1 accuracy is implied.",
+      "sha256": "351eedfa7dac9ba27d5dca2d3e1d42435caddca702276224eeb09f2bb682109a",
+      "id": "kodambakkam-sentinel2-context",
+      "type": "satellite-regional-context"
+    },
+    {
+      "id": "google-flyover-pano-2018",
+      "type": "street-view-reference-link",
+      "sourceUrl": "https://www.google.com/maps/@13.054141,80.2313321,3a,80y,90h,90t/data=!3m7!1e1!3m5!1sCIHM0ogKEICAgICEz6bxhwE!2e10!6shttps:%2F%2Flh3.googleusercontent.com%2Fgpms-cs-s%2FAFP8RcNpVBYyM_iAdOqmsnoWCNS4-slG1eDMSPl_qSNPGqY-_CidQ6Z3e8d5Auyf0rFfYvTSPGk_v9st0j865QyANzExuP2PqF2-WPs7oMk4skBVpg_rR8H_J1ogu8ead5eHkZVtQlPBSQ%3Dw900-h600-k-no-pi0-ya312.0952453613281-ro0-fo100!7i6912!8i3456?entry=ttu&g_ep=EgoyMDI2MDkwMi4wIKXMDSoASAFQAw%3D%3D",
+      "captureMonth": "2018-04",
+      "creator": "Kandhavel Manivannan",
+      "cameraCoordinate": [
+        80.2313321,
+        13.054141
+      ],
+      "cameraCoordinateSystem": "WGS84 longitude, latitude",
+      "panoramaId": "CIHM0ogKEICAgICEz6bxhwE",
+      "status": "Public viewer image visibly rendered and manually inspected 2026-09-08",
+      "license": "No redistribution license established; private reference viewer inspection only",
+      "imagesInPublicBundle": false,
+      "warning": "Historic user-contributed panorama. Uncalibrated scale/height/projection. Does not prove current or continuous Street View coverage."
+    },
+    {
+      "id": "kodambakkam-view-historic",
+      "type": "photograph",
+      "path": "/reference/kodambakkam-view-historic.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kodambakkam_view.JPG",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Kodambakkam_view.JPG",
+      "author": "L.vivian.richard",
+      "license": "Public domain",
+      "licenseUrl": "https://commons.wikimedia.org/wiki/File:Kodambakkam_view.JPG",
+      "capturedAt": null,
+      "sourceDateText": "24th February",
+      "exifDateTime": "2008:02:24 17:31:49",
+      "changes": "None; original bytes retained",
+      "cameraCoordinate": null,
+      "cameraCalibration": "Unknown location, heading and calibration; historical visual context only, not parcel identification",
+      "sha256": "529fc34e0632097b3f3fc8576d7de709d4aa59a66112f63b555a70c4d897727c",
+      "bytes": 3097639
+    },
+    {
+      "id": "united-india-colony-historic",
+      "type": "photograph",
+      "path": "/reference/united-india-colony-historic.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ucolony.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Ucolony.jpg",
+      "author": "Liliandavid",
+      "license": "Public domain",
+      "licenseUrl": "https://commons.wikimedia.org/wiki/File:Ucolony.jpg",
+      "capturedAt": null,
+      "sourceDateText": "3 March 2007 (original upload date)",
+      "exifDateTime": "2007:03:04 00:22:57",
+      "changes": "None; original bytes retained",
+      "cameraCoordinate": null,
+      "cameraCalibration": "Unknown location, heading and calibration; historical visual context only, not parcel identification",
+      "sha256": "2d0b1ef969785d5e2bcd4f608466f560785147282769a31c08be7bd755c7a8db",
+      "bytes": 143510
+    },
+    {
+      "id": "united-india-park-osm",
+      "type": "map-geometry",
+      "path": "/reference/united-india-park-osm.json",
+      "sourceUrl": "https://api.openstreetmap.org/api/0.6/map?bbox=80.22465,13.05085,80.22770,13.05330",
+      "license": "ODbL-1.0",
+      "attribution": "\u00a9 OpenStreetMap contributors",
+      "acquiredAt": "2026-09-09",
+      "featureIds": [
+        27191741
+      ],
+      "coverageWarning": "Park polygon only; paths, finishes and fixtures inferred. No parcel/facade evidence."
+    },
+    {
+      "id": "govindam-entrance-study",
+      "type": "original Blender model informed by private photograph",
+      "path": "/assets/govindam-bay.attribution.json",
+      "sourceUrl": "https://www.google.com/maps/@13.0512901,80.22544,3a,75y,90t/data=!3m4!1e2!3m2!1sCIHM0ogKEICAgICkv6CP_wE!2e10",
+      "author": "Reference photograph: Victor Livingstone, October 2018",
+      "license": "Original model geometry CC0; photograph not redistributed",
+      "limitation": "Partial stair bay on candidate OSM1095927870 north frontage; entrance position and all dimensions inferred. Not full facade or surveyed lot."
+    },
+    {
+      "id": "high-road-tank-study",
+      "type": "original Blender landmark informed by private references",
+      "path": "/assets/high-road-tank.attribution.json",
+      "license": "CC0 original geometry and generated maps; private reference pixels not redistributed",
+      "limitation": "Provisional aerial roof center;8.47m source accuracy, uncorrected parallax, inferred21m height and six-column topology."
+    },
+    {
+      "id": "govindam-hardware-study",
+      "type": "original Blender entrance fixtures informed by private photograph",
+      "path": "/assets/govindam-hardware.attribution.json",
+      "license": "CC0 original geometry; no source pixels",
+      "limitation": "Partial observed cabinet and utilities; blank unresolved notice, inferred dimensions/routing, current bay proportion mismatch."
+    },
+    {
+      "id": "govindam-window-study",
+      "type": "original Blender partial exterior informed by private photograph",
+      "path": "/assets/govindam-window.attribution.json",
+      "license": "CC0 original geometry and geometry-derived visibility; photograph not redistributed",
+      "limitation": "Single partially cropped window; left jamb, dimensions, room depth and pose inferred. Physical glazing costs an additional render pass. Photographic review failed."
+    }
+  ],
+  "unavailable": [
+    {
+      "source": "OSM natural trees",
+      "status": "Queries timed out or returned HTTP 406; unavailable, not zero trees"
+    },
+    {
+      "source": "Google nearby road checks",
+      "status": "Station View Road, Mambalam High Road and NSK Salai west approach returned no visible imagery for requested public-viewer points. No claim of neighborhood-wide absence."
+    }
+  ]
+}

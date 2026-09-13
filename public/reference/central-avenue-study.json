@@ -1,0 +1,3050 @@
+{
+  "name": "Central Avenue Road",
+  "revision": 15,
+  "roadWayId": 214356669,
+  "lengthMeters": 210.5346400378156,
+  "sourceSnapshotSha256": "a5b62fe3d269c998b32e74d77aa5dbe3e149cf6fffd0a3cdf07a45cde110013d",
+  "source": "https://www.openstreetmap.org/way/214356669",
+  "geometryEvidence": "Stored OSM centerline and building footprints; no surveyed road width or facade dimensions",
+  "inferred": [
+    "nominal 5.5 m road width",
+    "35 mm crown",
+    "road wear and repair positions",
+    "drainage and inspection lids",
+    "street-edge enclosures, not verified parcel boundaries",
+    "utility poles and cables",
+    "fifteen broadleaf planting positions, crown/trunk dimensions and species",
+    "shoulder width, edge variation, slope and dust pigments",
+    "Avinash floor height, facade dimensions, hidden surfaces and paint reflectance",
+    "Prashanth height9.65m, bay dimensions, gate setback, paint reflectance and higher opening layout; minimum ground plus two upper levels observed",
+    "Avinash green grille bow, swept motifs and fabrication dimensions",
+    "Prashanth courtyard/apron grades, concrete pigment and stair count/dimensions",
+    "Thin-leaf transmission ratio and restored donor pigment; no measured local leaf spectrum",
+    "White passenger van dimensions, variant, front/cabin construction and historical parking pose",
+    "Avinash screen condition and AC equipment fabrication",
+    "Prashanth upper pale band/infill/return dimensions; actual higher opening pattern remains unresolved",
+    "Central leaflets and cluster spray morphology; species and metric leaf sizes remain unmeasured",
+    "Surya old10/new8 association with way354840134 is conditional; G+3 observed,12.4m height and all bay/gate sections inferred",
+    "Avinash rectangular red unit bond,220\u00d773mm pitch,6mm joints, ceramic versus brick construction and pigment inferred",
+    "Van crown/body radii inferred from visible rounded silhouette; unseen front remains generic",
+    "Surya passage openings and10.5m hardstanding reach follow private gallery photo3; dimensions,98mm landing height and ground levels inferred. Navigation now follows actual rendered support",
+    "Parked commuter motorcycle is an original approximation of the unoccupied machine visible by Avinash northern boundary; exact make, dimensions, materials, parking pose and capture date unverified",
+    "Surya passage openings and10.5m hardstanding reach follow private gallery photo3; dimensions,98mm landing height and ground levels inferred. Navigation now follows actual rendered support",
+    "Parked commuter motorcycle is an original approximation of the unoccupied machine visible by Avinash northern boundary; exact make, dimensions, materials, parking pose and capture date unverified",
+    "Malles Roy Enclave4/7 Central Avenue association with12-corner way354839651 is conditional; two named listing pins lie inside and photographednotch matches footprint. G+3 observed,12.4m height and all facade/ground/gate dimensions inferred",
+    "Avinash courtyard/apron grade and grey/brown material are inferred from private source; outeredge matches current renderedshoulder",
+    "Yellow round object outsideAvinash has observedlowcircularform only; pose,diameter,material,thickness and function unknown. Repeated illustrative roadwaylids/grates removed because locations unsupported"
+  ],
+  "frontage": {
+    "revision": 4,
+    "wallProfile": {
+      "bayEdges": [
+        -3.96,
+        -0.68,
+        0.68,
+        3.96
+      ],
+      "setback": 0.21,
+      "grooves": [
+        3.03,
+        6.13,
+        9.23
+      ],
+      "grooveWidth": 0.015,
+      "grooveDepth": 0.006,
+      "limits": "Projection/recess relationship observed; dimensions and continuous roof connection inferred"
+    },
+    "pipeRuns": [
+      [
+        [
+          -4.35,
+          3.02
+        ],
+        [
+          -4.35,
+          3.28
+        ],
+        [
+          -3.9,
+          3.28
+        ],
+        [
+          -3.9,
+          3.48
+        ]
+      ],
+      [
+        [
+          3.45,
+          3.35
+        ],
+        [
+          3.45,
+          3.08
+        ],
+        [
+          4.3,
+          3.08
+        ],
+        [
+          4.3,
+          3.2
+        ]
+      ],
+      [
+        [
+          -3,
+          6.98
+        ],
+        [
+          -4.28,
+          6.98
+        ],
+        [
+          -4.28,
+          6.76
+        ]
+      ]
+    ],
+    "rearWindows": [
+      {
+        "index": 0,
+        "sill": 1.66166983289,
+        "lintel": 2.6554348638320002,
+        "rearZ": -0.68,
+        "leaves": [
+          {
+            "hingeX": -3.402,
+            "angleDegrees": 0,
+            "width": 0.7213333333333334,
+            "height": 0.9177650309420003
+          },
+          {
+            "hingeX": -2.6806666666666668,
+            "angleDegrees": 0,
+            "width": 0.7213333333333334,
+            "height": 0.9177650309420003
+          },
+          {
+            "hingeX": -1.9593333333333334,
+            "angleDegrees": 0,
+            "width": 0.7213333333333334,
+            "height": 0.9177650309420003
+          }
+        ],
+        "acCutout": {
+          "x0": -2.4776,
+          "x1": -1.4903999999999997,
+          "y0": 1.67766983289,
+          "y1": 2.22836529928926
+        },
+        "source": "Source-visible rear plaster below glazing, divided green casements and three window ACs",
+        "limits": "Ratios conditional on manual source fit. Absolute dimensions, leaf angles, profiles, AC housing and optical values inferred."
+      },
+      {
+        "index": 1,
+        "sill": 1.66166983289,
+        "lintel": 2.6554348638320002,
+        "rearZ": -0.68,
+        "leaves": [
+          {
+            "hingeX": 1.2379999999999998,
+            "angleDegrees": 58,
+            "width": 0.7213333333333334,
+            "height": 0.9177650309420003
+          },
+          {
+            "hingeX": 1.9593333333333331,
+            "angleDegrees": 0,
+            "width": 0.7213333333333334,
+            "height": 0.9177650309420003
+          },
+          {
+            "hingeX": 3.4019999999999997,
+            "angleDegrees": -58,
+            "width": 0.7213333333333334,
+            "height": 0.9177650309420003
+          }
+        ],
+        "acCutout": {
+          "x0": 1.9384,
+          "x1": 2.9255999999999998,
+          "y0": 1.67766983289,
+          "y1": 2.22836529928926
+        },
+        "source": "Source-visible rear plaster below glazing, divided green casements and three window ACs",
+        "limits": "Ratios conditional on manual source fit. Absolute dimensions, leaf angles, profiles, AC housing and optical values inferred."
+      },
+      {
+        "index": 2,
+        "sill": 4.76166983289,
+        "lintel": 5.755434863832,
+        "rearZ": -0.68,
+        "leaves": [
+          {
+            "hingeX": -3.402,
+            "angleDegrees": 54,
+            "width": 0.7213333333333334,
+            "height": 0.9177650309419999
+          },
+          {
+            "hingeX": -2.6806666666666668,
+            "angleDegrees": 0,
+            "width": 0.7213333333333334,
+            "height": 0.9177650309419999
+          },
+          {
+            "hingeX": -1.9593333333333334,
+            "angleDegrees": 0,
+            "width": 0.7213333333333334,
+            "height": 0.9177650309419999
+          }
+        ],
+        "acCutout": null,
+        "source": "Source-visible rear plaster below glazing, divided green casements and three window ACs",
+        "limits": "Ratios conditional on manual source fit. Absolute dimensions, leaf angles, profiles, AC housing and optical values inferred."
+      },
+      {
+        "index": 3,
+        "sill": 4.76166983289,
+        "lintel": 5.755434863832,
+        "rearZ": -0.68,
+        "leaves": [
+          {
+            "hingeX": 1.2379999999999998,
+            "angleDegrees": 0,
+            "width": 0.7213333333333334,
+            "height": 0.9177650309419999
+          },
+          {
+            "hingeX": 1.9593333333333331,
+            "angleDegrees": 0,
+            "width": 0.7213333333333334,
+            "height": 0.9177650309419999
+          },
+          {
+            "hingeX": 2.6806666666666663,
+            "angleDegrees": 0,
+            "width": 0.7213333333333334,
+            "height": 0.9177650309419999
+          }
+        ],
+        "acCutout": null,
+        "source": "Source-visible rear plaster below glazing, divided green casements and three window ACs",
+        "limits": "Ratios conditional on manual source fit. Absolute dimensions, leaf angles, profiles, AC housing and optical values inferred."
+      },
+      {
+        "index": 4,
+        "sill": 7.8616698328900005,
+        "lintel": 8.855434863832,
+        "rearZ": -0.68,
+        "leaves": [
+          {
+            "hingeX": -3.402,
+            "angleDegrees": 0,
+            "width": 0.7213333333333334,
+            "height": 0.9177650309419999
+          },
+          {
+            "hingeX": -2.6806666666666668,
+            "angleDegrees": 0,
+            "width": 0.7213333333333334,
+            "height": 0.9177650309419999
+          },
+          {
+            "hingeX": -1.9593333333333334,
+            "angleDegrees": 0,
+            "width": 0.7213333333333334,
+            "height": 0.9177650309419999
+          }
+        ],
+        "acCutout": {
+          "x0": -2.4776,
+          "x1": -1.4903999999999997,
+          "y0": 7.877669832890001,
+          "y1": 8.42836529928926
+        },
+        "source": "Source-visible rear plaster below glazing, divided green casements and three window ACs",
+        "limits": "Ratios conditional on manual source fit. Absolute dimensions, leaf angles, profiles, AC housing and optical values inferred."
+      },
+      {
+        "index": 5,
+        "sill": 7.8616698328900005,
+        "lintel": 8.855434863832,
+        "rearZ": -0.68,
+        "leaves": [
+          {
+            "hingeX": 1.2379999999999998,
+            "angleDegrees": 0,
+            "width": 0.7213333333333334,
+            "height": 0.9177650309419999
+          },
+          {
+            "hingeX": 1.9593333333333331,
+            "angleDegrees": 0,
+            "width": 0.7213333333333334,
+            "height": 0.9177650309419999
+          },
+          {
+            "hingeX": 3.4019999999999997,
+            "angleDegrees": -48,
+            "width": 0.7213333333333334,
+            "height": 0.9177650309419999
+          }
+        ],
+        "acCutout": null,
+        "source": "Source-visible rear plaster below glazing, divided green casements and three window ACs",
+        "limits": "Ratios conditional on manual source fit. Absolute dimensions, leaf angles, profiles, AC housing and optical values inferred."
+      }
+    ],
+    "wallConstruction": "Single closed stepped wall boundary with two projecting window stacks, recessed connecting/flank walls, twelve holes and three shallow plaster joints; continuous metre-space UV",
+    "plaster": {
+      "tileMeters": 1.024,
+      "normalScale": 1,
+      "heightPriorMeters": [
+        -0.000451593,
+        0.00054055
+      ],
+      "status": "Original procedural material prior; not a scan of this building"
+    },
+    "lettering": {
+      "words": [
+        {
+          "text": "LAKSHMI",
+          "widthMeters": 2,
+          "heightMeters": 0.27315914489311166,
+          "center": [
+            -2.32,
+            3.27
+          ],
+          "frontZ": 0.0156,
+          "backZ": 0.002
+        },
+        {
+          "text": "APARTMENTS",
+          "widthMeters": 2.42,
+          "heightMeters": 0.2269983686786297,
+          "center": [
+            2.32,
+            3.27
+          ],
+          "frontZ": 0.0156,
+          "backZ": 0.002
+        }
+      ],
+      "depthMeters": 0.012,
+      "bevelMeters": 0.0008,
+      "mountingGapMeters": 0.002,
+      "typeface": "Georgia Bold approximation; exact installed lettering typeface unknown",
+      "limits": "Exact font, size, depth and mounting gap inferred; source shows raised red lettering"
+    },
+    "wayId": 355940221,
+    "removedTriangles": 2,
+    "removedInstances": 30,
+    "width": 12.749730997623121,
+    "height": 9.65,
+    "pose": [
+      -173.42404792858838,
+      0,
+      -193.5632160000045
+    ],
+    "yaw": 1.270299023068605,
+    "openings": [
+      {
+        "x0": -3.44,
+        "x1": -1.1999999999999997,
+        "y0": 0.86,
+        "y1": 2.72,
+        "kind": "window"
+      },
+      {
+        "x0": 1.1999999999999997,
+        "x1": 3.44,
+        "y0": 0.86,
+        "y1": 2.72,
+        "kind": "window"
+      },
+      {
+        "x0": -5.43,
+        "x1": -4.67,
+        "y0": 1.7999999999999998,
+        "y1": 2.2,
+        "kind": "vent"
+      },
+      {
+        "x0": 4.67,
+        "x1": 5.43,
+        "y0": 1.7999999999999998,
+        "y1": 2.2,
+        "kind": "vent"
+      },
+      {
+        "x0": -3.44,
+        "x1": -1.1999999999999997,
+        "y0": 3.96,
+        "y1": 5.82,
+        "kind": "window"
+      },
+      {
+        "x0": 1.1999999999999997,
+        "x1": 3.44,
+        "y0": 3.96,
+        "y1": 5.82,
+        "kind": "window"
+      },
+      {
+        "x0": -5.43,
+        "x1": -4.67,
+        "y0": 4.9,
+        "y1": 5.3,
+        "kind": "vent"
+      },
+      {
+        "x0": 4.67,
+        "x1": 5.43,
+        "y0": 4.9,
+        "y1": 5.3,
+        "kind": "vent"
+      },
+      {
+        "x0": -3.44,
+        "x1": -1.1999999999999997,
+        "y0": 7.0600000000000005,
+        "y1": 8.92,
+        "kind": "window"
+      },
+      {
+        "x0": 1.1999999999999997,
+        "x1": 3.44,
+        "y0": 7.0600000000000005,
+        "y1": 8.92,
+        "kind": "window"
+      },
+      {
+        "x0": -5.43,
+        "x1": -4.67,
+        "y0": 8,
+        "y1": 8.4,
+        "kind": "vent"
+      },
+      {
+        "x0": 4.67,
+        "x1": 5.43,
+        "y0": 8,
+        "y1": 8.4,
+        "kind": "vent"
+      }
+    ],
+    "depth": 0.68,
+    "sourcePhoto": "Vishy Vishy, May 2024; Google photo CIHM0ogKEICAgICThPGJaw, captioned Rams Bridge View but visible lettering LAKSHMI APARTMENTS",
+    "identity": "Separate Lakshmi Apartments map listing at 2/12 Central Avenue, 13.053470,80.229074 lies adjacent to this mapped footprint. Conditional association, not a parcel survey.",
+    "limits": "Photo crops building edges and entrance; three visible window rows modeled within retained 9.65 m inferred shell height. Recess dimensions, colors, outer widths, AC geometry and lettering placement inferred. Ground entrance and unseen sides not reconstructed.",
+    "triangles": 28832
+  },
+  "materials": "Existing Poly Haven CC0 asphalt, concrete and foliage assets; original CC0 plaster normal/pigment/roughness fields at 1.024 m scale; raised lettering from approximate serif outlines",
+  "validation": {
+    "roadSamplesPerViewport": 520,
+    "maximumRoadHeightErrorMeters": 0.00040341895364109925,
+    "buildingCount": 1173,
+    "desktopAndMobileViewport": "Passed",
+    "physicalPhonePerformance": "Not measured",
+    "closedWallInvalidEdges": 0,
+    "wallVolumeErrorCubicMeters": 1.8240300079241933e-06,
+    "maximumFrontUvErrorMeters": 0,
+    "materialMaps": "Three 1024-square linear maps loaded at 1.024 m repeat",
+    "letteringExtentsMeters": {
+      "min": [
+        -3.3208000659942627,
+        3.132620096206665,
+        0.0020000000949949026
+      ],
+      "max": [
+        3.5308010578155518,
+        3.4073798656463623,
+        0.015599999576807022
+      ]
+    },
+    "evidence": "artifacts/central-avenue/revision-3/production/report.json",
+    "rearWindows": {
+      "units": 6,
+      "rearPlasterRays": 18,
+      "ACCutoutRays": 36,
+      "closedCasementVerticesInsideAC": 0,
+      "interiorCeilingChecks": 6,
+      "evidence": "artifacts/central-avenue/revision-3/production-windows/report.json"
+    },
+    "wallProfile": "44 actual geometry rays; zero invalid welded edges; volume 53.2606087 cubic metres agrees with stepped wall and openings",
+    "revision4Evidence": "artifacts/central-avenue/revision-4/production/report.json",
+    "revision5Evidence": [
+      "artifacts/central-avenue/revision-5/production/report.json",
+      "artifacts/central-avenue/encaarpus/revision-1/verified/report.json"
+    ],
+    "encaarpus": "All original world-space roof corners, one target in 1173 records, three open parking rays, twelve window glazing rays, desktop/mobile viewports, zero runtime/shader errors",
+    "revision6Lighting": "artifacts/central-avenue/revision-6/lighting/report.json: desktop/mobile solar radiance integration, actual sun direction, same-eye district restoration, station reference mode, and overcast control",
+    "revision7Evidence": [
+      "artifacts/central-avenue/revision-7/verified/report.json",
+      "artifacts/central-avenue/revision-7/geometry/report.json",
+      "assets/source/encaarpus-occlusion/atlas-check.json",
+      "assets/source/encaarpus-occlusion/ray-check.json"
+    ],
+    "ambientVisibility": "Revision 8 retained: 15 receivers; zero UV overlap/padding collisions; nine independent ray controls, maximum absolute error 0.0424. Runtime AO atlas and UV buffers unchanged in revision 9.",
+    "revision9Evidence": [
+      "artifacts/central-avenue/revision-9/avinash-final/report.json",
+      "artifacts/central-avenue/revision-9/road-verge/check-report.json",
+      "artifacts/central-avenue/revision-9/landmark/report.json"
+    ],
+    "revision10Evidence": [
+      "artifacts/central-avenue/revision-10/road-production/report.json",
+      "artifacts/central-avenue/revision-10/prashanth-production/report.json",
+      "artifacts/central-avenue/revision-10/avinash-production/report.json",
+      "artifacts/central-avenue/revision-10/landmarks/report.json",
+      "artifacts/central-avenue/revision-10/canopy/adaptation-check.json",
+      "artifacts/central-avenue/revision-10/canopy/candidate/report.json"
+    ],
+    "revision11Evidence": [
+      "artifacts/central-avenue/revision-11/avinash-production/report.json",
+      "artifacts/central-avenue/revision-11/prashanth-production/report.json",
+      "artifacts/central-avenue/revision-11/road-production/report.json",
+      "artifacts/central-avenue/revision-11/lighting-production/report.json",
+      "artifacts/central-avenue/revision-11/landmarks/report.json",
+      "artifacts/central-avenue/revision-11/foliage/optics-check.json",
+      "artifacts/central-avenue/revision-11/foliage/geometry-check.json",
+      "artifacts/central-avenue/revision-11/navigation/report.json"
+    ],
+    "revision12": "Production desktop/mobile facade, road/navigation, lighting, van and landmark checks pass; seventeen self-contained GLBs pass structure/normal sanity",
+    "revision13": "All five partial photographed frontages, road/walking, lighting and three landmark links checked in production; geometry/source audits archived under revision13. Seventeen GLBs pass structure/normal-map sanity",
+    "revision14": "Production desktop/mobile Surya, Avinash, road/walking and landmark controls; motorcycle support/collision and load-failure controls; Avinash ambient visibility held after visual corner artifact despite passing ray/direct/emission controls. Eighteen GLBs pass structural checks.",
+    "revision15": "Production desktop/mobile Malles, Avinash, Surya, Prashanth, road/walking, four landmark links, both parked vehicles and yellow-object support;18 GLBs pass structural checks. Malles minimumG+3 supported by gallery photographs; dimensions and finishes remain inferred."
+  },
+  "photographicStatus": "Six partial photo-informed Central Avenue buildings; incomplete and visibly synthetic. Generic neighbors, missing details, inferred geometry/materials and incomplete indirect light remain; no photographic pass.",
+  "renderSampling": {
+    "centralAvenueSceneSamples": 4,
+    "hardwareMaximumApplied": true,
+    "otherDistricts": "Previous zero-sample compositor setting retained",
+    "diagnosticControl": "centralMSAA=0",
+    "localFrameCadence": [
+      {
+        "samples": 0,
+        "medianMs": 16.699999999999818,
+        "p95Ms": 16.800000000000182,
+        "maxMs": 16.800000000000182,
+        "frames": 150
+      },
+      {
+        "samples": 4,
+        "medianMs": 16.699999999999818,
+        "p95Ms": 16.700000000000728,
+        "maxMs": 16.800000000000182,
+        "frames": 150
+      }
+    ],
+    "limits": "Local headless Chrome at 1440 by 1000; not a physical phone or GPU benchmark"
+  },
+  "cameraStudy": {
+    "currentOpeningsRmsPointPixels": 68.387947,
+    "variableProportionsRmsPointPixels": 6.752948,
+    "heldOutMiddleRowRmsPointPixels": 7.142146,
+    "status": "Conditional best fit puts eye below current ground datum; not promoted. Absolute scale, floor assignment and original inferred shell height unresolved."
+  },
+  "encaarpusVilla": {
+    "wayId": 354839754,
+    "revision": 3,
+    "width": 14.051123241200079,
+    "height": 15.52,
+    "heightSource": "Photo: four residential levels over stilt parking; inferred 3.1 m floor pitch and 3.12 m parking slab datum",
+    "observedResidentialRows": 4,
+    "observedStiltParking": true,
+    "sourcePhoto": "Frankleen Seeralan, January 2024, CIHM0ogKEICAgICtsaaHCA",
+    "sourceSha256": "0b02fddb8fcfeeb9b8552d5e12927ffea82ff016f3cf67bb972e8c735dd4bb99",
+    "identity": "Conditional association: visible name + 9/5 Central Avenue listing pin 3.99 m from way 354839754; not cadastral proof",
+    "pose": [
+      -172.2582722185752,
+      0,
+      -128.6747880000604
+    ],
+    "yaw": -1.8757235800530159,
+    "windowChecks": [
+      {
+        "x": -4.175190905956595,
+        "y": 5.46,
+        "z": -0.42,
+        "floor": 0
+      },
+      {
+        "x": -4.175190905956595,
+        "y": 8.559999999999999,
+        "z": -0.42,
+        "floor": 1
+      },
+      {
+        "x": -4.175190905956595,
+        "y": 11.66,
+        "z": -0.37,
+        "floor": 2
+      },
+      {
+        "x": -4.175190905956595,
+        "y": 14.76,
+        "z": -0.37,
+        "floor": 3
+      },
+      {
+        "x": 4.175190905956595,
+        "y": 5.46,
+        "z": -0.42,
+        "floor": 0
+      },
+      {
+        "x": 4.175190905956595,
+        "y": 8.559999999999999,
+        "z": -0.42,
+        "floor": 1
+      },
+      {
+        "x": 4.175190905956595,
+        "y": 11.66,
+        "z": -0.37,
+        "floor": 2
+      },
+      {
+        "x": 4.175190905956595,
+        "y": 14.76,
+        "z": -0.37,
+        "floor": 3
+      },
+      {
+        "x": -1.304747158111436,
+        "y": 5.42,
+        "z": -1.05,
+        "floor": 0
+      },
+      {
+        "x": 1.304747158111436,
+        "y": 5.42,
+        "z": -1.05,
+        "floor": 0
+      },
+      {
+        "x": -1.304747158111436,
+        "y": 8.519999999999998,
+        "z": -1.05,
+        "floor": 1
+      },
+      {
+        "x": 1.304747158111436,
+        "y": 8.519999999999998,
+        "z": -1.05,
+        "floor": 1
+      }
+    ],
+    "semantic": {
+      "mapped floor slab": 2,
+      "unobserved side wall": 3,
+      "unobserved side parapet": 3,
+      "parking column": 8,
+      "parking back wall": 1,
+      "parking floor": 1,
+      "entrance joint bed": 1,
+      "parking lintel": 1,
+      "slab moulding": 2,
+      "masonry": 44,
+      "flank joint": 26,
+      "room back": 16,
+      "room side": 32,
+      "room closure": 32,
+      "window frame": 48,
+      "casement leaf": 258,
+      "metalwork": 1273,
+      "window sill": 8,
+      "window hood": 8,
+      "baluster relief": 10,
+      "upper pier": 2,
+      "pier cap": 8,
+      "curved hood crest": 2,
+      "roof rail": 6,
+      "roof baluster": 14,
+      "AC housing": 12,
+      "AC radiator": 3,
+      "AC grille": 60,
+      "AC support": 12,
+      "recessed doorway": 2,
+      "ornament": 68,
+      "coral horizontal joint": 26,
+      "curved balcony masonry": 19,
+      "balcony door": 2,
+      "name panel": 1,
+      "name emblem": 1,
+      "name lettering": 2,
+      "lettering height 0": 0.28,
+      "lettering height 1": 0.26,
+      "boundary pier": 4,
+      "boundary cap": 4,
+      "gate plate": 6,
+      "gate lower plate": 6,
+      "conduit": 1
+    },
+    "gateZ": 2.9,
+    "limits": "Photo-informed frontage and open parking; floor heights, recesses, paint reflectance, metal sections and gate setback inferred. Plain unseen sides/rear, no measured floor plan, no present-day condition claim, no photorealism pass.",
+    "parkedCar": {
+      "revision": 1,
+      "source": "Frankleen Seeralan January 2024, Google photo CIHM0ogKEICAgICtsaaHCA",
+      "observed": [
+        "White compact hatchback parked rear-facing under central bay",
+        "Dark rear glass, white tailgate, corner rear lamps",
+        "Suzuki emblem visible; model name obscured"
+      ],
+      "identity": "Suzuki-badged compact hatchback class; exact model/year unidentified",
+      "inferred": [
+        "3.43m body length, approximately 1.52m body width, 1.49m roof height",
+        "Pose local x0.20, z-3.55; parking floor55mm",
+        "Wheelbase, wheel size, entire unseen front/sides, cabin, hardware and material response"
+      ],
+      "plate": "Blank; source registration is not reproduced",
+      "license": "CC0 original geometry and materials; no source photograph pixels",
+      "sha256": "b85c46b71aad26e9dcdf135e3ef1103ae3e2ef78381e3d6916558608fe511d23",
+      "bytes": 810860,
+      "triangles": 18800,
+      "limits": "Photo-informed reconstruction of partially occluded vehicle, not a verified model replica or current vehicle presence"
+    },
+    "ambientVisibility": {
+      "enabled": true,
+      "revision": 2,
+      "receivers": 15,
+      "resolution": [
+        2048,
+        2048
+      ],
+      "uvBytes": 1030368,
+      "uvSha256": "9f02202a032a49394374686abf42cc51755396b081da8a032b8ab16884a22313",
+      "atlasSha256": "b250047ed81dc224813e54ba5e608644407d0a31ddccd32667986c8619b8fca0",
+      "scope": "Scalar visibility for indirect illumination only; direct sunlight and shadows remain dynamic",
+      "limits": "Finite-distance local-model AO, not directional sky transport or multiple-bounce GI. Neighboring buildings, vegetation and the wider ground are omitted. Building dimensions and hidden parking/room layout remain inferred."
+    },
+    "triangles": 98404,
+    "meshes": 21,
+    "entranceRevision8": {
+      "status": "Integrated and checked on desktop/mobile; source comparison and remaining limits recorded in revision 8 review artifacts",
+      "sourcePhoto": "Frankleen Seeralan, January 2024, CIHM0ogKEICAgICtsaaHCA",
+      "sourceSha256": "0b02fddb8fcfeeb9b8552d5e12927ffea82ff016f3cf67bb972e8c735dd4bb99",
+      "lettering": {
+        "observed": "Blue bold italic sans upper name, blue four-lobed emblem, red serif lower name",
+        "approximateFonts": {
+          "Kanakadhara's": "Arial Bold Italic",
+          "Encaarpus Villa": "Georgia Bold"
+        },
+        "geometry": "Original approximate emblem and extruded displayed-word outlines with separated name lines; full fonts and source photo pixels are not bundled",
+        "limits": "Exact typeface, curves, colors, placement, size and fabrication dimensions inferred"
+      },
+      "parkedCar": {
+        "asset": "/assets/encaarpus-parked-car.glb",
+        "provenance": "/assets/encaarpus-parked-car.json",
+        "observed": "White compact hatchback parked rear-facing under central bay; dark rear glass, corner lamps and Suzuki emblem",
+        "identity": "Exact model and year unidentified; model name obscured",
+        "limits": "Dimensions, pose, hidden front/sides, cabin and material response inferred; not confirmation of current vehicle presence",
+        "plate": "Blank; source registration not reproduced"
+      },
+      "gate": {
+        "observed": "Clear vertical inner strips, largely rectangular opaque panels with narrow diagonal cutouts descending toward each bay center, gold rods/rings and lower horizontal bars",
+        "implementation": "Inferred 0.43 m inner strips, corrected diagonal panel openings and gold ornaments, three lower rail spaces; frame proportions and pose inferred",
+        "limits": "Opening width, frame fabrication and pose are not measured"
+      },
+      "paving": {
+        "observed": "Grey irregular jointed entrance paving",
+        "implementation": "252 original bounded irregular polygons over a joint bed; top local Y 0.055 m; nominal joint prior 0.008 m",
+        "limits": "Polygon layout, unit sizes, joints, bevels and pigment inferred; stone product and surveyed layout unidentified"
+      },
+      "distribution": "Original geometry/materials; private reference images and inspection crops remain outside public assets"
+    }
+  },
+  "canopyStudy": {
+    "revision": 5,
+    "placements": [
+      {
+        "stationMeters": 12,
+        "lateralMeters": 4.35,
+        "scale": [
+          0.88,
+          0.79,
+          0.86
+        ],
+        "rotationY": 3.7199999999999998
+      },
+      {
+        "stationMeters": 39,
+        "lateralMeters": -4.35,
+        "scale": [
+          0.98,
+          0.85,
+          0.96
+        ],
+        "rotationY": 12.09
+      },
+      {
+        "stationMeters": 62,
+        "lateralMeters": 4.4,
+        "scale": [
+          1.06,
+          0.86,
+          1.04
+        ],
+        "rotationY": 19.22
+      },
+      {
+        "stationMeters": 65,
+        "lateralMeters": 4.35,
+        "scale": [
+          1.1,
+          0.89,
+          1.04
+        ],
+        "rotationY": 20.15
+      },
+      {
+        "stationMeters": 72,
+        "lateralMeters": -4.45,
+        "scale": [
+          1.07,
+          0.92,
+          1.08
+        ],
+        "rotationY": 22.32
+      },
+      {
+        "stationMeters": 83,
+        "lateralMeters": 4.35,
+        "scale": [
+          1.03,
+          0.85,
+          1.1
+        ],
+        "rotationY": 25.73
+      },
+      {
+        "stationMeters": 94,
+        "lateralMeters": -4.4,
+        "scale": [
+          1.08,
+          0.9,
+          1.04
+        ],
+        "rotationY": 29.14
+      },
+      {
+        "stationMeters": 105,
+        "lateralMeters": 4.45,
+        "scale": [
+          1.1,
+          0.94,
+          1.06
+        ],
+        "rotationY": 32.55
+      },
+      {
+        "stationMeters": 116,
+        "lateralMeters": -4.35,
+        "scale": [
+          1.04,
+          0.86,
+          1.09
+        ],
+        "rotationY": 35.96
+      },
+      {
+        "stationMeters": 127,
+        "lateralMeters": 4.4,
+        "scale": [
+          1.06,
+          0.9,
+          1.02
+        ],
+        "rotationY": 39.37
+      },
+      {
+        "stationMeters": 138,
+        "lateralMeters": -4.4,
+        "scale": [
+          1,
+          0.85,
+          1.04
+        ],
+        "rotationY": 42.78
+      },
+      {
+        "stationMeters": 149,
+        "lateralMeters": 4.35,
+        "scale": [
+          1.05,
+          0.88,
+          1.02
+        ],
+        "rotationY": 46.19
+      },
+      {
+        "stationMeters": 161,
+        "lateralMeters": -4.35,
+        "scale": [
+          0.98,
+          0.84,
+          0.97
+        ],
+        "rotationY": 49.91
+      },
+      {
+        "stationMeters": 181,
+        "lateralMeters": 4.35,
+        "scale": [
+          0.94,
+          0.82,
+          0.96
+        ],
+        "rotationY": 56.11
+      },
+      {
+        "stationMeters": 201,
+        "lateralMeters": 4.35,
+        "scale": [
+          0.89,
+          0.8,
+          0.91
+        ],
+        "rotationY": 62.31
+      }
+    ],
+    "treeCount": 15,
+    "triangles": 769080,
+    "drawObjects": 9,
+    "asset": "/assets/station-broadleaf.glb",
+    "assetAttribution": "/assets/station-broadleaf.attribution.json",
+    "observed": "Broad crowns overlap above the street around Prashanth and Avinash; exposed branching and gaps remain visible beneath the foliage.",
+    "source": {
+      "panorama": "Vu0xhoBfuQb7XsmcWslizA",
+      "views": [
+        "900\u00d7600 street-context thumbnail",
+        "Prashanth east-facing entrance view",
+        "Prashanth upper frontage view",
+        "Closer Prashanth entrance view, trunk left of the name and a second farther north"
+      ],
+      "captureDate": "Unknown"
+    },
+    "inferred": "Tree count, planting stations, side offsets, crown dimensions, branch architecture and species. Existing original broadleaf asset is a morphology proxy, not an identified local tree species.",
+    "rendering": "Three spatial sections; instanced Central-only finer foliage geometry with thin-leaf material copies. No new image assets or source photograph pixels.",
+    "foliageOptics": {
+      "pigment": "Restored original CC0 donor color before its station-specific gray tint",
+      "transmission": "Bounded opposite-side diffuse response; inferred transmission/reflection ratio .6",
+      "unchanged": "Alpha cutout, normal textures, roughness, specular response and global daylight"
+    },
+    "foliageMorphology": {
+      "spraysPerDonorPatch": 2,
+      "sprayWidthScale": 0.62,
+      "sprayLengthScale": 0.8,
+      "leafWidthScale": 0.75,
+      "leafLengthScale": 0.7,
+      "leafTriangles": 2,
+      "source": "Fine irregular foliage in Prashanth entrance views; dimensions and arrangement inferred",
+      "geometry": "Central-only copies; original donor retained. Smaller normal-mapped leaf quads fund two smaller bent sprays per original patch; centers and broad crown envelope retained"
+    },
+    "trunkAdaptation": {
+      "radialFactor": 0.55,
+      "fullStrengthBelowDonorMeters": 2.5,
+      "unchangedAboveDonorMeters": 5.5,
+      "blend": "Smooth cubic interpolation; donor heights then receive each planting height scale",
+      "source": "Slender exposed stems below broad crowns in the Prashanth entrance views",
+      "geometry": "Central-only bark copy; Triangle geometry and UVs preserved; angle-weighted normals welded across attribute seams with local splits at folded twig corners; derivative tangent frame used; original station asset and upper branch geometry unchanged",
+      "dimensions": "Radial ratio and transition heights inferred, not measured trunk diameters"
+    },
+    "limits": "A canopy composition study, not a tree survey or calibrated camera match. Foreground crown overlap is source-supported; exact planting rhythm farther along the street is inferred. No photorealism pass."
+  },
+  "enclosures": "Generic hypotheses except conditional Encaarpus, Avinash and Prashanth boundaries; their generic enclosures are omitted.",
+  "lighting": {
+    "source": "https://polyhaven.com/a/kloofendal_38d_partly_cloudy_puresky",
+    "license": "CC0",
+    "authors": [
+      "Greg Zaal",
+      "Jarod Guest"
+    ],
+    "size": [
+      2048,
+      1024
+    ],
+    "peakPixel": [
+      1228,
+      296
+    ],
+    "rawDirection": [
+      0.6389751469702574,
+      0.6140215589310385,
+      0.4633446737820941
+    ],
+    "direction": [
+      -0.6480927041221514,
+      0.6140215589310385,
+      0.45050346506051975
+    ],
+    "rotationY": -1.906749913356918,
+    "solarRadiusDegrees": 3,
+    "backgroundAnnulusDegrees": [
+      3,
+      5
+    ],
+    "solarPixels": 1159,
+    "annulusRGB": [
+      8.376515742963456,
+      7.433257540479142,
+      6.413864362552977
+    ],
+    "removedIntegratedRGB": [
+      2.88033352616514,
+      2.729913223595016,
+      2.4473780485104846
+    ],
+    "lightIntensity": 2.88033352616514,
+    "lightColor": [
+      1,
+      0.947776776125509,
+      0.8496856444846892
+    ],
+    "limits": "Illustrative sky, not captured in Chennai. Azimuth inferred from facade shadows; solar elevation comes from this HDR, not a calibrated date or time. A 3-degree solar/halo core is approximated by a directional light; indirect occlusion and bounce remain incomplete.",
+    "environmentIntensity": 1,
+    "backgroundIntensity": 1,
+    "hemisphereIntensity": 0,
+    "exposure": 0.9,
+    "controlQuery": "centralLighting=overcast",
+    "stationBehavior": "Station, High Road, colony and Govindam restore the prior overcast lighting"
+  },
+  "shadowStudy": {
+    "centralCloseDepthBias": -0.0002,
+    "normalBiasMeters": 0.02,
+    "evidence": "Controlled AO-disabled captures isolate shadow acne from material maps; revised depth bias removes diagonal paving bands and preserves contact in tested views",
+    "limits": "Tested car, parking-column and Lakshmi views only; other view/sun conditions may still expose artifacts"
+  },
+  "avinashApartments": {
+    "wayId": 354839974,
+    "revision": 7,
+    "roofMasonryTop": 12.200000000000001,
+    "entryReveal": {
+      "frontZ": -0.2,
+      "backZ": -1.32,
+      "curveSegments": 10
+    },
+    "wallJoin": {
+      "outer": [
+        -8.62275173744186,
+        0,
+        0
+      ],
+      "inner": [
+        -8.422662362049122,
+        0,
+        -0.2
+      ],
+      "wallDepth": 0.2,
+      "wallTop": 12.200000000000001,
+      "pieces": [
+        {
+          "kind": "source south perforated wall",
+          "startVertex": 2784,
+          "vertexCount": 567,
+          "removedTriangles": 2
+        },
+        {
+          "kind": "perforated front wall",
+          "startVertex": 3351,
+          "vertexCount": 1167,
+          "removedTriangles": 2
+        }
+      ],
+      "method": "Mitered front/south masonry envelope; internal endcaps removed; exact mapped exterior corner retained"
+    },
+    "redFacing": {
+      "revision": 1,
+      "source": "Avinash alternate corner photograph and 900\u00d7600 Prashanth context view show red rectangular surface units with pale horizontal and offset vertical joints",
+      "sourceHashes": [
+        "2d35b04f17f1193820473500dee4be1fefd88a6644cbf13364dafb382bf2d96e",
+        "1da40acae2dc148579c94ef423b2bfbf2612ffafa0d79d7d2880d2b29b8de3c8"
+      ],
+      "band": {
+        "x0": -0.3200000644784315,
+        "x1": 0.5600001128372551,
+        "y0": 3.1,
+        "y1": 12.4,
+        "faceZ": 0.032,
+        "mortarZ": 0.026,
+        "backZ": 0.023
+      },
+      "pitch": [
+        0.22000004432892165,
+        0.073
+      ],
+      "jointWidth": 0.006,
+      "bevel": 0.0012,
+      "units": 576,
+      "limits": "Visible unit pattern only; brick versus ceramic facing, stagger, metric dimensions, pigment, microrelief and joints inferred. Original band envelope and wall pose retained; no inscription reconstructed."
+    },
+    "width": 17.24550347488372,
+    "height": 12.4,
+    "heightSource": "Photograph: three upper balcony rows above ground; inferred 3.1 m storey pitch, not a measured height",
+    "sourcePano": "jA1SRlYEzW_-i3dxbqIi3A",
+    "sourceSha256": "229abb2cf039a4e4dd3288adc152269e765ffceb76f20f5d51619adf3d5fbd1b",
+    "captureDate": "Unknown; copyright year does not date the photograph",
+    "association": "Conditional visible AVINASH APARTMENTS name and matching listing/Gazette address; listing pin 0.777 m outside unnamed OSM way 354839974",
+    "observedUpperBalconies": 3,
+    "balconyStacks": 2,
+    "alternateSourceSha256": "2d35b04f17f1193820473500dee4be1fefd88a6644cbf13364dafb382bf2d96e",
+    "frontEdge": [
+      1,
+      2
+    ],
+    "pose": [
+      -195.6280085416605,
+      0,
+      -119.76918800010094
+    ],
+    "yaw": 1.2621984198216085,
+    "semantic": {
+      "mapped slab": 2,
+      "unobserved side wall": 2,
+      "unobserved parapet": 3,
+      "south recess back": 9,
+      "south reveal": 36,
+      "south glazing": 9,
+      "south casement": 54,
+      "south window hood": 9,
+      "south window fin": 27,
+      "south fin blue edge": 27,
+      "source south perforated wall": 1,
+      "perforated front wall": 1,
+      "recess back": 19,
+      "recess jamb": 36,
+      "recess sill": 19,
+      "recess ceiling": 18,
+      "balcony slab": 6,
+      "balcony blue edge": 6,
+      "balcony parapet": 6,
+      "balcony side return": 12,
+      "rounded balcony surround": 6,
+      "green rounded bowed perimeter": 1,
+      "green vertical bar": 25,
+      "green bowed crossrail": 2,
+      "green broad swept ornament": 3,
+      "green right upper rail": 1,
+      "green mounting pad": 4,
+      "green mounting arm": 4,
+      "glazing": 15,
+      "casement stile": 45,
+      "casement rail": 45,
+      "balcony doorway": 6,
+      "metalwork": 153,
+      "diamond grille": 289,
+      "window sunshade": 6,
+      "window vertical fin": 18,
+      "fin blue edge": 18,
+      "vent louvre": 18,
+      "red facing mortar bed": 1,
+      "red rectangular facing units": 1,
+      "upper balcony blue screening": 1,
+      "screen top support": 1,
+      "screen pale binding": 5,
+      "AC cabinet": 1,
+      "AC fan shadow": 1,
+      "AC fan guard ring": 3,
+      "AC fan guard spoke": 8,
+      "AC side vents": 7,
+      "AC support bracket": 2,
+      "AC wall bracket": 2,
+      "AC bracket lower edge": 2,
+      "AC short service line": 2,
+      "curved entry reveal": 1,
+      "entry door": 1,
+      "entry door rails": 13,
+      "balcony roof slab": 2,
+      "front roof parapet": 2,
+      "blue parapet band": 4,
+      "left roof guard rail": 2,
+      "left roof guard picket": 22,
+      "south roof guard rail": 2,
+      "south roof guard picket": 11,
+      "balcony edge stripe": 2,
+      "boundary surround": 2,
+      "rounded boundary infill": 2,
+      "gate pier": 4,
+      "vehicle gate band rail": 2,
+      "name lettering": 1
+    },
+    "windowChecks": [
+      {
+        "x": -7.042001418928483,
+        "y": 4.918,
+        "z": -1.595
+      },
+      {
+        "x": -7.042001418928483,
+        "y": 8.018,
+        "z": -1.595
+      },
+      {
+        "x": -7.042001418928483,
+        "y": 11.118,
+        "z": -1.595
+      },
+      {
+        "x": 5.908001190433041,
+        "y": 4.918,
+        "z": -1.595
+      },
+      {
+        "x": 5.908001190433041,
+        "y": 8.018,
+        "z": -1.595
+      },
+      {
+        "x": 5.908001190433041,
+        "y": 11.118,
+        "z": -1.595
+      },
+      {
+        "x": -2.9912006027121385,
+        "y": 5.0680000000000005,
+        "z": -0.5850000000000001
+      },
+      {
+        "x": 1.728800348344726,
+        "y": 5.0680000000000005,
+        "z": -0.5850000000000001
+      },
+      {
+        "x": -2.9912006027121385,
+        "y": 8.168,
+        "z": -0.5850000000000001
+      },
+      {
+        "x": 1.728800348344726,
+        "y": 8.168,
+        "z": -0.5850000000000001
+      },
+      {
+        "x": -2.9912006027121385,
+        "y": 11.268,
+        "z": -0.5850000000000001
+      },
+      {
+        "x": 1.728800348344726,
+        "y": 11.268,
+        "z": -0.5850000000000001
+      },
+      {
+        "x": -2.896400583610403,
+        "y": 1.9285,
+        "z": -0.48500000000000004
+      },
+      {
+        "x": 1.8036003634165594,
+        "y": 1.9285,
+        "z": -0.48500000000000004
+      },
+      {
+        "x": 4.403600887303815,
+        "y": 1.9285,
+        "z": -0.48500000000000004
+      }
+    ],
+    "sideWindowChecks": [
+      {
+        "point": [
+          -8.027251788878766,
+          5.0545,
+          -12.31014068223991
+        ],
+        "normal": [
+          -0.9999999001951001,
+          0,
+          -0.00044677711418967956
+        ]
+      },
+      {
+        "point": [
+          -8.02926228589262,
+          5.0545,
+          -7.81014113136196
+        ],
+        "normal": [
+          -0.9999999001951001,
+          0,
+          -0.00044677711418967956
+        ]
+      },
+      {
+        "point": [
+          -8.031272782906473,
+          5.0545,
+          -3.31014158048401
+        ],
+        "normal": [
+          -0.9999999001951001,
+          0,
+          -0.00044677711418967956
+        ]
+      },
+      {
+        "point": [
+          -8.027251788878766,
+          8.1545,
+          -12.31014068223991
+        ],
+        "normal": [
+          -0.9999999001951001,
+          0,
+          -0.00044677711418967956
+        ]
+      },
+      {
+        "point": [
+          -8.02926228589262,
+          8.1545,
+          -7.81014113136196
+        ],
+        "normal": [
+          -0.9999999001951001,
+          0,
+          -0.00044677711418967956
+        ]
+      },
+      {
+        "point": [
+          -8.031272782906473,
+          8.1545,
+          -3.31014158048401
+        ],
+        "normal": [
+          -0.9999999001951001,
+          0,
+          -0.00044677711418967956
+        ]
+      },
+      {
+        "point": [
+          -8.027251788878766,
+          11.2545,
+          -12.31014068223991
+        ],
+        "normal": [
+          -0.9999999001951001,
+          0,
+          -0.00044677711418967956
+        ]
+      },
+      {
+        "point": [
+          -8.02926228589262,
+          11.2545,
+          -7.81014113136196
+        ],
+        "normal": [
+          -0.9999999001951001,
+          0,
+          -0.00044677711418967956
+        ]
+      },
+      {
+        "point": [
+          -8.031272782906473,
+          11.2545,
+          -3.31014158048401
+        ],
+        "normal": [
+          -0.9999999001951001,
+          0,
+          -0.00044677711418967956
+        ]
+      }
+    ],
+    "greenGrille": {
+      "xExtent": [
+        -8.115001635132721,
+        -4.385000883556006
+      ],
+      "yExtent": [
+        3.75,
+        5.64
+      ],
+      "baseZ": 0.99,
+      "bow": 0.28,
+      "maximumCenterZ": 1.27,
+      "surroundFrontZ": 0.925,
+      "frameRadius": 0.016,
+      "cornerRadius": 0.16,
+      "broadSweeps": 3,
+      "verticalBars": 25,
+      "parts": [
+        {
+          "kind": "green rounded bowed perimeter",
+          "startVertex": 0,
+          "vertexCount": 5760
+        },
+        {
+          "kind": "green vertical bar",
+          "startVertex": 5760,
+          "vertexCount": 72
+        },
+        {
+          "kind": "green vertical bar",
+          "startVertex": 5832,
+          "vertexCount": 72
+        },
+        {
+          "kind": "green vertical bar",
+          "startVertex": 5904,
+          "vertexCount": 72
+        },
+        {
+          "kind": "green vertical bar",
+          "startVertex": 5976,
+          "vertexCount": 72
+        },
+        {
+          "kind": "green vertical bar",
+          "startVertex": 6048,
+          "vertexCount": 72
+        },
+        {
+          "kind": "green vertical bar",
+          "startVertex": 6120,
+          "vertexCount": 72
+        },
+        {
+          "kind": "green vertical bar",
+          "startVertex": 6192,
+          "vertexCount": 72
+        },
+        {
+          "kind": "green vertical bar",
+          "startVertex": 6264,
+          "vertexCount": 72
+        },
+        {
+          "kind": "green vertical bar",
+          "startVertex": 6336,
+          "vertexCount": 72
+        },
+        {
+          "kind": "green vertical bar",
+          "startVertex": 6408,
+          "vertexCount": 72
+        },
+        {
+          "kind": "green vertical bar",
+          "startVertex": 6480,
+          "vertexCount": 72
+        },
+        {
+          "kind": "green vertical bar",
+          "startVertex": 6552,
+          "vertexCount": 72
+        },
+        {
+          "kind": "green vertical bar",
+          "startVertex": 6624,
+          "vertexCount": 72
+        },
+        {
+          "kind": "green vertical bar",
+          "startVertex": 6696,
+          "vertexCount": 72
+        },
+        {
+          "kind": "green vertical bar",
+          "startVertex": 6768,
+          "vertexCount": 72
+        },
+        {
+          "kind": "green vertical bar",
+          "startVertex": 6840,
+          "vertexCount": 72
+        },
+        {
+          "kind": "green vertical bar",
+          "startVertex": 6912,
+          "vertexCount": 72
+        },
+        {
+          "kind": "green vertical bar",
+          "startVertex": 6984,
+          "vertexCount": 72
+        },
+        {
+          "kind": "green vertical bar",
+          "startVertex": 7056,
+          "vertexCount": 72
+        },
+        {
+          "kind": "green vertical bar",
+          "startVertex": 7128,
+          "vertexCount": 72
+        },
+        {
+          "kind": "green vertical bar",
+          "startVertex": 7200,
+          "vertexCount": 72
+        },
+        {
+          "kind": "green vertical bar",
+          "startVertex": 7272,
+          "vertexCount": 72
+        },
+        {
+          "kind": "green vertical bar",
+          "startVertex": 7344,
+          "vertexCount": 72
+        },
+        {
+          "kind": "green vertical bar",
+          "startVertex": 7416,
+          "vertexCount": 72
+        },
+        {
+          "kind": "green vertical bar",
+          "startVertex": 7488,
+          "vertexCount": 72
+        },
+        {
+          "kind": "green bowed crossrail",
+          "startVertex": 7560,
+          "vertexCount": 1728
+        },
+        {
+          "kind": "green bowed crossrail",
+          "startVertex": 9288,
+          "vertexCount": 1728
+        },
+        {
+          "kind": "green broad swept ornament",
+          "startVertex": 11016,
+          "vertexCount": 1728
+        },
+        {
+          "kind": "green broad swept ornament",
+          "startVertex": 12744,
+          "vertexCount": 1728
+        },
+        {
+          "kind": "green broad swept ornament",
+          "startVertex": 14472,
+          "vertexCount": 1728
+        },
+        {
+          "kind": "green right upper rail",
+          "startVertex": 16200,
+          "vertexCount": 1728
+        },
+        {
+          "kind": "green mounting pad",
+          "startVertex": 17928,
+          "vertexCount": 36
+        },
+        {
+          "kind": "green mounting arm",
+          "startVertex": 17964,
+          "vertexCount": 72
+        },
+        {
+          "kind": "green mounting pad",
+          "startVertex": 18036,
+          "vertexCount": 36
+        },
+        {
+          "kind": "green mounting arm",
+          "startVertex": 18072,
+          "vertexCount": 72
+        },
+        {
+          "kind": "green mounting pad",
+          "startVertex": 18144,
+          "vertexCount": 36
+        },
+        {
+          "kind": "green mounting arm",
+          "startVertex": 18180,
+          "vertexCount": 72
+        },
+        {
+          "kind": "green mounting pad",
+          "startVertex": 18252,
+          "vertexCount": 36
+        },
+        {
+          "kind": "green mounting arm",
+          "startVertex": 18288,
+          "vertexCount": 72
+        }
+      ],
+      "limits": "Only lowest left enclosure. Bow, corner radius, swept motif curves, member sections, spacing and mounts inferred from uncalibrated photographs; not a fabrication survey."
+    },
+    "balconyScreen": {
+      "xExtent": [
+        -8.060001624050493,
+        -4.440000894638238
+      ],
+      "yExtent": [
+        10.785,
+        11.82
+      ],
+      "depthExtent": [
+        0.879,
+        0.922
+      ],
+      "limits": "Blue upper-half screening and pale bindings visible in the alternate corner source; movable condition, fabric, folds, support, dimensions and depth inferred. No capture-date match claimed."
+    },
+    "condenser": {
+      "center": [
+        -7.2800014668843165,
+        2.6
+      ],
+      "backZ": 0.06,
+      "frontZ": 0.4,
+      "width": 0.9400001894053924,
+      "height": 0.57,
+      "limits": "Cabinet beneath left balcony observed in alternate corner source; dimensions, fan layout, bracket sections and short service-line routing inferred. No brand or exact equipment identification."
+    },
+    "gateZ": 4.3,
+    "roofGuard": {
+      "bottom": 13.06,
+      "top": 13.44,
+      "frontZ": 0.89,
+      "frontExtent": [
+        -8.265001665356987,
+        -4.235000853331741
+      ],
+      "southReturnLength": 1.88,
+      "limits": "Source-visible left tower front and short south return only; height, sections, spacing and unresolved corner junction inferred"
+    },
+    "vehicleGateBands": {
+      "verticalExtent": [
+        0.14,
+        1.41
+      ],
+      "diamondExtent": [
+        0.5,
+        1.09
+      ],
+      "limits": "Central diamond band observed in corner source; exact band heights and bar spacing inferred; pedestrian gate unchanged"
+    },
+    "limits": "Two-angle visible frontage study; floor heights, bay widths, setback, construction and materials inferred. Alternate view establishes the red front band, second balcony stack, left roof guard and vehicle gate band relationships; foliage and van still hide portions. South upper finned windows are photo-informed; remaining rear/north walls plain. Green grille bow and broad ornament are source-informed approximations; exact fabrication and roof guard corner junction unresolved. Upper-left blue screening and outdoor AC cabinet follow visible corner-source details; movable screen state, equipment construction and dimensions inferred. No calibrated camera or photorealism pass.",
+    "ambientVisibility": {
+      "enabled": true,
+      "revision": 2,
+      "receivers": 7,
+      "resolution": [
+        2048,
+        2048
+      ],
+      "radiusMeters": 4,
+      "uvSha256": "602a894b4e57eb7244d7726d824ab94a670f5fea4636dabc13160040cf95fd64",
+      "atlasSha256": "1056fcdc7adbc613f9f3821fe3d60217ca8a82804bba672e3f4b9a11ca91361c",
+      "scope": "Scalar visibility for indirect illumination only; direct sunlight and shadows remain dynamic",
+      "limits": "Finite-distance local-model AO, not directional sky transport or multiple-bounce GI. Neighboring buildings, vegetation and the wider ground are omitted. Building dimensions and hidden room layout remain inferred."
+    },
+    "triangles": 41704,
+    "meshes": 14,
+    "hardstanding": {
+      "revision": 1,
+      "backY": 0.055,
+      "gateY": 0.005,
+      "gateZ": 4.3,
+      "baseY": -0.095,
+      "shoulderSeam": [
+        [
+          -8.62275173744186,
+          -0.0430000014603138,
+          5.886884165257986
+        ],
+        [
+          -8.224281950119966,
+          -0.0430000014603138,
+          5.910861824325991
+        ],
+        [
+          -7.72513617179208,
+          -0.0430000014603138,
+          5.9211213418742545
+        ],
+        [
+          -7.226380132295979,
+          -0.0430000014603138,
+          5.908731275743463
+        ],
+        [
+          -6.7279512208833125,
+          -0.0430000014603138,
+          5.877002859216731
+        ],
+        [
+          -6.229722621251888,
+          -0.0430000014603138,
+          5.834271692748899
+        ],
+        [
+          -5.731489483191638,
+          -0.0430000014603138,
+          5.791378926026056
+        ],
+        [
+          -5.233095684934263,
+          -0.0430000014603138,
+          5.7582843829828505
+        ],
+        [
+          -4.734413466462307,
+          -0.0430000014603138,
+          5.741417536768836
+        ],
+        [
+          -4.235432156112658,
+          -0.0430000014603138,
+          5.742168320762545
+        ],
+        [
+          -3.7361918270320373,
+          -0.0430000014603138,
+          5.757346439881331
+        ],
+        [
+          -3.236812778218244,
+          -0.0430000014603138,
+          5.780872380200975
+        ],
+        [
+          -2.737404327920828,
+          -0.0430000014603138,
+          5.806198682224789
+        ],
+        [
+          -2.238040489198987,
+          -0.0430000014603138,
+          5.82849628942094
+        ],
+        [
+          -1.7387772969716622,
+          -0.0430000014603138,
+          5.8456049773371035
+        ],
+        [
+          -1.2395868485431762,
+          -0.0430000014603138,
+          5.857788112013225
+        ],
+        [
+          -0.7404677411431138,
+          -0.0430000014603138,
+          5.866406550889167
+        ],
+        [
+          -0.24139568782184284,
+          -0.0430000014603138,
+          5.8723654265785115
+        ],
+        [
+          0.25762765809015775,
+          -0.0430000014603138,
+          5.8750566828924775
+        ],
+        [
+          0.756552261398177,
+          -0.0430000014603138,
+          5.8724142748639565
+        ],
+        [
+          1.2553444327498653,
+          -0.0430000014603138,
+          5.86204663979251
+        ],
+        [
+          1.753986423532531,
+          -0.0430000014603138,
+          5.842918437971434
+        ],
+        [
+          2.2525057313392054,
+          -0.0430000014603138,
+          5.816974776167314
+        ],
+        [
+          2.7510017334040455,
+          -0.0430000014603138,
+          5.789501070368516
+        ],
+        [
+          3.24960359251493,
+          -0.0430000014603138,
+          5.768287651164627
+        ],
+        [
+          3.7484584706325066,
+          -0.0430000014603138,
+          5.761407387600599
+        ],
+        [
+          4.247657302763457,
+          -0.0430000014603138,
+          5.774420647820676
+        ],
+        [
+          4.747213741686778,
+          -0.0430000014603138,
+          5.808123846983847
+        ],
+        [
+          5.2470418709122555,
+          -0.0430000014603138,
+          5.857675707812376
+        ],
+        [
+          5.74698176089052,
+          -0.0430000014603138,
+          5.913405896496641
+        ],
+        [
+          6.246825985398232,
+          -0.0430000014603138,
+          5.963385040843235
+        ],
+        [
+          6.746369694225308,
+          -0.0430000014603138,
+          5.996771991165957
+        ],
+        [
+          7.245518011073948,
+          -0.0430000014603138,
+          6.006838515297517
+        ],
+        [
+          7.744246014364322,
+          -0.0430000014603138,
+          5.992727728978508
+        ],
+        [
+          8.242642255124913,
+          -0.0430000014603138,
+          5.959264054294323
+        ],
+        [
+          8.62275173744186,
+          -0.0430000014603138,
+          5.9256290227875095
+        ]
+      ],
+      "sourcePositionSha256": "ed21756f3445a7701752547268c0aa1839b52cf0a4a4863c1b6ad68682d4214e",
+      "source": "Private Avinash west view shows worn continuous grey/brown apron beneath the parked motorcycle and through the gate",
+      "sourceSha256": "9454a6e8e1ad98ee3fe917cdeb6d47be95d6808a4d21888e1489fb1b83fcb909",
+      "limits": "Frontage width and existing boundary retained; paving extent, grade, material, scale and construction inferred. Outer edge copies actual generated shoulder vertices, not a surveyed paving line. No new kerb, utility function or hidden side/rear paving asserted."
+    }
+  },
+  "roadVerge": {
+    "source": "Private Prashanth street-context thumbnail Vu0xhoBfuQb7XsmcWslizA shows dusty irregular unkerbed road edges; capture date and camera unknown",
+    "nominalWidth": 1.18,
+    "widthVariation": 0.26,
+    "innerY": 0.035,
+    "outerY": -0.043,
+    "appearance": "Original dust pigment treatment with CC0 concrete scan variation; no source photo pixels",
+    "limits": "Widths, edge variation, slopes and pigment are visual hypotheses, not a surveyed cross section. Mapped centerline and walkable asphalt core unchanged."
+  },
+  "genericEnclosureExclusions": [
+    354839754,
+    354839974,
+    354840171,
+    354840134,
+    354839651
+  ],
+  "indirectLightingStudy": {
+    "status": "Private prototype only; visible mottling prevents production use",
+    "evidence": "artifacts/central-avenue/revision-9/indirect-study/final-review.json",
+    "limits": "Ground and neighbor snapshot predates current Avinash/shoulder integration; no current-scene GI claim"
+  },
+  "prashanthApartments": {
+    "wayId": 354840171,
+    "revision": 3,
+    "ground": {
+      "revision": 1,
+      "courtyardBackY": 0.055,
+      "gateY": 0.015,
+      "gateZ": 8.35,
+      "baseY": -0.065,
+      "source": "Private Prashanth entrance view: worn continuous-looking grey/brown hardstanding; no measured paving grid or grade",
+      "shoulderSeam": [
+        [
+          -0.6,
+          -0.0430000014603138,
+          9.315365637416692
+        ],
+        [
+          -0.4789517624355284,
+          -0.0430000014603138,
+          9.323113706805941
+        ],
+        [
+          0.020530857865402652,
+          -0.0430000014603138,
+          9.36345740102098
+        ],
+        [
+          0.5200046419662598,
+          -0.0430000014603138,
+          9.402476221524438
+        ],
+        [
+          1.0193056912643144,
+          -0.0430000014603138,
+          9.429376555370254
+        ],
+        [
+          1.518334015149911,
+          -0.0430000014603138,
+          9.435424144431494
+        ],
+        [
+          2.017019437869621,
+          -0.0430000014603138,
+          9.41665810276615
+        ],
+        [
+          2.515402392790122,
+          -0.0430000014603138,
+          9.375241143891543
+        ],
+        [
+          3.01358718687559,
+          -0.0430000014603138,
+          9.31880245666295
+        ],
+        [
+          3.511714244102393,
+          -0.0430000014603138,
+          9.258239012724488
+        ],
+        [
+          4.00993020789425,
+          -0.0430000014603138,
+          9.204365848336352
+        ],
+        [
+          4.508336923640734,
+          -0.0430000014603138,
+          9.164956889006362
+        ],
+        [
+          4.75,
+          -0.0430000014603138,
+          9.154201274605356
+        ]
+      ],
+      "stepLevels": [
+        0.1425,
+        0.23
+      ],
+      "stepRun": [
+        0,
+        0.32,
+        0.62
+      ],
+      "material": {
+        "source": "Existing Poly Haven CC0 concrete scan for relative wear/relief/roughness",
+        "repeatMeters": 2,
+        "pigmentLinear": [
+          0.22,
+          0.215,
+          0.2
+        ],
+        "scanMeanLuminance": 0.0936721751,
+        "limits": "Pigment, scale and optical response inferred; no source-photo color calibration"
+      },
+      "limits": "Courtyard extent uses the existing inferred boundary, not a parcel survey. Elevations, grade, apron, concrete product, step count and dimensions inferred. Apron copies the current shoulder outer-edge polyline; no asphalt geometry changes."
+    },
+    "width": 11.167901620928152,
+    "height": 9.65,
+    "heightSource": "Photographs establish ground and at least two upper levels; inferred 3.1 m storey pitch plus 0.35 m roof allowance, not measured height",
+    "frontEdge": [
+      3,
+      0
+    ],
+    "pose": [
+      -174.13435777993118,
+      0,
+      -111.81537399999272
+    ],
+    "yaw": -1.875541255416615,
+    "gateZ": 8.35,
+    "gateLeft": -0.6,
+    "gateRight": 4.75,
+    "openings": [
+      {
+        "id": "ground-left",
+        "x": -4.45,
+        "y": 1.25,
+        "w": 0.8,
+        "h": 0.85,
+        "z": -0.35,
+        "kind": "window"
+      },
+      {
+        "id": "ground-middle",
+        "x": -2.05,
+        "y": 1.3,
+        "w": 0.65,
+        "h": 0.8,
+        "z": -0.35,
+        "kind": "window"
+      },
+      {
+        "id": "ground-right",
+        "x": 2.9,
+        "y": 1.35,
+        "w": 0.7,
+        "h": 0.72,
+        "z": -0.35,
+        "kind": "window"
+      },
+      {
+        "id": "entry",
+        "x": 4.6,
+        "y": 0.16,
+        "w": 0.9,
+        "h": 2.35,
+        "z": -0.8,
+        "kind": "entry"
+      },
+      {
+        "id": "upper-left",
+        "x": -3.45,
+        "y": 4.2,
+        "w": 1.3,
+        "h": 1.6,
+        "z": -0.4,
+        "kind": "window"
+      },
+      {
+        "id": "upper-right",
+        "x": 3.95,
+        "y": 4.25,
+        "w": 0.9,
+        "h": 1.45,
+        "z": -0.4,
+        "kind": "window"
+      },
+      {
+        "id": "upper-balcony",
+        "x": 0,
+        "y": 3.3,
+        "w": 4.2,
+        "h": 2.55,
+        "z": -1.4,
+        "kind": "balcony"
+      }
+    ],
+    "semantic": {
+      "mapped slab": 2,
+      "unobserved side wall": 3,
+      "recess back": 7,
+      "reveal": 28,
+      "glazing": 5,
+      "casement": 30,
+      "metalwork": 154,
+      "window hood": 5,
+      "perforated front wall": 1,
+      "entry door": 1,
+      "closed entry steps": 1,
+      "curved name parapet": 1,
+      "entrance canopy slab": 1,
+      "meter enclosure": 2,
+      "service panel": 1,
+      "meter window": 2,
+      "surface conduit": 4,
+      "air conditioner housing": 1,
+      "air conditioner grille": 8,
+      "first upper pale divider": 1,
+      "upper projecting pale return": 1,
+      "upper pale horizontal band": 1,
+      "upper pale infill": 1,
+      "raised name": 1,
+      "boundary wall": 2,
+      "boundary pier": 4,
+      "pier cap": 4,
+      "name plaque": 1,
+      "boundary name": 1,
+      "pier lamp base": 2,
+      "pier lamp stem": 2,
+      "pier lamp globe": 2,
+      "pier lamp cap": 2
+    },
+    "minimumUpperLevels": 2,
+    "upperSolidDetails": {
+      "sourceViews": [
+        "prashanth-east.jpg",
+        "prashanth-upper.jpg",
+        "entrance-directed.jpg"
+      ],
+      "sourceSha256": [
+        "663a51d2e1698d4fcf1aaa97861538460f98c5440f700d1b2a9f2f84bcdf63dd",
+        "281a60dfcb2afa44b2a7dd12a4574479af8d6d127279e230617acccb24f2ca64",
+        "fa39e258ed439253ecf20342e1d614315bb7a422626f8a128951fabfcdb627ea"
+      ],
+      "observations": "Pale horizontal area left of a projecting pale vertical return; pale rectangular area to its right within orange masonry. The dark vertical strip is interpreted as the shaded return side, not a confirmed opening.",
+      "controls": [
+        {
+          "id": "pale-band",
+          "point": [
+            0.05,
+            6.94,
+            0.18
+          ]
+        },
+        {
+          "id": "projecting-return",
+          "point": [
+            2.6,
+            7.7,
+            0.62
+          ]
+        },
+        {
+          "id": "pale-infill",
+          "point": [
+            4.02,
+            7.61,
+            0.045
+          ]
+        }
+      ],
+      "limits": "Solid appearance and relative placement supported; exact dimensions, depth, material and architectural function inferred. Foliage prevents a defensible upper opening pattern. No new opening, storey or roofline asserted."
+    },
+    "upperOpeningLayout": "Unresolved above modeled first upper level; observed pale solid continuation represented without invented openings",
+    "sourcePano": "Vu0xhoBfuQb7XsmcWslizA",
+    "captureDate": "Unknown",
+    "sourceSha256": "fa39e258ed439253ecf20342e1d614315bb7a422626f8a128951fabfcdb627ea",
+    "association": "Named OSM footprint and visible PRASHANTH name; conditional alignment, not cadastral proof",
+    "limits": "Partial visible entrance only. Minimum ground plus two upper levels observed; provisional 9.65 m height inferred. Higher opening layout, exact total floor count and roofline obscured by canopy. Upper pale band/infill and projecting return are partial source-informed solids; their sections and function remain inferred. Bay dimensions, paint reflectance, curved parapet, gate fabrication and boundary setback inferred. Unseen sides/rear remain plain. Neighbor 13/7 gate is excluded. No calibrated photo match.",
+    "triangles": 9496,
+    "meshes": 9,
+    "validation": "Revision12 production desktop/mobile: three upper solids and projecting return side, retained windows, seven apertures, roof, gate, ground/topology/navigation controls pass"
+  },
+  "navigationSurface": {
+    "coverage": "Asphalt, shoulders, Prashanth courtyard/apron/treads, Surya courtyard/passage/apron/landings, Avinash continuous hardstanding and actual yellow-object top",
+    "selection": "Explicit shallow ground can replace nominal zero fallback; modeled upper level selection retained",
+    "evidence": "artifacts/central-avenue/revision-11/navigation/report.json",
+    "limits": "Nominal fallback outside explicit surface samplers remains unchanged; this is not a full-scene furniture collision system",
+    "installedObstacles": "Passenger van and commuter motorcycle install walking obstacles only after successful asset installation; other furniture remains incomplete",
+    "surya": "Continuous courtyard/passage, gate-only apron and door landings share geometry support;50 sampled path points match rendered ground",
+    "avinash": "362-triangle closed hardstanding shares sampler;2500 independent top rays and36 exact shoulder points agree. Van/motorcycle supported on new grade; yellow object has tilted actual-top walking support"
+  },
+  "passengerVan": {
+    "centralAvenueVan": true,
+    "revision": 1,
+    "station": 53.5,
+    "lateral": -3.85,
+    "triangles": 37534,
+    "meshes": 9,
+    "asset": "/assets/central-avenue-passenger-van.glb",
+    "attribution": "/assets/central-avenue-passenger-van.attribution.json",
+    "source": "Avinash west view and Prashanth street-context panorama show a tall white passenger van parked along the western verge, facing north",
+    "inferred": "Variant, dimensions, parking station/offset, material response, cabin and hidden front geometry; source capture date unknown",
+    "support": {
+      "contacts": [
+        {
+          "s": -1.83,
+          "n": -0.905,
+          "y": -0.02105382794631989
+        },
+        {
+          "s": -1.83,
+          "n": 0.905,
+          "y": 0.019821402044396516
+        },
+        {
+          "s": 1.83,
+          "n": -0.905,
+          "y": -0.021504344440897973
+        },
+        {
+          "s": 1.83,
+          "n": 0.905,
+          "y": 0.025004878824590945
+        }
+      ],
+      "mean": 0.0005670271204423994,
+      "slopeS": 0.0006465792739913046,
+      "slopeN": 0.02413935172823352,
+      "up": [
+        -0.023301527559995098,
+        0.9997085642683943,
+        -0.006310732271050664
+      ],
+      "maxPlaneResidual": 0.001408498318693132
+    },
+    "limits": "Historical scene occupancy study, not a current vehicle-location claim or verified manufacturer replica",
+    "assetRevision": 2,
+    "validation": "Production desktop/mobile retained window/crown/closure controls; four actual tyre contacts agree with combined Avinash approach/road support and walking clearance"
+  },
+  "suryaApartments": {
+    "wayId": 354840134,
+    "revision": 2,
+    "width": 16.7255890418377,
+    "height": 12.4,
+    "heightSource": "Photograph: ground plus three upper balcony rows; inferred 3.1 m pitch, roof height unmeasured",
+    "frontEdge": [
+      1,
+      2
+    ],
+    "pose": [
+      -191.5071269629571,
+      0,
+      -145.56759800002402
+    ],
+    "yaw": 1.2399590450758866,
+    "gateZ": 8.4,
+    "gateSpans": [
+      [
+        -11.8,
+        -8.48
+      ]
+    ],
+    "gateChecks": [
+      {
+        "x": -11.707777777777778,
+        "y": 0.82,
+        "blocked": false
+      },
+      {
+        "x": -11.615555555555556,
+        "y": 0.82,
+        "blocked": true
+      }
+    ],
+    "windowChecks": [
+      {
+        "x": -2.2359999999999998,
+        "y": 5.0096,
+        "z": -0.559
+      },
+      {
+        "x": 0.964,
+        "y": 5.0096,
+        "z": -0.559
+      },
+      {
+        "x": -2.2359999999999998,
+        "y": 8.1096,
+        "z": -0.559
+      },
+      {
+        "x": 0.964,
+        "y": 8.1096,
+        "z": -0.559
+      },
+      {
+        "x": -2.2359999999999998,
+        "y": 11.209600000000002,
+        "z": -0.559
+      },
+      {
+        "x": 0.964,
+        "y": 11.209600000000002,
+        "z": -0.559
+      },
+      {
+        "x": -2.2052,
+        "y": 1.9928,
+        "z": -0.539
+      },
+      {
+        "x": 0.9947999999999999,
+        "y": 1.9928,
+        "z": -0.539
+      }
+    ],
+    "balconyChecks": [
+      {
+        "x": -7.675,
+        "y": 4.95,
+        "z": -1.27
+      },
+      {
+        "x": -7.675,
+        "y": 8.05,
+        "z": -1.27
+      },
+      {
+        "x": -7.675,
+        "y": 11.15,
+        "z": -1.27
+      },
+      {
+        "x": 4.375,
+        "y": 4.95,
+        "z": -1.27
+      },
+      {
+        "x": 4.375,
+        "y": 8.05,
+        "z": -1.27
+      },
+      {
+        "x": 4.375,
+        "y": 11.15,
+        "z": -1.27
+      }
+    ],
+    "sideChecks": [
+      {
+        "point": [
+          -7.153133987415679,
+          4.96,
+          -2.450167625629854
+        ],
+        "normal": [
+          -0.9999999904015312,
+          0,
+          0.00013855301333178338
+        ]
+      },
+      {
+        "point": [
+          -7.153133987415679,
+          8.06,
+          -2.450167625629854
+        ],
+        "normal": [
+          -0.9999999904015312,
+          0,
+          0.00013855301333178338
+        ]
+      },
+      {
+        "point": [
+          -7.153133987415679,
+          11.16,
+          -2.450167625629854
+        ],
+        "normal": [
+          -0.9999999904015312,
+          0,
+          0.00013855301333178338
+        ]
+      }
+    ],
+    "sideGroundCheck": {
+      "point": [
+        -7.849096571421546,
+        1.94,
+        -2.180071195324162
+      ],
+      "normal": [
+        -0.9999999904015312,
+        0,
+        0.00013855301333178338
+      ]
+    },
+    "southBalconyRows": 3,
+    "balconyStacks": 2,
+    "observedUpperRows": 3,
+    "semantic": {
+      "exact mapped slab": 2,
+      "unobserved wall": 2,
+      "south recess back": 3,
+      "south recess jamb": 3,
+      "south recess sill ceiling": 6,
+      "south balcony slab": 3,
+      "south stepped peach parapet": 3,
+      "south balcony head": 3,
+      "south balcony pier": 6,
+      "south pale horizontal band": 3,
+      "south grille": 459,
+      "south scalloped grille": 114,
+      "south ground recess": 1,
+      "south ground jamb": 2,
+      "south ground sill": 2,
+      "south ground glazing": 1,
+      "south ground frame": 3,
+      "south ground rail": 3,
+      "passage recess back": 2,
+      "passage reveal jamb": 4,
+      "passage reveal sill": 3,
+      "passage glazing": 1,
+      "passage window frame": 5,
+      "passage opening hood": 2,
+      "passage recessed door": 1,
+      "passage door frame": 2,
+      "perforated south wall": 1,
+      "perforated facade": 1,
+      "recess back": 15,
+      "reveal jamb": 30,
+      "reveal sill ceiling": 30,
+      "projecting balcony slab": 6,
+      "balcony parapet": 6,
+      "balcony head": 6,
+      "balcony side pier": 12,
+      "pale balcony band": 12,
+      "bowed balcony rail": 18,
+      "grille bar": 159,
+      "scalloped balcony motif": 108,
+      "window glazing": 8,
+      "window stile": 24,
+      "window rail": 24,
+      "projecting window hood": 6,
+      "paired vertical fin": 12,
+      "recessed entrance door": 1,
+      "entrance grille": 12,
+      "inferred door threshold": 1,
+      "external conduit": 1,
+      "compound wall": 1,
+      "gate pier": 3,
+      "interlaced gate curve": 36,
+      "gate leaf stile": 1,
+      "nameboard": 1,
+      "name lettering": 1
+    },
+    "sourceSha256": "e284f73973e9af9457869ebf41f7b1096c48156e9adce1ce6d521d6a4f4c9064",
+    "additionalSourceSha256": [
+      "3a508969478aa7ae867074594ff466288c610e466212795be867e05469a060c5",
+      "29c6aeb40981aa0cea361feb71df23f987540e1155a91bae7810a895f8efb6ca"
+    ],
+    "captureDate": "Unknown",
+    "association": "Conditional: visible SURYA APARTMENTS / 8/10 CENTRAL AVENUE, Gazette old 10/new 8, Google listing pin inside unnamed way 354840134",
+    "limits": "Partial east frontage study. G+3 row count observed; pitch, roof height, bays, setback, gate widths, sign placement, materials and grille fabrication inferred. Gallery photographs are uncalibrated and partially occluded. Exact OSM roof footprint retained. Broad peach face on south return and narrow peach east return form a corner study; depth and interior connections unobserved. Single gate serves inferred south-side passage, gate photos are opposite views of one entrance. Courtyard at -0.043 m is inferred hardstanding, not a surveyed parcel. South near-corner balcony face and two additional passage ground openings observed; farther upper south/north/rear walls plain; no unseen openings invented. No source photograph pixels in runtime.",
+    "triangles": 44608,
+    "meshes": 11,
+    "landmark": "?district=central-avenue&landmark=surya",
+    "sourceGallery": "https://www.magicbricks.com/surya-apartments-kodambakkam-chennai-pdpid-4d4235303738373331",
+    "validation": "Production desktop/mobile: exact mapped roof and1173 records preserved; two additional south passage recesses, closed continuous ground/landing, seven shoulder seam segments and50 sequential navigation samples pass, plus retained facade and gate controls",
+    "passageChecks": [
+      {
+        "kind": "window",
+        "point": [
+          -7.849466313992923,
+          1.956,
+          -4.848671169709688
+        ],
+        "normal": [
+          -0.9999999904015312,
+          0,
+          0.00013855301333178338
+        ]
+      },
+      {
+        "kind": "door",
+        "point": [
+          -7.873867203051334,
+          1.7541999999999998,
+          -7.742067816665159
+        ],
+        "normal": [
+          -0.9999999904015312,
+          0,
+          0.00013855301333178338
+        ]
+      }
+    ],
+    "ground": {
+      "groundY": -0.043,
+      "baseY": -0.127,
+      "thresholdY": 0.055,
+      "passageDepth": 10.5,
+      "southDoorDepth": 7.5,
+      "boundary": [
+        {
+          "x": -11.865,
+          "z": -10.499999899912735
+        },
+        {
+          "x": -8.364249327558948,
+          "z": -10.499999899912735
+        },
+        {
+          "x": -8.36279452091885,
+          "z": 0
+        },
+        {
+          "x": 8.36279452091885,
+          "z": 0
+        },
+        {
+          "x": 8.36279452091885,
+          "z": 8.4
+        },
+        {
+          "x": -8.48,
+          "z": 8.4
+        },
+        {
+          "x": -8.48,
+          "z": 9.646286618328912
+        },
+        {
+          "x": -8.898729199077977,
+          "z": 9.707631169697152
+        },
+        {
+          "x": -9.395505849433505,
+          "z": 9.771223376634424
+        },
+        {
+          "x": -9.892811096858921,
+          "z": 9.821251215921507
+        },
+        {
+          "x": -10.390655292983794,
+          "z": 9.857637574391475
+        },
+        {
+          "x": -10.888912560484286,
+          "z": 9.883614361034205
+        },
+        {
+          "x": -11.387401012995511,
+          "z": 9.90379788060821
+        },
+        {
+          "x": -11.8,
+          "z": 9.918920431526109
+        },
+        {
+          "x": -11.8,
+          "z": 8.4
+        },
+        {
+          "x": -11.865,
+          "z": 8.4
+        }
+      ],
+      "shoulderSeam": [
+        {
+          "kind": "intersection",
+          "rows": [
+            148,
+            149
+          ],
+          "point": [
+            -11.8,
+            -0.0430000014603138,
+            9.918920431526109
+          ]
+        },
+        {
+          "row": 149,
+          "point": [
+            -11.387401012995511,
+            -0.0430000014603138,
+            9.90379788060821
+          ],
+          "kind": "existing-road-edge-vertex"
+        },
+        {
+          "row": 150,
+          "point": [
+            -10.888912560484286,
+            -0.0430000014603138,
+            9.883614361034205
+          ],
+          "kind": "existing-road-edge-vertex"
+        },
+        {
+          "row": 151,
+          "point": [
+            -10.390655292983794,
+            -0.0430000014603138,
+            9.857637574391475
+          ],
+          "kind": "existing-road-edge-vertex"
+        },
+        {
+          "row": 152,
+          "point": [
+            -9.892811096858921,
+            -0.0430000014603138,
+            9.821251215921507
+          ],
+          "kind": "existing-road-edge-vertex"
+        },
+        {
+          "row": 153,
+          "point": [
+            -9.395505849433505,
+            -0.0430000014603138,
+            9.771223376634424
+          ],
+          "kind": "existing-road-edge-vertex"
+        },
+        {
+          "row": 154,
+          "point": [
+            -8.898729199077977,
+            -0.0430000014603138,
+            9.707631169697152
+          ],
+          "kind": "existing-road-edge-vertex"
+        },
+        {
+          "kind": "intersection",
+          "rows": [
+            154,
+            155
+          ],
+          "point": [
+            -8.48,
+            -0.0430000014603138,
+            9.646286618328912
+          ]
+        }
+      ],
+      "source": "Gallery photo3: continuous grey concrete passage, ground openings and low doorway threshold; photo7 reciprocal gate view",
+      "limits": "Ground extent, 10.5 m observed-reach placement, slope, thickness and 98 mm landing step are inferred. Gate apron meets current rendered shoulder outer edge. This is not a parcel survey; no paving grid or unobserved rear courtyard is asserted."
+    }
+  },
+  "parkedMotorcycle": {
+    "centralAvenueMotorcycle": true,
+    "revision": 1,
+    "asset": "/assets/central-avenue-commuter-motorcycle.glb",
+    "attribution": "/assets/central-avenue-commuter-motorcycle.attribution.json",
+    "triangles": 31544,
+    "meshes": 8,
+    "frontLocalPose": [
+      6.2,
+      0,
+      5.05
+    ],
+    "yaw": 2.952994746616505,
+    "contacts": [
+      {
+        "local": [
+          -1.1176e-08,
+          0,
+          0.639999986
+        ],
+        "surface": -0.014049373019330314
+      },
+      {
+        "local": [
+          -1.1176e-08,
+          0,
+          -0.680000007
+        ],
+        "surface": -0.020471434857500474
+      },
+      {
+        "local": [
+          -0.33,
+          0,
+          0.28
+        ],
+        "surface": -0.024969505090416465
+      }
+    ],
+    "support": {
+      "slopeX": 0.02778382130306899,
+      "slopeZ": 0.004865198388050416,
+      "intercept": -0.017163099609057816
+    },
+    "source": "Private Avinash west photograph: unoccupied dark commuter motorcycle beside the northern blue boundary panel and yellow cover",
+    "limits": "Original approximate commuter geometry; make, dimensions, materials, parking pose and date unknown. Seven-degree parked lean baked into asset. No rider or source-photo pixels; historical occupancy, not a current vehicle-location claim.",
+    "validation": "Production desktop/mobile actual tyre vertices and three contacts meet graded Avinash hardstanding, wall/gate clearance and installed-only walking obstacle/failure controls"
+  },
+  "avinashVisibilityCandidate": {
+    "status": "Installed",
+    "evidence": "artifacts/central-avenue/revision-15/avinash-seam/visibility",
+    "scope": "Geometry-derived local scalar visibility; detailed final promotion and limitations recorded in source evidence"
+  },
+  "mallesRoyEnclave": {
+    "wayId": 354839651,
+    "revision": 1,
+    "width": 17.796968927426686,
+    "height": 12.4,
+    "heightSource": "Photographic minimum ground plus three upper levels; inferred 3.1 m pitch, roof height unmeasured",
+    "frameEndpoints": [
+      7,
+      0
+    ],
+    "frontEdges": [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "pose": [
+      -165.40459548707878,
+      0,
+      -148.21701400003838
+    ],
+    "yaw": -1.840330103238527,
+    "localPolygon": [
+      [
+        -8.898484463713373,
+        0,
+        -2.842170943040401e-14
+      ],
+      [
+        -9.547513770809388,
+        0,
+        -16.73039463803829
+      ],
+      [
+        -1.6722462076851627,
+        0,
+        -17.027131869784483
+      ],
+      [
+        -1.6018814831083432,
+        0,
+        -15.100212018194497
+      ],
+      [
+        3.4605256432683547,
+        0,
+        -15.294916573823883
+      ],
+      [
+        3.3901609184717643,
+        0,
+        -17.221836426951967
+      ],
+      [
+        8.234258129762736,
+        0,
+        -17.41248463756216
+      ],
+      [
+        8.898484463713316,
+        0,
+        -2.842170943040401e-14
+      ],
+      [
+        3.0222634325811555,
+        0,
+        0.21701445348145398
+      ],
+      [
+        2.878220501843458,
+        0,
+        -3.5234036054717137
+      ],
+      [
+        -3.4531928454127865,
+        0,
+        -3.281895069542884
+      ],
+      [
+        -3.332189346187036,
+        0,
+        -0.2101498699036881
+      ]
+    ],
+    "observedUpperLevels": 3,
+    "removedDegenerateTriangles": 4,
+    "nameFrame": {
+      "matrix": [
+        0.9993187490747263,
+        0,
+        -0.03690579558449099,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0.03690579558449099,
+        0,
+        0.9993187490747263,
+        0,
+        5.960373948147236,
+        0,
+        0.10850722674071278,
+        1
+      ],
+      "x": 0.2,
+      "y": 6.43,
+      "z": 0.068,
+      "width": 1.55,
+      "height": 0.2,
+      "depth": 0.003,
+      "text": "MALLES"
+    },
+    "porchGlazingChecks": [
+      {
+        "point": [
+          -1.745949359522329,
+          1.75,
+          -4.121579883536669
+        ],
+        "normal": [
+          0.0381167705330731,
+          0,
+          0.9992732918496968
+        ]
+      },
+      {
+        "point": [
+          -0.31698855217726274,
+          1.75,
+          -4.176086865398964
+        ],
+        "normal": [
+          0.0381167705330731,
+          0,
+          0.9992732918496968
+        ]
+      },
+      {
+        "point": [
+          1.1119722551678033,
+          1.75,
+          -4.230593847261258
+        ],
+        "normal": [
+          0.0381167705330731,
+          0,
+          0.9992732918496968
+        ]
+      }
+    ],
+    "clarifyingSourceSha256": "6fcfa78b0960b87f21735f7fe8779f6a449f322f30bf95cd892f2c0e99929008",
+    "apertures": [
+      {
+        "kind": "glazed-balcony",
+        "edge": 7,
+        "point": [
+          5.6354860601031005,
+          11.3123,
+          -0.8741719783929981
+        ],
+        "normal": [
+          0.03690579558449099,
+          0,
+          0.9993187490747263
+        ]
+      },
+      {
+        "kind": "window",
+        "edge": 7,
+        "point": [
+          5.827636402971639,
+          5.0753,
+          -0.3208865134334499
+        ],
+        "normal": [
+          0.03690579558449099,
+          0,
+          0.9993187490747263
+        ]
+      },
+      {
+        "kind": "window",
+        "edge": 7,
+        "point": [
+          5.827636402971639,
+          8.1753,
+          -0.3208865134334499
+        ],
+        "normal": [
+          0.03690579558449099,
+          0,
+          0.9993187490747263
+        ]
+      },
+      {
+        "kind": "window",
+        "edge": 7,
+        "point": [
+          5.899587352905019,
+          1.9061000000000001,
+          -0.3235437307155333
+        ],
+        "normal": [
+          0.03690579558449099,
+          0,
+          0.9993187490747263
+        ]
+      },
+      {
+        "kind": "balcony",
+        "edge": 9,
+        "point": [
+          -1.1409172404100443,
+          8.212299999999999,
+          -4.420859242735559
+        ],
+        "normal": [
+          0.0381167705330731,
+          0,
+          0.9992732918496968
+        ]
+      },
+      {
+        "kind": "balcony",
+        "edge": 9,
+        "point": [
+          -1.1409172404100443,
+          11.3123,
+          -4.420859242735559
+        ],
+        "normal": [
+          0.0381167705330731,
+          0,
+          0.9992732918496968
+        ]
+      },
+      {
+        "kind": "porch",
+        "edge": 9,
+        "point": [
+          -1.3220638304059762,
+          4.143,
+          -4.2638404128684195
+        ],
+        "normal": [
+          0.0381167705330731,
+          0,
+          0.9992732918496968
+        ]
+      },
+      {
+        "kind": "glazed-balcony",
+        "edge": 11,
+        "point": [
+          -6.64088995569461,
+          11.3123,
+          -1.0799413621372695
+        ],
+        "normal": [
+          0.03772711567656094,
+          0,
+          0.9992880789555769
+        ]
+      },
+      {
+        "kind": "window",
+        "edge": 11,
+        "point": [
+          -6.448284936566959,
+          5.0753,
+          -0.5268140109722442
+        ],
+        "normal": [
+          0.03772711567656094,
+          0,
+          0.9992880789555769
+        ]
+      },
+      {
+        "kind": "window",
+        "edge": 11,
+        "point": [
+          -6.448284936566959,
+          8.1753,
+          -0.5268140109722442
+        ],
+        "normal": [
+          0.03772711567656094,
+          0,
+          0.9992880789555769
+        ]
+      },
+      {
+        "kind": "window",
+        "edge": 11,
+        "point": [
+          -6.339562393576592,
+          1.9126,
+          -0.5309187211578541
+        ],
+        "normal": [
+          0.03772711567656094,
+          0,
+          0.9992880789555769
+        ]
+      }
+    ],
+    "semantic": {
+      "exact mapped slab": 2,
+      "unobserved plain wall": 7,
+      "recess back": 11,
+      "reveal jamb": 22,
+      "reveal sill ceiling": 22,
+      "glazing": 8,
+      "casement stile": 24,
+      "casement rail": 24,
+      "balcony pale parapet": 3,
+      "balcony sill projection": 4,
+      "balcony rose pier": 8,
+      "metal bar": 110,
+      "window hood": 6,
+      "source MALLES fascia lettering": 1,
+      "source shallow hipped canopy": 3,
+      "mapped perforated west wall": 5,
+      "source pale horizontal belt": 14,
+      "source pale parapet": 5,
+      "pale corner bead": 10,
+      "source rose balcony parapet": 1,
+      "source slotted parapet cap": 1,
+      "source narrow parapet slot divider": 10,
+      "source tall porch column": 2,
+      "source intermediate porch landing": 1,
+      "source porch ground glazing": 1,
+      "porch entry glazed stile": 4,
+      "porch entry glazed rail": 3,
+      "porch canopy slab": 1,
+      "continuous front and north access hardstanding": 1,
+      "front boundary": 1,
+      "source rose round boundary backing": 1,
+      "source flat round boundary border": 1,
+      "gate pier": 3,
+      "stepped pier capital": 12,
+      "source ochre spear tip": 21,
+      "gate curled motif": 40
+    },
+    "gateZ": 6.3,
+    "gateChecks": [
+      {
+        "x": -12.123,
+        "y": 1.55,
+        "blocked": false
+      },
+      {
+        "x": -12.046,
+        "y": 1.55,
+        "blocked": true
+      }
+    ],
+    "groundY": 0,
+    "sourceSha256": [
+      "826d034b70b1434f4ae4c2393a11fc42435c1cc4fb79a91e2e470e6a581f4f00",
+      "5bcd33d9097497804fd782ca870a90be5158f0981c3e4ec031b73eb76b76312a"
+    ],
+    "captureDate": "Unknown",
+    "association": "Conditional: gallery Roy Enclave4/7 Central Avenue, municipal old4/new7 address, both named Google listing pins inside unnamed12-corner way354839651; photographed central setback matches map notch",
+    "limits": "Partial observed western frontage; exact12-corner mapped roof preserved. G+3 row count photo-supported;12.4m height, bay dimensions, partially obscured lower casement extents, finishes, gate pose, boundary/ground extent and construction inferred. Tall central porch and upper balcony positions follow gallery8; unobserved return/rear openings and unreadable boundary lettering are not invented. Hardstanding at nominal zero is an inferred support datum, not surveyed grade or paving-unit reconstruction. No source pixels in runtime.",
+    "triangles": 11094,
+    "meshes": 10,
+    "landmark": "?district=central-avenue&landmark=malles",
+    "validation": "Production desktop/mobile exact12-corner mapped roof, unique target among1173 and all1172 other records preserved; source-visible physical openings, retained walls, gate, boundary and ground controls"
+  },
+  "yellowRoundObject": {
+    "avinashYellowObject": true,
+    "revision": 1,
+    "frontLocal": [
+      8.1,
+      0,
+      5.4
+    ],
+    "supportY": -0.026544278228476777,
+    "supportSlope": [
+      -0.02810984849748129,
+      -0.007662573398315576
+    ],
+    "radius": 0.335,
+    "height": 0.058,
+    "source": "Private Avinash west view shows a low yellow round object beside the rear of the unoccupied motorcycle, outside the northern blue boundary",
+    "sourceSha256": "9454a6e8e1ad98ee3fe917cdeb6d47be95d6808a4d21888e1489fb1b83fcb909",
+    "limits": "Only yellow circular top and low side silhouette observed. Exact pose, diameter, thickness, material and purpose unverified; no asserted utility lid, signage, hardware or photo pixels."
+  },
+  "removedUnverifiedFittings": {
+    "inspectionLids": 5,
+    "raisedGrates": 5,
+    "reason": "Repeated locations were illustrative and unsupported by the photographed street; retain observed objects separately"
+  }
+}

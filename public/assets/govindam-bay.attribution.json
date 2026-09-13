@@ -1,0 +1,155 @@
+{
+  "status": "Integrated partial central bay; remaining mapped shell retained",
+  "candidateOsmBuildingWayId": 1095927870,
+  "approvedReplacementIds": [],
+  "identityEvidence": "Photo reads Govindam and NEW NO5 OLD NO4; place address 5,4th Cross St; GCC lists Govindam Flats on4th Cross Street; named OSM footprint immediately south of frontage",
+  "photoId": "CIHM0ogKEICAgICkv6CP_wE",
+  "photographer": "Victor Livingstone",
+  "photoDate": "2018-10",
+  "geometryLicense": "CC0 original geometry; no photograph pixels embedded",
+  "observed": "blue stairwell borders, cream guards, burgundy name, open stairs, brown ground floor, adjacent window grilles, AC and red cabinet",
+  "inferred": "All dimensions, entrance placement, hidden stair interiors, physical material response and paint continuation outside photograph crop",
+  "limitations": "Photo does not show total facade width, roof or complete height. Do not remove generic whole-building shell based on this partial asset.",
+  "modifiedFacadeWayIds": [
+    1095927870
+  ],
+  "sha256": "a0cadef6f6993425aae1bf3b57783777dc9c20e28c240e4dd7549d581c46f1fe",
+  "bytes": 874592,
+  "placement": {
+    "sourceEdge": [
+      0,
+      1
+    ],
+    "fraction": 0.5,
+    "units": "metres",
+    "surveyed": false,
+    "limitation": "Entrance centered on nominated north footprint edge by inference; no measured facade dimensions."
+  },
+  "withheld": "Outer window repetitions, AC placement, full facade design and roof reconstruction",
+  "revision": 5,
+  "materialCorrection": {
+    "change": "Six material doubleSided flags true to false; entire geometry binary chunk unchanged",
+    "reason": "Controlled comparison isolated diagonal bands as shadow self-acne",
+    "shadowsEnabled": true,
+    "source": "united-india-govindam-bay-shadow-candidate.blend",
+    "appliedInRevision": 2,
+    "historicalGeometryTriangles": 68206
+  },
+  "geometryTriangles": 16872,
+  "geometryChange": "Source-fitted raised lettering position, approximate outline and mounting depth; lower tessellation; non-letter geometry unchanged from proportion revision4",
+  "ambientVisibility": {
+    "method": "Rebaked Cycles scalarAO on four materials including cream name panel; actual letter geometry occludes ambient rays; albedo unchanged",
+    "atlas": {
+      "resolution": 1024,
+      "triangles": 2348,
+      "degenerateUVTriangles": 0,
+      "coveredPixelCenters": 346824,
+      "overlapPixelCenters": 0,
+      "uvIslands": 162,
+      "otherIslandTexelsInside8PixelPadding": 0
+    },
+    "texCoord": 1,
+    "resolution": [
+      1024,
+      1024
+    ]
+  },
+  "triangles": 16872,
+  "proportionStudy": {
+    "status": "Installed conditional proportion study; no measured scale or photographic pass",
+    "sourceFit": "united-india-govindam-proportion-fit-private.json",
+    "focalHypothesisPixels": 1500,
+    "dimensionlessGuardRatios": [
+      0.437544148977602,
+      0.5934526432870415
+    ],
+    "assumedUprightSpacingMeters": 2.81,
+    "assumedLowerBorderHeightMeters": 3.18,
+    "assumedLandingSpacingMeters": 3.6189229195095236,
+    "assumedGuardHeightsMeters": [
+      1.5834385490323335,
+      2.147659372434984
+    ],
+    "apertureTopMeters": 8.99658229194451,
+    "changes": [
+      "Rebuilt unequal solid guard panels and four horizontal trims",
+      "Lengthened existing upright and upper returns with proper slab/soffit junctions",
+      "Upper soffit and paint boundary translated with upper landing",
+      "Name shape unchanged; vertically centered in revised lower panel"
+    ],
+    "preserved": [
+      "Ground stairs, ground soffit, original cabinet, name glyph shape, bay width/depth and pose",
+      "No footprint or inferred12.75m building shell change"
+    ],
+    "limitations": [
+      "Absolute dimensions are assumed, not measured",
+      "Hidden circulation remains incomplete",
+      "Right upper photo corners partly extrapolated through foliage",
+      "Camera fit uses correlated source strip controls; no independent accuracy claim"
+    ],
+    "license": "CC0 original geometry; no reference pixels",
+    "triangles": 65936,
+    "primitives": 6,
+    "bytes": 2049400,
+    "sha256": "03b520393239c8af14a40b956dd3af1aaeaec5b86ddfb42a9f936beb8638d1bc",
+    "ambientVisibility": {
+      "method": "Cycles AO scalar bake,16 hemisphere rays,64 samples,10m finite distance",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "texCoord": 1,
+      "albedoUnchanged": true,
+      "geometryNormalsUv0PbrUnchangedByBake": true,
+      "uvAudit": {
+        "resolution": 1024,
+        "triangles": 2132,
+        "degenerateUVTriangles": 0,
+        "coveredPixelCenters": 375384,
+        "overlapPixelCenters": 0,
+        "uvIslands": 150,
+        "otherIslandTexelsInside8PixelPadding": 0
+      },
+      "occluders": "Only six staged bay meshes; no invented cavity or shell occluder"
+    },
+    "review": "Before/after browser captures inspected; improved panel proportion correspondence, still visibly synthetic. Independent photographic review pending.",
+    "appliedInRevision": 4
+  },
+  "apertureTopMeters": 8.99658229194451,
+  "nameStudy": {
+    "sharedUniformScale": 1.263054643448351,
+    "curveResolution": 6,
+    "bevelResolution": 1,
+    "uniformStrokeOutsetBeforeScaleMeters": 0.004,
+    "inferredBackGapMeters": 0.002,
+    "inferredLetterThicknessMeters": 0.017935375936966584,
+    "materialPbrUnchanged": true,
+    "preserved": "All non-letter geometry, normals, UV0, transforms and original108cabinet triangles; mapped footprint, shell and hardware unchanged",
+    "ambientVisibility": {
+      "method": "Rebaked Cycles scalarAO on four materials including cream name panel; actual letter geometry occludes ambient rays; albedo unchanged",
+      "atlas": {
+        "resolution": 1024,
+        "triangles": 2348,
+        "degenerateUVTriangles": 0,
+        "coveredPixelCenters": 346824,
+        "overlapPixelCenters": 0,
+        "uvIslands": 162,
+        "otherIslandTexelsInside8PixelPadding": 0
+      },
+      "texCoord": 1,
+      "resolution": [
+        1024,
+        1024
+      ]
+    },
+    "limitations": [
+      "Exact physical font remains unresolved; silhouetteIoU0.626 is only a source-mask fitting diagnostic",
+      "Letter placement and scale conditional on inferred1500px camera and panel dimensions",
+      "Depth and mounting gap inferred, not measured",
+      "Reduced tessellation is not pixel-identical: reference-cropRGBRMS1.95/255 and1.07percent pixels differ bymorethan3; high-detail control retained",
+      "Independent name001 review failed; partial source fit is not a photographic pass"
+    ],
+    "approximateFont": "Apple Chancery outlines; exact photographed typeface unresolved",
+    "review": "Fresh neutral name001 crop: render10%, photo95%; failed photographic realism. Source-supported placement improvement retained; outline, wall microrelief and directional shadows unresolved."
+  }
+}

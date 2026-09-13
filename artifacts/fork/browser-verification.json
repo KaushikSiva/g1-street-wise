@@ -1,0 +1,139 @@
+{
+  "desktop": true,
+  "mobile": true,
+  "pause": true,
+  "scrub": true,
+  "apiFailureRecovery": true,
+  "orientation": [
+    {
+      "time": 1,
+      "distance": 0.0725029999999969,
+      "alignment": 0.9999791766691829
+    },
+    {
+      "time": 2,
+      "distance": 0.0725029999999969,
+      "alignment": 0.9999056629605159
+    },
+    {
+      "time": 3,
+      "distance": 0,
+      "alignment": 0
+    },
+    {
+      "time": 4,
+      "distance": 0.07250300000000508,
+      "alignment": 0.999848352607145
+    },
+    {
+      "time": 5,
+      "distance": 0.07250300000000508,
+      "alignment": 0.9999942916216452
+    }
+  ],
+  "errors": [],
+  "outcomes": [
+    {
+      "seed": 20001,
+      "mode": "before",
+      "hazard": "pedestrian",
+      "outcome": {
+        "scenario_seed": 20001,
+        "contact": false,
+        "fall": false,
+        "success": true,
+        "min_clearance": 0.000342,
+        "progress": 4.232796,
+        "return": 19.096365,
+        "elapsed": 6.8,
+        "hazard": "pedestrian"
+      },
+      "valid": true
+    },
+    {
+      "seed": 20001,
+      "mode": "after",
+      "hazard": "pedestrian",
+      "outcome": {
+        "scenario_seed": 20001,
+        "contact": false,
+        "fall": false,
+        "success": true,
+        "min_clearance": 0.006591,
+        "progress": 4.208047,
+        "return": 18.566866,
+        "elapsed": 9.2,
+        "hazard": "pedestrian"
+      },
+      "valid": true
+    },
+    {
+      "seed": 20002,
+      "mode": "before",
+      "hazard": "moving_car",
+      "outcome": {
+        "scenario_seed": 20002,
+        "contact": false,
+        "fall": false,
+        "success": true,
+        "min_clearance": 0.074361,
+        "progress": 4.501865,
+        "return": 18.834502,
+        "elapsed": 10.8,
+        "hazard": "moving_car"
+      },
+      "valid": true
+    },
+    {
+      "seed": 20002,
+      "mode": "after",
+      "hazard": "moving_car",
+      "outcome": {
+        "scenario_seed": 20002,
+        "contact": false,
+        "fall": false,
+        "success": true,
+        "min_clearance": 0.094111,
+        "progress": 4.549535,
+        "return": 19.129842,
+        "elapsed": 9.8,
+        "hazard": "moving_car"
+      },
+      "valid": true
+    },
+    {
+      "seed": 20003,
+      "mode": "before",
+      "hazard": "pothole_zone",
+      "outcome": {
+        "scenario_seed": 20003,
+        "contact": true,
+        "fall": false,
+        "success": false,
+        "min_clearance": -0.10926,
+        "progress": 2.508934,
+        "return": -15.831361,
+        "elapsed": 4.2,
+        "hazard": "pothole_zone"
+      },
+      "valid": true
+    },
+    {
+      "seed": 20003,
+      "mode": "after",
+      "hazard": "pothole_zone",
+      "outcome": {
+        "scenario_seed": 20003,
+        "contact": false,
+        "fall": false,
+        "success": true,
+        "min_clearance": 0.185833,
+        "progress": 3.986742,
+        "return": 18.484257,
+        "elapsed": 7.4,
+        "hazard": "pothole_zone"
+      },
+      "valid": true
+    }
+  ]
+}

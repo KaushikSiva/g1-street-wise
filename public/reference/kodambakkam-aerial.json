@@ -1,0 +1,44 @@
+{
+  "title": "Kodambakkam Sentinel-2 true-colour regional context",
+  "path": "/reference/kodambakkam-aerial.jpg",
+  "provider": "Copernicus Sentinel-2 via Element 84 Earth Search / AWS Open Data",
+  "sourceUrl": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/44/P/MV/2026/7/S2A_44PMV_20260715_0_L2A/TCI.tif",
+  "searchUrl": "https://earth-search.aws.element84.com/v1/search?collections=sentinel-2-l2a&bbox=80.225%2C13.049%2C80.235%2C13.057&datetime=2025-01-01T00%3A00%3A00Z%2F2026-09-08T00%3A00%3A00Z&limit=30&query=%7B%22eo%3Acloud_cover%22%3A+%7B%22lt%22%3A+5%7D%7D",
+  "stacItemId": "S2A_44PMV_20260715_0_L2A",
+  "capturedAt": "2026-07-15T05:15:29.390000Z",
+  "accessedAt": "2026-09-08",
+  "sourcePixelSizeMeters": [
+    10.0,
+    10.0
+  ],
+  "sourceProjection": "EPSG:32644",
+  "projection": "EPSG:3857",
+  "boundsWgs84WestSouthEastNorth": [
+    80.225,
+    13.049,
+    80.235,
+    13.057
+  ],
+  "boundsWebMercatorXminYminXmaxYmax": [
+    8930606.148890372,
+    1465330.9601700092,
+    8931719.343798304,
+    1466245.1369977954
+  ],
+  "width": 109,
+  "height": 90,
+  "outputProjectedPixelSizeMeters": [
+    10.212797320473495,
+    10.157520308736194
+  ],
+  "orientation": "north up; top-left northwest; pixel corners span stated bounds",
+  "sceneCloudCoverPercent": 0.835508,
+  "localCloudCoverPercent": null,
+  "attribution": "Contains modified Copernicus Sentinel data 2026. COG distribution: Element 84 / AWS Open Data.",
+  "license": "Copernicus Sentinel free, full and open data terms",
+  "licenseUrl": "https://sentinels.copernicus.eu/documents/247904/690755/Sentinel_Data_Legal_Notice",
+  "registryUrl": "https://registry.opendata.aws/sentinel-2-l2a-cogs/",
+  "changes": "Windowed true-colour COG reprojected UTM to Web Mercator using bilinear resampling, encoded JPEG quality 95. No invented detail or AI upscaling.",
+  "limitation": "10-metre imagery is regional context only. Cannot resolve individual lots, facades, tree trunks, pavement or signs. No surveyed 1:1 accuracy is implied.",
+  "sha256": "351eedfa7dac9ba27d5dca2d3e1d42435caddca702276224eeb09f2bb682109a"
+}

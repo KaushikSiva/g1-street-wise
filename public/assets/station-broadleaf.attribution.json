@@ -1,0 +1,95 @@
+{
+  "asset": "station-broadleaf.glb",
+  "description": "Custom inferred broadleaf crown; no species/location claim; morphology studied from station-2018.jpg without copying photograph pixels",
+  "source_asset": "Island Tree 02",
+  "source_page": "https://polyhaven.com/a/island_tree_02",
+  "source_license": "CC0-1.0",
+  "source_license_url": "https://polyhaven.com/license",
+  "source_authors": {
+    "Rob Tuytel": "scanning, processing",
+    "Rico Cilliers": "cleanup, processing"
+  },
+  "modifications": "Custom enlarged branch frame and smaller leaves; desaturated grey-green donor leaf color; 13,440 physical bent leaf strips plus 1,120 fixed bent patches using a Blender-baked16-variant atlas of160 physical leaves per variant. No source photograph pixels or complete donor tree geometry. Alpha/normal cluster maps baked locally;1K8-bit textures.",
+  "generator": "scripts/build_station_tree.py",
+  "glb_sha256": "4dc334b70a2fae8187a3aa6a005491f2ba1e06e216f214b4e83b0b6355d9f426",
+  "source_files": [
+    {
+      "path": "textures/island_tree_02_branches_diff_1k.png",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/island_tree_02/island_tree_02_branches_diff_1k.png",
+      "bytes": 5300342,
+      "md5": "06881375b8ce350a45746e30b68a5d4c",
+      "sha256": "4485125d88b9dcce618220e8850f8b3ec586d9cdebe08e28aca777206eef56e2"
+    },
+    {
+      "path": "textures/island_tree_02_branches_nor_gl_1k.png",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/island_tree_02/island_tree_02_branches_nor_gl_1k.png",
+      "bytes": 5400459,
+      "md5": "df3d91a9c29266f44b0b17da135a2899",
+      "sha256": "e72c3bf652d998d75ef98fc51fb7a10de3b7efd072c191a8eb9c92b6f93340f0"
+    },
+    {
+      "path": "textures/island_tree_02_branches_rough_1k.png",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/island_tree_02/island_tree_02_branches_rough_1k.png",
+      "bytes": 1625206,
+      "md5": "8bd9e066f93c242ef468c7c6ea6dc382",
+      "sha256": "c6db3c33f23654a8d31dcf5609d19d97ab1036b36b3d9a6bcd50ecc975f8fb3c"
+    },
+    {
+      "path": "textures/island_tree_02_leaves_alpha_1k.png",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/island_tree_02/island_tree_02_leaves_alpha_1k.png",
+      "bytes": 57438,
+      "md5": "5ad9fb9a06e70c069bd3d3ba23577375",
+      "sha256": "f4341f147988dbe6b58d9ca841a8f0e4bcff25bc40d05f9877da82006d489c39"
+    },
+    {
+      "path": "textures/island_tree_02_leaves_diff_1k.png",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/island_tree_02/island_tree_02_leaves_diff_1k.png",
+      "bytes": 1638916,
+      "md5": "f5dcd85f170c154cba9cb8367af5dbdd",
+      "sha256": "63d3563a22a62151f338ceb4e992de7c31b62e8e3582e2762d5071f02d286349"
+    },
+    {
+      "path": "textures/island_tree_02_leaves_nor_gl_1k.png",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/island_tree_02/island_tree_02_leaves_nor_gl_1k.png",
+      "bytes": 2886859,
+      "md5": "13a7610b0459f3175ca049b70eadbfea",
+      "sha256": "e58402f30c7108ec6321e0c689009508f6ab138c81612d9a67238038ac108211"
+    },
+    {
+      "path": "textures/island_tree_02_leaves_rough_1k.png",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/island_tree_02/island_tree_02_leaves_rough_1k.png",
+      "bytes": 879599,
+      "md5": "6195150c02ed2522f8ab60c2ec02f1b9",
+      "sha256": "b7e9a1857f63617344968bb43693786bfed7dd15bedca3193ce333f233fbab78"
+    }
+  ],
+  "revision": 2,
+  "derived_cluster_bake": {
+    "variants": 16,
+    "physical_leaves_per_variant": 160,
+    "total_bake_leaves": 2560,
+    "baked_leaf_length_m": [
+      0.1,
+      0.18
+    ],
+    "patch_size_m": [
+      0.78,
+      1.02
+    ],
+    "patch_mesh": "Nine vertices, four bent quads/eight triangles; fixed world orientation, no camera billboarding",
+    "normal_empty_texels": "Neutral tangent RGB128,128,255; normal atlas opaque",
+    "covered_atlas_fraction_at_cutoff": 0.25830078125,
+    "normal_rgb_mean_all_pixels": [
+      128.0334997177124,
+      128.20733833312988,
+      249.84350299835205
+    ],
+    "normal_rgb_mean_on_covered_pixels": [
+      128.12969266895084,
+      128.80270114603024,
+      235.03685092745746
+    ],
+    "color_sha256": "251583a787339a13df692daed29e168cc393db0dd6dcc93ddeb5fe0fcf650661",
+    "normal_sha256": "664013f1c83edb96a6645892ac9a3d1f33a2144d04dc70f7f019848a00e031aa"
+  }
+}

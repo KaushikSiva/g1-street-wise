@@ -1,0 +1,34 @@
+.street-name-ui { position: relative; width: min(290px, calc(100vw - 40px)); margin-top: 12px; color: #fff9ee; font: 12px/1.45 Arial, Helvetica, sans-serif; letter-spacing: normal; }
+.survey-head:has(.street-name-ui[open]) { z-index: 10; }
+.street-name-ui summary { list-style: none; cursor: pointer; min-height: 44px; background: #18211de8; border: 1px solid #ffffff40; border-radius: 2px; padding: 7px 28px 7px 10px; position: relative; }
+.street-name-ui summary::-webkit-details-marker { display: none; }
+.street-name-ui summary::after { content: '+'; position: absolute; right: 11px; top: 17px; }
+.street-name-ui[open] summary::after { content: '−'; }
+.street-name-eyebrow { display: block; font-size: 10px; color: #d5d8ce; }
+.street-name-nearest { display: block; font-size: 12px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.street-name-panel { position: absolute; z-index: 5; top: calc(100% + 8px); left: 0; width: min(360px, calc(100vw - 40px)); max-height: calc(100dvh - 390px); display: flex; flex-direction: column; padding: 16px; background: #eeece1; color: #282e27; box-shadow: 0 10px 40px #0004; }
+.street-name-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.street-name-ui .street-name-top button { background: transparent; color: #282e27; border: 0; width: 44px; min-height: 44px; font-size: 25px; padding: 0; }
+.street-name-ui input { width: 100%; min-height: 44px; padding: 10px; border: 1px solid #5d685877; background: #fffdf5; color: #282e27; font: 16px Arial, Helvetica, sans-serif; border-radius: 0; }
+.street-name-count { font-size: 11px; margin: 10px 0; }
+.street-name-list { margin: 0; padding: 0; overflow-y: auto; overscroll-behavior: contain; list-style: none; min-height: 70px; }
+.street-name-list li { border-top: 1px solid #28322533; padding: 7px 0 12px; }
+.street-name-ui .street-name-choice { display: block; width: 100%; max-width: none; min-height: 44px; padding: 7px 0; border: 0; background: transparent; text-align: left; text-decoration: none; color: #202a1b; font-size: 14px; line-height: 1.4; }
+.street-name-choice:hover { text-decoration: underline; }
+.street-name-tamil { display: block; font-size: 12px; margin: 0 0 8px; }
+.street-name-detail { font-size: 11px; color: #485241; }
+.street-name-ui a { color: inherit; }
+.street-name-detail a { display: inline-flex; align-items: center; min-height: 44px; }
+.street-name-credit { font-size: 10px; line-height: 1.5; margin: 12px 0 0; }
+.street-name-empty { font-size: 12px; }
+.street-name-ui :focus-visible { outline: 2px solid #bc862e; outline-offset: 2px; }
+@media(max-width: 650px) {
+  .street-name-ui { width: min(255px, calc(100vw - 40px)); margin-top: 9px; }
+  .street-name-panel { max-height: calc(100dvh - 360px); }
+}
+@media(max-height: 620px) { .street-name-panel { position: fixed; top: 16px; bottom: 16px; max-height: none; left: auto; right: 20px; } }
+.street-label-overlay { position: fixed; inset: 0; pointer-events: none; overflow: hidden; }
+.street-map-label { position: absolute; transform: translate(-50%, -100%); max-width: min(270px, calc(100vw - 40px)); padding: 5px 9px; background: #f6f1e7ec; color: #253025; border: 1px solid #35423190; border-radius: 3px; font: 12px/1.35 Arial, Helvetica, sans-serif; text-align: center; box-shadow: 0 1px 5px #0003; }
+.street-map-label::after { content: ''; position: absolute; left: calc(50% - 2px); bottom: -4px; width: 4px; height: 4px; border-radius: 50%; background: #253025; }
+.street-map-label-name, .street-map-label-tamil { display: block; }
+.street-map-label-tamil { font-size: 11px; margin-top: 3px; }

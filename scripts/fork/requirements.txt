@@ -1,0 +1,13 @@
+weave==0.53.9
+wandb==0.30.0
+openai==3.13.0
+python-dotenv==1.2.3
+marimo==0.24.2
+matplotlib==3.11.2
+torch==2.14.0
+mujoco==3.13.0
+gymnasium==1.3.0
+stable-baselines3==2.9.0
+numpy==2.5.3
+trimesh==5.1.0
+pyyaml==6.0.3

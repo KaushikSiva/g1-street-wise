@@ -1,0 +1,81 @@
+{
+  "name": "Kodambakkam south-side elevated circular tank - staged revision 1",
+  "generator": "scripts/build_high_road_tank.py",
+  "license": "CC0-1.0 for original geometry and generated PBR textures",
+  "sourcePixelsEmbedded": false,
+  "units": "metres",
+  "coordinateSystem": "glTF Y up",
+  "provisionalPosition": [
+    15.7229066952,
+    -0.045,
+    -235.347152289
+  ],
+  "sceneGroundContact": "Y -0.045 from existing ground raycast, not a surveyed real elevation",
+  "rotationY": 0,
+  "dimensions": {
+    "overallHeight": 21.0,
+    "reservoirDiameter": 6.8,
+    "roofDiameter": 7.08,
+    "bodyBottom": 17.15,
+    "bodyTop": 20.73,
+    "columnCount": 6,
+    "columnSection": 0.39,
+    "columnCenterRadius": 2.53,
+    "tieLevels": [
+      4,
+      10.1,
+      13.62,
+      16.8
+    ]
+  },
+  "visibleEvidence": [
+    "Circular pale body and projecting darkened upper lip",
+    "Slender rectilinear columns with overlapping front/rear profiles",
+    "Two visible intermediate horizontal tie levels",
+    "Weathered underside and subtle runoff discoloration"
+  ],
+  "inferences": [
+    "All dimensions; approximate body height inferred through unverified camera and deck elevation",
+    "Six-column topology, column orientation, cross sections, lower tie, hidden footings and reservoir underside",
+    "Roof shape beyond the visible lip",
+    "Aerial roof center used as provisional base; parallax not corrected"
+  ],
+  "references": [
+    {
+      "path": "high-road-camera-panorama-original.jpg",
+      "author": "Kandhavel Manivannan",
+      "date": "2018-04",
+      "panoramaId": "CIHM0ogKEICAgICEz6bxhwE",
+      "role": "Private visual reference, not redistributed"
+    },
+    {
+      "path": "high-road-camera-map-aerial.jpg",
+      "provider": "Esri World Imagery / Vantor WV03",
+      "date": "2026-03-04",
+      "resolutionMeters": 0.31,
+      "reportedAccuracyMeters": 8.47,
+      "role": "Approximate roof center and diameter; not surveyed base"
+    },
+    {
+      "path": "high-road-camera-aerial-context.jpg",
+      "role": "Private oblique reference corroborates circular elevated tank identity; date unknown"
+    }
+  ],
+  "geometry": {
+    "triangles": 6704,
+    "meshes": 3,
+    "materials": 3,
+    "textures": 9,
+    "textureResolutions": [
+      512,
+      256,
+      256
+    ],
+    "bytes": 1497572,
+    "sha256": "90c33167aed87868e68ea75738164218601d399fa34d898f9b49a5e587699817"
+  },
+  "status": "Installed reference-informed study; dimensions and placement remain inferred, no photographic pass",
+  "assetPath": "/assets/high-road-tank.glb",
+  "sha256": "90c33167aed87868e68ea75738164218601d399fa34d898f9b49a5e587699817",
+  "bytes": 1497572
+}

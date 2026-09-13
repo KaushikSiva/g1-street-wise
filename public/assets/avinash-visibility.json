@@ -1,0 +1,200 @@
+{
+  "revision": 2,
+  "wayId": 354839974,
+  "atlas": "/assets/textures/avinash_visibility.png",
+  "uvBuffer": "/assets/avinash-visibility-uv1.bin",
+  "size": [
+    2048,
+    2048
+  ],
+  "channel": 1,
+  "bindings": [
+    {
+      "name": "Avinash continuous hardstanding",
+      "vertexCount": 1086,
+      "byteOffset": 0,
+      "positionSha256": "a11868c0b37fc11993495cf853551fb71393e7a6c3f70aaf1f6e1a59e800399b",
+      "normalSha256": "f719dada20e5548f6954a235935f40077d2b667297c2574bae34e71e17de5274",
+      "matrixSha256": "5998e9d1dd9bf48af6af87a1ef8c7783b818ac8329637ada08cc5fb329042376"
+    },
+    {
+      "name": "Avinash concrete",
+      "vertexCount": 72,
+      "byteOffset": 8688,
+      "positionSha256": "80c1ff6c04ae0166cec3c9330eb5fcbaeab2b32a790ada4387a18e615c224fd5",
+      "normalSha256": "1fc6922708f385d4380b02029c7d3df7a72ad364b0bf5d561837d34aca673e71",
+      "matrixSha256": "5998e9d1dd9bf48af6af87a1ef8c7783b818ac8329637ada08cc5fb329042376"
+    },
+    {
+      "name": "Avinash white plaster",
+      "vertexCount": 13230,
+      "byteOffset": 9264,
+      "positionSha256": "596bf0a4a9327323faf84582a680c710faa6e8ea84b6a02fc3313eca5b50a22c",
+      "normalSha256": "61c8a62073b2ddb6354e973d815034ed05b43c6ddbffdb9aff3eef878791e2e2",
+      "matrixSha256": "5998e9d1dd9bf48af6af87a1ef8c7783b818ac8329637ada08cc5fb329042376"
+    },
+    {
+      "name": "Avinash unobserved recess",
+      "vertexCount": 1572,
+      "byteOffset": 115104,
+      "positionSha256": "dab3805707396d1cb19f0cf92fddd8d1b87200ab390a448f93350833881a1f25",
+      "normalSha256": "765480a4cd85c8b74565cbe678dabd9e0f3cc8edbe8f06e37433de4dd4fecfab",
+      "matrixSha256": "5998e9d1dd9bf48af6af87a1ef8c7783b818ac8329637ada08cc5fb329042376"
+    },
+    {
+      "name": "Avinash pale casements",
+      "vertexCount": 6372,
+      "byteOffset": 127680,
+      "positionSha256": "93497135e1b85cb8dae11416af3496e493c25c81714f550057f2c066bf77522d",
+      "normalSha256": "84ff05946d03a852a46dacb2a8b0675174317291537eb0e2fb3d7cf20fee5a0e",
+      "matrixSha256": "5998e9d1dd9bf48af6af87a1ef8c7783b818ac8329637ada08cc5fb329042376"
+    },
+    {
+      "name": "Avinash blue trim",
+      "vertexCount": 7416,
+      "byteOffset": 178656,
+      "positionSha256": "5eaab17227d195a2d163703b49f5c8c162451eb72741ec58140a55665f1be886",
+      "normalSha256": "7c7df407a213c331ca62e9918bcd4ec62d40da22db023eeb3f3ce171467eb920",
+      "matrixSha256": "5998e9d1dd9bf48af6af87a1ef8c7783b818ac8329637ada08cc5fb329042376"
+    },
+    {
+      "name": "Avinash pale facing joints",
+      "vertexCount": 36,
+      "byteOffset": 237984,
+      "positionSha256": "bf7a651372bef357df6d95487248a88560a18bad23827a9b72830361d6d8fb69",
+      "normalSha256": "484fbf9af41361f93f6c4952a7749e006af8cdd1b17bec099cab9b7be52f7aab",
+      "matrixSha256": "5998e9d1dd9bf48af6af87a1ef8c7783b818ac8329637ada08cc5fb329042376"
+    }
+  ],
+  "method": "Cycles AO scalar via emission bake; exact runtime surface geometry, no light/color/photo bake",
+  "radiusMeters": 4,
+  "aoRays": 16,
+  "cyclesSamples": 256,
+  "paddingPixels": 4,
+  "excludedOccluders": [
+    "Glass (runtime castShadow=false)"
+  ],
+  "occluders": [
+    {
+      "name": "Avinash continuous hardstanding",
+      "positionSha256": "a11868c0b37fc11993495cf853551fb71393e7a6c3f70aaf1f6e1a59e800399b",
+      "normalSha256": "f719dada20e5548f6954a235935f40077d2b667297c2574bae34e71e17de5274",
+      "matrixSha256": "5998e9d1dd9bf48af6af87a1ef8c7783b818ac8329637ada08cc5fb329042376",
+      "castShadow": true,
+      "glass": false
+    },
+    {
+      "name": "Avinash concrete",
+      "positionSha256": "80c1ff6c04ae0166cec3c9330eb5fcbaeab2b32a790ada4387a18e615c224fd5",
+      "normalSha256": "1fc6922708f385d4380b02029c7d3df7a72ad364b0bf5d561837d34aca673e71",
+      "matrixSha256": "5998e9d1dd9bf48af6af87a1ef8c7783b818ac8329637ada08cc5fb329042376",
+      "castShadow": true,
+      "glass": false
+    },
+    {
+      "name": "Avinash white plaster",
+      "positionSha256": "596bf0a4a9327323faf84582a680c710faa6e8ea84b6a02fc3313eca5b50a22c",
+      "normalSha256": "61c8a62073b2ddb6354e973d815034ed05b43c6ddbffdb9aff3eef878791e2e2",
+      "matrixSha256": "5998e9d1dd9bf48af6af87a1ef8c7783b818ac8329637ada08cc5fb329042376",
+      "castShadow": true,
+      "glass": false
+    },
+    {
+      "name": "Avinash unobserved recess",
+      "positionSha256": "dab3805707396d1cb19f0cf92fddd8d1b87200ab390a448f93350833881a1f25",
+      "normalSha256": "765480a4cd85c8b74565cbe678dabd9e0f3cc8edbe8f06e37433de4dd4fecfab",
+      "matrixSha256": "5998e9d1dd9bf48af6af87a1ef8c7783b818ac8329637ada08cc5fb329042376",
+      "castShadow": true,
+      "glass": false
+    },
+    {
+      "name": "Avinash window glass",
+      "positionSha256": "82e4950a20896bb3936b5c3d0ec2df197c4e4363519ae4aa0917b3d987adaa03",
+      "normalSha256": "01b40a12a758694226a4953756a4b67a27c5bee14dfe8bee7fe84863b1abb514",
+      "matrixSha256": "5998e9d1dd9bf48af6af87a1ef8c7783b818ac8329637ada08cc5fb329042376",
+      "castShadow": false,
+      "glass": true
+    },
+    {
+      "name": "Avinash pale casements",
+      "positionSha256": "93497135e1b85cb8dae11416af3496e493c25c81714f550057f2c066bf77522d",
+      "normalSha256": "84ff05946d03a852a46dacb2a8b0675174317291537eb0e2fb3d7cf20fee5a0e",
+      "matrixSha256": "5998e9d1dd9bf48af6af87a1ef8c7783b818ac8329637ada08cc5fb329042376",
+      "castShadow": true,
+      "glass": false
+    },
+    {
+      "name": "Avinash blue trim",
+      "positionSha256": "5eaab17227d195a2d163703b49f5c8c162451eb72741ec58140a55665f1be886",
+      "normalSha256": "7c7df407a213c331ca62e9918bcd4ec62d40da22db023eeb3f3ce171467eb920",
+      "matrixSha256": "5998e9d1dd9bf48af6af87a1ef8c7783b818ac8329637ada08cc5fb329042376",
+      "castShadow": true,
+      "glass": false
+    },
+    {
+      "name": "Avinash green balcony grille",
+      "positionSha256": "847ead814cb65c38b895201ebe928ba3a5c3421756dfcbf0f40039b3c7594679",
+      "normalSha256": "54ac6eb3530b6e2c4d4aca4f9f64aae31ddbdd8b30cb9b7e9e54142a5fb234bb",
+      "matrixSha256": "5998e9d1dd9bf48af6af87a1ef8c7783b818ac8329637ada08cc5fb329042376",
+      "castShadow": true,
+      "glass": false
+    },
+    {
+      "name": "Avinash upper diamond mesh",
+      "positionSha256": "d01334aa992afebce3dbf3ed65eb88df96a640c29ea936ba211d8f1b34418f33",
+      "normalSha256": "54967dab0178ca33db314be7048146416a4efa9c8e4822a79db0f0e7c1504578",
+      "matrixSha256": "5998e9d1dd9bf48af6af87a1ef8c7783b818ac8329637ada08cc5fb329042376",
+      "castShadow": true,
+      "glass": false
+    },
+    {
+      "name": "Avinash dark steel",
+      "positionSha256": "12670582e6fd01d67993b71e889dd0d7a8132bd2bd59028c0256790196c3d0b6",
+      "normalSha256": "2e0a89225c914cff82d8446ee4cb42a2f4722abf25566826b1727a3cbb187e4d",
+      "matrixSha256": "5998e9d1dd9bf48af6af87a1ef8c7783b818ac8329637ada08cc5fb329042376",
+      "castShadow": true,
+      "glass": false
+    },
+    {
+      "name": "Avinash pale facing joints",
+      "positionSha256": "bf7a651372bef357df6d95487248a88560a18bad23827a9b72830361d6d8fb69",
+      "normalSha256": "484fbf9af41361f93f6c4952a7749e006af8cdd1b17bec099cab9b7be52f7aab",
+      "matrixSha256": "5998e9d1dd9bf48af6af87a1ef8c7783b818ac8329637ada08cc5fb329042376",
+      "castShadow": true,
+      "glass": false
+    },
+    {
+      "name": "Avinash red vertical band",
+      "positionSha256": "fbf236b167eb5c399ae01cc95e02b050e6493c532e2922a2fb9e79097d50434b",
+      "normalSha256": "5e8e4c1901b2cb79750223d48da7720b9367dd472ea676fa0057d902f000a6f0",
+      "matrixSha256": "5998e9d1dd9bf48af6af87a1ef8c7783b818ac8329637ada08cc5fb329042376",
+      "castShadow": true,
+      "glass": false
+    },
+    {
+      "name": "Avinash blue balcony screening",
+      "positionSha256": "7c3946b82ea1ef76307ff9722b11e19dbd27448a15005ee1983b30d3f7a2adf8",
+      "normalSha256": "626f8448920f64060cec1af4c0c0c1b82f97e2752835460a723ff868eaa933ca",
+      "matrixSha256": "5998e9d1dd9bf48af6af87a1ef8c7783b818ac8329637ada08cc5fb329042376",
+      "castShadow": true,
+      "glass": false
+    },
+    {
+      "name": "Avinash exterior equipment casing",
+      "positionSha256": "dc5a85b3de3e889b0ecfa1baea78a2c5be265de5e766d4f6d7033c186b12fb4d",
+      "normalSha256": "87fbaf5c1ae64a7ee07287ae1a51a201e1e7bdb661c0455456a02c4a3c4b2dc6",
+      "matrixSha256": "5998e9d1dd9bf48af6af87a1ef8c7783b818ac8329637ada08cc5fb329042376",
+      "castShadow": true,
+      "glass": false
+    }
+  ],
+  "sceneSha256": "b6d69b7140ebde31958b639f9cad30993c522cd0c1abd7b126dbdb31b08efbf7",
+  "includedOccluders": "Every existing opaque castShadow mesh in Avinash; no additional hidden bake-only walls",
+  "scope": "Scalar visibility for indirect illumination only; direct sunlight and shadows remain dynamic",
+  "limits": "Finite-distance local-model AO, not directional sky transport or multiple-bounce GI. Neighboring buildings, vegetation and the wider ground are omitted. Building dimensions and hidden room layout remain inferred.",
+  "license": "CC0 original computed visibility and UV data; no photograph input",
+  "inputSha256": "4aed4e117da2571f3b9e1ad839129ccad1cfca4a9b33a063b0208003beea8182",
+  "uvSha256": "602a894b4e57eb7244d7726d824ab94a670f5fea4636dabc13160040cf95fd64",
+  "atlasSha256": "1056fcdc7adbc613f9f3821fe3d60217ca8a82804bba672e3f4b9a11ca91361c",
+  "elapsedSeconds": 45.43279504100792
+}

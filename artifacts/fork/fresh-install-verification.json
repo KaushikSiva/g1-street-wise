@@ -1,0 +1,22 @@
+{
+  "platform": "macOS Apple Silicon",
+  "python": "3.12",
+  "frontend": "npm ci and npm run build passed in separate checkout",
+  "setup": "scripts/fork/setup.py completed from a fresh Python environment and fresh pinned vendor checkouts",
+  "sdk": {
+    "sdk": "unitree_sdk2_python",
+    "revision": "65691c8a8bc53b98d3976dba4dbf9d5d20b2e7f5",
+    "domain": 42,
+    "interface": "lo0",
+    "command_messages": 500,
+    "feedback_messages": 500,
+    "crc_verified": true,
+    "simulated_seconds": 10.000000000000009,
+    "distance_m": 4.090879068070288,
+    "height_m": 0.7678997918426508,
+    "roundtrip_p50_ms": 1.1087914754170924,
+    "physical_robot_connected": false,
+    "control": "Received LowCmd PD gains and targets applied to MuJoCo joints"
+  },
+  "credentialMode": "fresh checkout .env contains blank API key"
+}

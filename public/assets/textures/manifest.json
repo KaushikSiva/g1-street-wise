@@ -1,0 +1,143 @@
+[
+  {
+    "asset": "asphalt_02",
+    "kind": "Diffuse",
+    "path": "/assets/textures/asphalt_02_Diffuse.jpg",
+    "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/asphalt_02/asphalt_02_diff_1k.jpg",
+    "source": "https://polyhaven.com/a/asphalt_02",
+    "license": "CC0",
+    "usage": "Illustrative physical material, not a texture surveyed in Kodambakkam"
+  },
+  {
+    "asset": "asphalt_02",
+    "kind": "nor_gl",
+    "path": "/assets/textures/asphalt_02_nor_gl.jpg",
+    "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/asphalt_02/asphalt_02_nor_gl_1k.jpg",
+    "source": "https://polyhaven.com/a/asphalt_02",
+    "license": "CC0",
+    "usage": "Illustrative physical material, not a texture surveyed in Kodambakkam"
+  },
+  {
+    "asset": "concrete_floor_worn_001",
+    "kind": "Diffuse",
+    "path": "/assets/textures/concrete_floor_worn_001_Diffuse.jpg",
+    "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/concrete_floor_worn_001/concrete_floor_worn_001_diff_1k.jpg",
+    "source": "https://polyhaven.com/a/concrete_floor_worn_001",
+    "license": "CC0",
+    "usage": "Illustrative physical material, not a texture surveyed in Kodambakkam"
+  },
+  {
+    "asset": "concrete_floor_worn_001",
+    "kind": "nor_gl",
+    "path": "/assets/textures/concrete_floor_worn_001_nor_gl.jpg",
+    "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/concrete_floor_worn_001/concrete_floor_worn_001_nor_gl_1k.jpg",
+    "source": "https://polyhaven.com/a/concrete_floor_worn_001",
+    "license": "CC0",
+    "usage": "Illustrative physical material, not a texture surveyed in Kodambakkam"
+  },
+  {
+    "asset": "asphalt_02",
+    "kind": "Rough",
+    "path": "/assets/textures/asphalt_02_Rough.jpg",
+    "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/asphalt_02/asphalt_02_rough_1k.jpg",
+    "source": "https://polyhaven.com/a/asphalt_02",
+    "license": "CC0",
+    "usage": "Illustrative material; not Kodambakkam survey"
+  },
+  {
+    "asset": "concrete_floor_worn_001",
+    "kind": "Rough",
+    "path": "/assets/textures/concrete_floor_worn_001_Rough.jpg",
+    "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/concrete_floor_worn_001/concrete_floor_worn_001_rough_1k.jpg",
+    "source": "https://polyhaven.com/a/concrete_floor_worn_001",
+    "license": "CC0",
+    "usage": "Illustrative material; not Kodambakkam survey"
+  },
+  {
+    "asset": "kloofendal_overcast_puresky",
+    "path": "/assets/textures/overcast.hdr",
+    "url": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/1k/kloofendal_overcast_puresky_1k.hdr",
+    "license": "CC0",
+    "source": "https://polyhaven.com/a/kloofendal_overcast_puresky",
+    "usage": "Illustrative overcast illumination, not HDRI captured in Chennai"
+  },
+  {
+    "asset": "plaster_fine",
+    "kind": "normal",
+    "path": "/assets/textures/plaster_fine_normal.png",
+    "generator": "scripts/building-exteriors-plaster-field.py",
+    "license": "CC0 original procedural material fields; no photograph input",
+    "usage": "Lakshmi facade material prior; physical depth and paint response are inferred, not measured on Central Avenue",
+    "tileMeters": 1.024,
+    "resolution": [
+      1024,
+      1024
+    ],
+    "colorSpace": "linear data",
+    "sha256": "50100327b10d634c3c8c699de8a700e675c18054d03741cba8949b0e7ff6a728",
+    "bytes": 853631
+  },
+  {
+    "asset": "plaster_fine",
+    "kind": "pigment",
+    "path": "/assets/textures/plaster_fine_pigment.png",
+    "generator": "scripts/building-exteriors-plaster-field.py",
+    "license": "CC0 original procedural material fields; no photograph input",
+    "usage": "Lakshmi facade material prior; physical depth and paint response are inferred, not measured on Central Avenue",
+    "tileMeters": 1.024,
+    "resolution": [
+      1024,
+      1024
+    ],
+    "colorSpace": "linear data",
+    "sha256": "3bfb5489d4385972416e00bf6d18cefed6f5e23faa08bdad93d3ba26b225be1f",
+    "bytes": 19143
+  },
+  {
+    "asset": "plaster_fine",
+    "kind": "roughness",
+    "path": "/assets/textures/plaster_fine_roughness.png",
+    "generator": "scripts/building-exteriors-plaster-field.py",
+    "license": "CC0 original procedural material fields; no photograph input",
+    "usage": "Lakshmi facade material prior; physical depth and paint response are inferred, not measured on Central Avenue",
+    "tileMeters": 1.024,
+    "resolution": [
+      1024,
+      1024
+    ],
+    "colorSpace": "linear data",
+    "sha256": "e695b5c573a67945887a7bc991bf503825ee8ca17f1732cc8acf998e6a023cdb",
+    "bytes": 37843
+  },
+  {
+    "asset": "kloofendal_38d_partly_cloudy_puresky",
+    "source": "https://polyhaven.com/a/kloofendal_38d_partly_cloudy_puresky",
+    "url": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/kloofendal_38d_partly_cloudy_puresky_2k.hdr",
+    "license": "CC0",
+    "authors": [
+      "Greg Zaal",
+      "Jarod Guest"
+    ],
+    "bytes": 5294817,
+    "sha256": "a24bde75b46707fb51770626fad7dbd6986eb80754e4b05bc76739d4f3122cd7",
+    "usage": "Illustrative sky illumination; not captured in Chennai, not a reconstruction of the photo capture time",
+    "path": "/assets/textures/central-daylight.hdr",
+    "runtimeProcessing": "Original background retained. A 3-degree solar/halo core is replaced by surrounding sky radiance for indirect lighting, and removed solid-angle-integrated radiance drives a shadow-casting sun. Orientation inferred, not a solar-date fit."
+  },
+  {
+    "asset": "encaarpus_visibility",
+    "path": "/assets/textures/encaarpus_visibility.png",
+    "license": "CC0 original geometry-derived scalar visibility; no photograph input",
+    "generator": "scripts/bake-encaarpus-occlusion.py",
+    "source": "/assets/encaarpus-visibility.json",
+    "sha256": "b250047ed81dc224813e54ba5e608644407d0a31ddccd32667986c8619b8fca0",
+    "usage": "Indirect occlusion for fifteen Encaarpus facade, paving and parked-car material meshes; dimensions and hidden floor plan inferred; not full GI",
+    "resolution": [
+      2048,
+      2048
+    ],
+    "colorSpace": "linear data",
+    "channel": 1,
+    "bytes": 677886
+  }
+]

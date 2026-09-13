@@ -1,0 +1,42 @@
+{
+  "asset": "station-mast.glb",
+  "generator": "scripts/build_station_mast.py",
+  "reference": "public/reference/station-2018.jpg",
+  "authorship": "Original programmatic Blender mesh and generated PBR textures created for this project",
+  "source_asset_license": "No third-party asset or photograph pixels embedded",
+  "geometry_status": "Photo-informed dimensions inferred, not surveyed; hidden assemblies inferred",
+  "triangles": 9400,
+  "material_batches": 4,
+  "bytes": 1485972,
+  "gltf_bounds": {
+    "min": [
+      -0.6150000095367432,
+      0.0,
+      -0.17000000178813934
+    ],
+    "max": [
+      0.6149999499320984,
+      8.199999809265137,
+      0.17000000178813934
+    ]
+  },
+  "upright_centers_local_x": [
+    -0.45,
+    0.45
+  ],
+  "blue_band_top_local_y": 1.02,
+  "blue_band_edge": "Modestly irregular brush edge with per-section mean1.02m",
+  "brace_pitch_m": 0.84,
+  "near_upright_brace_join_heights_m": [
+    1.55,
+    3.23,
+    4.91,
+    6.59
+  ],
+  "inferred_near_upright_terminal_joins_m": [
+    0.22,
+    8.1
+  ],
+  "revision": 2,
+  "source_blend": "assets/source/station-mast.blend"
+}
