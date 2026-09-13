@@ -1,10 +1,16 @@
 {
+  "url": "https://streetwise-cppv.onrender.com/?robot=1&live=1",
   "serviceId": "srv-dajf0h0jo6nc73dk2880",
-  "deployId": "dep-dajf0h8jo6nc73dk2920",
-  "commit": "b04bdce6bd23e160711dcc94088a3976474a49d5",
+  "deployId": "dep-dajfj41594qs73c12ll0",
+  "commit": "ef3ef939981c702decfc2b97723ed459a107fc8c",
   "status": "live",
-  "url": "https://streetwise-cppv.onrender.com",
-  "plan": "free",
-  "health": "passed",
-  "autoDeploy": false
+  "checks": {
+    "browser_ready": true,
+    "interrupted_poll_recovery": true,
+    "newest_first_history": true,
+    "strict_passing_filter": true,
+    "recorded_20002_collision_corrected": true,
+    "fresh_20002_car_pass": true,
+    "fresh_20002_shelter_pass": true
+  }
 }
