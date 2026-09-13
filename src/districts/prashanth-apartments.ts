@@ -1,4 +1,5 @@
 import {buildPrashanthGround} from './prashanth-ground';
+import {buildPrashanthServices} from './prashanth-services';
 import * as THREE from 'three';
 import {mergeGeometries} from 'three/addons/utils/BufferGeometryUtils.js';
 import {createLakshmiPlaster,setLakshmiMaterialUV} from './lakshmi-material';
@@ -88,8 +89,7 @@ export function buildPrashanthApartments(points:Point[],height:number,heightSour
  box(1.15,2.35,.14,.61,.45,.20,dark,'service panel');
  for(const [x,y,w]of [[1.25,1.84,.15],[1.62,1.65,.10]])box(x,y,.231,w,.09,.012,glass,'meter window');
  for(const x of [.82,1.50]){rod([x,.55,.11],[x,2.98,.11],.015,metal,'surface conduit');rod([x,2.98,.11],[x-2.5,2.98,.11],.015,metal,'surface conduit');}
- box(-3.75,2.62,.24,.72,.50,.46,cream,'air conditioner housing');
- for(let x=-4.04;x<-3.47;x+=.075)box(x,2.62,.479,.022,.38,.018,metal,'air conditioner grille');
+ const services=buildPrashanthServices();group.add(services);
  // Source upper continuation: the dark vertical strip is read as the shaded
  // side of a projecting pale return. No upper window is asserted from it.
  box(2.60,4.875,.18,.35,3.0,.38,cream,'first upper pale divider');
@@ -128,6 +128,6 @@ export function buildPrashanthApartments(points:Point[],height:number,heightSour
  }
  for(const [m,geometries]of batches){const g=mergeGeometries(geometries,false);if(!g)throw new Error('Prashanth geometry merge failed');const mesh=new THREE.Mesh(g,m);mesh.name=m.name;mesh.castShadow=m!==glass;mesh.receiveShadow=true;group.add(mesh);geometries.forEach(g=>g.dispose());}
  const ground=buildPrashanthGround(width);group.add(ground);
- group.userData={wayId:PRASHANTH_WAY_ID,revision:3,ground:ground.userData,width,height,heightSource,frontEdge:[3,0],pose:group.position.toArray(),yaw:group.rotation.y,gateZ,gateLeft,gateRight,openings,semantic,minimumUpperLevels:2,upperSolidDetails,upperOpeningLayout:'Unresolved above modeled first upper level; observed pale solid continuation represented without invented openings',sourcePano:'Vu0xhoBfuQb7XsmcWslizA',captureDate:'Unknown',sourceSha256:'fa39e258ed439253ecf20342e1d614315bb7a422626f8a128951fabfcdb627ea',association:'Named OSM footprint and visible PRASHANTH name; conditional alignment, not cadastral proof',limits:'Partial visible entrance only. Minimum ground plus two upper levels observed; provisional 9.65 m height inferred. Higher opening layout, exact total floor count and roofline obscured by canopy. Upper pale band/infill and projecting return are partial source-informed solids; their sections and function remain inferred. Bay dimensions, paint reflectance, curved parapet, gate fabrication and boundary setback inferred. Unseen sides/rear remain plain. Neighbor 13/7 gate is excluded. No calibrated photo match.'};
+ group.userData={wayId:PRASHANTH_WAY_ID,revision:4,services:services.userData,ground:ground.userData,width,height,heightSource,frontEdge:[3,0],pose:group.position.toArray(),yaw:group.rotation.y,gateZ,gateLeft,gateRight,openings,semantic,minimumUpperLevels:2,upperSolidDetails,upperOpeningLayout:'Unresolved above modeled first upper level; observed pale solid continuation represented without invented openings',sourcePano:'Vu0xhoBfuQb7XsmcWslizA',captureDate:'Unknown',sourceSha256:'fa39e258ed439253ecf20342e1d614315bb7a422626f8a128951fabfcdb627ea',association:'Named OSM footprint and visible PRASHANTH name; conditional alignment, not cadastral proof',limits:'Partial visible entrance only. Minimum ground plus two upper levels observed; provisional 9.65 m height inferred. Higher opening layout, exact total floor count and roofline obscured by canopy. Upper pale band/infill and projecting return are partial source-informed solids; their sections and function remain inferred. Bay dimensions, paint reflectance, curved parapet, gate fabrication and boundary setback inferred. Unseen sides/rear remain plain. Neighbor 13/7 gate is excluded. No calibrated photo match.'};
  return group;
 }

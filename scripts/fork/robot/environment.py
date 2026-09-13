@@ -100,9 +100,13 @@ class CentralAvenueG1(gym.Env):
             self._frame(0)
         return self._observe(), {'scenario_seed': self.scenario_seed}
 
+    def actor_visible(self):
+        d = self.robot.data
+        return visible(d.qpos[0], d.qpos[1], self.crossing, self.py)
+
     def _observe(self):
         d = self.robot.data
-        seen = visible(d.qpos[0], d.qpos[1], self.crossing, self.py)
+        seen = self.actor_visible()
         if seen:
             self.last_y, self.last_v, self.age = self.py, self.pv, 0.
         estimated_y = self.last_y+self.last_v*self.age
@@ -131,7 +135,7 @@ class CentralAvenueG1(gym.Env):
         d = self.robot.data
         self.frames.append({'t': round(self.t, 4), 'qpos': d.qpos[:19].tolist(),
             'pedestrian': [self.crossing, self.py, .85], 'action': int(action),
-            'visible': visible(d.qpos[0], d.qpos[1], self.crossing, self.py),
+            'visible': self.actor_visible(),
             'clearance': float(np.hypot(d.qpos[0]-self.crossing,d.qpos[1]-self.py)-.55)})
 
     def command_for_action(self, action):

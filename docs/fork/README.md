@@ -4,7 +4,41 @@
 
 STREETWISE turns a photo-informed Chennai street into a repeatable robot learning environment. A walking robot encounters an occluded pedestrian, learns a better navigation policy from simulator outcomes, and is evaluated on unseen encounters. The purpose is to find costly navigation mistakes in simulation before deploying a robot.
 
-118-second demo: rendering · [Pitch PDF](../../artifacts/fork/media/STREETWISE-pitch.pdf) · [Editable slides](../../artifacts/fork/media/pitch.html) · [Submission copy](submission.md)
+[118-second demo](../../artifacts/fork/media/STREETWISE-demo.mp4) · [Pitch PDF](../../artifacts/fork/media/STREETWISE-pitch.pdf) · [Editable slides](../../artifacts/fork/media/pitch.html) · [Submission copy](submission.md)
+
+## Same street. Same pedestrian. A better decision.
+
+These are **actual application captures of recorded MuJoCo physics**, not generated before/after pictures. Both show test encounter **20002 at 4.0 seconds**, with the same camera, pedestrian and frozen walking controller.
+
+| Before: constant forward motion | After: learned navigation |
+|---|---|
+| ![Before training: the robot enters the pedestrian clearance envelope](../../artifacts/fork/media/before-learning.png) | ![After training: the robot keeps more space from the same pedestrian](../../artifacts/fork/media/after-learning.png) |
+| Clearance violated at 4.0 s. | Clear at 4.0 s; completes at 7.4 s. |
+
+Across **64 unseen mixed-hazard encounters**, completion improved from **28 to 64**, and clearance violations fell from **35 to 0**. These are simulation results, with measured limits explained below.
+
+## How it works — think of learning to cross a street
+
+![Simple architecture: notice the street, choose a move, let the walking controller move the legs, practise in simulation, and learn from the score](../../artifacts/fork/media/architecture-simple.svg)
+
+1. **Notice:** Where am I? Where was the person or car last seen?
+2. **Choose:** A small decision-making model picks “wait,” “slow,” “forward,” or “move sideways.”
+3. **Walk:** Unitree's existing walking skill turns that choice into leg movements.
+4. **Practise:** MuJoCo simulates what happens. Safe progress earns points; getting too close loses points.
+5. **Learn:** PPO makes small changes to the decision model. Then we test it on encounters it did not practise on.
+
+**What is PPO?** Proximal Policy Optimization is a reinforcement-learning method: try actions, measure the reward, and update the policy in controlled steps. Here, we train the robot's navigation decisions. **The pretrained Unitree walking policy stays frozen.**
+
+| Tool | Its job in plain English |
+|---|---|
+| Unitree policy + MuJoCo | The robot's walking skill and physics practice ground. |
+| PPO / Stable-Baselines3 | The coach that improves movement decisions from rewards. |
+| W&B | The experiment scorebook: training curves, checkpoints and test results. |
+| Weave + W&B-hosted Qwen | A traced analyst for the separate world-model experiment. |
+| marimo / molab | An interactive lab notebook and the GPU training workspace. |
+| Three.js | The Chennai street you see, replaying recorded robot joint positions. |
+
+The **world-model lab is a separate experiment** that predicts possible futures and learns from new encounters. It does not currently feed predictions into the physical robot's PPO policy. [Detailed engineering diagram](../../artifacts/fork/media/architecture.svg).
 
 ## Run the demo
 
@@ -91,3 +125,9 @@ Setup pins Unitree RL Gym, Unitree SDK2 Python and CycloneDDS revisions. Source/
 The existing Chennai map, OSM footprints and photo-informed architecture predate this build. New work comprises the world model, robot simulation, PPO navigation, evaluation, sponsor instrumentation, notebooks and demo. Central Avenue dimensions, vegetation and synthetic encounters are inferred. This is not a surveyed digital twin, a photogrammetry reconstruction, or a real robot trial. The visual scene aims for a realistic presentation; the collision model is deliberately simpler and disclosed.
 
 W&B/Weave and marimo are used. ARIA is not integrated. No claims are made about winning awards, physical deployments or completed participant surveys.
+
+## Help build the next street
+
+Try an unseen scenario, reproduce a result, or contribute a new measured road condition. Useful contributions include better perception, additional street layouts, stronger locomotion, and reproducible failure cases. Please include the scenario seed, checkpoint and expected/observed behavior when [opening an issue](https://github.com/KaushikSiva/g1-street-wise/issues).
+
+If this is useful for your robotics work, star the repository to follow its progress. Built by **Kaushik Sivakumar**.

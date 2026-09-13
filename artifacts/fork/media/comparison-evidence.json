@@ -1,0 +1,35 @@
+{
+  "source": "Unmodified scene rendered by the application from recorded MuJoCo joint states. Heading annotations identify the comparison. Same seed, camera and simulation timestamp.",
+  "captures": [
+    {
+      "mode": "before",
+      "seed": 20002,
+      "time": 4,
+      "outcome": {
+        "scenario_seed": 20002,
+        "contact": true,
+        "fall": false,
+        "success": false,
+        "min_clearance": -0.043207,
+        "progress": 2.293568,
+        "return": -16.222092,
+        "elapsed": 4
+      }
+    },
+    {
+      "mode": "after",
+      "seed": 20002,
+      "time": 4,
+      "outcome": {
+        "scenario_seed": 20002,
+        "contact": false,
+        "fall": false,
+        "success": true,
+        "min_clearance": 0.190707,
+        "progress": 3.685754,
+        "return": 17.882279,
+        "elapsed": 7.4
+      }
+    }
+  ]
+}

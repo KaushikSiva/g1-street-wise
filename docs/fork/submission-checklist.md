@@ -9,8 +9,8 @@ Source: [participant handbook](https://wandbai.notion.site/CoreWeave-Hacks-Parti
 - [x] Reproducible startup, dependencies, assets, credentials template, training/checkpoint/evaluation commands.
 - [x] W&B Models training graphs and run URLs; Weave traces of agent loop.
 - [x] marimo interactive experiment notebook with actual data and comparisons.
-- [ ] 118-second MP4 including problem, before/after, W&B graphs and explanation, plus narration script and captions.
-- [ ] Public GitHub publication package, repository URL or judge access instructions.
+- [x] 118-second MP4 including problem, before/after, W&B graphs and explanation, plus narration script and captions.
+- [x] Public GitHub publication package, repository URL or judge access instructions.
 - [x] 2–3 sentence summary, utility, architecture, RL environments, sponsor tools/protocols, prior work disclosure.
 - [ ] Unique team name, member names, social handles; AGI House account + participant survey for each member (user supplied).
 - [ ] Track: Best Use of Weave and/or marimo; Best Loop Design automatic. Claim ARIA only if actually used.
