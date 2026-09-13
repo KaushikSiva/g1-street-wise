@@ -1,12 +1,17 @@
 # STREETWISE — submission copy
 
 ## Project description
-STREETWISE is a robot learning lab that turns a photo-informed Chennai street into repeatable navigation tests. An official Unitree walking policy powers a simulated robot while PPO learns to wait, advance and steer around occluded pedestrians, moving cars and marked road defects; a separate action-conditioned world model predicts futures, observes mistakes and improves through validation-gated updates. W&B records training and evaluations, Weave traces the agent's curriculum analysis, and marimo makes the evidence inspectable and reproducible.
+
+STREETWISE began with a simple question: how can a robot learn to handle the everyday surprises of a real street? We recreated a street in Chennai, India, where a parked van can hide a pedestrian, a car can cross the robot’s path, and sudden rain means finding shelter. An official Unitree policy handles walking, while PPO learns when to wait, move forward, or change direction. Each encounter can be replayed to see what went wrong and test whether the next policy improves. W&B tracks the results, Weave records the agent’s curriculum reviews, and marimo makes the experiments easy to inspect and rerun.
 
 ## Why it matters
 Street deployments expose robots to hazards that tidy laboratory tests miss. STREETWISE helps robotics teams find navigation failures, compare policies on identical encounters and review measured improvements before spending scarce hardware-testing time. It is a simulation-first evaluation tool, with a path toward site-specific testing for delivery, inspection and campus robots; it does not establish real-world safety.
 
 ## Evidence
+
+The original center-clearance scores below predate a physical-contact audit and must not be read as collision-free success rates. Under the corrected contact checks, retrained traffic succeeds in 60/64 tests versus 41/64 for its starting checkpoint. Rain-onset shelter navigation succeeds in 56/64 tests with zero contacts/falls; eight trials time out.
+
+Original benchmark records:
 - Pedestrian curriculum: 42 → 64 completed crossings on 64 held-out encounters; 22 → 0 clearance violations; zero falls.
 - Mixed curriculum: 28 → 64 completed encounters on 64 held-out tests; 35 → 0 clearance violations; 0 → 0 falls.
 - Official SDK: 500 CRC-checked commands applied to simulated joints and 500 feedback messages through DDS loopback.

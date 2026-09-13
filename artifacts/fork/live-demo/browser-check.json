@@ -1,8 +1,8 @@
 {
-  "base": "https://streetwise-cppv.onrender.com",
+  "base": "http://127.0.0.1:8196",
   "seed": 30002,
   "badge": "FRESH MUJOCO RUN · SEED 30002",
-  "status": "Fresh comparison ready · seed 30002 · 13.1 seconds of server computation. Use Before / After and Play encounter above.",
+  "status": "Fresh comparison ready · seed 30002 · 0.7 seconds of server computation. Use Before / After and Play encounter above.",
   "summary": "Before · constant forwardPhysical collision · 4.6 sAfter · navigation policyRoute completed · 7.8 s",
   "modeSwitch": true,
   "playback": true,

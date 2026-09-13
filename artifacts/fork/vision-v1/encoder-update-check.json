@@ -1,0 +1,5 @@
+{
+  "encoder_max_weight_change": 0.01894562318921089,
+  "encoder_tensors_changed": 8,
+  "meaning": "PPO updated the RGB encoder; this alone does not establish useful perception or generalization."
+}
