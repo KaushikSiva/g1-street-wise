@@ -58,3 +58,7 @@ Continue checking the existing cloud jobs, back up newly completed rounds, and i
 At the first 8,192-step emergency check, validation completion was 5/32 (starting policy 4/32), with 22 total clearance violations, 17 emergency-envelope violations and one actual foot contact. No successful accident stops were measured. These are interim validation results, not final unseen-test evidence or a solved task.
 
 The local 118-second MP4 was refreshed from actual application capture with the latest native scene and saved naturally paced Fish Audio narration. H.264/AAC 1920×1080 encoding and full decode passed. Desktop/STREETWISE Demo has the refreshed MP4, captions, narration, script and this checkpoint.
+
+## Human-language video edit
+
+The final demo now shows the user-supplied Chennai Street View image at 12–16 seconds, then says the robot bumps into a person. Spoken clearance jargon in the results segment is replaced with plain language about giving people space. Edits cover 12–27 and 43–58 seconds; other content, thank-you at 110–112, and QR at 112–120 are preserved. Scripts: `humanize_demo.py`, `humanize-demo.mjs`, `verify_human_edit.py`. Verification: `artifacts/fork/media/human-edit-verification.json`.

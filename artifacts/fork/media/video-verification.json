@@ -1,7 +1,7 @@
 {
   "duration": 120,
   "decode": "passed",
-  "first110Seconds": "Approved video content retained",
+  "first110Seconds": "Chennai photo and plain-language edits at 12\u201327 and 43\u201358 seconds; other content retained.",
   "sourceSha256": "b6ebd4a0ac9294fabfba276f23c6b59966a401720dd17465047f193ce153e5f8",
   "thankYou": [
     110,
@@ -23,5 +23,6 @@
     {
       "codec_name": "aac"
     }
-  ]
+  ],
+  "humanEditVerification": "human-edit-verification.json"
 }

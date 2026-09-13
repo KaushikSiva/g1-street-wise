@@ -1,8 +1,20 @@
 # STREETWISE — submission copy
 
+**Tagline:** Learning the street, one mistake at a time.
+
 ## Project description
 
 STREETWISE began with a simple question: how can a robot learn to handle the everyday surprises of a real street? We recreated a street in Chennai, India, where a parked van can hide a pedestrian, a car can cross the robot’s path, and sudden rain means finding shelter. An official Unitree policy handles walking, while PPO learns when to wait, move forward, or change direction. Each encounter can be replayed to see what went wrong and test whether the next policy improves. W&B tracks the results, Weave records the agent’s curriculum reviews, and marimo makes the experiments easy to inspect and rerun.
+
+## Tech stack
+
+- Frontend: TypeScript, Three.js, Vite, MapLibre GL
+- Simulation: MuJoCo, Gymnasium, Unitree RL Gym and SDK2
+- Robot learning: Python, PyTorch, Stable-Baselines3 (PPO), NumPy
+- Experiment tracking: Weights & Biases, Weave
+- Interactive lab: marimo, molab
+- Deployment: Docker, Render
+- Demo production: Fish Audio, FFmpeg, Playwright
 
 ## Why it matters
 Street deployments expose robots to hazards that tidy laboratory tests miss. STREETWISE helps robotics teams find navigation failures, compare policies on identical encounters and review measured improvements before spending scarce hardware-testing time. It is a simulation-first evaluation tool, with a path toward site-specific testing for delivery, inspection and campus robots; it does not establish real-world safety.

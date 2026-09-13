@@ -7,9 +7,15 @@
   },
   {
     "start": 12,
+    "end": 16,
+    "text": "We recreated a street in Chennai, India.",
+    "screen": "User-supplied Chennai Street View reference"
+  },
+  {
+    "start": 16,
     "end": 27,
-    "screen": "Before RL, pedestrian test, then freeze at violation",
-    "text": "We recreated a Central Avenue encounter beside Kanakadhara in Chennai. First, an official Unitree walking policy follows a constant forward command. The pedestrian emerges, and the robot enters the clearance envelope."
+    "text": "At first, the robot just keeps walking. A person steps out from behind the van, and the robot bumps into them.",
+    "screen": "Recorded robot bumps into a person"
   },
   {
     "start": 27,
@@ -21,7 +27,7 @@
     "start": 43,
     "end": 58,
     "screen": "Actual W&B learning graph and held-out comparison",
-    "text": "These are actual training measurements from Weights and Biases. On sixty-four unseen pedestrian encounters, completed crossings rise from forty-two to sixty-four. Clearance violations fall from twenty-two to zero, with no robot falls."
+    "text": "These are the original training results from Weights and Biases. Across sixty-four pedestrian tests, successful crossings rose from forty-two to sixty-four. The robot also learned to give people more space."
   },
   {
     "start": 58,

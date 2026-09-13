@@ -54,5 +54,37 @@
       "tempo": 1.08008207253886,
       "textSha256": "1d82d6ffb708ada160cc6d79ea789d7865ea8ad3f48797080c5a9bae5c75cbe1"
     }
+  ],
+  "humanLanguageRevision": [
+    {
+      "start": 12,
+      "end": 16,
+      "text": "We recreated a street in Chennai, India.",
+      "sourceDuration": 2.429333,
+      "tempo": 0.9,
+      "voiceId": "324f49797a924f60a3004950b40d0f0e",
+      "model": "s2.1-pro-free",
+      "audioFile": "human-narration-12-16.wav"
+    },
+    {
+      "start": 16,
+      "end": 27,
+      "text": "At first, the robot just keeps walking. A person steps out from behind the van, and the robot bumps into them.",
+      "sourceDuration": 6.713417,
+      "tempo": 0.78,
+      "voiceId": "324f49797a924f60a3004950b40d0f0e",
+      "model": "s2.1-pro-free",
+      "audioFile": "human-narration-16-27.wav"
+    },
+    {
+      "start": 43,
+      "end": 58,
+      "text": "These are the original training results from Weights and Biases. Across sixty-four pedestrian tests, successful crossings rose from forty-two to sixty-four. The robot also learned to give people more space.",
+      "sourceDuration": 11.441583,
+      "tempo": 0.88,
+      "voiceId": "324f49797a924f60a3004950b40d0f0e",
+      "model": "s2.1-pro-free",
+      "audioFile": "human-narration-43-58.wav"
+    }
   ]
 }

@@ -9,3 +9,7 @@
 - **Surface textures / daylight HDR:** reused licensed assets listed in `public/assets/textures/manifest.json`; Poly Haven assets are CC0. These are material/light references, not surveyed Central Avenue pixels.
 
 Human and van are visual assets above synthetic simulator geometry. Their paths, scale and obstacle envelope must agree with the recorded experiment. No generated footage is presented as a simulator result.
+
+## Chennai Street View reference in the demo
+
+`artifacts/fork/media/chennai-street-reference.png` was supplied by the user on September 13, 2026. It shows Google Street View imagery dated January 2025. The full screenshot, including visible Google attribution, appears at 12–16 seconds in the revised demo. It is a visual reference for the presentation and is not used as robot-training input.

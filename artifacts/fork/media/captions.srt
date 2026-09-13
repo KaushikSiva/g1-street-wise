@@ -11,85 +11,89 @@ and a robot that simply keeps walking can make the wrong decision.
 This is STREETWISE.
 
 4
-00:00:12,000 --> 00:00:17,000
-We recreated a Central Avenue encounter beside Kanakadhara in Chennai. First, an
+00:00:12,000 --> 00:00:16,000
+We recreated a street in Chennai, India.
 
 5
-00:00:17,000 --> 00:00:22,000
-official Unitree walking policy follows a constant forward command. The pedestrian emerges,
+00:00:16,000 --> 00:00:19,000
+At first, the robot just keeps walking.
 
 6
-00:00:22,000 --> 00:00:27,000
-and the robot enters the clearance envelope.
+00:00:19,000 --> 00:00:22,000
+A person steps out from behind the van,
 
 7
+00:00:22,000 --> 00:00:27,000
+and the robot bumps into them.
+
+8
 00:00:27,000 --> 00:00:32,333
 Now replay the same encounter with trained navigation. PPO has learned when
 
-8
+9
 00:00:32,333 --> 00:00:37,666
 to slow down and wait before proceeding. The walking policy itself stays
 
-9
+10
 00:00:37,666 --> 00:00:43,000
 frozen. Every robot joint you see comes from recorded MuJoCo physics.
 
-10
-00:00:43,000 --> 00:00:48,000
-These are actual training measurements from Weights and Biases. On sixty-four unseen
-
 11
-00:00:48,000 --> 00:00:53,000
-pedestrian encounters, completed crossings rise from forty-two to sixty-four. Clearance violations fall
+00:00:43,000 --> 00:00:47,500
+These are the original training results from Weights and Biases.
 
 12
-00:00:53,000 --> 00:00:58,000
-from twenty-two to zero, with no robot falls.
+00:00:47,500 --> 00:00:53,300
+Across sixty-four pedestrian tests, successful crossings rose from forty-two to sixty-four.
 
 13
+00:00:53,300 --> 00:00:58,000
+The robot also learned to give people more space.
+
+14
 00:00:58,000 --> 00:01:03,000
 Training on a molab Blackwell GPU adds lateral movement, moving cars and
 
-14
+15
 00:01:03,000 --> 00:01:08,000
 road defects. Mixed-hazard completion rises from twenty-eight to sixty-four out of sixty-four.
 
-15
+16
 00:01:08,000 --> 00:01:13,000
 Rain changes ground friction; fog limits tracking range. The first weather test
 
-16
+17
 00:01:13,000 --> 00:01:18,000
 still has one failure.
 
-17
+18
 00:01:18,000 --> 00:01:24,000
 A separate world-model lab predicts futures and learns from simulated experience, with
 
-18
+19
 00:01:24,000 --> 00:01:30,000
 Weave tracing its analyst. For robot training, a challenge ladder introduces harder
 
-19
+20
 00:01:30,000 --> 00:01:36,000
 conditions after two perfect validation checks. Test results never control advancement.
 
-20
+21
 00:01:36,000 --> 00:01:40,000
 Compare both policies side by side, or run live MuJoCo with Chennai
 
-21
+22
 00:01:40,000 --> 00:01:44,000
 geometry. Marimo, checkpoints, official SDK evidence and startup instructions make the results
 
-22
+23
 00:01:44,000 --> 00:01:48,000
 inspectable.
 
-23
+24
 00:01:48,000 --> 00:01:50,000
 This is simulation, not a physical robot safety claim. STREETWISE helps teams
 
-24
+25
 00:01:50,250 --> 00:01:51,600
 Thank you.
