@@ -9,7 +9,7 @@ RUN npm run build
 
 FROM python:3.12-slim-bookworm
 WORKDIR /app
-ENV STREETWISE_NUMPY_GAIT=1 HOST=0.0.0.0 PYTHONUNBUFFERED=1 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MPLBACKEND=Agg
+ENV STREETWISE_COMPILED_SCENES=1 STREETWISE_NUMPY_GAIT=1 HOST=0.0.0.0 PYTHONUNBUFFERED=1 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MPLBACKEND=Agg
 RUN apt-get update && apt-get install -y --no-install-recommends git libgl1 libglib2.0-0 && rm -rf /var/lib/apt/lists/*
 COPY scripts/fork/live-requirements.txt /app/live-requirements.txt
 RUN pip install --no-cache-dir -r live-requirements.txt
@@ -33,6 +33,8 @@ COPY artifacts/fork/emergencies-v1/round-001/best.npz ./artifacts/fork/emergenci
 COPY --from=frontend /app/dist ./dist
 COPY scripts/fork/compress_assets.py ./scripts/fork/compress_assets.py
 RUN python scripts/fork/compress_assets.py
+COPY scripts/fork/compile_live_scenes.py ./scripts/fork/compile_live_scenes.py
+RUN python scripts/fork/compile_live_scenes.py
 RUN mkdir -p .fork-runs/robot && useradd --uid 10001 --no-create-home streetwise && chown -R streetwise:streetwise /app/.fork-runs
 USER streetwise
 EXPOSE 10000

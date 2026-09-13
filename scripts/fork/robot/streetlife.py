@@ -27,6 +27,7 @@ def streetlife_scene():
 
 
 class CentralAvenueStreetlife(CentralAvenueWeather):
+    scene_factory = staticmethod(streetlife_scene)
     horizon=18.
     adversarial_seeds=[]
 
@@ -36,7 +37,6 @@ class CentralAvenueStreetlife(CentralAvenueWeather):
         self.goal=np.array([3.2,0.])
         self.seek_shelter=False
         super().__init__(record)
-        self.robot=G1Controller(streetlife_scene())
         self.observation_space=spaces.Box(-10,10,(37,),dtype=np.float32)
 
     def reset(self,*,seed=None,options=None):

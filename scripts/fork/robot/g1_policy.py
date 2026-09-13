@@ -25,7 +25,10 @@ def gravity(quat):
 
 class G1Controller:
     def __init__(self, xml=None):
-        self.model = mujoco.MjModel.from_xml_path(str(xml or UPSTREAM / 'resources/robots/g1_description/scene.xml'))
+        xml = Path(xml or UPSTREAM / 'resources/robots/g1_description/scene.xml')
+        import re
+        cached = ROOT/'.fork-runs/compiled-scenes'/(re.sub(r'-[0-9]+$', '', xml.stem)+'.mjb')
+        self.model = mujoco.MjModel.from_binary_path(str(cached)) if os.getenv('STREETWISE_COMPILED_SCENES') == '1' and cached.exists() else mujoco.MjModel.from_xml_path(str(xml))
         self.data = mujoco.MjData(self.model)
         self.model.opt.timestep = CONFIG['simulation_dt']
         if NUMPY_GAIT:

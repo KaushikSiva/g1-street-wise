@@ -60,6 +60,7 @@ def footprint_clearance(position, center, half_extents, yaw, margin=.30):
 
 
 class CentralAvenueEmergencies(CentralAvenueStreetlife):
+    scene_factory = staticmethod(emergency_scene)
     schema = SCHEMA
 
     def __init__(self, record=False):
@@ -71,7 +72,6 @@ class CentralAvenueEmergencies(CentralAvenueStreetlife):
         self.emergency_contact = False
         self.emergency_min_clearance = 100.
         super().__init__(record)
-        self.robot = G1Controller(emergency_scene())
         self.action_space = spaces.Discrete(len(COMMANDS))
         self.observation_space = spaces.Box(-10, 10, (57,), dtype=np.float32)
         self._bind_geometry()

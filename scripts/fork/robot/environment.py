@@ -58,12 +58,13 @@ def visible(rx, ry, px, py):
 
 
 class CentralAvenueG1(gym.Env):
+    scene_factory = staticmethod(make_scene)
     metadata = {'render_modes': []}
     horizon = HORIZON
     enforce_physical_contacts = False  # Preserve the original benchmark definition.
 
     def __init__(self, record=False):
-        self.robot = G1Controller(make_scene())
+        self.robot = G1Controller(self.scene_factory())
         self.action_space = spaces.Discrete(3)
         self.observation_space = spaces.Box(-10, 10, (10,), dtype=np.float32)
         self.record = record

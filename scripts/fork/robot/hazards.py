@@ -27,10 +27,10 @@ def hazard_scene():
 
 
 class CentralAvenueHazards(CentralAvenueG1):
+    scene_factory = staticmethod(hazard_scene)
     def __init__(self,record=False):
         self.kind=0
         super().__init__(record)
-        self.robot=G1Controller(hazard_scene())
         self.action_space=spaces.Discrete(5)
         self.observation_space=spaces.Box(-10,10,(13,),dtype=np.float32)
 
