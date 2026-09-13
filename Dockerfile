@@ -25,7 +25,14 @@ COPY artifacts/fork/rl-hazards-v2/best.zip ./artifacts/fork/rl-hazards-v2/best.z
 COPY artifacts/fork/rl-weather/best.zip ./artifacts/fork/rl-weather/best.zip
 COPY artifacts/fork/streetlife-multiple-shelters/round-002/best.zip ./artifacts/fork/streetlife-multiple-shelters/round-002/best.zip
 COPY artifacts/fork/emergencies-v1/round-001/best.zip ./artifacts/fork/emergencies-v1/round-001/best.zip
+COPY artifacts/fork/rl-corridor-v2/best.npz ./artifacts/fork/rl-corridor-v2/best.npz
+COPY artifacts/fork/rl-hazards-v2/best.npz ./artifacts/fork/rl-hazards-v2/best.npz
+COPY artifacts/fork/rl-weather/best.npz ./artifacts/fork/rl-weather/best.npz
+COPY artifacts/fork/streetlife-multiple-shelters/round-002/best.npz ./artifacts/fork/streetlife-multiple-shelters/round-002/best.npz
+COPY artifacts/fork/emergencies-v1/round-001/best.npz ./artifacts/fork/emergencies-v1/round-001/best.npz
 COPY --from=frontend /app/dist ./dist
+COPY scripts/fork/compress_assets.py ./scripts/fork/compress_assets.py
+RUN python scripts/fork/compress_assets.py
 RUN mkdir -p .fork-runs/robot && useradd --uid 10001 --no-create-home streetwise && chown -R streetwise:streetwise /app/.fork-runs
 USER streetwise
 EXPOSE 10000

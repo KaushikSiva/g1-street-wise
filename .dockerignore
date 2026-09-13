@@ -24,3 +24,4 @@ artifacts
 !artifacts/fork/emergencies-v1
 !artifacts/fork/emergencies-v1/round-001
 !artifacts/fork/emergencies-v1/round-001/best.zip
+!artifacts/fork/**/best.npz

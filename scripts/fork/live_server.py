@@ -31,16 +31,31 @@ SLOTS = threading.BoundedSemaphore(4)
 WORKER = ThreadPoolExecutor(max_workers=1)
 
 
+class NavigationPolicy:
+    """The trained two-layer PPO actor, without training-library imports."""
+    def __init__(self, path):
+        import numpy as np
+        self.weights = dict(np.load(path, allow_pickle=False))
+
+    def predict(self, obs):
+        import numpy as np
+        w = self.weights
+        x = np.asarray(obs, dtype=np.float32)
+        x = np.tanh(w['w0'] @ x + w['b0'])
+        x = np.tanh(w['w1'] @ x + w['b1'])
+        return int(np.argmax(w['wa'] @ x + w['ba']))
+
+
 def simulate(job_id, curriculum, seed):
     try:
         with LOCK:
             JOBS[job_id].update(status='running', phase='Loading walking and navigation policies')
         import importlib
-        from stable_baselines3 import PPO
         module, name, checkpoint_dir = CURRICULA[curriculum]
         checkpoint = ROOT/'artifacts/fork'/checkpoint_dir/'best.zip'
         env = getattr(importlib.import_module(module), name)(record=True)
-        policy = PPO.load(checkpoint, device='cpu')
+        policy = NavigationPolicy(checkpoint.with_suffix('.npz'))
+        assert str(policy.weights['checkpoint_sha256']) == hashlib.sha256(checkpoint.read_bytes()).hexdigest()
         results = {}
         started = time.monotonic()
         for label in ('before', 'after'):
@@ -48,7 +63,7 @@ def simulate(job_id, curriculum, seed):
                 JOBS[job_id]['phase'] = f'Running {"constant-forward" if label == "before" else "trained navigation"} policy'
             obs, _ = env.reset(seed=seed)
             for _ in range(1000):
-                action = 2 if label == 'before' else int(policy.predict(obs, deterministic=True)[0])
+                action = 2 if label == 'before' else policy.predict(obs)
                 obs, _, terminated, truncated, info = env.step(action)
                 if terminated or truncated:
                     break
@@ -79,6 +94,20 @@ class Handler(SimpleHTTPRequestHandler):
 
     def log_message(self, *_):
         pass
+
+    def send_head(self):
+        path = Path(self.translate_path(self.path))
+        compressed = Path(str(path)+'.gz')
+        if 'gzip' in self.headers.get('Accept-Encoding', '') and compressed.is_file():
+            self.send_response(200)
+            self.send_header('Content-Type', self.guess_type(str(path)))
+            self.send_header('Content-Encoding', 'gzip')
+            self.send_header('Vary', 'Accept-Encoding')
+            self.send_header('Cache-Control', 'public, max-age=3600')
+            self.send_header('Content-Length', str(compressed.stat().st_size))
+            self.end_headers()
+            return compressed.open('rb')
+        return super().send_head()
 
     def send_json(self, status, payload):
         body = json.dumps(payload, allow_nan=False).encode()

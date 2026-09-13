@@ -1,0 +1,37 @@
+[
+  {
+    "checkpoint": "rl-corridor-v2",
+    "observations": 1024,
+    "actionMismatches": 0,
+    "checkpointSha256": "49285488fc8f7e75d12d8c7d0c4eccf04d8c8e75440c422f696649815675ff3a",
+    "inferenceBytes": 20309
+  },
+  {
+    "checkpoint": "rl-hazards-v2",
+    "observations": 1024,
+    "actionMismatches": 0,
+    "checkpointSha256": "b7a5171502b866df783fc2e8de695e1f27ee09ad40125aa95740d95883455cfc",
+    "inferenceBytes": 21509
+  },
+  {
+    "checkpoint": "rl-weather",
+    "observations": 1024,
+    "actionMismatches": 0,
+    "checkpointSha256": "bf4d66a9e3128894128c952a7192e6c8ec6b0de99492b01f5b0b1a06615a4a27",
+    "inferenceBytes": 21509
+  },
+  {
+    "checkpoint": "streetlife-multiple-shelters/round-002",
+    "observations": 1024,
+    "actionMismatches": 0,
+    "checkpointSha256": "68d3f9960c5d1649d9e84104634f793bc965a83724856e50ece9ec79a9b5980e",
+    "inferenceBytes": 27058
+  },
+  {
+    "checkpoint": "emergencies-v1/round-001",
+    "observations": 1024,
+    "actionMismatches": 0,
+    "checkpointSha256": "a3f58f6944f512f08936b9106b47a5fa7860120432a49871417651b3cebbeeba",
+    "inferenceBytes": 32463
+  }
+]
