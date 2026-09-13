@@ -1,0 +1,15 @@
+{
+  "schema": "streetwise-emergency-v1",
+  "gymnasium": "passed",
+  "deterministic_reset": true,
+  "no_unseen_incident_leakage": true,
+  "range_and_occlusion_gating": true,
+  "retained_last_seen_track": true,
+  "clearance_terminates_failure": true,
+  "actual_mujoco_foot_contact_detected": true,
+  "safe_stop_requires_observed_nearby_accident": true,
+  "rotated_footprint": true,
+  "legacy_checkpoint_transfer": true,
+  "observation_size": 57,
+  "actions": 8
+}

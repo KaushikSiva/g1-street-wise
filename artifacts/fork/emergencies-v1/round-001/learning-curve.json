@@ -1,0 +1,31 @@
+[
+  {
+    "step": 0,
+    "validation/episodes": 32,
+    "validation/success_rate": 0.125,
+    "validation/clearance_violations": 25,
+    "validation/falls": 0,
+    "validation/mean_return": -10.71210543359016,
+    "validation/mean_progress": 3.6851821413605412,
+    "validation/mean_elapsed": 7.706249999999924,
+    "validation/safe_stops": 0,
+    "validation/emergency_violations": 19,
+    "validation/foot_contacts": 0
+  },
+  {
+    "step": 8192,
+    "wall_seconds": 268.0931360721588,
+    "train/mean_return": -12.15277938,
+    "train/success_rate": 0.12,
+    "validation/episodes": 32,
+    "validation/success_rate": 0.15625,
+    "validation/clearance_violations": 22,
+    "validation/falls": 0,
+    "validation/mean_return": -8.689495559909446,
+    "validation/mean_progress": 4.208886406036079,
+    "validation/mean_elapsed": 9.274999999999888,
+    "validation/safe_stops": 0,
+    "validation/emergency_violations": 17,
+    "validation/foot_contacts": 1
+  }
+]

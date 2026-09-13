@@ -1,0 +1,71 @@
+{
+  "schema": "streetwise-emergency-v1",
+  "observationSize": 57,
+  "actionCount": 8,
+  "sourceHashes": {
+    "hazards.py": "a6c06760dbdc29d0365a667cecda044da0f85b8f53a961be9a07982b575d0967",
+    "streetlife.py": "4ef510a81d4ef645dc0f9486793cb13932258306f48c13b708a22e20ca7f02ab",
+    "streetlife_loop.py": "b7a3ef4c8b6db296f57475ef2cd12fd1c6d1f49a276791a414657091c95c4d79",
+    "sdk_bridge_check.py": "c659863604431a4537ec18839ea4998e94cfa13082509355e510471f684a465d",
+    "viewer.py": "bb6c5005ac70df0355b3f68100d5529f64c1812e8ae9c73a3e50936f2975367a",
+    "curriculum.py": "cecb8941fb01357c794bc270de8ddb5c7702d135ba9f34b942c301720fae6be8",
+    "prepare_pedestrian.py": "a8f7edf0516a2a769a08998bb160df6162a308d30ee360b2cd9b5cdafe1bdffe",
+    "prepare_human.py": "bd5740605078c8b7d4d2ed0533a86ad867b315c4f08aee93223ba587af300cbb",
+    "export_robot.py": "fe040e635c426bc5130edd12dad839e91bde05fa90a1ee81c41e8802d5fcfa9c",
+    "native_scene.py": "556c1edb29174499cf8cc3b3463baef806c93cb3a91d994c4d735b6234445a38",
+    "check_emergencies.py": "5963c8855e3fe3694038fb547b03002d63277d95c78614ba2907a8bc34dd9f64",
+    "native_human.py": "795040c4ce096d783aa816eafc07a912f761577e4e09a16cd65d5866498f6a7e",
+    "weather.py": "dfdd5220898a0f2220cc3b3944f4ff7cb96d9fab0c1b9b6d601f05241cbb7b2d",
+    "g1_policy.py": "e3259784e59edbaa264af768915ee980e5ffa2bd8d192bdf5bb64e32eecb8d45",
+    "verify_native_scene.py": "9374c81196470dd0e05621e3eee6ac5ac0c91876e76e1cadcace859fdf2403c2",
+    "train.py": "df18b2d39261aea41c52c4a16d5a5c3c27ec07b45ec204b40a3b04a9eca51c49",
+    "environment.py": "5d337ed76b30bcd481fe9211639df877eea522c13057027b28b44472428efc35",
+    "emergencies.py": "daeb3ba86841c587d2eb0d630132bd8a32adbb09d2aad131c97ae85980221e72",
+    "evaluate_checkpoint.py": "bf48f039d356790d6d62be005edfb4cba634374a656698df669ce81e12db3584"
+  },
+  "resumeCheckpointSha256": "a689a782870d5cc0ba06044784350f059bd053d7e98ee3b5a33b72bfcce1f369",
+  "commands": [
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      0.35,
+      0,
+      0
+    ],
+    [
+      0.7,
+      0,
+      0
+    ],
+    [
+      0.35,
+      0.3,
+      0
+    ],
+    [
+      0.35,
+      -0.3,
+      0
+    ],
+    [
+      0.0,
+      0.3,
+      0.0
+    ],
+    [
+      0.0,
+      -0.3,
+      0.0
+    ],
+    [
+      -0.25,
+      0.0,
+      0.0
+    ]
+  ],
+  "observationLayout": "37 streetlife values + two 10-value incident tracks: relative xy/4, half extents/2, sin/cos yaw, capped age/4, visible, known, safe-stop allowed",
+  "perception": "Simulator tracks gated by range and van occlusion; no camera recognition."
+}

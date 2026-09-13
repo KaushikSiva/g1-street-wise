@@ -1,0 +1,120 @@
+{
+  "phase": "before",
+  "errors": [],
+  "revision": 3,
+  "records": [
+    {
+      "wayId": 354839696,
+      "height": 6.55,
+      "windows": 32,
+      "entries": 1
+    },
+    {
+      "wayId": 354840154,
+      "height": 6.55,
+      "windows": 32,
+      "entries": 1
+    },
+    {
+      "wayId": 355940211,
+      "height": 9.65,
+      "windows": 60,
+      "entries": 1
+    },
+    {
+      "wayId": 354759778,
+      "height": 6.55,
+      "windows": 32,
+      "entries": 0
+    },
+    {
+      "wayId": 364160225,
+      "height": 6.55,
+      "windows": 32,
+      "entries": 0
+    },
+    {
+      "wayId": 354839712,
+      "height": 6.55,
+      "windows": 32,
+      "entries": 1
+    },
+    {
+      "wayId": 354839933,
+      "height": 6.55,
+      "windows": 32,
+      "entries": 1
+    },
+    {
+      "wayId": 355940230,
+      "height": 9.65,
+      "windows": 66,
+      "entries": 1
+    },
+    {
+      "wayId": 354759816,
+      "height": 6.55,
+      "windows": 36,
+      "entries": 1
+    }
+  ],
+  "paintFinish": {
+    "palette": "Three muted mineral colors, inferred",
+    "texture": "Original fine plaster field shared with existing district materials",
+    "shellOffsetMeters": 0.004
+  },
+  "source": "Existing OpenStreetMap footprints and already inferred generic window grid",
+  "inferred": true,
+  "limits": "Original architectural finishing study; no facade photographs, surveyed heights, tenancy or real opening positions asserted. Existing shells, heights, glazing and map source unchanged. Unmapped buildings remain unresolved.",
+  "vertices": 133524,
+  "triangles": 44508,
+  "finite": true,
+  "meshes": 8,
+  "buildingCount": 1173,
+  "p50": 33.399999999999636,
+  "p90": 50,
+  "overflow": false,
+  "poses": [
+    {
+      "name": "street",
+      "camera": [
+        -188.43950269230373,
+        2.7999999999999994,
+        -123.65788489612366
+      ],
+      "target": [
+        -179.43702904738882,
+        1.3,
+        -129.3108016894802
+      ]
+    },
+    {
+      "name": "neighbor",
+      "camera": [
+        -157.99515720550903,
+        4.7,
+        -160.58865537098984
+      ],
+      "target": [
+        -139.5026858771985,
+        3.6,
+        -156.22648800010495
+      ]
+    },
+    {
+      "name": "construction",
+      "camera": [
+        -146.47890942723447,
+        4.2,
+        -152.78608493829384
+      ],
+      "target": [
+        -140.69600642745436,
+        4,
+        -151.1676619201204
+      ]
+    }
+  ],
+  "mapSha256": "a5b62fe3d269c998b32e74d77aa5dbe3e149cf6fffd0a3cdf07a45cde110013d",
+  "performanceScope": "45 browser animation intervals at emulated 390x844 on this Mac; not physical-phone evidence"
+}

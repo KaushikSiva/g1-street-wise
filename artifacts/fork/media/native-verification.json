@@ -1,6 +1,6 @@
 {
   "freshPhysics": true,
-  "nativeGuiLaunch": "passed with mjpython",
+  "nativeModelCompile": "passed",
   "decorativeGeometryPreservesOutcome": true,
   "seed": 20002,
   "outcome": {
@@ -13,5 +13,164 @@
     "return": 17.882279310554022,
     "elapsed": 7.39999999999993
   },
-  "geometry": "Actual Chennai Three.js geometry within 38 m of station 75, transformed into the robot physics coordinate system. Flat material colors; textures and browser postprocessing are not transferred. Decorative only, no collision changes."
+  "maxJointPositionDifference": 0.0,
+  "matchedPolicyActions": 37,
+  "collisionGeomsCompared": 6,
+  "geometry": {
+    "exactFloat32Vertices": 1580965,
+    "exactSourceTriangles": 677061,
+    "planarBackings": 2,
+    "discardedDegenerateTriangles": 128,
+    "sourceExportSha256": "bf95caa0870f882f403cd3314e4d1748e845b71f8b15acf52c8e42bcf0d8b7ca"
+  },
+  "sceneMetadata": [
+    {
+      "name": "Encaarpus source-visible roof dishes",
+      "sourcePhoto": "Frankleen Seeralan, January 2024, CIHM0ogKEICAgICtsaaHCA",
+      "sourceSha256": "0b02fddb8fcfeeb9b8552d5e12927ffea82ff016f3cf67bb972e8c735dd4bb99",
+      "observed": "Two shallow grey dish silhouettes above the inner grey roof piers",
+      "poses": [
+        {
+          "x": -2.94,
+          "y": 16.63,
+          "z": -0.55,
+          "yaw": -0.3
+        },
+        {
+          "x": 2.53,
+          "y": 16.58,
+          "z": -0.64,
+          "yaw": 0.17
+        }
+      ],
+      "diameterMeters": 0.6,
+      "limits": "Source supports count, broad silhouette and relative roof location. Diameter, depth, mounting, azimuth, elevation and hidden parts are inferred. No operator, brand, current installation or functional communications claim. Separate meshes preserve the existing facade AO geometry."
+    },
+    {
+      "name": "Central Avenue neighbors \u00b7 inferred architectural finishing",
+      "revision": 4,
+      "records": [
+        {
+          "wayId": 354839696,
+          "height": 6.55,
+          "windows": 32,
+          "entries": 1,
+          "rainwaterStacks": 1,
+          "pipeClamps": 4,
+          "parapetFaces": 4,
+          "copingJoints": 40
+        },
+        {
+          "wayId": 354840154,
+          "height": 6.55,
+          "windows": 32,
+          "entries": 1,
+          "rainwaterStacks": 1,
+          "pipeClamps": 4,
+          "parapetFaces": 4,
+          "copingJoints": 42
+        },
+        {
+          "wayId": 355940211,
+          "height": 9.65,
+          "windows": 60,
+          "entries": 1,
+          "rainwaterStacks": 1,
+          "pipeClamps": 5,
+          "parapetFaces": 4,
+          "copingJoints": 44
+        },
+        {
+          "wayId": 354759778,
+          "height": 6.55,
+          "windows": 32,
+          "entries": 0,
+          "rainwaterStacks": 1,
+          "pipeClamps": 4,
+          "parapetFaces": 4,
+          "copingJoints": 36
+        },
+        {
+          "wayId": 364160225,
+          "height": 6.55,
+          "windows": 32,
+          "entries": 0,
+          "rainwaterStacks": 1,
+          "pipeClamps": 4,
+          "parapetFaces": 4,
+          "copingJoints": 38
+        },
+        {
+          "wayId": 354839712,
+          "height": 6.55,
+          "windows": 32,
+          "entries": 1,
+          "rainwaterStacks": 1,
+          "pipeClamps": 4,
+          "parapetFaces": 4,
+          "copingJoints": 38
+        },
+        {
+          "wayId": 354839933,
+          "height": 6.55,
+          "windows": 32,
+          "entries": 1,
+          "rainwaterStacks": 1,
+          "pipeClamps": 4,
+          "parapetFaces": 4,
+          "copingJoints": 36
+        },
+        {
+          "wayId": 355940230,
+          "height": 9.65,
+          "windows": 66,
+          "entries": 1,
+          "rainwaterStacks": 1,
+          "pipeClamps": 5,
+          "parapetFaces": 4,
+          "copingJoints": 52
+        },
+        {
+          "wayId": 354759816,
+          "height": 6.55,
+          "windows": 36,
+          "entries": 1,
+          "rainwaterStacks": 1,
+          "pipeClamps": 4,
+          "parapetFaces": 4,
+          "copingJoints": 42
+        }
+      ],
+      "paintFinish": {
+        "palette": "Three muted mineral colors, inferred",
+        "texture": "Original fine plaster field shared with existing district materials",
+        "shellOffsetMeters": 0.004
+      },
+      "constructionFinish": {
+        "source": "Inferred construction details on existing mapped shells; no photographed drainage routes",
+        "rainwaterPipeDiameterMeters": 0.09,
+        "clampSpacingMeters": 1.9,
+        "parapetFinishOffsetMeters": 0.004,
+        "copingJointWidthMeters": 0.012,
+        "limits": "Decorative open discharge shoes; no underground drain, hydraulic simulation or surveyed service placement asserted"
+      },
+      "source": "Existing OpenStreetMap footprints and already inferred generic window grid",
+      "inferred": true,
+      "limits": "Original architectural finishing study; no facade photographs, surveyed heights, tenancy or real opening positions asserted. Existing shells, heights, glazing and map source unchanged. Unmapped buildings remain unresolved."
+    }
+  ],
+  "nativeMeshes": 141,
+  "nativeTriangles": 677067,
+  "nativeTextures": 28,
+  "exportedAt": "2026-09-13T18:18:52.997Z",
+  "limits": "Native OpenGL lighting differs from the web renderer; shader-only weathering, AO and normal mapping are not transferred. Foliage uses alpha-sampled triangle trimming instead of browser alpha testing. Planar visual faces use a 2 mm backing for mesh compilation.",
+  "scope": "One deterministic crossing episode proves invariance for this seed, not a policy benchmark. Native images are renderer captures; browser material and lighting differences remain.",
+  "facadeParity": {
+    "revision": 4,
+    "buildings": 9,
+    "materialBatches": 8,
+    "triangles": 56976,
+    "comparedToWebEvidence": true,
+    "plasterBatchesWithTexture": 3
+  }
 }

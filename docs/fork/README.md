@@ -101,6 +101,12 @@ The automatic ladder raises difficulty after two consecutive validation checkpoi
 .venv-fork/bin/python scripts/fork/robot/curriculum.py --initial-run artifacts/fork/rl-weather --max-level 3 --steps-per-level 32768 --device cuda --wandb
 ```
 
+## Emergency avoidance and ongoing shelter learning
+
+[Emergency curriculum and reproduction](emergencies.md) adds collidable prone people, rigid debris and accident scenes with randomized onset. It uses 57 simulator-track observations and eight velocity actions, including pure lateral and backward movement. Unknown incidents remain hidden until within tracking range and clear of the parked van. Actual foot contacts and conservative body clearance are measured separately; an observed accident can be handled by a safe stop. Camera recognition is not implemented. The first emergency training run is ongoing, with no measured learning improvement claimed yet.
+
+Multiple-shelter round two improved from **23/64 to 31/64 completed unseen encounters**, comparing its starting and selected policies on the same test seeds; clearance violations fell from **19 to 9**. [Measured round](https://wandb.ai/kaushik-siva88/Unitree%20G1/runs/0c0dsvp9). This expanded task remains unresolved. The earlier 64/64 simpler-task results do not describe shelter or emergency performance.
+
 ## Compare two policies, or run live MuJoCo
 
 Open **http://127.0.0.1:5189/?compare=1** for synchronized before/after views. Choose one scenario, play or pause both together, and scrub the same simulation time. Completed episodes freeze while the other policy continues.

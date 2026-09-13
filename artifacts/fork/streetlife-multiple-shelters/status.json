@@ -1,8 +1,79 @@
 {
   "status": "training",
-  "round": 1,
+  "round": 3,
   "difficulty": 0,
-  "history": [],
+  "history": [
+    {
+      "round": 1,
+      "difficulty": 0,
+      "steps": 65536,
+      "trainingFailuresFound": 45,
+      "validationMastered": false,
+      "baseline": {
+        "episodes": 64,
+        "success_rate": 0.25,
+        "clearance_violations": 38,
+        "falls": 0,
+        "mean_return": -6.392928200301931,
+        "mean_progress": 4.821102484299439,
+        "mean_elapsed": 8.562499999999904
+      },
+      "starting": {
+        "episodes": 64,
+        "success_rate": 0.390625,
+        "clearance_violations": 16,
+        "falls": 0,
+        "mean_return": 3.077301465416933,
+        "mean_progress": 5.76244321933514,
+        "mean_elapsed": 12.534374999999821
+      },
+      "trained": {
+        "episodes": 64,
+        "success_rate": 0.390625,
+        "clearance_violations": 16,
+        "falls": 0,
+        "mean_return": 3.077301465416933,
+        "mean_progress": 5.76244321933514,
+        "mean_elapsed": 12.534374999999821
+      },
+      "wandbUrl": "https://wandb.ai/kaushik-siva88/Unitree%20G1/runs/h051m5wv"
+    },
+    {
+      "round": 2,
+      "difficulty": 0,
+      "steps": 65536,
+      "trainingFailuresFound": 34,
+      "validationMastered": false,
+      "baseline": {
+        "episodes": 64,
+        "success_rate": 0.296875,
+        "clearance_violations": 36,
+        "falls": 0,
+        "mean_return": -4.688885722601228,
+        "mean_progress": 4.853588998667984,
+        "mean_elapsed": 8.715624999999903
+      },
+      "starting": {
+        "episodes": 64,
+        "success_rate": 0.359375,
+        "clearance_violations": 19,
+        "falls": 0,
+        "mean_return": 1.7270725021870297,
+        "mean_progress": 5.5919260511571185,
+        "mean_elapsed": 12.321874999999824
+      },
+      "trained": {
+        "episodes": 64,
+        "success_rate": 0.484375,
+        "clearance_violations": 9,
+        "falls": 0,
+        "mean_return": 5.757407911338764,
+        "mean_progress": 6.280138187289517,
+        "mean_elapsed": 13.4656249999998
+      },
+      "wandbUrl": "https://wandb.ai/kaushik-siva88/Unitree%20G1/runs/0c0dsvp9"
+    }
+  ],
   "seedPolicy": "Training and adversarial seeds below 9000. Validation/test use distinct round offsets.",
   "goal": "Find plausible failure cases, learn from training failures, measure on independent encounters."
 }

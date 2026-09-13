@@ -20,7 +20,8 @@ for folder in sorted((ROOT/'artifacts/fork').glob('rl-weather-level-*')):
 copy('artifacts/central-avenue/streetwise-finish')
 copy('artifacts/web-city-realism')
 copy('docs/districts/central-avenue-neighbors.md')
-for name in ['streetlife', 'streetlife-multiple-shelters']:
+copy('docs/districts/central-avenue-neighbors-revision-4.md')
+for name in ['streetlife', 'streetlife-multiple-shelters', 'emergencies-v1']:
  copy('artifacts/fork/'+name)
 # These directories are generated assets: remove only files absent from the source
 # so superseded mesh formats do not linger in the publication checkout.
@@ -35,7 +36,7 @@ for name in ['docs/fork/participant-handbook.txt','public/assets/fork/unitree-g1
 main=dest/'src/main.ts'
 main.write_text("if (!location.search) history.replaceState(null, '', '?robot=1');\n"+main.read_text())
 (dest/'.gitignore').write_text('node_modules/\ndist/\n.env\n.env.*\n!.env.example\n.fork-runs/\n.venv-fork/\nvendor/\n__pycache__/\n.DS_Store\n')
-readme=(ROOT/'docs/fork/README.md').read_text().replace('(asset-provenance.md)','(docs/fork/asset-provenance.md)').replace('(submission-checklist.md)','(docs/fork/submission-checklist.md)').replace('(demo-script.md)','(docs/fork/demo-script.md)').replace('(submission.md)','(docs/fork/submission.md)').replace('(../../artifacts/','(artifacts/')
+readme=(ROOT/'docs/fork/README.md').read_text().replace('(asset-provenance.md)','(docs/fork/asset-provenance.md)').replace('(submission-checklist.md)','(docs/fork/submission-checklist.md)').replace('(demo-script.md)','(docs/fork/demo-script.md)').replace('(submission.md)','(docs/fork/submission.md)').replace('(emergencies.md)','(docs/fork/emergencies.md)').replace('(../../artifacts/','(artifacts/')
 (dest/'README.md').write_text('![STREETWISE beside Kanakadhara](artifacts/fork/media/human-kanakadhara.png)\n\n'+readme)
 if not (dest/'artifacts/fork/media/STREETWISE-demo.mp4').exists():
  import re

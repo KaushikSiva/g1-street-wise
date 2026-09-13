@@ -1,5 +1,5 @@
 {
-  "source": "Actual Chennai Three.js meshes intersecting the 38 m neighborhood of station 75, with nearby merged building shells retained to 90 m for the street backdrop, original albedo texture images and transformed UVs. Browser shader-only weathering, normal maps, GTAO and lighting are not reproduced. Decorative only, no collision changes.",
+  "source": "Actual Chennai Three.js meshes intersecting the 38 m neighborhood of station 75, with nearby mapped building shells and their inherited facade details retained to 90 m for the street backdrop, original albedo texture images and transformed UVs. Browser shader-only weathering, normal maps, GTAO and lighting are not reproduced. Decorative only, no collision changes.",
   "collision": "Decorative meshes only, contype=conaffinity=0 and density=0. Original road, van and frontage collision geoms retained with transparent rendering.",
   "limits": "Native OpenGL lighting differs from the web renderer; shader-only weathering, AO and normal mapping are not transferred. Foliage uses alpha-sampled triangle trimming instead of browser alpha testing. Planar visual faces use a 2 mm backing for mesh compilation.",
   "textures": [
@@ -167,7 +167,7 @@
     {
       "file": "texture-023.png",
       "name": "chennai_texture_23",
-      "flipY": false,
+      "flipY": true,
       "width": 1024,
       "height": 1024
     },
@@ -189,15 +189,8 @@
       "file": "texture-026.png",
       "name": "chennai_texture_26",
       "flipY": false,
-      "width": 128,
-      "height": 128
-    },
-    {
-      "file": "texture-027.png",
-      "name": "chennai_texture_27",
-      "flipY": false,
-      "width": 128,
-      "height": 128
+      "width": 1024,
+      "height": 1024
     },
     {
       "name": "chennai_road_verge_albedo",
@@ -211,6 +204,13 @@
     {
       "file": "street-000-0.msh",
       "name": "Malles concrete",
+      "sourceObjects": [
+        "Malles concrete"
+      ],
+      "sourceGroup": 0,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 108,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.663,
         0.663,
@@ -224,6 +224,13 @@
     {
       "file": "street-001-0.msh",
       "name": "Malles rose plaster",
+      "sourceObjects": [
+        "Malles rose plaster"
+      ],
+      "sourceGroup": 1,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 768,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.757,
         0.553,
@@ -237,6 +244,13 @@
     {
       "file": "street-002-0.msh",
       "name": "Malles recess interior",
+      "sourceObjects": [
+        "Malles recess interior"
+      ],
+      "sourceGroup": 2,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 132,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.4,
         0.404,
@@ -250,6 +264,13 @@
     {
       "file": "street-003-0.msh",
       "name": "Malles cream bands",
+      "sourceObjects": [
+        "Malles cream bands"
+      ],
+      "sourceGroup": 3,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 2024,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.886,
         0.871,
@@ -263,6 +284,13 @@
     {
       "file": "street-004-0.msh",
       "name": "Malles glazing",
+      "sourceObjects": [
+        "Malles glazing"
+      ],
+      "sourceGroup": 4,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 108,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.412,
         0.475,
@@ -276,6 +304,13 @@
     {
       "file": "street-005-0.msh",
       "name": "Malles brown frames",
+      "sourceObjects": [
+        "Malles brown frames"
+      ],
+      "sourceGroup": 5,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 576,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.38,
         0.282,
@@ -289,6 +324,13 @@
     {
       "file": "street-006-0.msh",
       "name": "Malles black metalwork",
+      "sourceObjects": [
+        "Malles black metalwork"
+      ],
+      "sourceGroup": 6,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 6640,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.161,
         0.184,
@@ -302,6 +344,13 @@
     {
       "file": "street-007-0.msh",
       "name": "Malles fascia lettering",
+      "sourceObjects": [
+        "Malles fascia lettering"
+      ],
+      "sourceGroup": 7,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 492,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.584,
         0.325,
@@ -315,6 +364,13 @@
     {
       "file": "street-008-0.msh",
       "name": "Malles clay canopy",
+      "sourceObjects": [
+        "Malles clay canopy"
+      ],
+      "sourceGroup": 8,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 36,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.451,
         0.314,
@@ -328,6 +384,13 @@
     {
       "file": "street-009-0.msh",
       "name": "Malles ochre spear tips",
+      "sourceObjects": [
+        "Malles ochre spear tips"
+      ],
+      "sourceGroup": 9,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 210,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.714,
         0.608,
@@ -341,6 +404,13 @@
     {
       "file": "street-010-0.msh",
       "name": "Encaarpus entrance stone",
+      "sourceObjects": [
+        "Encaarpus entrance stone"
+      ],
+      "sourceGroup": 10,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 10464,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.549,
         0.553,
@@ -354,6 +424,13 @@
     {
       "file": "street-011-0.msh",
       "name": "Encaarpus parking concrete",
+      "sourceObjects": [
+        "Encaarpus parking concrete"
+      ],
+      "sourceGroup": 11,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 60,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.553,
         0.549,
@@ -367,6 +444,13 @@
     {
       "file": "street-012-0.msh",
       "name": "Encaarpus cream plaster",
+      "sourceObjects": [
+        "Encaarpus cream plaster"
+      ],
+      "sourceGroup": 12,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 8932,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.824,
         0.812,
@@ -380,6 +464,13 @@
     {
       "file": "street-013-0.msh",
       "name": "Encaarpus grey piers",
+      "sourceObjects": [
+        "Encaarpus grey piers"
+      ],
+      "sourceGroup": 13,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 468,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.506,
         0.478,
@@ -393,6 +484,13 @@
     {
       "file": "street-014-0.msh",
       "name": "Encaarpus ochre flank plaster",
+      "sourceObjects": [
+        "Encaarpus ochre flank plaster"
+      ],
+      "sourceGroup": 14,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 24,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.769,
         0.635,
@@ -406,6 +504,13 @@
     {
       "file": "street-015-0.msh",
       "name": "Encaarpus unobserved room interior",
+      "sourceObjects": [
+        "Encaarpus unobserved room interior"
+      ],
+      "sourceGroup": 15,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 1008,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.2,
         0.216,
@@ -419,6 +524,13 @@
     {
       "file": "street-016-0.msh",
       "name": "Encaarpus cream casements",
+      "sourceObjects": [
+        "Encaarpus cream casements"
+      ],
+      "sourceGroup": 16,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 2808,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.729,
         0.694,
@@ -432,6 +544,13 @@
     {
       "file": "street-017-0.msh",
       "name": "Encaarpus window glass",
+      "sourceObjects": [
+        "Encaarpus window glass"
+      ],
+      "sourceGroup": 17,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 864,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.329,
         0.376,
@@ -445,6 +564,13 @@
     {
       "file": "street-018-0.msh",
       "name": "Encaarpus dark painted steel",
+      "sourceObjects": [
+        "Encaarpus dark painted steel"
+      ],
+      "sourceGroup": 18,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 32148,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.2,
         0.216,
@@ -458,6 +584,13 @@
     {
       "file": "street-019-0.msh",
       "name": "Encaarpus coral panels",
+      "sourceObjects": [
+        "Encaarpus coral panels"
+      ],
+      "sourceGroup": 19,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 404,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.702,
         0.404,
@@ -471,6 +604,13 @@
     {
       "file": "street-020-0.msh",
       "name": "Encaarpus gate and grille ornament",
+      "sourceObjects": [
+        "Encaarpus gate and grille ornament"
+      ],
+      "sourceGroup": 20,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 11168,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.659,
         0.584,
@@ -484,6 +624,13 @@
     {
       "file": "street-021-0.msh",
       "name": "Encaarpus blue name and emblem",
+      "sourceObjects": [
+        "Encaarpus blue name and emblem"
+      ],
+      "sourceGroup": 21,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 4000,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.239,
         0.337,
@@ -497,6 +644,13 @@
     {
       "file": "street-022-0.msh",
       "name": "Encaarpus painted name",
+      "sourceObjects": [
+        "Encaarpus painted name"
+      ],
+      "sourceGroup": 22,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 7256,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.443,
         0.239,
@@ -510,6 +664,13 @@
     {
       "file": "street-023-0.msh",
       "name": "Encaarpus loose cable geometry",
+      "sourceObjects": [
+        "Encaarpus loose cable geometry"
+      ],
+      "sourceGroup": 23,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 2000,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.329,
         0.325,
@@ -522,7 +683,54 @@
     },
     {
       "file": "street-024-0.msh",
+      "name": "Encaarpus roof dish bowls",
+      "sourceObjects": [
+        "Encaarpus roof dish bowls"
+      ],
+      "sourceGroup": 24,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 896,
+      "discardedDegenerateTriangles": 128,
+      "color": [
+        0.529,
+        0.545,
+        0.522
+      ],
+      "texture": null,
+      "roughness": 0.79,
+      "triangles": 768,
+      "visualBacking": false
+    },
+    {
+      "file": "street-025-0.msh",
+      "name": "Encaarpus roof mounts",
+      "sourceObjects": [
+        "Encaarpus roof mounts"
+      ],
+      "sourceGroup": 25,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 192,
+      "discardedDegenerateTriangles": 0,
+      "color": [
+        0.333,
+        0.361,
+        0.341
+      ],
+      "texture": null,
+      "roughness": 0.7,
+      "triangles": 192,
+      "visualBacking": false
+    },
+    {
+      "file": "street-026-0.msh",
       "name": "Encaarpus parked hatchback cabin interior",
+      "sourceObjects": [
+        "Encaarpus parked hatchback cabin interior"
+      ],
+      "sourceGroup": 26,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 1128,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.176,
         0.186,
@@ -534,8 +742,15 @@
       "visualBacking": false
     },
     {
-      "file": "street-025-0.msh",
+      "file": "street-027-0.msh",
       "name": "Encaarpus parked hatchback dark glazing",
+      "sourceObjects": [
+        "Encaarpus parked hatchback dark glazing"
+      ],
+      "sourceGroup": 27,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 36,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.086,
         0.128,
@@ -547,8 +762,15 @@
       "visualBacking": false
     },
     {
-      "file": "street-026-0.msh",
+      "file": "street-028-0.msh",
       "name": "Encaarpus parked hatchback indicator amber",
+      "sourceObjects": [
+        "Encaarpus parked hatchback indicator amber"
+      ],
+      "sourceGroup": 28,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 120,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.701,
         0.41,
@@ -560,8 +782,15 @@
       "visualBacking": false
     },
     {
-      "file": "street-027-0.msh",
+      "file": "street-029-0.msh",
       "name": "Encaarpus parked hatchback lamp pale lens",
+      "sourceObjects": [
+        "Encaarpus parked hatchback lamp pale lens"
+      ],
+      "sourceGroup": 29,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 684,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.626,
         0.634,
@@ -573,8 +802,15 @@
       "visualBacking": false
     },
     {
-      "file": "street-028-0.msh",
+      "file": "street-030-0.msh",
       "name": "Encaarpus parked hatchback rear lamp red",
+      "sourceObjects": [
+        "Encaarpus parked hatchback rear lamp red"
+      ],
+      "sourceGroup": 30,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 808,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.556,
         0.112,
@@ -586,8 +822,15 @@
       "visualBacking": false
     },
     {
-      "file": "street-029-0.msh",
+      "file": "street-031-0.msh",
       "name": "Encaarpus parked hatchback rubber and trim",
+      "sourceObjects": [
+        "Encaarpus parked hatchback rubber and trim"
+      ],
+      "sourceGroup": 31,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 10364,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.133,
         0.147,
@@ -599,8 +842,15 @@
       "visualBacking": false
     },
     {
-      "file": "street-030-0.msh",
+      "file": "street-032-0.msh",
       "name": "Encaarpus parked hatchback wheel and emblem",
+      "sourceObjects": [
+        "Encaarpus parked hatchback wheel and emblem"
+      ],
+      "sourceGroup": 32,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 2340,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.593,
         0.61,
@@ -612,8 +862,15 @@
       "visualBacking": false
     },
     {
-      "file": "street-031-0.msh",
+      "file": "street-033-0.msh",
       "name": "Encaarpus parked hatchback white body",
+      "sourceObjects": [
+        "Encaarpus parked hatchback white body"
+      ],
+      "sourceGroup": 33,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 3320,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.832,
         0.843,
@@ -625,8 +882,15 @@
       "visualBacking": false
     },
     {
-      "file": "street-032-0.msh",
+      "file": "street-034-0.msh",
       "name": "Avinash continuous hardstanding",
+      "sourceObjects": [
+        "Avinash continuous hardstanding"
+      ],
+      "sourceGroup": 34,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 362,
+      "discardedDegenerateTriangles": 0,
       "color": [
         1,
         1,
@@ -638,8 +902,15 @@
       "visualBacking": false
     },
     {
-      "file": "street-033-0.msh",
+      "file": "street-035-0.msh",
       "name": "Avinash concrete",
+      "sourceObjects": [
+        "Avinash concrete"
+      ],
+      "sourceGroup": 35,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 24,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.592,
         0.604,
@@ -651,8 +922,15 @@
       "visualBacking": false
     },
     {
-      "file": "street-034-0.msh",
+      "file": "street-036-0.msh",
       "name": "Avinash white plaster",
+      "sourceObjects": [
+        "Avinash white plaster"
+      ],
+      "sourceGroup": 36,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 4410,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.859,
         0.871,
@@ -664,8 +942,15 @@
       "visualBacking": false
     },
     {
-      "file": "street-035-0.msh",
+      "file": "street-037-0.msh",
       "name": "Avinash unobserved recess",
+      "sourceObjects": [
+        "Avinash unobserved recess"
+      ],
+      "sourceGroup": 37,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 524,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.4,
         0.42,
@@ -677,8 +962,15 @@
       "visualBacking": false
     },
     {
-      "file": "street-036-0.msh",
+      "file": "street-038-0.msh",
       "name": "Avinash window glass",
+      "sourceObjects": [
+        "Avinash window glass"
+      ],
+      "sourceGroup": 38,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 288,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.408,
         0.518,
@@ -690,8 +982,15 @@
       "visualBacking": false
     },
     {
-      "file": "street-037-0.msh",
+      "file": "street-039-0.msh",
       "name": "Avinash pale casements",
+      "sourceObjects": [
+        "Avinash pale casements"
+      ],
+      "sourceGroup": 39,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 2124,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.773,
         0.82,
@@ -703,8 +1002,15 @@
       "visualBacking": false
     },
     {
-      "file": "street-038-0.msh",
+      "file": "street-040-0.msh",
       "name": "Avinash blue trim",
+      "sourceObjects": [
+        "Avinash blue trim"
+      ],
+      "sourceGroup": 40,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 2472,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.322,
         0.435,
@@ -716,8 +1022,15 @@
       "visualBacking": false
     },
     {
-      "file": "street-039-0.msh",
+      "file": "street-041-0.msh",
       "name": "Avinash green balcony grille",
+      "sourceObjects": [
+        "Avinash green balcony grille"
+      ],
+      "sourceGroup": 41,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 6120,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.286,
         0.498,
@@ -729,8 +1042,15 @@
       "visualBacking": false
     },
     {
-      "file": "street-040-0.msh",
+      "file": "street-042-0.msh",
       "name": "Avinash upper diamond mesh",
+      "sourceObjects": [
+        "Avinash upper diamond mesh"
+      ],
+      "sourceGroup": 42,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 7416,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.604,
         0.616,
@@ -742,8 +1062,15 @@
       "visualBacking": false
     },
     {
-      "file": "street-041-0.msh",
+      "file": "street-043-0.msh",
       "name": "Avinash dark steel",
+      "sourceObjects": [
+        "Avinash dark steel"
+      ],
+      "sourceGroup": 43,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 4452,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.259,
         0.294,
@@ -755,8 +1082,15 @@
       "visualBacking": false
     },
     {
-      "file": "street-042-0.msh",
+      "file": "street-044-0.msh",
       "name": "Avinash pale facing joints",
+      "sourceObjects": [
+        "Avinash pale facing joints"
+      ],
+      "sourceGroup": 44,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 12,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.698,
         0.643,
@@ -768,8 +1102,15 @@
       "visualBacking": false
     },
     {
-      "file": "street-043-0.msh",
+      "file": "street-045-0.msh",
       "name": "Avinash red vertical band",
+      "sourceObjects": [
+        "Avinash red vertical band"
+      ],
+      "sourceGroup": 45,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 11520,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.706,
         0.396,
@@ -781,8 +1122,15 @@
       "visualBacking": false
     },
     {
-      "file": "street-044-0.msh",
+      "file": "street-046-0.msh",
       "name": "Avinash blue balcony screening",
+      "sourceObjects": [
+        "Avinash blue balcony screening"
+      ],
+      "sourceGroup": 46,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 768,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.208,
         0.408,
@@ -794,8 +1142,15 @@
       "visualBacking": false
     },
     {
-      "file": "street-045-0.msh",
+      "file": "street-047-0.msh",
       "name": "Avinash exterior equipment casing",
+      "sourceObjects": [
+        "Avinash exterior equipment casing"
+      ],
+      "sourceGroup": 47,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 1212,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.769,
         0.784,
@@ -807,8 +1162,15 @@
       "visualBacking": false
     },
     {
-      "file": "street-046-0.msh",
+      "file": "street-048-0.msh",
       "name": "Vasanth AC painted casing",
+      "sourceObjects": [
+        "Vasanth AC painted casing"
+      ],
+      "sourceGroup": 48,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 108,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.776,
         0.78,
@@ -820,8 +1182,15 @@
       "visualBacking": false
     },
     {
-      "file": "street-047-0.msh",
+      "file": "street-049-0.msh",
       "name": "Vasanth AC recessed interior",
+      "sourceObjects": [
+        "Vasanth AC recessed interior"
+      ],
+      "sourceGroup": 49,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 12,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.188,
         0.227,
@@ -833,8 +1202,15 @@
       "visualBacking": false
     },
     {
-      "file": "street-048-0.msh",
+      "file": "street-050-0.msh",
       "name": "Vasanth AC grille and fasteners",
+      "sourceObjects": [
+        "Vasanth AC grille and fasteners"
+      ],
+      "sourceGroup": 50,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 296,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.455,
         0.482,
@@ -846,8 +1222,15 @@
       "visualBacking": false
     },
     {
-      "file": "street-049-0.msh",
+      "file": "street-051-0.msh",
       "name": "Vasanth AC support pads",
+      "sourceObjects": [
+        "Vasanth AC support pads"
+      ],
+      "sourceGroup": 51,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 24,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.271,
         0.294,
@@ -859,8 +1242,16 @@
       "visualBacking": false
     },
     {
-      "file": "street-050-0.msh",
+      "file": "street-052-0.msh",
       "name": "Vasanth continuous hardstanding",
+      "sourceObjects": [
+        "Vasanth shoulder-connected apron",
+        "Vasanth north passage support"
+      ],
+      "sourceGroup": 52,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 546,
+      "discardedDegenerateTriangles": 0,
       "color": [
         1,
         1,
@@ -868,12 +1259,19 @@
       ],
       "texture": "chennai_texture_7",
       "roughness": 0.98,
-      "triangles": 536,
+      "triangles": 546,
       "visualBacking": false
     },
     {
-      "file": "street-051-0.msh",
+      "file": "street-053-0.msh",
       "name": "Vasanth perforated threshold covers",
+      "sourceObjects": [
+        "Vasanth perforated threshold covers"
+      ],
+      "sourceGroup": 53,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 1872,
+      "discardedDegenerateTriangles": 0,
       "color": [
         1,
         1,
@@ -885,8 +1283,15 @@
       "visualBacking": false
     },
     {
-      "file": "street-052-0.msh",
+      "file": "street-054-0.msh",
       "name": "Vasanth threshold recess",
+      "sourceObjects": [
+        "Vasanth threshold recess"
+      ],
+      "sourceGroup": 54,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 36,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.333,
         0.325,
@@ -898,8 +1303,15 @@
       "visualBacking": false
     },
     {
-      "file": "street-053-0.msh",
+      "file": "street-055-0.msh",
       "name": "Vasanth passage boundary plaster",
+      "sourceObjects": [
+        "Vasanth passage boundary plaster"
+      ],
+      "sourceGroup": 55,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 124,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.725,
         0.753,
@@ -911,8 +1323,15 @@
       "visualBacking": false
     },
     {
-      "file": "street-054-0.msh",
+      "file": "street-056-0.msh",
       "name": "Vasanth passage boundary coping",
+      "sourceObjects": [
+        "Vasanth passage boundary coping"
+      ],
+      "sourceGroup": 56,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 24,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.784,
         0.788,
@@ -924,8 +1343,15 @@
       "visualBacking": false
     },
     {
-      "file": "street-055-0.msh",
+      "file": "street-057-0.msh",
       "name": "Vasanth gate painted steel",
+      "sourceObjects": [
+        "Vasanth gate painted steel"
+      ],
+      "sourceGroup": 57,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 444,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.188,
         0.224,
@@ -937,8 +1363,15 @@
       "visualBacking": false
     },
     {
-      "file": "street-056-0.msh",
+      "file": "street-058-0.msh",
       "name": "Vasanth gate hinge and latch steel",
+      "sourceObjects": [
+        "Vasanth gate hinge and latch steel"
+      ],
+      "sourceGroup": 58,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 244,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.314,
         0.349,
@@ -950,8 +1383,15 @@
       "visualBacking": false
     },
     {
-      "file": "street-057-0.msh",
+      "file": "street-059-0.msh",
       "name": "Vasanth concrete",
+      "sourceObjects": [
+        "Vasanth concrete"
+      ],
+      "sourceGroup": 59,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 72,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.588,
         0.596,
@@ -963,8 +1403,15 @@
       "visualBacking": false
     },
     {
-      "file": "street-058-0.msh",
+      "file": "street-060-0.msh",
       "name": "Vasanth recess interior",
+      "sourceObjects": [
+        "Vasanth recess interior"
+      ],
+      "sourceGroup": 60,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 240,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.4,
         0.42,
@@ -976,8 +1423,15 @@
       "visualBacking": false
     },
     {
-      "file": "street-059-0.msh",
+      "file": "street-061-0.msh",
       "name": "Vasanth cream frames",
+      "sourceObjects": [
+        "Vasanth cream frames"
+      ],
+      "sourceGroup": 61,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 1592,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.847,
         0.843,
@@ -989,8 +1443,15 @@
       "visualBacking": false
     },
     {
-      "file": "street-060-0.msh",
+      "file": "street-062-0.msh",
       "name": "Vasanth glazing",
+      "sourceObjects": [
+        "Vasanth glazing"
+      ],
+      "sourceGroup": 62,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 240,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.325,
         0.388,
@@ -1002,8 +1463,15 @@
       "visualBacking": false
     },
     {
-      "file": "street-061-0.msh",
+      "file": "street-063-0.msh",
       "name": "Vasanth black metalwork",
+      "sourceObjects": [
+        "Vasanth black metalwork"
+      ],
+      "sourceGroup": 63,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 1224,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.188,
         0.224,
@@ -1015,8 +1483,15 @@
       "visualBacking": false
     },
     {
-      "file": "street-062-0.msh",
+      "file": "street-064-0.msh",
       "name": "Vasanth olive ground storey",
+      "sourceObjects": [
+        "Vasanth olive ground storey"
+      ],
+      "sourceGroup": 64,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 136,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.533,
         0.549,
@@ -1028,8 +1503,15 @@
       "visualBacking": false
     },
     {
-      "file": "street-063-0.msh",
+      "file": "street-065-0.msh",
       "name": "Vasanth pale green plaster",
+      "sourceObjects": [
+        "Vasanth pale green plaster"
+      ],
+      "sourceGroup": 65,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 420,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.796,
         0.816,
@@ -1041,8 +1523,15 @@
       "visualBacking": false
     },
     {
-      "file": "street-064-0.msh",
+      "file": "street-066-0.msh",
       "name": "Vasanth original nameplate",
+      "sourceObjects": [
+        "Vasanth original nameplate"
+      ],
+      "sourceGroup": 66,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 2,
+      "discardedDegenerateTriangles": 0,
       "color": [
         1,
         1,
@@ -1054,8 +1543,15 @@
       "visualBacking": true
     },
     {
-      "file": "street-065-0.msh",
+      "file": "street-067-0.msh",
       "name": "Vasanth address 8",
+      "sourceObjects": [
+        "Vasanth address 8"
+      ],
+      "sourceGroup": 67,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 2,
+      "discardedDegenerateTriangles": 0,
       "color": [
         1,
         1,
@@ -1067,8 +1563,15 @@
       "visualBacking": true
     },
     {
-      "file": "street-066-0.msh",
+      "file": "street-068-0.msh",
       "name": "Vasanth address 12",
+      "sourceObjects": [
+        "Vasanth address 12"
+      ],
+      "sourceGroup": 68,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 32,
+      "discardedDegenerateTriangles": 0,
       "color": [
         1,
         1,
@@ -1080,8 +1583,17 @@
       "visualBacking": false
     },
     {
-      "file": "street-067-0.msh",
+      "file": "street-069-0.msh",
       "name": "Surya concrete",
+      "sourceObjects": [
+        "Surya continuous courtyard passage and gate apron",
+        "Surya south passage door landing",
+        "Surya concrete"
+      ],
+      "sourceGroup": 69,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 108,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.667,
         0.663,
@@ -1089,12 +1601,19 @@
       ],
       "texture": "chennai_texture_13",
       "roughness": 1,
-      "triangles": 66,
+      "triangles": 108,
       "visualBacking": false
     },
     {
-      "file": "street-068-0.msh",
+      "file": "street-070-0.msh",
       "name": "Surya cream plaster",
+      "sourceObjects": [
+        "Surya cream plaster"
+      ],
+      "sourceGroup": 70,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 1964,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.886,
         0.871,
@@ -1106,8 +1625,15 @@
       "visualBacking": false
     },
     {
-      "file": "street-069-0.msh",
+      "file": "street-071-0.msh",
       "name": "Surya recess interior",
+      "sourceObjects": [
+        "Surya recess interior"
+      ],
+      "sourceGroup": 71,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 252,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.459,
         0.451,
@@ -1119,8 +1645,15 @@
       "visualBacking": false
     },
     {
-      "file": "street-070-0.msh",
+      "file": "street-072-0.msh",
       "name": "Surya peach plaster",
+      "sourceObjects": [
+        "Surya peach plaster"
+      ],
+      "sourceGroup": 72,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 564,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.792,
         0.702,
@@ -1132,8 +1665,15 @@
       "visualBacking": false
     },
     {
-      "file": "street-071-0.msh",
+      "file": "street-073-0.msh",
       "name": "Surya dark metalwork",
+      "sourceObjects": [
+        "Surya dark metalwork"
+      ],
+      "sourceGroup": 73,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 38904,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.176,
         0.204,
@@ -1145,8 +1685,15 @@
       "visualBacking": false
     },
     {
-      "file": "street-072-0.msh",
+      "file": "street-074-0.msh",
       "name": "Surya window glass",
+      "sourceObjects": [
+        "Surya window glass"
+      ],
+      "sourceGroup": 74,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 120,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.396,
         0.482,
@@ -1158,8 +1705,15 @@
       "visualBacking": false
     },
     {
-      "file": "street-073-0.msh",
+      "file": "street-075-0.msh",
       "name": "Surya brown frames",
+      "sourceObjects": [
+        "Surya brown frames"
+      ],
+      "sourceGroup": 75,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 756,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.369,
         0.231,
@@ -1171,8 +1725,15 @@
       "visualBacking": false
     },
     {
-      "file": "street-074-0.msh",
+      "file": "street-076-0.msh",
       "name": "Surya burgundy nameboard",
+      "sourceObjects": [
+        "Surya burgundy nameboard"
+      ],
+      "sourceGroup": 76,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 12,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.396,
         0.173,
@@ -1184,8 +1745,15 @@
       "visualBacking": false
     },
     {
-      "file": "street-075-0.msh",
+      "file": "street-077-0.msh",
       "name": "Surya white name lettering",
+      "sourceObjects": [
+        "Surya white name lettering"
+      ],
+      "sourceGroup": 77,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 1928,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.91,
         0.902,
@@ -1197,8 +1765,15 @@
       "visualBacking": false
     },
     {
-      "file": "street-076-0.msh",
+      "file": "street-078-0.msh",
       "name": "",
+      "sourceObjects": [
+        ""
+      ],
+      "sourceGroup": 78,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 284,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.667,
         0.663,
@@ -1210,8 +1785,15 @@
       "visualBacking": false
     },
     {
-      "file": "street-077-0.msh",
+      "file": "street-079-0.msh",
       "name": "",
+      "sourceObjects": [
+        ""
+      ],
+      "sourceGroup": 79,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 148,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.204,
         0.235,
@@ -1223,8 +1805,15 @@
       "visualBacking": false
     },
     {
-      "file": "street-078-0.msh",
+      "file": "street-080-0.msh",
       "name": "",
+      "sourceObjects": [
+        ""
+      ],
+      "sourceGroup": 80,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 2437,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.451,
         0.475,
@@ -1236,8 +1825,15 @@
       "visualBacking": false
     },
     {
-      "file": "street-079-0.msh",
+      "file": "street-081-0.msh",
       "name": "",
+      "sourceObjects": [
+        ""
+      ],
+      "sourceGroup": 81,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 540,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.196,
         0.204,
@@ -1249,8 +1845,15 @@
       "visualBacking": false
     },
     {
-      "file": "street-080-0.msh",
+      "file": "street-082-0.msh",
       "name": "Prashanth concrete",
+      "sourceObjects": [
+        "Prashanth concrete"
+      ],
+      "sourceGroup": 82,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 92,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.588,
         0.588,
@@ -1262,8 +1865,15 @@
       "visualBacking": false
     },
     {
-      "file": "street-081-0.msh",
+      "file": "street-083-0.msh",
       "name": "Prashanth orange plaster",
+      "sourceObjects": [
+        "Prashanth orange plaster"
+      ],
+      "sourceGroup": 83,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 856,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.839,
         0.592,
@@ -1275,8 +1885,15 @@
       "visualBacking": false
     },
     {
-      "file": "street-082-0.msh",
+      "file": "street-084-0.msh",
       "name": "Prashanth recessed interior",
+      "sourceObjects": [
+        "Prashanth recessed interior"
+      ],
+      "sourceGroup": 84,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 108,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.255,
         0.263,
@@ -1288,8 +1905,15 @@
       "visualBacking": false
     },
     {
-      "file": "street-083-0.msh",
+      "file": "street-085-0.msh",
       "name": "Prashanth glazing",
+      "sourceObjects": [
+        "Prashanth glazing"
+      ],
+      "sourceGroup": 85,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 84,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.322,
         0.412,
@@ -1301,8 +1925,15 @@
       "visualBacking": false
     },
     {
-      "file": "street-084-0.msh",
+      "file": "street-086-0.msh",
       "name": "Prashanth iron",
+      "sourceObjects": [
+        "Prashanth iron"
+      ],
+      "sourceGroup": 86,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 6556,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.2,
         0.224,
@@ -1314,8 +1945,15 @@
       "visualBacking": false
     },
     {
-      "file": "street-085-0.msh",
+      "file": "street-087-0.msh",
       "name": "Prashanth pale masonry",
+      "sourceObjects": [
+        "Prashanth pale masonry"
+      ],
+      "sourceGroup": 87,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 396,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.788,
         0.788,
@@ -1327,8 +1965,15 @@
       "visualBacking": false
     },
     {
-      "file": "street-086-0.msh",
+      "file": "street-088-0.msh",
       "name": "Prashanth raised name",
+      "sourceObjects": [
+        "Prashanth raised name"
+      ],
+      "sourceGroup": 88,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 1028,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.761,
         0.796,
@@ -1340,8 +1985,15 @@
       "visualBacking": false
     },
     {
-      "file": "street-087-0.msh",
+      "file": "street-089-0.msh",
       "name": "Prashanth weathered boundary plaster",
+      "sourceObjects": [
+        "Prashanth weathered boundary plaster"
+      ],
+      "sourceGroup": 89,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 120,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.761,
         0.769,
@@ -1353,8 +2005,15 @@
       "visualBacking": false
     },
     {
-      "file": "street-088-0.msh",
+      "file": "street-090-0.msh",
       "name": "Prashanth continuous hardstanding",
+      "sourceObjects": [
+        "Prashanth courtyard and driveway apron"
+      ],
+      "sourceGroup": 90,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 148,
+      "discardedDegenerateTriangles": 0,
       "color": [
         1,
         1,
@@ -1366,8 +2025,180 @@
       "visualBacking": false
     },
     {
-      "file": "street-089-0.msh",
-      "name": "Inferred parapets",
+      "file": "street-091-0.msh",
+      "name": "Mapped building shells 0",
+      "sourceObjects": [
+        "Mapped building shells 0"
+      ],
+      "sourceGroup": 91,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 15,
+      "discardedDegenerateTriangles": 0,
+      "color": [
+        0.816,
+        0.784,
+        0.722
+      ],
+      "texture": "chennai_texture_16",
+      "roughness": 0.93,
+      "triangles": 15,
+      "visualBacking": false
+    },
+    {
+      "file": "street-092-0.msh",
+      "name": "Mapped building shells 1",
+      "sourceObjects": [
+        "Mapped building shells 1"
+      ],
+      "sourceGroup": 92,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 24,
+      "discardedDegenerateTriangles": 0,
+      "color": [
+        0.859,
+        0.839,
+        0.784
+      ],
+      "texture": "chennai_texture_16",
+      "roughness": 0.93,
+      "triangles": 24,
+      "visualBacking": false
+    },
+    {
+      "file": "street-093-0.msh",
+      "name": "Mapped building shells 2",
+      "sourceObjects": [
+        "Mapped building shells 2"
+      ],
+      "sourceGroup": 93,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 42,
+      "discardedDegenerateTriangles": 0,
+      "color": [
+        0.769,
+        0.745,
+        0.69
+      ],
+      "texture": "chennai_texture_16",
+      "roughness": 0.93,
+      "triangles": 42,
+      "visualBacking": false
+    },
+    {
+      "file": "street-094-0.msh",
+      "name": "Mapped building shells 3",
+      "sourceObjects": [
+        "Mapped building shells 3"
+      ],
+      "sourceGroup": 94,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 72,
+      "discardedDegenerateTriangles": 0,
+      "color": [
+        0.773,
+        0.784,
+        0.733
+      ],
+      "texture": "chennai_texture_16",
+      "roughness": 0.93,
+      "triangles": 72,
+      "visualBacking": false
+    },
+    {
+      "file": "street-095-0.msh",
+      "name": "Mapped building shells 4",
+      "sourceObjects": [
+        "Mapped building shells 4"
+      ],
+      "sourceGroup": 95,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 55,
+      "discardedDegenerateTriangles": 0,
+      "color": [
+        0.784,
+        0.753,
+        0.722
+      ],
+      "texture": "chennai_texture_16",
+      "roughness": 0.93,
+      "triangles": 55,
+      "visualBacking": false
+    },
+    {
+      "file": "street-096-0.msh",
+      "name": "Mapped building shells 5",
+      "sourceObjects": [
+        "Mapped building shells 5"
+      ],
+      "sourceGroup": 96,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 58,
+      "discardedDegenerateTriangles": 0,
+      "color": [
+        0.765,
+        0.722,
+        0.639
+      ],
+      "texture": "chennai_texture_16",
+      "roughness": 0.93,
+      "triangles": 58,
+      "visualBacking": false
+    },
+    {
+      "file": "street-097-0.msh",
+      "name": "Mapped building shells 6",
+      "sourceObjects": [
+        "Mapped building shells 6"
+      ],
+      "sourceGroup": 97,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 48,
+      "discardedDegenerateTriangles": 0,
+      "color": [
+        0.722,
+        0.753,
+        0.749
+      ],
+      "texture": "chennai_texture_16",
+      "roughness": 0.93,
+      "triangles": 48,
+      "visualBacking": false
+    },
+    {
+      "file": "street-098-0.msh",
+      "name": "Mapped building shells 7",
+      "sourceObjects": [
+        "Mapped building shells 7"
+      ],
+      "sourceGroup": 98,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 57,
+      "discardedDegenerateTriangles": 0,
+      "color": [
+        0.827,
+        0.808,
+        0.753
+      ],
+      "texture": "chennai_texture_16",
+      "roughness": 0.93,
+      "triangles": 57,
+      "visualBacking": false
+    },
+    {
+      "file": "street-099-0.msh",
+      "name": "Flat roof surfaces",
+      "sourceObjects": [
+        "Flat roof surfaces",
+        "Inferred parapets",
+        "Inferred plinths",
+        "Inferred sunshades",
+        "Inferred tank pedestals",
+        "Inferred balcony slabs"
+      ],
+      "sourceGroup": 99,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 16277,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.686,
         0.663,
@@ -1375,12 +2206,23 @@
       ],
       "texture": "chennai_texture_16",
       "roughness": 0.98,
-      "triangles": 130,
+      "triangles": 16277,
       "visualBacking": false
     },
     {
-      "file": "street-090-0.msh",
+      "file": "street-100-0.msh",
       "name": "Inferred parapet caps",
+      "sourceObjects": [
+        "Inferred parapet caps",
+        "Inferred floor bands",
+        "Inferred tank pipes",
+        "Inferred window sills",
+        "Inferred AC condensers"
+      ],
+      "sourceGroup": 100,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 4956,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.718,
         0.71,
@@ -1388,12 +2230,20 @@
       ],
       "texture": null,
       "roughness": 0.88,
-      "triangles": 68,
+      "triangles": 4956,
       "visualBacking": false
     },
     {
-      "file": "street-091-0.msh",
+      "file": "street-101-0.msh",
       "name": "Inferred window shadows",
+      "sourceObjects": [
+        "Inferred window shadows",
+        "Inferred AC vents"
+      ],
+      "sourceGroup": 101,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 12024,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.196,
         0.231,
@@ -1401,12 +2251,19 @@
       ],
       "texture": null,
       "roughness": 0.78,
-      "triangles": 56,
+      "triangles": 12024,
       "visualBacking": false
     },
     {
-      "file": "street-092-0.msh",
+      "file": "street-102-0.msh",
       "name": "Inferred glazing",
+      "sourceObjects": [
+        "Inferred glazing"
+      ],
+      "sourceGroup": 102,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 11964,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.204,
         0.267,
@@ -1414,12 +2271,63 @@
       ],
       "texture": null,
       "roughness": 0.28,
-      "triangles": 54,
+      "triangles": 11964,
       "visualBacking": false
     },
     {
-      "file": "street-093-0.msh",
+      "file": "street-103-0.msh",
+      "name": "Inferred roof water tanks",
+      "sourceObjects": [
+        "Inferred roof water tanks",
+        "Inferred tank lids"
+      ],
+      "sourceGroup": 103,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 3328,
+      "discardedDegenerateTriangles": 0,
+      "color": [
+        0.145,
+        0.157,
+        0.165
+      ],
+      "texture": null,
+      "roughness": 0.91,
+      "triangles": 3328,
+      "visualBacking": false
+    },
+    {
+      "file": "street-104-0.msh",
+      "name": "Inferred window mullions",
+      "sourceObjects": [
+        "Inferred window mullions",
+        "Inferred security bars",
+        "Inferred balcony rails",
+        "Inferred balcony bars"
+      ],
+      "sourceGroup": 104,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 1656,
+      "discardedDegenerateTriangles": 0,
+      "color": [
+        0.357,
+        0.357,
+        0.318
+      ],
+      "texture": null,
+      "roughness": 0.71,
+      "triangles": 1656,
+      "visualBacking": false
+    },
+    {
+      "file": "street-105-0.msh",
       "name": "Central Avenue asphalt",
+      "sourceObjects": [
+        "Central Avenue asphalt"
+      ],
+      "sourceGroup": 105,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 2952,
+      "discardedDegenerateTriangles": 0,
       "color": [
         1,
         1,
@@ -1432,8 +2340,15 @@
       "appearance": "Actual browser shader albedo atlas, no lighting baked"
     },
     {
-      "file": "street-094-0.msh",
+      "file": "street-106-0.msh",
       "name": "Central Avenue dusty mineral verge",
+      "sourceObjects": [
+        "Central Avenue compacted shoulder"
+      ],
+      "sourceGroup": 106,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 4410,
+      "discardedDegenerateTriangles": 0,
       "color": [
         1,
         1,
@@ -1446,8 +2361,15 @@
       "appearance": "Actual browser shader albedo atlas, no lighting baked"
     },
     {
-      "file": "street-095-0.msh",
+      "file": "street-107-0.msh",
       "name": "Central Avenue inferred fittings",
+      "sourceObjects": [
+        "Central Avenue inferred fittings"
+      ],
+      "sourceGroup": 107,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 48,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.494,
         0.49,
@@ -1459,8 +2381,15 @@
       "visualBacking": false
     },
     {
-      "file": "street-096-0.msh",
+      "file": "street-108-0.msh",
       "name": "Central Avenue inferred fittings",
+      "sourceObjects": [
+        "Central Avenue inferred fittings"
+      ],
+      "sourceGroup": 108,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 552,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.663,
         0.62,
@@ -1472,8 +2401,15 @@
       "visualBacking": false
     },
     {
-      "file": "street-097-0.msh",
+      "file": "street-109-0.msh",
       "name": "Central Avenue inferred fittings",
+      "sourceObjects": [
+        "Central Avenue inferred fittings"
+      ],
+      "sourceGroup": 109,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 1572,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.306,
         0.349,
@@ -1485,8 +2421,15 @@
       "visualBacking": false
     },
     {
-      "file": "street-098-0.msh",
+      "file": "street-110-0.msh",
       "name": "Central Avenue inferred fittings",
+      "sourceObjects": [
+        "Central Avenue inferred fittings"
+      ],
+      "sourceGroup": 110,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 480,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.267,
         0.263,
@@ -1498,8 +2441,15 @@
       "visualBacking": false
     },
     {
-      "file": "street-099-0.msh",
+      "file": "street-111-0.msh",
       "name": "Central Avenue inferred fittings",
+      "sourceObjects": [
+        "Central Avenue inferred fittings"
+      ],
+      "sourceGroup": 111,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 5400,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.153,
         0.165,
@@ -1511,21 +2461,35 @@
       "visualBacking": false
     },
     {
-      "file": "street-100-0.msh",
-      "name": "Inferred neighboring facade 273bb97d",
-      "color": [
-        0.682,
-        0.71,
-        0.675
+      "file": "street-112-0.msh",
+      "name": "Neighbor inferred mineral plaster 3",
+      "sourceObjects": [
+        "Inferred neighboring facade 8181c6f8"
       ],
-      "texture": null,
-      "roughness": 0.57,
-      "triangles": 13572,
+      "sourceGroup": 112,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 48,
+      "discardedDegenerateTriangles": 0,
+      "color": [
+        0.722,
+        0.757,
+        0.702
+      ],
+      "texture": "chennai_texture_21",
+      "roughness": 1,
+      "triangles": 48,
       "visualBacking": false
     },
     {
-      "file": "street-101-0.msh",
-      "name": "Inferred neighboring facade 396bfbe4",
+      "file": "street-113-0.msh",
+      "name": "Inferred neighboring facade 76499a34",
+      "sourceObjects": [
+        "Inferred neighboring facade 76499a34"
+      ],
+      "sourceGroup": 113,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 8748,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.561,
         0.576,
@@ -1533,12 +2497,39 @@
       ],
       "texture": null,
       "roughness": 0.95,
-      "triangles": 2292,
+      "triangles": 8748,
       "visualBacking": false
     },
     {
-      "file": "street-102-0.msh",
-      "name": "Inferred neighboring facade 2fd2119d",
+      "file": "street-114-0.msh",
+      "name": "Inferred neighboring facade 40af0d6a",
+      "sourceObjects": [
+        "Inferred neighboring facade 40af0d6a"
+      ],
+      "sourceGroup": 114,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 25572,
+      "discardedDegenerateTriangles": 0,
+      "color": [
+        0.682,
+        0.71,
+        0.675
+      ],
+      "texture": null,
+      "roughness": 0.57,
+      "triangles": 25572,
+      "visualBacking": false
+    },
+    {
+      "file": "street-115-0.msh",
+      "name": "Inferred neighboring facade 5505e10e",
+      "sourceObjects": [
+        "Inferred neighboring facade 5505e10e"
+      ],
+      "sourceGroup": 115,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 7920,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.776,
         0.757,
@@ -1546,12 +2537,19 @@
       ],
       "texture": null,
       "roughness": 0.9,
-      "triangles": 2364,
+      "triangles": 7920,
       "visualBacking": false
     },
     {
-      "file": "street-103-0.msh",
-      "name": "Inferred neighboring facade fdd9fea1",
+      "file": "street-116-0.msh",
+      "name": "Inferred neighboring facade 6fb23c70",
+      "sourceObjects": [
+        "Inferred neighboring facade 6fb23c70"
+      ],
+      "sourceGroup": 116,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 14508,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.302,
         0.341,
@@ -1559,12 +2557,19 @@
       ],
       "texture": null,
       "roughness": 0.67,
-      "triangles": 5292,
+      "triangles": 14508,
       "visualBacking": false
     },
     {
-      "file": "street-104-0.msh",
-      "name": "Inferred neighboring facade 1327c557",
+      "file": "street-117-0.msh",
+      "name": "Inferred neighboring facade 09e6d7fe",
+      "sourceObjects": [
+        "Inferred neighboring facade 09e6d7fe"
+      ],
+      "sourceGroup": 117,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 84,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.349,
         0.4,
@@ -1572,25 +2577,81 @@
       ],
       "texture": null,
       "roughness": 0.81,
-      "triangles": 36,
+      "triangles": 84,
       "visualBacking": false
     },
     {
-      "file": "street-105-0.msh",
+      "file": "street-118-0.msh",
+      "name": "Neighbor inferred mineral plaster 2",
+      "sourceObjects": [
+        "Inferred neighboring facade 891460bb"
+      ],
+      "sourceGroup": 118,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 48,
+      "discardedDegenerateTriangles": 0,
+      "color": [
+        0.776,
+        0.737,
+        0.655
+      ],
+      "texture": "chennai_texture_21",
+      "roughness": 1,
+      "triangles": 48,
+      "visualBacking": false
+    },
+    {
+      "file": "street-119-0.msh",
+      "name": "Neighbor inferred mineral plaster 1",
+      "sourceObjects": [
+        "Inferred neighboring facade 953a21ff"
+      ],
+      "sourceGroup": 119,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 48,
+      "discardedDegenerateTriangles": 0,
+      "color": [
+        0.784,
+        0.769,
+        0.702
+      ],
+      "texture": "chennai_texture_21",
+      "roughness": 1,
+      "triangles": 48,
+      "visualBacking": false
+    },
+    {
+      "file": "street-120-0.msh",
       "name": "13/7 worn hardstanding",
+      "sourceObjects": [
+        "13/7 shoulder-connected apron",
+        "13/7 north passage support",
+        "13/7 side-entry step"
+      ],
+      "sourceGroup": 120,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 336,
+      "discardedDegenerateTriangles": 0,
       "color": [
         1,
         1,
         1
       ],
-      "texture": "chennai_texture_21",
+      "texture": "chennai_texture_22",
       "roughness": 0.98,
-      "triangles": 316,
+      "triangles": 336,
       "visualBacking": false
     },
     {
-      "file": "street-106-0.msh",
+      "file": "street-121-0.msh",
       "name": "13/7 dark room backing",
+      "sourceObjects": [
+        "13/7 dark room backing"
+      ],
+      "sourceGroup": 121,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 108,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.329,
         0.357,
@@ -1602,21 +2663,35 @@
       "visualBacking": false
     },
     {
-      "file": "street-107-0.msh",
+      "file": "street-122-0.msh",
       "name": "13/7 weathered white plaster",
+      "sourceObjects": [
+        "13/7 weathered white plaster"
+      ],
+      "sourceGroup": 122,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 1296,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.851,
         0.863,
         0.827
       ],
-      "texture": "chennai_texture_22",
+      "texture": "chennai_texture_23",
       "roughness": 1,
       "triangles": 1296,
       "visualBacking": false
     },
     {
-      "file": "street-108-0.msh",
+      "file": "street-123-0.msh",
       "name": "13/7 recessed glazing",
+      "sourceObjects": [
+        "13/7 recessed glazing"
+      ],
+      "sourceGroup": 123,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 108,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.341,
         0.392,
@@ -1628,8 +2703,15 @@
       "visualBacking": false
     },
     {
-      "file": "street-109-0.msh",
+      "file": "street-124-0.msh",
       "name": "13/7 pale casements",
+      "sourceObjects": [
+        "13/7 pale casements"
+      ],
+      "sourceGroup": 124,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 540,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.612,
         0.667,
@@ -1641,8 +2723,15 @@
       "visualBacking": false
     },
     {
-      "file": "street-110-0.msh",
+      "file": "street-125-0.msh",
       "name": "13/7 dark window guards and gate",
+      "sourceObjects": [
+        "13/7 dark window guards and gate"
+      ],
+      "sourceGroup": 125,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 8338,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.161,
         0.192,
@@ -1654,47 +2743,75 @@
       "visualBacking": false
     },
     {
-      "file": "street-111-0.msh",
+      "file": "street-126-0.msh",
       "name": "13/7 inferred concrete support",
+      "sourceObjects": [
+        "13/7 inferred concrete support"
+      ],
+      "sourceGroup": 126,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 24,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.537,
         0.553,
         0.514
       ],
-      "texture": "chennai_texture_22",
+      "texture": "chennai_texture_23",
       "roughness": 1,
       "triangles": 24,
       "visualBacking": false
     },
     {
-      "file": "street-112-0.msh",
+      "file": "street-127-0.msh",
       "name": "13/7 stained ground-floor fascia",
+      "sourceObjects": [
+        "13/7 stained ground-floor fascia"
+      ],
+      "sourceGroup": 127,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 12,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.769,
         0.788,
         0.745
       ],
-      "texture": "chennai_texture_22",
+      "texture": "chennai_texture_23",
       "roughness": 1,
       "triangles": 12,
       "visualBacking": false
     },
     {
-      "file": "street-113-0.msh",
+      "file": "street-128-0.msh",
       "name": "13/7 grey bands",
+      "sourceObjects": [
+        "13/7 grey bands"
+      ],
+      "sourceGroup": 128,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 84,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.69,
         0.718,
         0.678
       ],
-      "texture": "chennai_texture_22",
+      "texture": "chennai_texture_23",
       "roughness": 1,
       "triangles": 84,
       "visualBacking": false
     },
     {
-      "file": "street-114-0.msh",
+      "file": "street-129-0.msh",
       "name": "Passenger van amber lenses",
+      "sourceObjects": [
+        "Passenger_van_amber_lenses"
+      ],
+      "sourceGroup": 129,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 376,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.786,
         0.496,
@@ -1706,8 +2823,15 @@
       "visualBacking": false
     },
     {
-      "file": "street-115-0.msh",
+      "file": "street-130-0.msh",
       "name": "Passenger van dark interior upholstery",
+      "sourceObjects": [
+        "Passenger_van_dark_interior_upholstery"
+      ],
+      "sourceGroup": 130,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 3384,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.179,
         0.209,
@@ -1719,8 +2843,15 @@
       "visualBacking": false
     },
     {
-      "file": "street-116-0.msh",
+      "file": "street-131-0.msh",
       "name": "Passenger van pale blue green curtains",
+      "sourceObjects": [
+        "Passenger_van_pale_blue_green_curtains"
+      ],
+      "sourceGroup": 131,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 856,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.517,
         0.68,
@@ -1732,8 +2863,15 @@
       "visualBacking": false
     },
     {
-      "file": "street-117-0.msh",
+      "file": "street-132-0.msh",
       "name": "Passenger van pale lamp lenses",
+      "sourceObjects": [
+        "Passenger_van_pale_lamp_lenses"
+      ],
+      "sourceGroup": 132,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 940,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.767,
         0.78,
@@ -1745,8 +2883,15 @@
       "visualBacking": false
     },
     {
-      "file": "street-118-0.msh",
+      "file": "street-133-0.msh",
       "name": "Passenger van red tail lenses",
+      "sourceObjects": [
+        "Passenger_van_red_tail_lenses"
+      ],
+      "sourceGroup": 133,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 752,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.65,
         0.093,
@@ -1758,8 +2903,15 @@
       "visualBacking": false
     },
     {
-      "file": "street-119-0.msh",
+      "file": "street-134-0.msh",
       "name": "Passenger van rubber and seals",
+      "sourceObjects": [
+        "Passenger_van_rubber_and_seals"
+      ],
+      "sourceGroup": 134,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 20716,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.123,
         0.143,
@@ -1771,8 +2923,15 @@
       "visualBacking": false
     },
     {
-      "file": "street-120-0.msh",
+      "file": "street-135-0.msh",
       "name": "Passenger van warm white enamel",
+      "sourceObjects": [
+        "Passenger_van_warm_white_enamel"
+      ],
+      "sourceGroup": 135,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 5284,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.843,
         0.854,
@@ -1784,8 +2943,15 @@
       "visualBacking": false
     },
     {
-      "file": "street-121-0.msh",
+      "file": "street-136-0.msh",
       "name": "Passenger van wheel alloy",
+      "sourceObjects": [
+        "Passenger_van_wheel_alloy"
+      ],
+      "sourceGroup": 136,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 5004,
+      "discardedDegenerateTriangles": 0,
       "color": [
         0.618,
         0.642,
@@ -1797,47 +2963,35 @@
       "visualBacking": false
     },
     {
-      "file": "street-122-0.msh",
+      "file": "street-137-0.msh",
       "name": "Small bent leaf-cluster patches - Blender baked CC0 donor \u00b7 Central Avenue thin leaf",
+      "sourceObjects": [
+        "1120_small_bent_3D_twig-cluster_patches"
+      ],
+      "sourceGroup": 137,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 47032,
+      "discardedDegenerateTriangles": 0,
       "color": [
         1,
         1,
         1
       ],
-      "texture": "chennai_texture_23",
+      "texture": "chennai_texture_24",
       "roughness": 0.800000011920929,
       "triangles": 47032,
       "visualBacking": false
     },
     {
-      "file": "street-123-0.msh",
+      "file": "street-138-0.msh",
       "name": "CC0 individual leaf atlas - alpha mask double sided \u00b7 Central Avenue thin leaf",
-      "color": [
-        1,
-        1,
-        1
+      "sourceObjects": [
+        "13440_individually_bent_small_donor_leaves"
       ],
-      "texture": "chennai_texture_24",
-      "roughness": 1,
-      "triangles": 150000,
-      "visualBacking": false
-    },
-    {
-      "file": "street-123-1.msh",
-      "name": "CC0 individual leaf atlas - alpha mask double sided \u00b7 Central Avenue thin leaf",
-      "color": [
-        1,
-        1,
-        1
-      ],
-      "texture": "chennai_texture_24",
-      "roughness": 1,
-      "triangles": 37872,
-      "visualBacking": false
-    },
-    {
-      "file": "street-124-0.msh",
-      "name": "CC0 bark on inferred branch hierarchy",
+      "sourceGroup": 138,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 150000,
+      "discardedDegenerateTriangles": 0,
       "color": [
         1,
         1,
@@ -1845,128 +2999,189 @@
       ],
       "texture": "chennai_texture_25",
       "roughness": 1,
+      "triangles": 150000,
+      "visualBacking": false
+    },
+    {
+      "file": "street-138-1.msh",
+      "name": "CC0 individual leaf atlas - alpha mask double sided \u00b7 Central Avenue thin leaf",
+      "sourceObjects": [
+        "13440_individually_bent_small_donor_leaves"
+      ],
+      "sourceGroup": 138,
+      "sourceFaceStart": 150000,
+      "sourceFaceCount": 37872,
+      "discardedDegenerateTriangles": 0,
+      "color": [
+        1,
+        1,
+        1
+      ],
+      "texture": "chennai_texture_25",
+      "roughness": 1,
+      "triangles": 37872,
+      "visualBacking": false
+    },
+    {
+      "file": "street-139-0.msh",
+      "name": "CC0 bark on inferred branch hierarchy",
+      "sourceObjects": [
+        "Inferred_trunk_primary_branches_and_twigs"
+      ],
+      "sourceGroup": 139,
+      "sourceFaceStart": 0,
+      "sourceFaceCount": 51776,
+      "discardedDegenerateTriangles": 0,
+      "color": [
+        1,
+        1,
+        1
+      ],
+      "texture": "chennai_texture_26",
+      "roughness": 1,
       "triangles": 51776,
-      "visualBacking": false
-    },
-    {
-      "file": "street-125-0.msh",
-      "name": "Mapped building shells 0",
-      "color": [
-        0.816,
-        0.784,
-        0.722
-      ],
-      "texture": "chennai_texture_27",
-      "roughness": 0.93,
-      "triangles": 15,
-      "visualBacking": false
-    },
-    {
-      "file": "street-126-0.msh",
-      "name": "Mapped building shells 1",
-      "color": [
-        0.859,
-        0.839,
-        0.784
-      ],
-      "texture": "chennai_texture_27",
-      "roughness": 0.93,
-      "triangles": 24,
-      "visualBacking": false
-    },
-    {
-      "file": "street-127-0.msh",
-      "name": "Mapped building shells 2",
-      "color": [
-        0.769,
-        0.745,
-        0.69
-      ],
-      "texture": "chennai_texture_27",
-      "roughness": 0.93,
-      "triangles": 42,
-      "visualBacking": false
-    },
-    {
-      "file": "street-128-0.msh",
-      "name": "Mapped building shells 3",
-      "color": [
-        0.773,
-        0.784,
-        0.733
-      ],
-      "texture": "chennai_texture_27",
-      "roughness": 0.93,
-      "triangles": 72,
-      "visualBacking": false
-    },
-    {
-      "file": "street-129-0.msh",
-      "name": "Mapped building shells 4",
-      "color": [
-        0.784,
-        0.753,
-        0.722
-      ],
-      "texture": "chennai_texture_27",
-      "roughness": 0.93,
-      "triangles": 55,
-      "visualBacking": false
-    },
-    {
-      "file": "street-130-0.msh",
-      "name": "Mapped building shells 5",
-      "color": [
-        0.765,
-        0.722,
-        0.639
-      ],
-      "texture": "chennai_texture_27",
-      "roughness": 0.93,
-      "triangles": 58,
-      "visualBacking": false
-    },
-    {
-      "file": "street-131-0.msh",
-      "name": "Mapped building shells 6",
-      "color": [
-        0.722,
-        0.753,
-        0.749
-      ],
-      "texture": "chennai_texture_27",
-      "roughness": 0.93,
-      "triangles": 48,
-      "visualBacking": false
-    },
-    {
-      "file": "street-132-0.msh",
-      "name": "Mapped building shells 7",
-      "color": [
-        0.827,
-        0.808,
-        0.753
-      ],
-      "texture": "chennai_texture_27",
-      "roughness": 0.93,
-      "triangles": 57,
-      "visualBacking": false
-    },
-    {
-      "file": "street-133-0.msh",
-      "name": "Flat roof surfaces",
-      "color": [
-        0.686,
-        0.663,
-        0.608
-      ],
-      "texture": "chennai_texture_27",
-      "roughness": 0.98,
-      "triangles": 65,
       "visualBacking": false
     }
   ],
   "exportWarnings": [],
+  "sceneMetadata": [
+    {
+      "name": "Encaarpus source-visible roof dishes",
+      "sourcePhoto": "Frankleen Seeralan, January 2024, CIHM0ogKEICAgICtsaaHCA",
+      "sourceSha256": "0b02fddb8fcfeeb9b8552d5e12927ffea82ff016f3cf67bb972e8c735dd4bb99",
+      "observed": "Two shallow grey dish silhouettes above the inner grey roof piers",
+      "poses": [
+        {
+          "x": -2.94,
+          "y": 16.63,
+          "z": -0.55,
+          "yaw": -0.3
+        },
+        {
+          "x": 2.53,
+          "y": 16.58,
+          "z": -0.64,
+          "yaw": 0.17
+        }
+      ],
+      "diameterMeters": 0.6,
+      "limits": "Source supports count, broad silhouette and relative roof location. Diameter, depth, mounting, azimuth, elevation and hidden parts are inferred. No operator, brand, current installation or functional communications claim. Separate meshes preserve the existing facade AO geometry."
+    },
+    {
+      "name": "Central Avenue neighbors \u00b7 inferred architectural finishing",
+      "revision": 4,
+      "records": [
+        {
+          "wayId": 354839696,
+          "height": 6.55,
+          "windows": 32,
+          "entries": 1,
+          "rainwaterStacks": 1,
+          "pipeClamps": 4,
+          "parapetFaces": 4,
+          "copingJoints": 40
+        },
+        {
+          "wayId": 354840154,
+          "height": 6.55,
+          "windows": 32,
+          "entries": 1,
+          "rainwaterStacks": 1,
+          "pipeClamps": 4,
+          "parapetFaces": 4,
+          "copingJoints": 42
+        },
+        {
+          "wayId": 355940211,
+          "height": 9.65,
+          "windows": 60,
+          "entries": 1,
+          "rainwaterStacks": 1,
+          "pipeClamps": 5,
+          "parapetFaces": 4,
+          "copingJoints": 44
+        },
+        {
+          "wayId": 354759778,
+          "height": 6.55,
+          "windows": 32,
+          "entries": 0,
+          "rainwaterStacks": 1,
+          "pipeClamps": 4,
+          "parapetFaces": 4,
+          "copingJoints": 36
+        },
+        {
+          "wayId": 364160225,
+          "height": 6.55,
+          "windows": 32,
+          "entries": 0,
+          "rainwaterStacks": 1,
+          "pipeClamps": 4,
+          "parapetFaces": 4,
+          "copingJoints": 38
+        },
+        {
+          "wayId": 354839712,
+          "height": 6.55,
+          "windows": 32,
+          "entries": 1,
+          "rainwaterStacks": 1,
+          "pipeClamps": 4,
+          "parapetFaces": 4,
+          "copingJoints": 38
+        },
+        {
+          "wayId": 354839933,
+          "height": 6.55,
+          "windows": 32,
+          "entries": 1,
+          "rainwaterStacks": 1,
+          "pipeClamps": 4,
+          "parapetFaces": 4,
+          "copingJoints": 36
+        },
+        {
+          "wayId": 355940230,
+          "height": 9.65,
+          "windows": 66,
+          "entries": 1,
+          "rainwaterStacks": 1,
+          "pipeClamps": 5,
+          "parapetFaces": 4,
+          "copingJoints": 52
+        },
+        {
+          "wayId": 354759816,
+          "height": 6.55,
+          "windows": 36,
+          "entries": 1,
+          "rainwaterStacks": 1,
+          "pipeClamps": 4,
+          "parapetFaces": 4,
+          "copingJoints": 42
+        }
+      ],
+      "paintFinish": {
+        "palette": "Three muted mineral colors, inferred",
+        "texture": "Original fine plaster field shared with existing district materials",
+        "shellOffsetMeters": 0.004
+      },
+      "constructionFinish": {
+        "source": "Inferred construction details on existing mapped shells; no photographed drainage routes",
+        "rainwaterPipeDiameterMeters": 0.09,
+        "clampSpacingMeters": 1.9,
+        "parapetFinishOffsetMeters": 0.004,
+        "copingJointWidthMeters": 0.012,
+        "limits": "Decorative open discharge shoes; no underground drain, hydraulic simulation or surveyed service placement asserted"
+      },
+      "source": "Existing OpenStreetMap footprints and already inferred generic window grid",
+      "inferred": true,
+      "limits": "Original architectural finishing study; no facade photographs, surveyed heights, tenancy or real opening positions asserted. Existing shells, heights, glazing and map source unchanged. Unmapped buildings remain unresolved."
+    }
+  ],
+  "exportedAt": "2026-09-13T18:18:52.997Z",
+  "sourceExportSha256": "bf95caa0870f882f403cd3314e4d1748e845b71f8b15acf52c8e42bcf0d8b7ca",
   "lighting": {
     "source": "Direction and chromaticity from the actual browser solar-separated HDR light; native OpenGL intensity/ambient approximation.",
     "sun": {
@@ -2004,8 +3219,8 @@
     ],
     "source": "Actual Three.js asphalt stochastic sampling and verge mineral pigment shaders rendered without lights or shadows; original map geometry/UVs, no invented surface detail.",
     "updatedMeshes": [
-      "street-093-0.msh",
-      "street-094-0.msh"
+      "street-105-0.msh",
+      "street-106-0.msh"
     ]
   }
 }

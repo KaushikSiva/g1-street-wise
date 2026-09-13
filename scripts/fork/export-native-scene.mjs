@@ -3,7 +3,8 @@ import {chromium} from '@playwright/test';
 import fs from 'node:fs/promises';
 const browser=await chromium.launch({channel:'chrome',headless:true});
 const page=await browser.newPage({viewport:{width:1200,height:850}});
-await page.goto('http://127.0.0.1:5188/?robot=1');await page.waitForFunction(()=>window.forkRobot?.ready,null,{timeout:60000});await page.waitForTimeout(2000);
+const sourceUrl=process.env.STREETWISE_SOURCE_URL||'http://127.0.0.1:5188/?robot=1';
+await page.goto(sourceUrl);await page.waitForFunction(()=>window.forkRobot?.ready,null,{timeout:60000});await page.waitForTimeout(2000);
 const appearanceOnly=process.argv.includes('--appearance-only'),buildingsOnly=process.argv.includes('--buildings-only');
 const result=JSON.parse(await page.evaluate(async({appearanceOnly,buildingsOnly})=>{
  const THREE=await import('/node_modules/three/build/three.module.js');
@@ -22,7 +23,8 @@ const result=JSON.parse(await page.evaluate(async({appearanceOnly,buildingsOnly}
  const appearanceAtlas={name:'road-verge-unlit',png:albedoRenderer.domElement.toDataURL('image/png').split(',')[1],width:4096,height:512,bounds:[-46,46,-5,5],materials:[...new Set(bakedMaterials)],source:'Actual Three.js asphalt stochastic sampling and verge mineral pigment shaders rendered without lights or shadows; original map geometry/UVs, no invented surface detail.'};
  albedoScene.traverse(o=>{o.geometry?.dispose();o.material?.dispose();});albedoRenderer.dispose();
  if(appearanceOnly)return JSON.stringify({appearanceAtlas,lighting});
- const groups=new Map(),textures=new Map(),texturePixels=new Map(),warnings=[];let meshes=0;
+ const groups=new Map(),textures=new Map(),texturePixels=new Map(),warnings=[],sceneMetadata=[];let meshes=0;
+ scene.scene.traverse(o=>{if(/Central Avenue neighbors|source-visible roof dishes/.test(o.name))sceneMetadata.push({name:o.name,...o.userData});});
  function textureFor(mat){
   const map=mat.map;if(!map)return null;const key=map.uuid+(mat.userData.centralLeaf?.restorePigment?'_leaf':'');if(textures.has(key))return key;
   try{const image=map.image;if(!image?.width||!image?.height)return null;const scale=Math.min(1,1024/Math.max(image.width,image.height));const canvas=document.createElement('canvas');canvas.width=Math.round(image.width*scale);canvas.height=Math.round(image.height*scale);const ctx=canvas.getContext('2d');
@@ -40,14 +42,14 @@ const result=JSON.parse(await page.evaluate(async({appearanceOnly,buildingsOnly}
   const geo=o.geometry;if(!geo?.attributes.position)return;
   for(let inst=0;inst<(o.isInstancedMesh?o.count:1);inst++){
    const matrix=o.matrixWorld.clone();if(o.isInstancedMesh){const im=new THREE.Matrix4();o.getMatrixAt(inst,im);matrix.multiply(im);}matrix.premultiply(transform);
-   geo.computeBoundingSphere();const sphere=geo.boundingSphere.clone().applyMatrix4(matrix);if(sphere.center.length()-sphere.radius>38||(sphere.radius>100&&!/Central Avenue asphalt|Central Avenue compacted shoulder|Mapped building shells|Flat roof surfaces/.test(o.name)))continue;
+   geo.computeBoundingSphere();const sphere=geo.boundingSphere.clone().applyMatrix4(matrix);if(sphere.center.length()-sphere.radius>(o.parent?.name==='OSM building footprints · inferred architectural detail'?90:38)||(sphere.radius>100&&!/Central Avenue asphalt|Central Avenue compacted shoulder|Mapped building shells|Flat roof surfaces/.test(o.name)))continue;
    const normals=new THREE.Matrix3().getNormalMatrix(matrix),materials=Array.isArray(o.material)?o.material:[o.material],ranges=geo.groups.length?geo.groups:[{start:0,count:geo.index?.count||geo.attributes.position.count,materialIndex:0}];
-   for(const range of ranges){const mat=materials[range.materialIndex||0];if(!mat||mat.opacity<.6)continue;
+   for(const range of ranges){const mat=materials[Array.isArray(o.material)?(range.materialIndex||0):0];if(!mat||mat.opacity<.6)continue;
     const texture=geo.attributes.uv?textureFor(mat):null,color=mat.color?.clone()||new THREE.Color(.5,.5,.5);if(o.isInstancedMesh&&o.instanceColor){const c=new THREE.Color();o.getColorAt(inst,c);color.multiply(c);}
     // Match the displayed albedo scale; MuJoCo's fixed-function viewer lacks Three's tone map.
     color.convertLinearToSRGB();const rgb=[color.r,color.g,color.b].map(v=>Math.round(v*1000)/1000);
     if(mat.alphaTest>.1&&!texture)rgb.splice(0,3,.20,.34,.12);
-    const key=[mat.uuid,texture,...rgb].join(',');let group=groups.get(key);if(!group){group={name:mat.name||o.name,color:rgb,texture,roughness:mat.roughness??.8,vertices:[],normals:[],uvs:[],faces:[]};groups.set(key,group);}
+    const key=[mat.uuid,texture,...rgb].join(',');let group=groups.get(key);if(!group){group={name:mat.name||o.name,sourceObjects:[],color:rgb,texture,roughness:mat.roughness??.8,vertices:[],normals:[],uvs:[],faces:[]};groups.set(key,group);}if(!group.sourceObjects.includes(o.name))group.sourceObjects.push(o.name);
     const end=Math.min(range.start+range.count,geo.index?.count||geo.attributes.position.count),mapping=new Map();mat.map?.updateMatrix();
     for(let i=range.start;i+2<end;i+=3){
      const sourceIds=[0,1,2].map(j=>geo.index?geo.index.getX(i+j):i+j);
@@ -57,8 +59,9 @@ const result=JSON.parse(await page.evaluate(async({appearanceOnly,buildingsOnly}
    }meshes++;
   }
  });
- return JSON.stringify({source:'Actual Chennai Three.js meshes intersecting the 38 m neighborhood of station 75, with nearby merged building shells retained to 90 m for the street backdrop, original albedo texture images and transformed UVs. Browser shader-only weathering, normal maps, GTAO and lighting are not reproduced. Decorative only, no collision changes.',appearanceAtlas,lighting,meshes,warnings,textures:[...textures.values()],groups:[...groups.values()]});
+ return JSON.stringify({source:'Actual Chennai Three.js meshes intersecting the 38 m neighborhood of station 75, with nearby mapped building shells and their inherited facade details retained to 90 m for the street backdrop, original albedo texture images and transformed UVs. Browser shader-only weathering, normal maps, GTAO and lighting are not reproduced. Decorative only, no collision changes.',sceneMetadata,appearanceAtlas,lighting,meshes,warnings,textures:[...textures.values()],groups:[...groups.values()]});
 },{appearanceOnly,buildingsOnly}));
 if(appearanceOnly){const data=JSON.parse(await fs.readFile('.fork-runs/robot/chennai-native.json','utf8'));data.appearanceAtlas=result.appearanceAtlas;data.lighting=result.lighting;await fs.writeFile('.fork-runs/robot/chennai-native.json',JSON.stringify(data));console.log({appearanceAtlas:result.appearanceAtlas.materials,resolution:[4096,512]});await browser.close();process.exit(0);}
 if(buildingsOnly){const data=JSON.parse(await fs.readFile('.fork-runs/robot/chennai-native.json','utf8'));data.source=result.source;data.groups=data.groups.filter(g=>!/Mapped building shells|Flat roof surfaces/.test(g.name)).concat(result.groups);data.textures=data.textures.concat(result.textures);data.appearanceAtlas=result.appearanceAtlas;data.lighting=result.lighting;await fs.writeFile('.fork-runs/robot/chennai-native.json',JSON.stringify(data));console.log({localBuildingGroups:result.groups.length,vertices:result.groups.reduce((n,g)=>n+g.vertices.length/3,0)});await browser.close();process.exit(0);}
-await fs.mkdir('.fork-runs/robot',{recursive:true});await fs.writeFile('.fork-runs/robot/chennai-native.json',JSON.stringify(result));console.log({meshes:result.meshes,materials:result.groups.length,textures:result.textures.length,warnings:result.warnings,vertices:result.groups.reduce((n,g)=>n+g.vertices.length/3,0)});await browser.close();
+result.exportedAt=new Date().toISOString();result.sourceUrl=sourceUrl;
+await fs.mkdir('.fork-runs/robot',{recursive:true});await fs.writeFile('.fork-runs/robot/chennai-native.json',JSON.stringify(result));console.log({meshes:result.meshes,materials:result.groups.length,textures:result.textures.length,warnings:result.warnings,vertices:result.groups.reduce((n,g)=>n+g.vertices.length/3,0),sceneMetadata:result.sceneMetadata});await browser.close();

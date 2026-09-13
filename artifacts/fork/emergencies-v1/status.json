@@ -1,0 +1,8 @@
+{
+  "status": "training",
+  "round": 1,
+  "difficulty": 0,
+  "history": [],
+  "seedPolicy": "Training and adversarial seeds below 9000. Validation/test use distinct round offsets.",
+  "goal": "Find plausible failure cases, learn from training failures, measure on independent encounters."
+}

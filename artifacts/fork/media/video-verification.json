@@ -1,5 +1,5 @@
 {
-  "duration": 118,
+  "duration": 118.0,
   "decode": "passed",
   "streams": [
     {
@@ -11,5 +11,8 @@
       "codec_name": "aac"
     }
   ],
-  "narration": "Fish Audio South Indian Male synthetic voice"
+  "narration": "Fish Audio South Indian Male synthetic voice; latest saved naturally paced narration",
+  "sourceCaptureSeconds": 125.64,
+  "trimmedSetupSeconds": 7.640000000000001,
+  "nativeScene": "September 13 resumed nine-building transfer"
 }
