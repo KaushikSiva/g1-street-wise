@@ -54,6 +54,7 @@ def simulate(job_id, curriculum, seed):
         module, name, checkpoint_dir = CURRICULA[curriculum]
         checkpoint = ROOT/'artifacts/fork'/checkpoint_dir/'best.zip'
         env = getattr(importlib.import_module(module), name)(record=True)
+        env.enforce_physical_contacts = True
         policy = NavigationPolicy(checkpoint.with_suffix('.npz'))
         assert str(policy.weights['checkpoint_sha256']) == hashlib.sha256(checkpoint.read_bytes()).hexdigest()
         results = {}
@@ -69,9 +70,22 @@ def simulate(job_id, curriculum, seed):
                     break
             else:
                 raise RuntimeError('Episode exceeded its control-step budget')
-            results[label] = {**env.episode_record(), 'outcome': info}
+            outcome = dict(info)
+            if info['contact'] or info['fall']:
+                # Hold the final issued command; show real dynamics after failure.
+                # The scored episode has ended, so these frames cannot earn success.
+                for _ in range(10):
+                    _, _, _, _, consequence = env.step(action)
+                    outcome['fall'] |= consequence['fall']
+                    outcome['physical_contact'] |= consequence['physical_contact']
+                    if consequence['collision_geometry'] and not outcome['collision_geometry']:
+                        outcome['collision_geometry'] = consequence['collision_geometry']
+                outcome['continuation_seconds'] = 2.
+            results[label] = {**env.episode_record(), 'outcome': outcome}
         result = {'source': 'fresh_mujoco', 'curriculum': curriculum, 'seed': seed,
                   'wallSeconds': round(time.monotonic()-started, 2),
+                  'generatedAt': time.time(), 'scoring': 'physical-contact-v2',
+                  'gaitBackend': 'numpy-lstm' if os.getenv('STREETWISE_NUMPY_GAIT') == '1' else 'torchscript',
                   'checkpointSha256': hashlib.sha256(checkpoint.read_bytes()).hexdigest(),
                   'checkpoint': checkpoint_dir, 'replays': {k: [v] for k, v in results.items()},
                   'limits': 'Fresh simulated physics with frozen walking policy; not a physical robot trial. '

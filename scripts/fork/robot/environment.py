@@ -60,6 +60,7 @@ def visible(rx, ry, px, py):
 class CentralAvenueG1(gym.Env):
     metadata = {'render_modes': []}
     horizon = HORIZON
+    enforce_physical_contacts = False  # Preserve the original benchmark definition.
 
     def __init__(self, record=False):
         self.robot = G1Controller(make_scene())
@@ -94,6 +95,10 @@ class CentralAvenueG1(gym.Env):
         self.return_sum = 0.
         self.min_clearance = 100.
         self.contact = False
+        self.physical_contact = False
+        self.collision_geometry = None
+        self.first_violation_time = None
+        self._contact_model = None
         self.fall = False
         self.frames = []
         self.decisions = []
@@ -143,6 +148,28 @@ class CentralAvenueG1(gym.Env):
     def command_for_action(self, action):
         return [ACTION_SPEEDS[action], 0, 0]
 
+    def _physical_contact_step(self):
+        model, data = self.robot.model, self.robot.data
+        if self._contact_model is not model:
+            pelvis = mujoco.mj_name2id(model, mujoco.mjtObj.mjOBJ_BODY, 'pelvis')
+            bodies = {pelvis}
+            for body in range(pelvis+1, model.nbody):
+                if int(model.body_parentid[body]) in bodies:
+                    bodies.add(body)
+            self._robot_geoms = {i for i in range(model.ngeom) if int(model.geom_bodyid[i]) in bodies}
+            self._obstacle_geoms = {i for i in range(model.ngeom) if i not in self._robot_geoms
+                and (mujoco.mj_id2name(model, mujoco.mjtObj.mjOBJ_GEOM, i) or '') != 'central_avenue_road'}
+            self._contact_model = model
+        for contact in data.contact:
+            a, b = int(contact.geom1), int(contact.geom2)
+            other = b if a in self._robot_geoms else a if b in self._robot_geoms else -1
+            if contact.dist <= 0 and other in self._obstacle_geoms:
+                self.physical_contact = self.contact = True
+                if self.collision_geometry is None:
+                    self.collision_geometry = mujoco.mj_id2name(model, mujoco.mjtObj.mjOBJ_GEOM, other)
+        if self.contact and self.first_violation_time is None:
+            self.first_violation_time = round(self.t + (self.robot.counter % 10+1)*model.opt.timestep, 4)
+
     def goal_reached(self):
         return self.robot.data.qpos[0] > self.crossing+1
 
@@ -156,7 +183,8 @@ class CentralAvenueG1(gym.Env):
         command=self.command_for_action(action)
         self.decisions.append({'t': round(self.t, 3), 'action': action, 'speed': command[0], 'command': command})
         for _ in range(10):
-            self.robot.step(command, before_step=self._pedestrian_step)
+            self.robot.step(command, before_step=self._pedestrian_step,
+                            after_step=self._physical_contact_step if self.enforce_physical_contacts else None)
             self.t += .02
             self.age += .02
             self._observe()
@@ -180,6 +208,9 @@ class CentralAvenueG1(gym.Env):
         info = {'scenario_seed': self.scenario_seed, 'contact': bool(self.contact),
                 'fall': self.fall, 'success': success, 'min_clearance': self.min_clearance,
                 'progress': float(d.qpos[0]+3), 'return': self.return_sum, 'elapsed': self.t}
+        if self.enforce_physical_contacts:
+            info.update(physical_contact=self.physical_contact, collision_geometry=self.collision_geometry,
+                        first_violation_time=self.first_violation_time, scoring='physical-contact-v2')
         return self._observe(), reward, terminated, truncated, info
 
     def episode_record(self):

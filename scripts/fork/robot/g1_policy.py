@@ -4,15 +4,18 @@ Observation ordering, gains and phase follow unitree_rl_gym deploy_mujoco.py.
 The supplied base policy is frozen; FORK trains the navigation layer above it.
 """
 from pathlib import Path
+import os
 import numpy as np
 import mujoco
-import torch
 import yaml
 
 ROOT = Path(__file__).resolve().parents[3]
 UPSTREAM = ROOT / 'vendor/unitree_rl_gym'
 CONFIG = yaml.safe_load((UPSTREAM / 'deploy/deploy_mujoco/configs/g1.yaml').read_text())
-torch.set_num_threads(1)
+NUMPY_GAIT = os.getenv('STREETWISE_NUMPY_GAIT') == '1'
+if not NUMPY_GAIT:
+    import torch
+    torch.set_num_threads(1)
 
 
 def gravity(quat):
@@ -25,7 +28,11 @@ class G1Controller:
         self.model = mujoco.MjModel.from_xml_path(str(xml or UPSTREAM / 'resources/robots/g1_description/scene.xml'))
         self.data = mujoco.MjData(self.model)
         self.model.opt.timestep = CONFIG['simulation_dt']
-        self.policy = torch.jit.load(str(UPSTREAM / 'deploy/pre_train/g1/motion.pt'), map_location='cpu').eval()
+        if NUMPY_GAIT:
+            from numpy_gait import NumpyGait
+            self.policy = NumpyGait(ROOT/'artifacts/fork/live-demo/gait.npz')
+        else:
+            self.policy = torch.jit.load(str(UPSTREAM / 'deploy/pre_train/g1/motion.pt'), map_location='cpu').eval()
         self.kp = np.array(CONFIG['kps'])
         self.kd = np.array(CONFIG['kds'])
         self.default = np.array(CONFIG['default_angles'])
@@ -50,16 +57,21 @@ class G1Controller:
             self.data.qvel[6:18]*CONFIG['dof_vel_scale'], self.action,
             [np.sin(2*np.pi*phase), np.cos(2*np.pi*phase)],
         ]).astype(np.float32)
-        with torch.inference_mode():
-            self.action = self.policy(torch.from_numpy(obs).unsqueeze(0)).numpy().reshape(12).copy()
+        if NUMPY_GAIT:
+            self.action = self.policy(obs).copy()
+        else:
+            with torch.inference_mode():
+                self.action = self.policy(torch.from_numpy(obs).unsqueeze(0)).numpy().reshape(12).copy()
         self.target = self.action*CONFIG['action_scale']+self.default
 
-    def step(self, command, steps=10, before_step=None):
+    def step(self, command, steps=10, before_step=None, after_step=None):
         for _ in range(steps):
             if before_step:
                 before_step()
             self.data.ctrl[:] = (self.target-self.data.qpos[7:19])*self.kp-self.data.qvel[6:18]*self.kd
             mujoco.mj_step(self.model, self.data)
+            if after_step:
+                after_step()
             self.counter += 1
             if self.counter % CONFIG['control_decimation'] == 0:
                 self.update_target(command)

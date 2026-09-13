@@ -1,0 +1,12 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs/promises';
+import {stripTypeScriptTypes} from 'node:module';
+const source=await fs.readFile('src/fork/live-api.ts','utf8');
+const outputText=stripTypeScriptTypes(source,{mode:'transform'});
+const {readJob,LiveApiError,isLiveResult}=await import('data:text/javascript;base64,'+Buffer.from(outputText).toString('base64'));
+for(const body of ['', '<html>Bad Gateway</html>','{"id":'])await assert.rejects(readJob(new Response(body,{status:502})),e=>e instanceof LiveApiError&&e.retryable&&!/Unexpected/.test(e.message));
+await assert.rejects(readJob(new Response('{"id":"a","status":"complete","result":{}}')),/expected replay format/);
+await assert.rejects(readJob(new Response('{"id":"a","status":"running","phase":13}')),/invalid run status/);
+assert.equal((await readJob(new Response('{"id":"a","status":"running"}'))).status,'running');
+assert.equal(isLiveResult({source:'fresh_mujoco',seed:1,curriculum:'hazards',wallSeconds:1,replays:{before:[{frames:[]}],after:[]}}),false);
+console.log('PASS empty, truncated, HTML, malformed status/replay, and valid status responses.');

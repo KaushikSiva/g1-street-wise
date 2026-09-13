@@ -1,0 +1,6 @@
+{
+  "steps": 4000,
+  "max_absolute_action_error": 2.288818359375e-05,
+  "weights": "unchanged official Unitree LSTM",
+  "scope": "Numerical inference parity; floating point differences can affect long physics trajectories."
+}

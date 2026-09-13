@@ -1,9 +1,9 @@
 {
-  "base": "http://127.0.0.1:8192",
+  "base": "http://127.0.0.1:8194",
   "seed": 30002,
   "badge": "FRESH MUJOCO RUN · SEED 30002",
-  "status": "Fresh comparison ready · seed 30002 · 0.2 seconds of server computation. Use Before / After and Play encounter above.",
-  "summary": "Before · constant forwardRoute completed · 8.4 sAfter · navigation policyRoute completed · 7.8 s",
+  "status": "Fresh comparison ready · seed 30002 · 0.4 seconds of server computation. Use Before / After and Play encounter above.",
+  "summary": "Before · constant forwardPhysical collision · 4.6 sAfter · navigation policyRoute completed · 7.8 s",
   "modeSwitch": true,
   "playback": true,
   "mobileOverflow": false,

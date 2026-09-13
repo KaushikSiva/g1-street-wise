@@ -9,9 +9,8 @@ RUN npm run build
 
 FROM python:3.12-slim-bookworm
 WORKDIR /app
-ENV HOST=0.0.0.0 PYTHONUNBUFFERED=1 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MPLBACKEND=Agg
+ENV STREETWISE_NUMPY_GAIT=1 HOST=0.0.0.0 PYTHONUNBUFFERED=1 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MPLBACKEND=Agg
 RUN apt-get update && apt-get install -y --no-install-recommends git libgl1 libglib2.0-0 && rm -rf /var/lib/apt/lists/*
-RUN pip install --no-cache-dir torch==2.14.0 --index-url https://download.pytorch.org/whl/cpu
 COPY scripts/fork/live-requirements.txt /app/live-requirements.txt
 RUN pip install --no-cache-dir -r live-requirements.txt
 RUN git clone --filter=blob:none --no-checkout https://github.com/unitreerobotics/unitree_rl_gym.git vendor/unitree_rl_gym && \
@@ -19,6 +18,7 @@ RUN git clone --filter=blob:none --no-checkout https://github.com/unitreerobotic
     git -C vendor/unitree_rl_gym checkout 276801e46c5d433564f24658bac64f254b7d2d4b && \
     rm -rf vendor/unitree_rl_gym/.git
 COPY scripts/fork/robot ./scripts/fork/robot
+COPY artifacts/fork/live-demo/gait.npz ./artifacts/fork/live-demo/gait.npz
 COPY scripts/fork/live_server.py ./scripts/fork/live_server.py
 COPY artifacts/fork/rl-corridor-v2/best.zip ./artifacts/fork/rl-corridor-v2/best.zip
 COPY artifacts/fork/rl-hazards-v2/best.zip ./artifacts/fork/rl-hazards-v2/best.zip

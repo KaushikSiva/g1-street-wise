@@ -1,0 +1,1037 @@
+{
+  "weather-experiment.json": [
+    {
+      "mode": "before",
+      "seed": 20002,
+      "original_success": true,
+      "time": 3.8,
+      "geometry": "moving_car_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20005,
+      "original_success": true,
+      "time": 4.08,
+      "geometry": "moving_car_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20007,
+      "original_success": true,
+      "time": 3.78,
+      "geometry": "pedestrian_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20008,
+      "original_success": true,
+      "time": 3.96,
+      "geometry": "moving_car_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20010,
+      "original_success": true,
+      "time": 3.82,
+      "geometry": "pedestrian_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20011,
+      "original_success": false,
+      "time": 4.76,
+      "geometry": "moving_car_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20014,
+      "original_success": false,
+      "time": 4.6,
+      "geometry": "moving_car_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20016,
+      "original_success": false,
+      "time": 4.0,
+      "geometry": "pedestrian_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20020,
+      "original_success": false,
+      "time": 4.46,
+      "geometry": "moving_car_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20022,
+      "original_success": true,
+      "time": 4.34,
+      "geometry": "pedestrian_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20023,
+      "original_success": false,
+      "time": 4.26,
+      "geometry": "moving_car_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20025,
+      "original_success": false,
+      "time": 4.12,
+      "geometry": "pedestrian_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20026,
+      "original_success": true,
+      "time": 4.4,
+      "geometry": "moving_car_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20029,
+      "original_success": true,
+      "time": 4.3,
+      "geometry": "moving_car_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20031,
+      "original_success": true,
+      "time": 4.24,
+      "geometry": "pedestrian_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20032,
+      "original_success": true,
+      "time": 4.28,
+      "geometry": "moving_car_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20035,
+      "original_success": true,
+      "time": 4.06,
+      "geometry": "moving_car_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20037,
+      "original_success": true,
+      "time": 3.9,
+      "geometry": "pedestrian_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20038,
+      "original_success": true,
+      "time": 4.44,
+      "geometry": "moving_car_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20041,
+      "original_success": true,
+      "time": 4.32,
+      "geometry": "moving_car_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20043,
+      "original_success": true,
+      "time": 4.04,
+      "geometry": "pedestrian_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20044,
+      "original_success": true,
+      "time": 4.3,
+      "geometry": "moving_car_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20047,
+      "original_success": false,
+      "time": 4.4,
+      "geometry": "moving_car_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20049,
+      "original_success": false,
+      "time": 4.56,
+      "geometry": "pedestrian_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20050,
+      "original_success": true,
+      "time": 4.32,
+      "geometry": "moving_car_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20053,
+      "original_success": true,
+      "time": 3.76,
+      "geometry": "moving_car_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20056,
+      "original_success": false,
+      "time": 4.76,
+      "geometry": "moving_car_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20058,
+      "original_success": true,
+      "time": 4.48,
+      "geometry": "pedestrian_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20059,
+      "original_success": true,
+      "time": 3.84,
+      "geometry": "moving_car_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20061,
+      "original_success": true,
+      "time": 4.38,
+      "geometry": "pedestrian_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20062,
+      "original_success": true,
+      "time": 4.0,
+      "geometry": "moving_car_body"
+    },
+    {
+      "mode": "after",
+      "seed": 20001,
+      "original_success": true,
+      "time": 5.34,
+      "geometry": "pedestrian_body"
+    },
+    {
+      "mode": "after",
+      "seed": 20002,
+      "original_success": true,
+      "time": 5.08,
+      "geometry": "moving_car_body"
+    },
+    {
+      "mode": "after",
+      "seed": 20005,
+      "original_success": true,
+      "time": 5.46,
+      "geometry": "moving_car_body"
+    },
+    {
+      "mode": "after",
+      "seed": 20008,
+      "original_success": true,
+      "time": 5.26,
+      "geometry": "moving_car_body"
+    },
+    {
+      "mode": "after",
+      "seed": 20011,
+      "original_success": true,
+      "time": 3.68,
+      "geometry": "parked_van"
+    },
+    {
+      "mode": "after",
+      "seed": 20014,
+      "original_success": true,
+      "time": 4.26,
+      "geometry": "parked_van"
+    },
+    {
+      "mode": "after",
+      "seed": 20017,
+      "original_success": true,
+      "time": 6.42,
+      "geometry": "moving_car_body"
+    },
+    {
+      "mode": "after",
+      "seed": 20020,
+      "original_success": true,
+      "time": 4.08,
+      "geometry": "parked_van"
+    },
+    {
+      "mode": "after",
+      "seed": 20023,
+      "original_success": true,
+      "time": 5.94,
+      "geometry": "moving_car_body"
+    },
+    {
+      "mode": "after",
+      "seed": 20028,
+      "original_success": true,
+      "time": 5.18,
+      "geometry": "pedestrian_body"
+    },
+    {
+      "mode": "after",
+      "seed": 20034,
+      "original_success": true,
+      "time": 5.02,
+      "geometry": "pedestrian_body"
+    },
+    {
+      "mode": "after",
+      "seed": 20035,
+      "original_success": true,
+      "time": 5.42,
+      "geometry": "moving_car_body"
+    },
+    {
+      "mode": "after",
+      "seed": 20046,
+      "original_success": true,
+      "time": 4.68,
+      "geometry": "pedestrian_body"
+    },
+    {
+      "mode": "after",
+      "seed": 20047,
+      "original_success": true,
+      "time": 4.18,
+      "geometry": "parked_van"
+    },
+    {
+      "mode": "after",
+      "seed": 20050,
+      "original_success": true,
+      "time": 5.7,
+      "geometry": "moving_car_body"
+    },
+    {
+      "mode": "after",
+      "seed": 20053,
+      "original_success": true,
+      "time": 5.04,
+      "geometry": "moving_car_body"
+    },
+    {
+      "mode": "after",
+      "seed": 20055,
+      "original_success": true,
+      "time": 4.56,
+      "geometry": "pedestrian_body"
+    },
+    {
+      "mode": "after",
+      "seed": 20056,
+      "original_success": true,
+      "time": 3.66,
+      "geometry": "parked_van"
+    },
+    {
+      "mode": "after",
+      "seed": 20064,
+      "original_success": true,
+      "time": 4.92,
+      "geometry": "pedestrian_body"
+    }
+  ],
+  "robot-experiment.json": [
+    {
+      "mode": "before",
+      "seed": 20002,
+      "original_success": false,
+      "time": 3.88,
+      "geometry": "pedestrian_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20003,
+      "original_success": false,
+      "time": 4.5,
+      "geometry": "pedestrian_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20005,
+      "original_success": false,
+      "time": 4.36,
+      "geometry": "pedestrian_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20006,
+      "original_success": false,
+      "time": 4.12,
+      "geometry": "pedestrian_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20007,
+      "original_success": true,
+      "time": 3.78,
+      "geometry": "pedestrian_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20009,
+      "original_success": false,
+      "time": 4.54,
+      "geometry": "pedestrian_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20010,
+      "original_success": true,
+      "time": 3.78,
+      "geometry": "pedestrian_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20016,
+      "original_success": false,
+      "time": 4.0,
+      "geometry": "pedestrian_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20017,
+      "original_success": true,
+      "time": 4.34,
+      "geometry": "pedestrian_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20018,
+      "original_success": true,
+      "time": 4.22,
+      "geometry": "pedestrian_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20020,
+      "original_success": true,
+      "time": 4.18,
+      "geometry": "pedestrian_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20021,
+      "original_success": false,
+      "time": 4.24,
+      "geometry": "pedestrian_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20022,
+      "original_success": true,
+      "time": 4.34,
+      "geometry": "pedestrian_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20025,
+      "original_success": false,
+      "time": 4.12,
+      "geometry": "pedestrian_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20026,
+      "original_success": true,
+      "time": 4.18,
+      "geometry": "pedestrian_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20027,
+      "original_success": true,
+      "time": 4.22,
+      "geometry": "pedestrian_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20030,
+      "original_success": true,
+      "time": 4.36,
+      "geometry": "pedestrian_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20031,
+      "original_success": true,
+      "time": 4.24,
+      "geometry": "pedestrian_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20033,
+      "original_success": true,
+      "time": 3.82,
+      "geometry": "pedestrian_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20035,
+      "original_success": true,
+      "time": 3.84,
+      "geometry": "pedestrian_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20037,
+      "original_success": true,
+      "time": 3.88,
+      "geometry": "pedestrian_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20038,
+      "original_success": true,
+      "time": 3.66,
+      "geometry": "pedestrian_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20042,
+      "original_success": true,
+      "time": 3.8,
+      "geometry": "pedestrian_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20043,
+      "original_success": true,
+      "time": 4.04,
+      "geometry": "pedestrian_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20044,
+      "original_success": true,
+      "time": 3.94,
+      "geometry": "pedestrian_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20047,
+      "original_success": true,
+      "time": 3.88,
+      "geometry": "pedestrian_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20048,
+      "original_success": true,
+      "time": 4.7,
+      "geometry": "pedestrian_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20049,
+      "original_success": false,
+      "time": 4.56,
+      "geometry": "pedestrian_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20050,
+      "original_success": true,
+      "time": 3.7,
+      "geometry": "pedestrian_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20053,
+      "original_success": true,
+      "time": 3.64,
+      "geometry": "pedestrian_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20054,
+      "original_success": true,
+      "time": 4.0,
+      "geometry": "pedestrian_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20056,
+      "original_success": true,
+      "time": 4.16,
+      "geometry": "pedestrian_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20057,
+      "original_success": true,
+      "time": 4.22,
+      "geometry": "pedestrian_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20058,
+      "original_success": true,
+      "time": 4.48,
+      "geometry": "pedestrian_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20059,
+      "original_success": false,
+      "time": 4.2,
+      "geometry": "pedestrian_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20061,
+      "original_success": true,
+      "time": 4.38,
+      "geometry": "pedestrian_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20063,
+      "original_success": true,
+      "time": 4.18,
+      "geometry": "pedestrian_body"
+    },
+    {
+      "mode": "after",
+      "seed": 20001,
+      "original_success": true,
+      "time": 6.56,
+      "geometry": "pedestrian_body"
+    },
+    {
+      "mode": "after",
+      "seed": 20003,
+      "original_success": true,
+      "time": 5.42,
+      "geometry": "pedestrian_body"
+    },
+    {
+      "mode": "after",
+      "seed": 20005,
+      "original_success": true,
+      "time": 5.4,
+      "geometry": "pedestrian_body"
+    },
+    {
+      "mode": "after",
+      "seed": 20009,
+      "original_success": true,
+      "time": 5.52,
+      "geometry": "pedestrian_body"
+    },
+    {
+      "mode": "after",
+      "seed": 20018,
+      "original_success": true,
+      "time": 5.34,
+      "geometry": "pedestrian_body"
+    },
+    {
+      "mode": "after",
+      "seed": 20024,
+      "original_success": true,
+      "time": 6.34,
+      "geometry": "pedestrian_body"
+    },
+    {
+      "mode": "after",
+      "seed": 20028,
+      "original_success": true,
+      "time": 5.96,
+      "geometry": "pedestrian_body"
+    },
+    {
+      "mode": "after",
+      "seed": 20034,
+      "original_success": true,
+      "time": 7.14,
+      "geometry": "pedestrian_body"
+    },
+    {
+      "mode": "after",
+      "seed": 20045,
+      "original_success": true,
+      "time": 6.66,
+      "geometry": "pedestrian_body"
+    },
+    {
+      "mode": "after",
+      "seed": 20064,
+      "original_success": true,
+      "time": 5.64,
+      "geometry": "pedestrian_body"
+    }
+  ],
+  "hazard-experiment.json": [
+    {
+      "mode": "before",
+      "seed": 20002,
+      "original_success": true,
+      "time": 3.76,
+      "geometry": "moving_car_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20005,
+      "original_success": true,
+      "time": 4.08,
+      "geometry": "moving_car_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20007,
+      "original_success": true,
+      "time": 3.78,
+      "geometry": "pedestrian_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20008,
+      "original_success": true,
+      "time": 3.96,
+      "geometry": "moving_car_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20010,
+      "original_success": true,
+      "time": 3.78,
+      "geometry": "pedestrian_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20011,
+      "original_success": false,
+      "time": 4.74,
+      "geometry": "moving_car_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20014,
+      "original_success": false,
+      "time": 4.6,
+      "geometry": "moving_car_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20016,
+      "original_success": false,
+      "time": 4.0,
+      "geometry": "pedestrian_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20020,
+      "original_success": false,
+      "time": 4.42,
+      "geometry": "moving_car_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20022,
+      "original_success": true,
+      "time": 4.34,
+      "geometry": "pedestrian_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20023,
+      "original_success": false,
+      "time": 4.26,
+      "geometry": "moving_car_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20025,
+      "original_success": false,
+      "time": 4.12,
+      "geometry": "pedestrian_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20026,
+      "original_success": true,
+      "time": 4.4,
+      "geometry": "moving_car_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20029,
+      "original_success": true,
+      "time": 4.24,
+      "geometry": "moving_car_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20031,
+      "original_success": true,
+      "time": 4.24,
+      "geometry": "pedestrian_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20032,
+      "original_success": true,
+      "time": 4.28,
+      "geometry": "moving_car_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20035,
+      "original_success": true,
+      "time": 4.06,
+      "geometry": "moving_car_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20037,
+      "original_success": true,
+      "time": 3.88,
+      "geometry": "pedestrian_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20038,
+      "original_success": true,
+      "time": 4.42,
+      "geometry": "moving_car_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20041,
+      "original_success": true,
+      "time": 4.32,
+      "geometry": "moving_car_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20043,
+      "original_success": true,
+      "time": 4.04,
+      "geometry": "pedestrian_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20044,
+      "original_success": true,
+      "time": 4.3,
+      "geometry": "moving_car_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20047,
+      "original_success": false,
+      "time": 4.38,
+      "geometry": "moving_car_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20049,
+      "original_success": false,
+      "time": 4.56,
+      "geometry": "pedestrian_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20050,
+      "original_success": true,
+      "time": 4.32,
+      "geometry": "moving_car_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20053,
+      "original_success": true,
+      "time": 3.76,
+      "geometry": "moving_car_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20056,
+      "original_success": false,
+      "time": 4.72,
+      "geometry": "moving_car_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20058,
+      "original_success": true,
+      "time": 4.48,
+      "geometry": "pedestrian_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20059,
+      "original_success": true,
+      "time": 3.84,
+      "geometry": "moving_car_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20061,
+      "original_success": true,
+      "time": 4.38,
+      "geometry": "pedestrian_body"
+    },
+    {
+      "mode": "before",
+      "seed": 20062,
+      "original_success": true,
+      "time": 4.0,
+      "geometry": "moving_car_body"
+    },
+    {
+      "mode": "after",
+      "seed": 20001,
+      "original_success": true,
+      "time": 5.3,
+      "geometry": "pedestrian_body"
+    },
+    {
+      "mode": "after",
+      "seed": 20002,
+      "original_success": true,
+      "time": 5.04,
+      "geometry": "moving_car_body"
+    },
+    {
+      "mode": "after",
+      "seed": 20005,
+      "original_success": true,
+      "time": 5.46,
+      "geometry": "moving_car_body"
+    },
+    {
+      "mode": "after",
+      "seed": 20008,
+      "original_success": true,
+      "time": 5.26,
+      "geometry": "moving_car_body"
+    },
+    {
+      "mode": "after",
+      "seed": 20011,
+      "original_success": true,
+      "time": 3.76,
+      "geometry": "parked_van"
+    },
+    {
+      "mode": "after",
+      "seed": 20014,
+      "original_success": true,
+      "time": 4.26,
+      "geometry": "parked_van"
+    },
+    {
+      "mode": "after",
+      "seed": 20017,
+      "original_success": true,
+      "time": 6.42,
+      "geometry": "moving_car_body"
+    },
+    {
+      "mode": "after",
+      "seed": 20020,
+      "original_success": true,
+      "time": 6.46,
+      "geometry": "moving_car_body"
+    },
+    {
+      "mode": "after",
+      "seed": 20023,
+      "original_success": true,
+      "time": 5.94,
+      "geometry": "moving_car_body"
+    },
+    {
+      "mode": "after",
+      "seed": 20028,
+      "original_success": true,
+      "time": 5.1,
+      "geometry": "pedestrian_body"
+    },
+    {
+      "mode": "after",
+      "seed": 20034,
+      "original_success": true,
+      "time": 5.02,
+      "geometry": "pedestrian_body"
+    },
+    {
+      "mode": "after",
+      "seed": 20035,
+      "original_success": true,
+      "time": 5.42,
+      "geometry": "moving_car_body"
+    },
+    {
+      "mode": "after",
+      "seed": 20046,
+      "original_success": true,
+      "time": 4.64,
+      "geometry": "pedestrian_body"
+    },
+    {
+      "mode": "after",
+      "seed": 20047,
+      "original_success": true,
+      "time": 6.06,
+      "geometry": "moving_car_body"
+    },
+    {
+      "mode": "after",
+      "seed": 20050,
+      "original_success": true,
+      "time": 5.7,
+      "geometry": "moving_car_body"
+    },
+    {
+      "mode": "after",
+      "seed": 20053,
+      "original_success": true,
+      "time": 5.04,
+      "geometry": "moving_car_body"
+    },
+    {
+      "mode": "after",
+      "seed": 20055,
+      "original_success": true,
+      "time": 4.52,
+      "geometry": "pedestrian_body"
+    },
+    {
+      "mode": "after",
+      "seed": 20056,
+      "original_success": true,
+      "time": 3.76,
+      "geometry": "parked_van"
+    },
+    {
+      "mode": "after",
+      "seed": 20064,
+      "original_success": true,
+      "time": 4.9,
+      "geometry": "pedestrian_body"
+    }
+  ]
+}
