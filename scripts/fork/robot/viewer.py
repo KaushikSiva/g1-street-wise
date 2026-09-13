@@ -15,7 +15,7 @@ def main():
     p=argparse.ArgumentParser()
     p.add_argument('--policy',choices=['before','after'],default='after')
     p.add_argument('--checkpoint')
-    p.add_argument('--environment',choices=['crossing','hazards','weather'],default='crossing')
+    p.add_argument('--environment',choices=['crossing','hazards','weather','streetlife'],default='crossing')
     p.add_argument('--difficulty',type=int,default=0,choices=range(4))
     p.add_argument('--seed',type=int,default=20002)
     p.add_argument('--chennai',action='store_true')
@@ -25,7 +25,10 @@ def main():
     p.add_argument('--screenshot',help='Render the initial native physics scene to PNG')
     args=p.parse_args()
     cls=CentralAvenueG1
-    if args.environment=='hazards':
+    if args.environment=='streetlife':
+        from streetlife import CentralAvenueStreetlife
+        cls=CentralAvenueStreetlife;cls.difficulty=args.difficulty
+    elif args.environment=='hazards':
         from hazards import CentralAvenueHazards
         cls=CentralAvenueHazards
     elif args.environment=='weather':
@@ -35,9 +38,10 @@ def main():
     if args.chennai:
         from native_scene import decorate
         from native_human import attach,NativeHumans
-        env.robot=G1Controller(attach(decorate(args.environment)))
-        native_humans=NativeHumans(env.robot.model)
-    default={'crossing':'rl-corridor-v2','hazards':'rl-hazards-v2','weather':'rl-weather'}[args.environment]
+        instances=3 if args.environment=='streetlife' else 1
+        env.robot=G1Controller(attach(decorate(args.environment),instances=instances))
+        native_humans=NativeHumans(env.robot.model,instances=instances)
+    default={'crossing':'rl-corridor-v2','hazards':'rl-hazards-v2','weather':'rl-weather','streetlife':'streetlife-multiple-shelters/round-001'}[args.environment]
     checkpoint=ROOT/(args.checkpoint or f'artifacts/fork/{default}/best.zip')
     policy=PPO.load(checkpoint,device='cpu') if args.policy=='after' else None
     obs,_=env.reset(seed=args.seed)

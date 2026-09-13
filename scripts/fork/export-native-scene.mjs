@@ -4,11 +4,13 @@ import fs from 'node:fs/promises';
 const browser=await chromium.launch({channel:'chrome',headless:true});
 const page=await browser.newPage({viewport:{width:1200,height:850}});
 await page.goto('http://127.0.0.1:5188/?robot=1');await page.waitForFunction(()=>window.forkRobot?.ready,null,{timeout:60000});await page.waitForTimeout(2000);
-const appearanceOnly=process.argv.includes('--appearance-only');
-const result=JSON.parse(await page.evaluate(async(appearanceOnly)=>{
+const appearanceOnly=process.argv.includes('--appearance-only'),buildingsOnly=process.argv.includes('--buildings-only');
+const result=JSON.parse(await page.evaluate(async({appearanceOnly,buildingsOnly})=>{
  const THREE=await import('/node_modules/three/build/three.module.js');
  const {scene,g1}=window.forkRobot;const frame=scene.frame;const origin=frame.point(75,0,.07);
  const transform=new THREE.Matrix4().makeBasis(frame.direction,frame.normal.clone().negate(),new THREE.Vector3(0,1,0));transform.setPosition(origin);transform.invert();
+ const lighting={source:'Direction and chromaticity from the actual browser solar-separated HDR light; native OpenGL intensity/ambient approximation.',sun:null,groundColor:[.44,.40,.32]};
+ scene.scene.updateMatrixWorld(true);scene.scene.traverse(o=>{if(o.isDirectionalLight&&o.intensity>0){const position=o.getWorldPosition(new THREE.Vector3()),target=o.target.getWorldPosition(new THREE.Vector3());lighting.sun={direction:target.sub(position).normalize().transformDirection(transform).toArray(),color:o.color.toArray(),intensity:o.intensity};}if(o.isMesh&&o.geometry.type==='PlaneGeometry'&&o.geometry.parameters.width>=1500)lighting.groundColor=o.material.color.clone().convertLinearToSRGB().toArray();});
  const albedoScene=new THREE.Scene(),albedoRenderer=new THREE.WebGLRenderer({antialias:false,alpha:true,preserveDrawingBuffer:true});
  albedoRenderer.setSize(4096,512,false);albedoRenderer.setClearColor(0,0);albedoRenderer.toneMapping=THREE.NoToneMapping;albedoRenderer.outputColorSpace=THREE.SRGBColorSpace;
  scene.scene.updateMatrixWorld(true);const bakedMaterials=[];
@@ -19,7 +21,7 @@ const result=JSON.parse(await page.evaluate(async(appearanceOnly)=>{
  const atlasCamera=new THREE.OrthographicCamera(-46,46,5,-5,.1,200);atlasCamera.position.set(0,0,100);atlasCamera.up.set(0,1,0);atlasCamera.lookAt(0,0,0);albedoRenderer.render(albedoScene,atlasCamera);
  const appearanceAtlas={name:'road-verge-unlit',png:albedoRenderer.domElement.toDataURL('image/png').split(',')[1],width:4096,height:512,bounds:[-46,46,-5,5],materials:[...new Set(bakedMaterials)],source:'Actual Three.js asphalt stochastic sampling and verge mineral pigment shaders rendered without lights or shadows; original map geometry/UVs, no invented surface detail.'};
  albedoScene.traverse(o=>{o.geometry?.dispose();o.material?.dispose();});albedoRenderer.dispose();
- if(appearanceOnly)return JSON.stringify({appearanceAtlas});
+ if(appearanceOnly)return JSON.stringify({appearanceAtlas,lighting});
  const groups=new Map(),textures=new Map(),texturePixels=new Map(),warnings=[];let meshes=0;
  function textureFor(mat){
   const map=mat.map;if(!map)return null;const key=map.uuid+(mat.userData.centralLeaf?.restorePigment?'_leaf':'');if(textures.has(key))return key;
@@ -32,12 +34,13 @@ const result=JSON.parse(await page.evaluate(async(appearanceOnly)=>{
  scene.scene.updateMatrixWorld(true);
  scene.scene.traverse(o=>{
   if(!o.isMesh||o.isSkinnedMesh||!o.visible)return;
+  if(buildingsOnly&&!/Mapped building shells|Flat roof surfaces/.test(o.name))return;
   let staticVan=false;for(let parent=o;parent;parent=parent.parent)if(parent.parent===g1.group.parent&&Math.abs(parent.position.x+3.1)<.001&&Math.abs(parent.position.y+2)<.001)staticVan=true;
   for(let parent=o;parent;parent=parent.parent)if((parent===g1.group.parent&&!staticVan)||parent===scene.stage||!parent.visible)return;
   const geo=o.geometry;if(!geo?.attributes.position)return;
   for(let inst=0;inst<(o.isInstancedMesh?o.count:1);inst++){
    const matrix=o.matrixWorld.clone();if(o.isInstancedMesh){const im=new THREE.Matrix4();o.getMatrixAt(inst,im);matrix.multiply(im);}matrix.premultiply(transform);
-   geo.computeBoundingSphere();const sphere=geo.boundingSphere.clone().applyMatrix4(matrix);if(sphere.center.length()-sphere.radius>38||(sphere.radius>100&&!/Central Avenue asphalt|Central Avenue compacted shoulder/.test(o.name)))continue;
+   geo.computeBoundingSphere();const sphere=geo.boundingSphere.clone().applyMatrix4(matrix);if(sphere.center.length()-sphere.radius>38||(sphere.radius>100&&!/Central Avenue asphalt|Central Avenue compacted shoulder|Mapped building shells|Flat roof surfaces/.test(o.name)))continue;
    const normals=new THREE.Matrix3().getNormalMatrix(matrix),materials=Array.isArray(o.material)?o.material:[o.material],ranges=geo.groups.length?geo.groups:[{start:0,count:geo.index?.count||geo.attributes.position.count,materialIndex:0}];
    for(const range of ranges){const mat=materials[range.materialIndex||0];if(!mat||mat.opacity<.6)continue;
     const texture=geo.attributes.uv?textureFor(mat):null,color=mat.color?.clone()||new THREE.Color(.5,.5,.5);if(o.isInstancedMesh&&o.instanceColor){const c=new THREE.Color();o.getColorAt(inst,c);color.multiply(c);}
@@ -48,13 +51,14 @@ const result=JSON.parse(await page.evaluate(async(appearanceOnly)=>{
     const end=Math.min(range.start+range.count,geo.index?.count||geo.attributes.position.count),mapping=new Map();mat.map?.updateMatrix();
     for(let i=range.start;i+2<end;i+=3){
      const sourceIds=[0,1,2].map(j=>geo.index?geo.index.getX(i+j):i+j);
-     if(sphere.radius>100){const center=new THREE.Vector3();for(const idx of sourceIds)center.add(new THREE.Vector3().fromBufferAttribute(geo.attributes.position,idx).applyMatrix4(matrix));center.multiplyScalar(1/3);if(Math.hypot(center.x,center.y)>46)continue;}
+     if(sphere.radius>100){const center=new THREE.Vector3();for(const idx of sourceIds)center.add(new THREE.Vector3().fromBufferAttribute(geo.attributes.position,idx).applyMatrix4(matrix));center.multiplyScalar(1/3);if(Math.hypot(center.x,center.y)>(/Mapped building shells|Flat roof surfaces/.test(o.name)?90:46))continue;}
      if(mat.alphaTest>.1&&texture){const pixels=texturePixels.get(texture),uv=new THREE.Vector2();for(const idx of sourceIds)uv.add(new THREE.Vector2().fromBufferAttribute(geo.attributes.uv,idx));uv.multiplyScalar(1/3).applyMatrix3(mat.map.matrix);const u=((uv.x%1)+1)%1,v=((uv.y%1)+1)%1,x=Math.min(pixels.width-1,Math.floor(u*pixels.width)),y=Math.min(pixels.height-1,Math.floor((pixels.flipY?1-v:v)*pixels.height));if(pixels.data[4*(y*pixels.width+x)+3]/255<Math.max(.45,mat.alphaTest))continue;}
      const ids=[];for(let j=0;j<3;j++){const idx=geo.index?geo.index.getX(i+j):i+j;if(!mapping.has(idx)){const v=new THREE.Vector3().fromBufferAttribute(geo.attributes.position,idx).applyMatrix4(matrix);mapping.set(idx,group.vertices.length/3);group.vertices.push(...v.toArray().map(x=>Math.round(x*1e5)/1e5));const n=geo.attributes.normal?new THREE.Vector3().fromBufferAttribute(geo.attributes.normal,idx).applyMatrix3(normals).normalize():new THREE.Vector3(0,0,1);group.normals.push(...n.toArray().map(x=>Math.round(x*1e5)/1e5));const uv=geo.attributes.uv?new THREE.Vector2().fromBufferAttribute(geo.attributes.uv,idx):new THREE.Vector2();if(mat.map)uv.applyMatrix3(mat.map.matrix);group.uvs.push(Math.round(uv.x*1e5)/1e5,Math.round(uv.y*1e5)/1e5);}ids.push(mapping.get(idx));}if(matrix.determinant()<0)ids.reverse();group.faces.push(...ids);}
    }meshes++;
   }
  });
- return JSON.stringify({source:'Actual Chennai Three.js meshes within 38 m of station 75, with original albedo texture images and transformed UVs. Browser shader-only weathering, normal maps, GTAO and lighting are not reproduced. Decorative only, no collision changes.',appearanceAtlas,meshes,warnings,textures:[...textures.values()],groups:[...groups.values()]});
-},appearanceOnly));
-if(appearanceOnly){const data=JSON.parse(await fs.readFile('.fork-runs/robot/chennai-native.json','utf8'));data.appearanceAtlas=result.appearanceAtlas;await fs.writeFile('.fork-runs/robot/chennai-native.json',JSON.stringify(data));console.log({appearanceAtlas:result.appearanceAtlas.materials,resolution:[4096,512]});await browser.close();process.exit(0);}
+ return JSON.stringify({source:'Actual Chennai Three.js meshes intersecting the 38 m neighborhood of station 75, with nearby merged building shells retained to 90 m for the street backdrop, original albedo texture images and transformed UVs. Browser shader-only weathering, normal maps, GTAO and lighting are not reproduced. Decorative only, no collision changes.',appearanceAtlas,lighting,meshes,warnings,textures:[...textures.values()],groups:[...groups.values()]});
+},{appearanceOnly,buildingsOnly}));
+if(appearanceOnly){const data=JSON.parse(await fs.readFile('.fork-runs/robot/chennai-native.json','utf8'));data.appearanceAtlas=result.appearanceAtlas;data.lighting=result.lighting;await fs.writeFile('.fork-runs/robot/chennai-native.json',JSON.stringify(data));console.log({appearanceAtlas:result.appearanceAtlas.materials,resolution:[4096,512]});await browser.close();process.exit(0);}
+if(buildingsOnly){const data=JSON.parse(await fs.readFile('.fork-runs/robot/chennai-native.json','utf8'));data.source=result.source;data.groups=data.groups.filter(g=>!/Mapped building shells|Flat roof surfaces/.test(g.name)).concat(result.groups);data.textures=data.textures.concat(result.textures);data.appearanceAtlas=result.appearanceAtlas;data.lighting=result.lighting;await fs.writeFile('.fork-runs/robot/chennai-native.json',JSON.stringify(data));console.log({localBuildingGroups:result.groups.length,vertices:result.groups.reduce((n,g)=>n+g.vertices.length/3,0)});await browser.close();process.exit(0);}
 await fs.mkdir('.fork-runs/robot',{recursive:true});await fs.writeFile('.fork-runs/robot/chennai-native.json',JSON.stringify(result));console.log({meshes:result.meshes,materials:result.groups.length,textures:result.textures.length,warnings:result.warnings,vertices:result.groups.reduce((n,g)=>n+g.vertices.length/3,0)});await browser.close();

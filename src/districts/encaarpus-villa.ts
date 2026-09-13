@@ -4,6 +4,7 @@ import {createLakshmiPlaster,setLakshmiMaterialUV} from './lakshmi-material';
 import outlines from './encaarpus-lettering.json';
 import {buildEncaarpusPaving} from './encaarpus-entry';
 import {buildEncaarpusServices} from './encaarpus-services';
+import {buildEncaarpusRoofFixtures} from './encaarpus-roof-fixtures';
 
 export const ENCAARPUS_WAY_ID=354839754;
 // Four residential rows over open parking are visible. Metre heights are priors.
@@ -223,6 +224,7 @@ export function buildEncaarpusVilla(points:Point[]) {
   rod([-2.3,9.5,-.02],[-2.3,15.75,-.02],.018,cream,'conduit');
   for(const [m,geometries]of batches){const merged=mergeGeometries(geometries,false);if(!merged)throw new Error('Encaarpus geometry merge failed');const mesh=new THREE.Mesh(merged,m);mesh.name=m.name||'Encaarpus painted name';mesh.castShadow=m!==glass;mesh.receiveShadow=true;group.add(mesh);geometries.forEach(g=>g.dispose());}
   const facadeServices=buildEncaarpusServices(width);group.add(facadeServices);
+  const roofFixtures=buildEncaarpusRoofFixtures(width);group.add(roofFixtures);
   group.userData={wayId:ENCAARPUS_WAY_ID,revision:3,facadeServices:facadeServices.userData,width,height:ENCAARPUS_HEIGHT,heightSource:ENCAARPUS_HEIGHT_SOURCE,observedResidentialRows:4,observedStiltParking:true,sourcePhoto:'Frankleen Seeralan, January 2024, CIHM0ogKEICAgICtsaaHCA',sourceSha256:'0b02fddb8fcfeeb9b8552d5e12927ffea82ff016f3cf67bb972e8c735dd4bb99',identity:'Conditional association: visible name + 9/5 Central Avenue listing pin 3.99 m from way 354839754; not cadastral proof',pose:group.position.toArray(),yaw:group.rotation.y,windowChecks,semantic,gateZ,limits:'Photo-informed frontage and open parking; floor heights, recesses, paint reflectance, metal sections and gate setback inferred. Plain unseen sides/rear, no measured floor plan, no present-day condition claim, no photorealism pass.'};
   return group;
 }

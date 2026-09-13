@@ -1,0 +1,11 @@
+{
+  "p50": 16.5,
+  "p90": 17.600000023841858,
+  "renderer": {
+    "frame": 530,
+    "calls": 1,
+    "triangles": 1,
+    "points": 0,
+    "lines": 0
+  }
+}

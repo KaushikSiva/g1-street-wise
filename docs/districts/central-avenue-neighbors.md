@@ -1,0 +1,17 @@
+# Central Avenue neighboring facade finish
+
+This original architectural study improves nine **already mapped** background buildings near the Kanakadhara / Encaarpus Villa demonstration. It does not add unmapped buildings or claim a photographed reconstruction. Their footprints, inherited heights and generic window positions remain unchanged.
+
+The visual aim is a quiet residential background: warm mineral walls, pale window sections, muted green metalwork, believable sill depth and small cast shadows. The street and the named photo-informed facades retain the visual emphasis.
+
+`src/districts/central-avenue-neighbors.ts` builds the additional geometry; `central-avenue.ts` installs it in both the original district and the STREETWISE scene. The first batch covers OSM ways 354839696, 354840154, 355940211, 354759778 and 364160225. A second batch covers 354839712 and 354839933 behind the named frontage, 355940230 across the street and 354759816 farther along the background row. These are map identifiers, not tenancy/name claims.
+
+The existing generic glazing is framed with separate jambs, headers, mullions and transoms. Projecting sills and small drip edges connect to the inherited sunshades. Ground-floor grilles are actual thin geometry. Closed entries occupy a gap between existing ground-floor window bays on the street-facing edge; a shallow threshold connects the leaf to the ground. No false walk-through aperture or imaginary room is introduced. Geometry is merged into five material batches.
+
+All architectural details, colors, entry positions and default story heights are inferred. There is no exterior photograph for these nine properties, no current-condition claim and no validated photorealism claim. Buildings absent from the stored map remain unresolved; adding them requires a reference or a separately labeled synthetic scenario.
+
+Verification evidence is in `artifacts/web-city-realism`: matched before/after street and neighboring-building views plus finite-geometry/browser results. The production TypeScript/Vite build passed. The Prashanth and Encaarpus source-supported service detail modules were not changed.
+
+Revision 2 verifies **354 window assemblies and seven closed entries** over the nine existing shells, using five merged meshes and 44,436 added triangles. The overall mapped building count remains **1,173**. Browser checks found no page errors, non-finite vertices or mobile overflow. On this Mac, 45 animation intervals at an emulated 390×844 viewport gave median/p90 16.6/17.8 ms, versus 16.5/17.6 ms immediately before the second batch. This short timing sample is a local regression check, not physical-phone performance evidence. Named facade geometry and its AO hashes are unaffected.
+
+Revision 3 adds a thin mineral-plaster appearance layer to those same nine shells, using three muted inferred pigments and the district's original fine plaster maps. The layer sits 4 mm outside the old wall and behind existing glazing, bands and plinths. No window locations or wall openings change. It adds 72 triangles, bringing the study to 44,508 triangles and eight merged meshes. The material pass avoids the coarse bump scale of the older massing material. Browser median/p90 timing was 16.5/17.4 ms in the same short emulated-mobile check, with no page errors, overflow or non-finite geometry. Exact pigment, roughness and wall condition are visual hypotheses.

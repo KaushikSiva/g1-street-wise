@@ -1,0 +1,44 @@
+{
+  "status": "training",
+  "round": 2,
+  "difficulty": 0,
+  "history": [
+    {
+      "round": 1,
+      "difficulty": 0,
+      "steps": 65536,
+      "trainingFailuresFound": 46,
+      "validationMastered": false,
+      "baseline": {
+        "episodes": 64,
+        "success_rate": 0.25,
+        "clearance_violations": 38,
+        "falls": 0,
+        "mean_return": -4.98646800424304,
+        "mean_progress": 4.821102484299439,
+        "mean_elapsed": 8.562499999999904
+      },
+      "starting": {
+        "episodes": 64,
+        "success_rate": 0.390625,
+        "clearance_violations": 16,
+        "falls": 0,
+        "mean_return": 4.764760439562706,
+        "mean_progress": 5.76244321933514,
+        "mean_elapsed": 12.534374999999821
+      },
+      "trained": {
+        "episodes": 64,
+        "success_rate": 0.390625,
+        "clearance_violations": 16,
+        "falls": 0,
+        "mean_return": 4.764760439562706,
+        "mean_progress": 5.76244321933514,
+        "mean_elapsed": 12.534374999999821
+      },
+      "wandbUrl": "https://wandb.ai/kaushik-siva88/Unitree%20G1/runs/qvtf8rmq"
+    }
+  ],
+  "seedPolicy": "Training and adversarial seeds below 9000. Validation/test use distinct round offsets.",
+  "goal": "Find plausible failure cases, learn from training failures, measure on independent encounters."
+}

@@ -1,5 +1,6 @@
 import * as THREE from 'three';
 import { mergeGeometries } from 'three/addons/utils/BufferGeometryUtils.js';
+import {buildCentralAvenueNeighbors} from './central-avenue-neighbors';
 
 export const CENTRAL_AVENUE_WAY_ID = 214356669;
 const ORIGIN = {lon:80.2306892, lat:13.0516624};
@@ -194,6 +195,7 @@ export function buildCentralAvenue(data:Data) {
     geometries.forEach(g=>g.dispose());
   }
   unitBox.dispose();
+  const neighboringFacades=buildCentralAvenueNeighbors(data);group.add(neighboringFacades);
   group.userData={district:'central-avenue',revision:4,navigationSurface:'Asphalt and existing sloped shoulders; analytic profile sampler, measured against rendered triangles',roadWayId:CENTRAL_AVENUE_WAY_ID,lengthMeters:f.length,sourceCenterline:[f.start.toArray(),f.end.toArray()],surface:'5.5 m nominal width and 35 mm crown inferred; no lane markings asserted',verge:{source:'Private Prashanth street-context thumbnail Vu0xhoBfuQb7XsmcWslizA shows dusty irregular unkerbed road edges; capture date and camera unknown',nominalWidth:1.18,widthVariation:.26,innerY:.035,outerY:-.043,appearance:'Original dust pigment treatment with CC0 concrete scan variation; no source photo pixels',limits:'Widths, edge variation, slopes and pigment are visual hypotheses, not a surveyed cross section. Mapped centerline and walkable asphalt core unchanged.'},genericEnclosureExclusions:[354839754,354839974,354840171,354840134,354839651,354840013],frontages,poles:polePositions,removedUnverifiedFittings:{inspectionLids:5,raisedGrates:5,reason:'Repeated locations were illustrative and unsupported by the photographed street; retain observed objects separately'},source:'OpenStreetMap stored geometry, 2026-07-15; material scans Poly Haven CC0',limits:'No street-level survey. Widths, surfaces, repairs, drainage, enclosure positions and wiring are inferred visual studies. Mapped footprints retained; identified frontages replace generic studies. No photorealism pass.'};
   return group;
 }

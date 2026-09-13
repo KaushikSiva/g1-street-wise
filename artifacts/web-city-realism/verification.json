@@ -1,0 +1,44 @@
+{
+  "errors": [],
+  "overflow": false,
+  "revision": 1,
+  "records": [
+    {
+      "wayId": 354839696,
+      "height": 6.55,
+      "windows": 32,
+      "entries": 1
+    },
+    {
+      "wayId": 354840154,
+      "height": 6.55,
+      "windows": 32,
+      "entries": 1
+    },
+    {
+      "wayId": 355940211,
+      "height": 9.65,
+      "windows": 60,
+      "entries": 1
+    },
+    {
+      "wayId": 354759778,
+      "height": 6.55,
+      "windows": 32,
+      "entries": 0
+    },
+    {
+      "wayId": 364160225,
+      "height": 6.55,
+      "windows": 32,
+      "entries": 0
+    }
+  ],
+  "source": "Existing OpenStreetMap footprints and already inferred generic window grid",
+  "inferred": true,
+  "limits": "Original architectural finishing study; no facade photographs, surveyed heights, tenancy or real opening positions asserted. Existing shells, heights, glazing and map source unchanged. Unmapped buildings remain unresolved.",
+  "vertices": 70668,
+  "finite": true,
+  "meshCount": 5,
+  "mapSha256": "a5b62fe3d269c998b32e74d77aa5dbe3e149cf6fffd0a3cdf07a45cde110013d"
+}

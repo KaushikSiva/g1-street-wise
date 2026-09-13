@@ -1,0 +1,25 @@
+{
+  "errors": [],
+  "sourcePhoto": "Frankleen Seeralan, January 2024, CIHM0ogKEICAgICtsaaHCA",
+  "sourceSha256": "0b02fddb8fcfeeb9b8552d5e12927ffea82ff016f3cf67bb972e8c735dd4bb99",
+  "observed": "Two shallow grey dish silhouettes above the inner grey roof piers",
+  "poses": [
+    {
+      "x": -2.94,
+      "y": 16.63,
+      "z": -0.55,
+      "yaw": -0.3
+    },
+    {
+      "x": 2.53,
+      "y": 16.58,
+      "z": -0.64,
+      "yaw": 0.17
+    }
+  ],
+  "diameterMeters": 0.6,
+  "limits": "Source supports count, broad silhouette and relative roof location. Diameter, depth, mounting, azimuth, elevation and hidden parts are inferred. No operator, brand, current installation or functional communications claim. Separate meshes preserve the existing facade AO geometry.",
+  "finite": true,
+  "vertices": 3264,
+  "meshes": 2
+}

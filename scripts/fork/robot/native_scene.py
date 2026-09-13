@@ -7,7 +7,10 @@ from environment import ROOT,make_scene
 ASSETS=ROOT/'public/assets/fork/native-chennai'
 
 def decorate(environment='crossing'):
-    if environment!='crossing':
+    if environment=='streetlife':
+        from streetlife import streetlife_scene
+        source=streetlife_scene()
+    elif environment!='crossing':
         from hazards import hazard_scene
         source=hazard_scene()
     else:source=make_scene()
@@ -17,10 +20,20 @@ def decorate(environment='crossing'):
     asset=root.find('asset')
     if asset is None:asset=ET.SubElement(root,'asset')
     world=root.find('worldbody')
+    # Robot-only XML inherits a ~1.2 m shadow box; extend visual bounds to the street.
+    statistic=root.find('statistic')
+    if statistic is None:statistic=ET.SubElement(root,'statistic')
+    statistic.set('extent','36');statistic.set('center','0 0 5')
+    lighting=data.get('lighting',{});sun=lighting.get('sun')
+    if sun:
+        for light in world.findall('light'):light.set('active','false')
+        direction=sun['direction'];position=[-value*70+(5 if i==2 else 0) for i,value in enumerate(direction)]
+        color=sun['color'];power=min(.95,max(.50,sun['intensity']/3.141592653589793))
+        ET.SubElement(world,'light',name='chennai_browser_sun',pos=' '.join(map(str,position)),dir=' '.join(map(str,direction)),directional='true',castshadow='true',diffuse=' '.join(str(value*power) for value in color),ambient='0 0 0',specular='.10 .10 .10')
     for geom in world.findall('geom'):
         if geom.get('name','').startswith('frontage_') or geom.get('name') in ('parked_van','central_avenue_road'):geom.set('rgba','0 0 0 0')
     # A visual ground apron closes the view outside the captured map; physics plane stays intact.
-    ET.SubElement(world,'geom',name='chennai_visual_ground',type='plane',size='100 100 .01',pos='0 0 -.14',rgba='.44 .40 .32 1',contype='0',conaffinity='0',group='2',density='0')
+    ET.SubElement(world,'geom',name='chennai_visual_ground',type='plane',size='100 100 .01',pos='0 0 -.14',rgba=' '.join(map(str,lighting.get('groundColor',[.44,.40,.32])+[1])),contype='0',conaffinity='0',group='2',density='0')
     for i,entry in enumerate(data.get('textures',[])):
         ET.SubElement(asset,'texture',name=entry['name'],type='2d',file=str(ASSETS/entry['file']),nchannel='4',vflip='true' if entry.get('flipY') else 'false')
     for i,entry in enumerate(data['meshes']):
@@ -34,12 +47,41 @@ def decorate(environment='crossing'):
     if visual is None:visual=ET.SubElement(root,'visual')
     headlight=visual.find('headlight')
     if headlight is None:headlight=ET.SubElement(visual,'headlight')
-    headlight.set('ambient','.35 .35 .35');headlight.set('diffuse','.55 .55 .55');headlight.set('specular','.08 .08 .08')
+    headlight.set('ambient','.34 .34 .34');headlight.set('diffuse','.18 .18 .18');headlight.set('specular','.08 .08 .08')
+    quality=visual.find('quality')
+    if quality is None:quality=ET.SubElement(visual,'quality')
+    quality.set('shadowsize','4096')
+    mapping=visual.find('map')
+    if mapping is None:mapping=ET.SubElement(visual,'map')
+    mapping.set('shadowclip','1');mapping.set('znear','.002');mapping.set('zfar','10')
     ET.SubElement(asset,'texture',name='streetwise_sky',type='skybox',builtin='gradient',rgb1='.65 .75 .82',rgb2='.93 .94 .91',width='256',height='1536')
     global_=visual.find('global')
     if global_ is None:global_=ET.SubElement(visual,'global')
     global_.set('offwidth','1400');global_.set('offheight','900')
     path=ROOT/'.fork-runs/robot'/f'chennai-native-{os.getpid()}.xml';tree.write(path);return path
+
+
+def apply_appearance(data,manifest):
+    """Transfer the web road/verge albedo shader bake without changing any vertex."""
+    import numpy as np
+    if data.get('lighting'):manifest['lighting']=data['lighting']
+    atlas=data.get('appearanceAtlas')
+    if not atlas:return manifest
+    file='road-verge-albedo.png';name='chennai_road_verge_albedo';(ASSETS/file).write_bytes(base64.b64decode(atlas['png']))
+    manifest['textures']=[t for t in manifest.get('textures',[]) if t['name']!=name]
+    manifest['textures'].append({'name':name,'file':file,'width':atlas['width'],'height':atlas['height'],'flipY':True})
+    xmin,xmax,ymin,ymax=atlas['bounds'];changed=[]
+    for mesh in manifest['meshes']:
+        if mesh['name'] not in atlas['materials']:continue
+        path=ASSETS/mesh['file'];blob=bytearray(path.read_bytes());nv,nn,nt,nf=np.frombuffer(blob,dtype=np.int32,count=4)
+        vertices=np.frombuffer(blob,dtype=np.float32,count=int(nv)*3,offset=16).reshape(-1,3)
+        assert nv==nt,'Atlas requires a texture coordinate per vertex'
+        uv=np.column_stack([(vertices[:,0]-xmin)/(xmax-xmin),(vertices[:,1]-ymin)/(ymax-ymin)]).clip(0,1).astype(np.float32)
+        offset=16+int(nv+nn)*12;blob[offset:offset+uv.nbytes]=uv.tobytes();path.write_bytes(blob)
+        mesh['texture']=name;mesh['color']=[1,1,1];mesh['appearance']='Actual browser shader albedo atlas, no lighting baked';changed.append(mesh['file'])
+    manifest['appearanceAtlas']={k:v for k,v in atlas.items() if k!='png'}
+    manifest['appearanceAtlas']['updatedMeshes']=changed
+    return manifest
 
 
 def prepare():
@@ -76,6 +118,11 @@ def prepare():
         for old in ASSETS.glob(pattern):
             if old.name not in keep:old.unlink()
     manifest={'source':data['source'],'collision':'Decorative meshes only, contype=conaffinity=0 and density=0. Original road, van and frontage collision geoms retained with transparent rendering.','limits':'Native OpenGL lighting differs from the web renderer; shader-only weathering, AO and normal mapping are not transferred. Foliage uses alpha-sampled triangle trimming instead of browser alpha testing. Planar visual faces use a 2 mm backing for mesh compilation.','textures':textures,'meshes':meshes,'exportWarnings':data.get('warnings',[])}
+    manifest=apply_appearance(data,manifest)
     (ASSETS/'manifest.json').write_text(json.dumps(manifest,indent=2));print({'meshes':len(meshes),'textures':len(textures),'triangles':sum(m['triangles'] for m in meshes)})
 
-if __name__=='__main__':prepare()
+if __name__=='__main__':
+    import sys
+    if '--appearance-only' in sys.argv:
+        data=json.loads((ROOT/'.fork-runs/robot/chennai-native.json').read_text());manifest=json.loads((ASSETS/'manifest.json').read_text());manifest=apply_appearance(data,manifest);(ASSETS/'manifest.json').write_text(json.dumps(manifest,indent=2));print({'appearanceMeshes':manifest.get('appearanceAtlas',{}).get('updatedMeshes',[])})
+    else:prepare()

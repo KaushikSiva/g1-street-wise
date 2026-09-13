@@ -18,6 +18,15 @@ for name in ['rl-corridor-v2','rl-hazards-v2','rl-weather','curriculum','media',
 for folder in sorted((ROOT/'artifacts/fork').glob('rl-weather-level-*')):
  copy(str(folder.relative_to(ROOT)))
 copy('artifacts/central-avenue/streetwise-finish')
+copy('artifacts/web-city-realism')
+copy('docs/districts/central-avenue-neighbors.md')
+for name in ['streetlife', 'streetlife-multiple-shelters']:
+ copy('artifacts/fork/'+name)
+# These directories are generated assets: remove only files absent from the source
+# so superseded mesh formats do not linger in the publication checkout.
+for name in ['public/assets/fork/native-chennai', 'public/assets/fork/native-human']:
+ for target in (dest/name).rglob('*'):
+  if target.is_file() and not (ROOT/name/target.relative_to(dest/name)).exists():target.unlink()
 # Remove the superseded exploratory hazard artifacts from the generated package.
 if (dest/'artifacts/fork/rl-hazards').exists():shutil.rmtree(dest/'artifacts/fork/rl-hazards')
 # Remove only non-deliverable files from this generated publication copy.

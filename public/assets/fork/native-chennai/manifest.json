@@ -1,5 +1,5 @@
 {
-  "source": "Actual Chennai Three.js meshes within 38 m of station 75, with original albedo texture images and transformed UVs. Browser shader-only weathering, normal maps, GTAO and lighting are not reproduced. Decorative only, no collision changes.",
+  "source": "Actual Chennai Three.js meshes intersecting the 38 m neighborhood of station 75, with nearby merged building shells retained to 90 m for the street backdrop, original albedo texture images and transformed UVs. Browser shader-only weathering, normal maps, GTAO and lighting are not reproduced. Decorative only, no collision changes.",
   "collision": "Decorative meshes only, contype=conaffinity=0 and density=0. Original road, van and frontage collision geoms retained with transparent rendering.",
   "limits": "Native OpenGL lighting differs from the web renderer; shader-only weathering, AO and normal mapping are not transferred. Foliage uses alpha-sampled triangle trimming instead of browser alpha testing. Planar visual faces use a 2 mm backing for mesh compilation.",
   "textures": [
@@ -184,6 +184,27 @@
       "flipY": false,
       "width": 1024,
       "height": 1024
+    },
+    {
+      "file": "texture-026.png",
+      "name": "chennai_texture_26",
+      "flipY": false,
+      "width": 128,
+      "height": 128
+    },
+    {
+      "file": "texture-027.png",
+      "name": "chennai_texture_27",
+      "flipY": false,
+      "width": 128,
+      "height": 128
+    },
+    {
+      "name": "chennai_road_verge_albedo",
+      "file": "road-verge-albedo.png",
+      "width": 4096,
+      "height": 512,
+      "flipY": true
     }
   ],
   "meshes": [
@@ -1400,14 +1421,15 @@
       "file": "street-093-0.msh",
       "name": "Central Avenue asphalt",
       "color": [
-        0.667,
-        0.667,
-        0.643
+        1,
+        1,
+        1
       ],
-      "texture": "chennai_texture_17",
+      "texture": "chennai_road_verge_albedo",
       "roughness": 0.95,
       "triangles": 2952,
-      "visualBacking": false
+      "visualBacking": false,
+      "appearance": "Actual browser shader albedo atlas, no lighting baked"
     },
     {
       "file": "street-094-0.msh",
@@ -1417,10 +1439,11 @@
         1,
         1
       ],
-      "texture": "chennai_texture_18",
+      "texture": "chennai_road_verge_albedo",
       "roughness": 0.98,
       "triangles": 4410,
-      "visualBacking": false
+      "visualBacking": false,
+      "appearance": "Actual browser shader albedo atlas, no lighting baked"
     },
     {
       "file": "street-095-0.msh",
@@ -1489,6 +1512,71 @@
     },
     {
       "file": "street-100-0.msh",
+      "name": "Inferred neighboring facade 273bb97d",
+      "color": [
+        0.682,
+        0.71,
+        0.675
+      ],
+      "texture": null,
+      "roughness": 0.57,
+      "triangles": 13572,
+      "visualBacking": false
+    },
+    {
+      "file": "street-101-0.msh",
+      "name": "Inferred neighboring facade 396bfbe4",
+      "color": [
+        0.561,
+        0.576,
+        0.533
+      ],
+      "texture": null,
+      "roughness": 0.95,
+      "triangles": 2292,
+      "visualBacking": false
+    },
+    {
+      "file": "street-102-0.msh",
+      "name": "Inferred neighboring facade 2fd2119d",
+      "color": [
+        0.776,
+        0.757,
+        0.682
+      ],
+      "texture": null,
+      "roughness": 0.9,
+      "triangles": 2364,
+      "visualBacking": false
+    },
+    {
+      "file": "street-103-0.msh",
+      "name": "Inferred neighboring facade fdd9fea1",
+      "color": [
+        0.302,
+        0.341,
+        0.318
+      ],
+      "texture": null,
+      "roughness": 0.67,
+      "triangles": 5292,
+      "visualBacking": false
+    },
+    {
+      "file": "street-104-0.msh",
+      "name": "Inferred neighboring facade 1327c557",
+      "color": [
+        0.349,
+        0.4,
+        0.361
+      ],
+      "texture": null,
+      "roughness": 0.81,
+      "triangles": 36,
+      "visualBacking": false
+    },
+    {
+      "file": "street-105-0.msh",
       "name": "13/7 worn hardstanding",
       "color": [
         1,
@@ -1501,7 +1589,7 @@
       "visualBacking": false
     },
     {
-      "file": "street-101-0.msh",
+      "file": "street-106-0.msh",
       "name": "13/7 dark room backing",
       "color": [
         0.329,
@@ -1514,7 +1602,7 @@
       "visualBacking": false
     },
     {
-      "file": "street-102-0.msh",
+      "file": "street-107-0.msh",
       "name": "13/7 weathered white plaster",
       "color": [
         0.851,
@@ -1527,7 +1615,7 @@
       "visualBacking": false
     },
     {
-      "file": "street-103-0.msh",
+      "file": "street-108-0.msh",
       "name": "13/7 recessed glazing",
       "color": [
         0.341,
@@ -1540,7 +1628,7 @@
       "visualBacking": false
     },
     {
-      "file": "street-104-0.msh",
+      "file": "street-109-0.msh",
       "name": "13/7 pale casements",
       "color": [
         0.612,
@@ -1553,7 +1641,7 @@
       "visualBacking": false
     },
     {
-      "file": "street-105-0.msh",
+      "file": "street-110-0.msh",
       "name": "13/7 dark window guards and gate",
       "color": [
         0.161,
@@ -1566,7 +1654,7 @@
       "visualBacking": false
     },
     {
-      "file": "street-106-0.msh",
+      "file": "street-111-0.msh",
       "name": "13/7 inferred concrete support",
       "color": [
         0.537,
@@ -1579,7 +1667,7 @@
       "visualBacking": false
     },
     {
-      "file": "street-107-0.msh",
+      "file": "street-112-0.msh",
       "name": "13/7 stained ground-floor fascia",
       "color": [
         0.769,
@@ -1592,7 +1680,7 @@
       "visualBacking": false
     },
     {
-      "file": "street-108-0.msh",
+      "file": "street-113-0.msh",
       "name": "13/7 grey bands",
       "color": [
         0.69,
@@ -1605,7 +1693,7 @@
       "visualBacking": false
     },
     {
-      "file": "street-109-0.msh",
+      "file": "street-114-0.msh",
       "name": "Passenger van amber lenses",
       "color": [
         0.786,
@@ -1618,7 +1706,7 @@
       "visualBacking": false
     },
     {
-      "file": "street-110-0.msh",
+      "file": "street-115-0.msh",
       "name": "Passenger van dark interior upholstery",
       "color": [
         0.179,
@@ -1631,7 +1719,7 @@
       "visualBacking": false
     },
     {
-      "file": "street-111-0.msh",
+      "file": "street-116-0.msh",
       "name": "Passenger van pale blue green curtains",
       "color": [
         0.517,
@@ -1644,7 +1732,7 @@
       "visualBacking": false
     },
     {
-      "file": "street-112-0.msh",
+      "file": "street-117-0.msh",
       "name": "Passenger van pale lamp lenses",
       "color": [
         0.767,
@@ -1657,7 +1745,7 @@
       "visualBacking": false
     },
     {
-      "file": "street-113-0.msh",
+      "file": "street-118-0.msh",
       "name": "Passenger van red tail lenses",
       "color": [
         0.65,
@@ -1670,7 +1758,7 @@
       "visualBacking": false
     },
     {
-      "file": "street-114-0.msh",
+      "file": "street-119-0.msh",
       "name": "Passenger van rubber and seals",
       "color": [
         0.123,
@@ -1683,7 +1771,7 @@
       "visualBacking": false
     },
     {
-      "file": "street-115-0.msh",
+      "file": "street-120-0.msh",
       "name": "Passenger van warm white enamel",
       "color": [
         0.843,
@@ -1696,7 +1784,7 @@
       "visualBacking": false
     },
     {
-      "file": "street-116-0.msh",
+      "file": "street-121-0.msh",
       "name": "Passenger van wheel alloy",
       "color": [
         0.618,
@@ -1709,7 +1797,7 @@
       "visualBacking": false
     },
     {
-      "file": "street-117-0.msh",
+      "file": "street-122-0.msh",
       "name": "Small bent leaf-cluster patches - Blender baked CC0 donor \u00b7 Central Avenue thin leaf",
       "color": [
         1,
@@ -1722,7 +1810,7 @@
       "visualBacking": false
     },
     {
-      "file": "street-118-0.msh",
+      "file": "street-123-0.msh",
       "name": "CC0 individual leaf atlas - alpha mask double sided \u00b7 Central Avenue thin leaf",
       "color": [
         1,
@@ -1735,7 +1823,7 @@
       "visualBacking": false
     },
     {
-      "file": "street-118-1.msh",
+      "file": "street-123-1.msh",
       "name": "CC0 individual leaf atlas - alpha mask double sided \u00b7 Central Avenue thin leaf",
       "color": [
         1,
@@ -1748,7 +1836,7 @@
       "visualBacking": false
     },
     {
-      "file": "street-119-0.msh",
+      "file": "street-124-0.msh",
       "name": "CC0 bark on inferred branch hierarchy",
       "color": [
         1,
@@ -1759,7 +1847,165 @@
       "roughness": 1,
       "triangles": 51776,
       "visualBacking": false
+    },
+    {
+      "file": "street-125-0.msh",
+      "name": "Mapped building shells 0",
+      "color": [
+        0.816,
+        0.784,
+        0.722
+      ],
+      "texture": "chennai_texture_27",
+      "roughness": 0.93,
+      "triangles": 15,
+      "visualBacking": false
+    },
+    {
+      "file": "street-126-0.msh",
+      "name": "Mapped building shells 1",
+      "color": [
+        0.859,
+        0.839,
+        0.784
+      ],
+      "texture": "chennai_texture_27",
+      "roughness": 0.93,
+      "triangles": 24,
+      "visualBacking": false
+    },
+    {
+      "file": "street-127-0.msh",
+      "name": "Mapped building shells 2",
+      "color": [
+        0.769,
+        0.745,
+        0.69
+      ],
+      "texture": "chennai_texture_27",
+      "roughness": 0.93,
+      "triangles": 42,
+      "visualBacking": false
+    },
+    {
+      "file": "street-128-0.msh",
+      "name": "Mapped building shells 3",
+      "color": [
+        0.773,
+        0.784,
+        0.733
+      ],
+      "texture": "chennai_texture_27",
+      "roughness": 0.93,
+      "triangles": 72,
+      "visualBacking": false
+    },
+    {
+      "file": "street-129-0.msh",
+      "name": "Mapped building shells 4",
+      "color": [
+        0.784,
+        0.753,
+        0.722
+      ],
+      "texture": "chennai_texture_27",
+      "roughness": 0.93,
+      "triangles": 55,
+      "visualBacking": false
+    },
+    {
+      "file": "street-130-0.msh",
+      "name": "Mapped building shells 5",
+      "color": [
+        0.765,
+        0.722,
+        0.639
+      ],
+      "texture": "chennai_texture_27",
+      "roughness": 0.93,
+      "triangles": 58,
+      "visualBacking": false
+    },
+    {
+      "file": "street-131-0.msh",
+      "name": "Mapped building shells 6",
+      "color": [
+        0.722,
+        0.753,
+        0.749
+      ],
+      "texture": "chennai_texture_27",
+      "roughness": 0.93,
+      "triangles": 48,
+      "visualBacking": false
+    },
+    {
+      "file": "street-132-0.msh",
+      "name": "Mapped building shells 7",
+      "color": [
+        0.827,
+        0.808,
+        0.753
+      ],
+      "texture": "chennai_texture_27",
+      "roughness": 0.93,
+      "triangles": 57,
+      "visualBacking": false
+    },
+    {
+      "file": "street-133-0.msh",
+      "name": "Flat roof surfaces",
+      "color": [
+        0.686,
+        0.663,
+        0.608
+      ],
+      "texture": "chennai_texture_27",
+      "roughness": 0.98,
+      "triangles": 65,
+      "visualBacking": false
     }
   ],
-  "exportWarnings": []
+  "exportWarnings": [],
+  "lighting": {
+    "source": "Direction and chromaticity from the actual browser solar-separated HDR light; native OpenGL intensity/ambient approximation.",
+    "sun": {
+      "direction": [
+        0.6176370691502776,
+        -0.4914285054607155,
+        -0.6140215589310384
+      ],
+      "color": [
+        1,
+        0.947776776125509,
+        0.8496856444846892
+      ],
+      "intensity": 2.88033352616514
+    },
+    "groundColor": [
+      0.8509825995357807,
+      0.7960813562470016,
+      0.6941217510291781
+    ]
+  },
+  "appearanceAtlas": {
+    "name": "road-verge-unlit",
+    "width": 4096,
+    "height": 512,
+    "bounds": [
+      -46,
+      46,
+      -5,
+      5
+    ],
+    "materials": [
+      "Central Avenue asphalt",
+      "Central Avenue dusty mineral verge"
+    ],
+    "source": "Actual Three.js asphalt stochastic sampling and verge mineral pigment shaders rendered without lights or shadows; original map geometry/UVs, no invented surface detail.",
+    "updatedMeshes": [
+      "street-093-0.msh",
+      "street-094-0.msh"
+    ]
+  }
 }
