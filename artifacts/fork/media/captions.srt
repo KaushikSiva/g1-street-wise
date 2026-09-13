@@ -87,13 +87,9 @@ geometry. Marimo, checkpoints, official SDK evidence and startup instructions ma
 inspectable.
 
 23
-00:01:48,000 --> 00:01:51,333
+00:01:48,000 --> 00:01:50,000
 This is simulation, not a physical robot safety claim. STREETWISE helps teams
 
 24
-00:01:51,333 --> 00:01:54,666
-discover navigation mistakes before street deployment. Robots that learn the street before
-
-25
-00:01:54,666 --> 00:01:58,000
-they enter it.
+00:01:50,250 --> 00:01:51,600
+Thank you.

@@ -1,0 +1,25 @@
+{
+  "seed": 20002,
+  "speed_m_s": 2.263114046164091,
+  "glancing": {
+    "first": {
+      "t": 5.02,
+      "mesh": "left_wrist_roll_rubber_hand",
+      "normal_force_N": 1303.1169581663403,
+      "normal": [
+        -0.9966447731573354,
+        -0.046547165575512056,
+        0.06732427136664379
+      ]
+    },
+    "fall": false,
+    "normal_impulse_Ns": 17.304036172382695
+  },
+  "direct_impact": {
+    "same_speed": 2.263114046164091,
+    "fall": true,
+    "command": "stand",
+    "car_path": "directly through robot initial position"
+  },
+  "limits": "Diagnostic synthetic kinematic car and fixed upper-body G1. Not validated vehicle-impact biomechanics."
+}

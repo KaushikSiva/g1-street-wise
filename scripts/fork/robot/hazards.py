@@ -28,6 +28,8 @@ def hazard_scene():
 
 class CentralAvenueHazards(CentralAvenueG1):
     scene_factory = staticmethod(hazard_scene)
+    kind_override = None
+
     def __init__(self,record=False):
         self.kind=0
         super().__init__(record)
@@ -35,7 +37,7 @@ class CentralAvenueHazards(CentralAvenueG1):
         self.observation_space=spaces.Box(-10,10,(13,),dtype=np.float32)
 
     def reset(self,*,seed=None,options=None):
-        self.kind=int(seed%3) if seed is not None else int(self.np_random.integers(0,3))
+        self.kind=self.kind_override if self.kind_override is not None else int(seed%3) if seed is not None else int(self.np_random.integers(0,3))
         _,info=super().reset(seed=seed,options=options)
         self.robot.data.mocap_pos[1:3]=[[0,100,.75],[0,100,-.02]]
         rng=np.random.default_rng(self.scenario_seed+50000)
@@ -89,3 +91,11 @@ class CentralAvenueHazards(CentralAvenueG1):
     def episode_record(self):
         return {**super().episode_record(),'hazard':KINDS[self.kind],
                 'hazardGeometry':{'car_half_extents':[.85,2.05,.72],'pothole_keepout_radius':.55}}
+
+
+class CarCrossing(CentralAvenueHazards):
+    kind_override = 1
+
+
+class RoadDefect(CentralAvenueHazards):
+    kind_override = 2

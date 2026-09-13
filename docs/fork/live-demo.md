@@ -18,3 +18,11 @@ npm run build
 # Open http://127.0.0.1:8192/?robot=1
 node scripts/fork/verify-live-demo.mjs
 ```
+
+Production: https://streetwise-cppv.onrender.com/?robot=1&live=1 . Fresh runs show their checkpoint directory, checkpoint SHA, creation time, and scoring version. Recent runs appear newest first; an optional filter includes only trained-policy successes with no reported physical contact, clearance violation, or fall. A seed is an encounter identifier, not a checkpoint timestamp.
+
+Response data is validated at runtime in `live-api.ts`. Empty, truncated, non-JSON, and malformed replies produce useful errors; transient status-poll failures reconnect to the existing run. POST requests are not automatically repeated, avoiding duplicate physics jobs.
+
+Fresh scoring v2 checks actual robot/obstacle contacts at every 2 ms physics step. A collision always fails, even if the center clearance remains positive. A failed episode receives a two-second continuation using the last issued command so the viewer can observe real physics; that continuation cannot earn success. A contact need not cause a fall. Recorded outcomes were separately audited by reconstructing contacts at saved 50 Hz poses, which can miss between-frame collisions. Original outcomes and original validation curves remain available for provenance. No checkpoint was selected using this audit.
+
+For the free host, the frozen Unitree LSTM and navigation MLP execute in NumPy without importing training frameworks. The 4,000-step recurrent inference check found maximum action error 0.0000229 relative to the official TorchScript model. These are the same weights; floating-point differences can change long simulated trajectories. Public mesh downloads use gzip, and mesh loading retries interrupted requests. Inference results retain the backend label.

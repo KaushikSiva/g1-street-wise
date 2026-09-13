@@ -43,8 +43,21 @@
   },
   {
     "start": 108,
-    "end": 118,
+    "end": 110,
     "screen": "Closing image, repository URL, limits",
     "text": "This is simulation, not a physical robot safety claim. STREETWISE helps teams discover navigation mistakes before street deployment. Robots that learn the street before they enter it."
+  },
+  {
+    "start": 110,
+    "end": 112,
+    "screen": "Thank you title",
+    "text": "Thank you."
+  },
+  {
+    "start": 112,
+    "end": 120,
+    "screen": "Silent QR invitation to deployed demo",
+    "text": "",
+    "url": "https://streetwise-cppv.onrender.com/?robot=1&live=1"
   }
 ]

@@ -45,3 +45,14 @@ export async function readJob(response:Response):Promise<Job>{
  // All fields used below have passed runtime validation.
  return value as Job;
 }
+export type ValidationPoint={step:number;'validation/success_rate':number};
+type Metrics={episodes?:number;success_rate:number;clearance_violations:number;falls:number};
+export type RecordedExperiment={replays:{before:LiveReplay[];after:LiveReplay[]};evaluation:{baseline:Metrics;trained:Metrics;history:ValidationPoint[];wandbUrl?:string|null};contactAudit?:unknown};
+export async function readRecorded(response:Response):Promise<RecordedExperiment>{
+ if(!response.ok)throw new LiveApiError(`Recorded encounters could not load (HTTP ${response.status}). Please retry.`,response.status>=500);
+ const raw=await response.text();let value:unknown;
+ try{value=JSON.parse(raw);}catch{throw new LiveApiError('The recorded encounter download was interrupted. Please reload to retry.',true);}
+ const metrics=(m:unknown)=>object(m)&&number(m.success_rate)&&number(m.clearance_violations)&&number(m.falls)&&optional(m.episodes,number);
+ if(!object(value)||!object(value.replays)||!['before','after'].every(k=>{const rows=(value.replays as Record<string,unknown>)[k];return Array.isArray(rows)&&rows.length>0&&rows.every(replay);})||!object(value.evaluation)||!metrics(value.evaluation.baseline)||!metrics(value.evaluation.trained)||!optional(value.evaluation.wandbUrl,v=>v===null||string(v))||!Array.isArray(value.evaluation.history)||!value.evaluation.history.every(p=>object(p)&&number(p.step)&&number(p['validation/success_rate'])))throw new LiveApiError('The recorded encounter file has an invalid format.');
+ return value as RecordedExperiment;
+}

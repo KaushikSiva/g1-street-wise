@@ -8,7 +8,7 @@ from stable_baselines3 import PPO
 
 ROOT = Path(__file__).resolve().parents[2]
 FOLDERS = ['rl-corridor-v2', 'rl-hazards-v2', 'rl-weather',
-           'streetlife-multiple-shelters/round-002', 'emergencies-v1/round-001']
+           'streetlife-multiple-shelters/round-002', 'emergencies-v1/round-001', 'rain-shelter-v3', 'rl-hazards-contact-v2']
 
 
 def main():

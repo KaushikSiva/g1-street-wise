@@ -1,0 +1,19 @@
+{
+  "car_20002": {
+    "scenario_seed": 20002,
+    "contact": true,
+    "fall": false,
+    "success": false,
+    "min_clearance": 0.09411141219730246,
+    "progress": 2.1952018866583214,
+    "return": -16.658824148152046,
+    "elapsed": 5.199999999999977,
+    "physical_contact": true,
+    "collision_geometry": "moving_car_body",
+    "first_violation_time": 5.028,
+    "scoring": "physical-contact-v2",
+    "hazard": "moving_car"
+  },
+  "rain_onset_switches_goal": true,
+  "cover_requires_stopped_dwell": true
+}

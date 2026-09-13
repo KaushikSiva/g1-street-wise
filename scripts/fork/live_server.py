@@ -20,7 +20,10 @@ ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT/'scripts/fork/robot'))
 CURRICULA = {
     'crossing': ('environment', 'CentralAvenueG1', 'rl-corridor-v2'),
-    'hazards': ('hazards', 'CentralAvenueHazards', 'rl-hazards-v2'),
+    'hazards': ('hazards', 'CentralAvenueHazards', 'rl-hazards-contact-v2'),
+    'cars': ('hazards', 'CarCrossing', 'rl-hazards-contact-v2'),
+    'road-defects': ('hazards', 'RoadDefect', 'rl-hazards-contact-v2'),
+    'rain-shelter': ('rain_shelter', 'RainShelter', 'rain-shelter-v3'),
     'weather': ('weather', 'CentralAvenueWeather', 'rl-weather'),
     'streetlife': ('streetlife', 'CentralAvenueStreetlife', 'streetlife-multiple-shelters/round-002'),
     'emergencies': ('emergencies', 'CentralAvenueEmergencies', 'emergencies-v1/round-001'),

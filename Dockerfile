@@ -20,6 +20,10 @@ RUN git clone --filter=blob:none --no-checkout https://github.com/unitreerobotic
 COPY scripts/fork/robot ./scripts/fork/robot
 COPY artifacts/fork/live-demo/gait.npz ./artifacts/fork/live-demo/gait.npz
 COPY scripts/fork/live_server.py ./scripts/fork/live_server.py
+COPY artifacts/fork/rain-shelter-v3/best.zip ./artifacts/fork/rain-shelter-v3/best.zip
+COPY artifacts/fork/rain-shelter-v3/best.npz ./artifacts/fork/rain-shelter-v3/best.npz
+COPY artifacts/fork/rl-hazards-contact-v2/best.zip ./artifacts/fork/rl-hazards-contact-v2/best.zip
+COPY artifacts/fork/rl-hazards-contact-v2/best.npz ./artifacts/fork/rl-hazards-contact-v2/best.npz
 COPY artifacts/fork/rl-corridor-v2/best.zip ./artifacts/fork/rl-corridor-v2/best.zip
 COPY artifacts/fork/rl-hazards-v2/best.zip ./artifacts/fork/rl-hazards-v2/best.zip
 COPY artifacts/fork/rl-weather/best.zip ./artifacts/fork/rl-weather/best.zip

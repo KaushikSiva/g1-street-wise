@@ -1,0 +1,15 @@
+import {chromium} from '@playwright/test';
+import assert from 'node:assert/strict';
+const base=process.env.STREETWISE_URL||'http://127.0.0.1:8195';
+const browser=await chromium.launch({channel:'chrome',headless:true});const page=await browser.newPage();
+await page.goto(base+'/?robot=1&live=1');await page.waitForFunction(()=>window.forkRobot?.ready,null,{timeout:120000});
+let interrupted=false;
+await page.route('**/live-api/runs/*',async route=>{if(!interrupted){interrupted=true;await route.fulfill({status:502,body:''});}else await route.continue();});
+await page.locator('#live-seed').fill('30002');await page.locator('#live-run').click();await page.waitForFunction(()=>!document.querySelector('#live-results').hidden,null,{timeout:120000});
+assert.match(await page.locator('#live-provenance').textContent(),/physical-contact-v2/);
+await page.locator('#live-curriculum').selectOption('hazards');await page.locator('#live-seed').fill('20011');await page.locator('#live-run').click();await page.waitForFunction(()=>!document.querySelector('#live-results').hidden,null,{timeout:120000});
+const labels=await page.locator('#live-history-pick option').allTextContents();assert.match(labels[0],/20011/);assert.match(labels[1],/30002/);
+await page.locator('#live-history-filter').selectOption('passed');const passed=await page.locator('#live-history-pick option').allTextContents();assert(passed.some(x=>x.includes('30002')));assert(!passed.some(x=>x.includes('20011')));
+await page.locator('#curriculum').selectOption('hazards');await page.waitForFunction(()=>document.querySelector('#replay-source').textContent.startsWith('RECORDED')); await page.locator('#robot-seed').selectOption('20002');await page.locator('#after').click();await page.evaluate(()=>window.forkRobot.seek(6));
+assert.match(await page.locator('#robot-event').textContent(),/physical collision/i);
+await browser.close();console.log('PASS interrupted poll recovery, newest-first runs, strict passing filter, corrected recorded seed 20002.');

@@ -4,7 +4,11 @@
 
 STREETWISE turns a photo-informed Chennai street into a repeatable robot learning environment. A walking robot encounters an occluded pedestrian, learns a better navigation policy from simulator outcomes, and is evaluated on unseen encounters. The purpose is to find costly navigation mistakes in simulation before deploying a robot.
 
-[118-second demo](../../artifacts/fork/media/STREETWISE-demo.mp4) · [Pitch PDF](../../artifacts/fork/media/STREETWISE-pitch.pdf) · [Editable slides](../../artifacts/fork/media/pitch.html) · [Submission copy](submission.md)
+[120-second demo](../../artifacts/fork/media/STREETWISE-demo.mp4) · [Pitch PDF](../../artifacts/fork/media/STREETWISE-pitch.pdf) · [Editable slides](../../artifacts/fork/media/pitch.html) · [Submission copy](submission.md)
+Live demo: https://streetwise-cppv.onrender.com/?robot=1&live=1 . The final video keeps the approved first 110 seconds, then says “Thank you” and shows a QR code.
+
+**Scoring correction (September 13):** the original benchmark/video used center-clearance scoring and missed some physical contacts, including car seed 20002. Public recorded outcomes now include a 50 Hz contact audit; fresh runs check contacts at 500 Hz. Original benchmark numbers and validation curves below are historical, not the corrected collision-free success rates.
+
 
 ## Same street. Same pedestrian. A better decision.
 

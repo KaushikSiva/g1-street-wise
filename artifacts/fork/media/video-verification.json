@@ -1,6 +1,19 @@
 {
-  "duration": 118.0,
+  "duration": 120,
   "decode": "passed",
+  "first110Seconds": "Approved video content retained",
+  "sourceSha256": "b6ebd4a0ac9294fabfba276f23c6b59966a401720dd17465047f193ce153e5f8",
+  "thankYou": [
+    110,
+    112
+  ],
+  "qrCard": [
+    112,
+    120
+  ],
+  "url": "https://streetwise-cppv.onrender.com/?robot=1&live=1",
+  "qrDecodedFromPNG": true,
+  "qrDecodedFromEncodedVideo": true,
   "streams": [
     {
       "codec_name": "h264",
@@ -10,9 +23,5 @@
     {
       "codec_name": "aac"
     }
-  ],
-  "narration": "Fish Audio South Indian Male synthetic voice; latest saved naturally paced narration",
-  "sourceCaptureSeconds": 125.64,
-  "trimmedSetupSeconds": 7.640000000000001,
-  "nativeScene": "September 13 resumed nine-building transfer"
+  ]
 }

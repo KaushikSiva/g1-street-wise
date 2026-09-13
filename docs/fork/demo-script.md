@@ -15,3 +15,7 @@ The finished video uses actual application screens and recorded MuJoCo joint tra
 
 ## Live demo fallback
 If cloud access is unavailable, the local viewer still replays the saved official joint trajectories and full test outcomes. It labels them as recorded simulation. Do not call these recordings a live robot session. The independent browser world model can still fit and evaluate locally without API keys.
+
+## Final presentation edit
+
+The delivered `STREETWISE-demo.mp4` is 120 seconds: approved content through 1:50, “Thank you” from 1:50–1:52, then a silent QR invitation from 1:52–2:00. The QR opens the deployed live scenario controls at https://streetwise-cppv.onrender.com/?robot=1&live=1 . The earlier script above documents the original narration source; `finalize_demo.py` produces this final edit. Captions and the extracted narration audio match the edited video.

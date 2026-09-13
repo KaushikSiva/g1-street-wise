@@ -1,0 +1,50 @@
+[
+  {
+    "start": 0,
+    "end": 12,
+    "screen": "Hero, Kanakadhara frontage, robot and parked van",
+    "text": "Streets are harder than laboratories. A parked van can hide a pedestrian, and a robot that simply keeps walking can make the wrong decision. This is STREETWISE."
+  },
+  {
+    "start": 12,
+    "end": 27,
+    "screen": "Before RL, pedestrian test, then freeze at violation",
+    "text": "We recreated a Central Avenue encounter beside Kanakadhara in Chennai. First, an official Unitree walking policy follows a constant forward command. The pedestrian emerges, and the robot enters the clearance envelope."
+  },
+  {
+    "start": 27,
+    "end": 43,
+    "screen": "Same seed after RL; replay completion",
+    "text": "Now replay the same encounter with trained navigation. PPO has learned when to slow down and wait before proceeding. The walking policy itself stays frozen. Every robot joint you see comes from recorded MuJoCo physics."
+  },
+  {
+    "start": 43,
+    "end": 58,
+    "screen": "Actual W&B learning graph and held-out comparison",
+    "text": "These are actual training measurements from Weights and Biases. On sixty-four unseen pedestrian encounters, completed crossings rise from forty-two to sixty-four. Clearance violations fall from twenty-two to zero, with no robot falls."
+  },
+  {
+    "start": 58,
+    "end": 78,
+    "screen": "Moving-car before/after, then recorded wet-road encounter",
+    "text": "Training on a molab Blackwell GPU adds lateral movement, moving cars and road defects. Mixed-hazard completion rises from twenty-eight to sixty-four out of sixty-four. Rain changes ground friction; fog limits tracking range. The first weather test still has one failure."
+  },
+  {
+    "start": 78,
+    "end": 96,
+    "screen": "Separate world-model run and update",
+    "text": "A separate world-model lab predicts futures and learns from simulated experience, with Weave tracing its analyst. For robot training, a challenge ladder introduces harder conditions after two perfect validation checks. Test results never control advancement."
+  },
+  {
+    "start": 96,
+    "end": 108,
+    "screen": "Actual native MuJoCo screenshot, simple architecture",
+    "text": "Compare both policies side by side, or run live MuJoCo with Chennai geometry. Marimo, checkpoints, official SDK evidence and startup instructions make the results inspectable."
+  },
+  {
+    "start": 108,
+    "end": 118,
+    "screen": "Closing image, repository URL, limits",
+    "text": "This is simulation, not a physical robot safety claim. STREETWISE helps teams discover navigation mistakes before street deployment. Robots that learn the street before they enter it."
+  }
+]

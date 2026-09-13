@@ -1,0 +1,64 @@
+[
+  {
+    "step": 0,
+    "validation/episodes": 32,
+    "validation/success_rate": 0.78125,
+    "validation/clearance_violations": 7,
+    "validation/falls": 0,
+    "validation/mean_return": 11.132915052607832,
+    "validation/mean_progress": 3.786071493935136,
+    "validation/mean_elapsed": 7.1499999999999355
+  },
+  {
+    "step": 8192,
+    "wall_seconds": 102.52928423881531,
+    "train/mean_return": 10.3127723,
+    "train/success_rate": 0.76,
+    "validation/episodes": 32,
+    "validation/success_rate": 0.84375,
+    "validation/clearance_violations": 5,
+    "validation/falls": 0,
+    "validation/mean_return": 13.213569279200941,
+    "validation/mean_progress": 3.8532736072316904,
+    "validation/mean_elapsed": 7.41874999999993
+  },
+  {
+    "step": 16384,
+    "wall_seconds": 325.5845000743866,
+    "train/mean_return": 16.6837685,
+    "train/success_rate": 0.94,
+    "validation/episodes": 32,
+    "validation/success_rate": 0.6875,
+    "validation/clearance_violations": 10,
+    "validation/falls": 0,
+    "validation/mean_return": 6.99548232963367,
+    "validation/mean_progress": 3.1454801324480552,
+    "validation/mean_elapsed": 6.431249999999951
+  },
+  {
+    "step": 24576,
+    "wall_seconds": 407.02367520332336,
+    "train/mean_return": 15.20569716,
+    "train/success_rate": 0.9,
+    "validation/episodes": 32,
+    "validation/success_rate": 0.78125,
+    "validation/clearance_violations": 7,
+    "validation/falls": 0,
+    "validation/mean_return": 10.612512984157839,
+    "validation/mean_progress": 3.51962045971014,
+    "validation/mean_elapsed": 7.087499999999936
+  },
+  {
+    "step": 32768,
+    "wall_seconds": 476.05437326431274,
+    "train/mean_return": 17.759176479999997,
+    "train/success_rate": 0.96,
+    "validation/episodes": 32,
+    "validation/success_rate": 0.96875,
+    "validation/clearance_violations": 1,
+    "validation/falls": 0,
+    "validation/mean_return": 17.733409563737634,
+    "validation/mean_progress": 4.207568749500037,
+    "validation/mean_elapsed": 8.362499999999908
+  }
+]

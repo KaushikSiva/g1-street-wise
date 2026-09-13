@@ -28,3 +28,10 @@ artifacts
 
 !artifacts/fork/live-demo/
 !artifacts/fork/live-demo/gait.npz
+
+!artifacts/fork/rain-shelter-v3/
+!artifacts/fork/rain-shelter-v3/best.zip
+!artifacts/fork/rain-shelter-v3/best.npz
+!artifacts/fork/rl-hazards-contact-v2/
+!artifacts/fork/rl-hazards-contact-v2/best.zip
+!artifacts/fork/rl-hazards-contact-v2/best.npz

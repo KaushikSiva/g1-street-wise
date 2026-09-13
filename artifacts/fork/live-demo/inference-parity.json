@@ -33,5 +33,19 @@
     "actionMismatches": 0,
     "checkpointSha256": "a3f58f6944f512f08936b9106b47a5fa7860120432a49871417651b3cebbeeba",
     "inferenceBytes": 32463
+  },
+  {
+    "checkpoint": "rain-shelter-v3",
+    "observations": 1024,
+    "actionMismatches": 0,
+    "checkpointSha256": "d0a70d2b6d39de0652bddf3e17604b27d2f4c8ac5d8428238951cad6b4b9ddb5",
+    "inferenceBytes": 27697
+  },
+  {
+    "checkpoint": "rl-hazards-contact-v2",
+    "observations": 1024,
+    "actionMismatches": 0,
+    "checkpointSha256": "a45b3a82bf1aefce9e4fc2b499068b5b6e0b9121dec056cee6b4fef851d37b61",
+    "inferenceBytes": 21524
   }
 ]

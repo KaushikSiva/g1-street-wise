@@ -21,7 +21,7 @@ copy('artifacts/central-avenue/streetwise-finish')
 copy('artifacts/web-city-realism')
 copy('docs/districts/central-avenue-neighbors.md')
 copy('docs/districts/central-avenue-neighbors-revision-4.md')
-for name in ['streetlife', 'streetlife-multiple-shelters', 'emergencies-v1', 'live-demo']:
+for name in ['streetlife', 'streetlife-multiple-shelters', 'emergencies-v1', 'live-demo', 'rain-shelter-v3', 'rl-hazards-contact-v2', 'vision-v1']:
  copy('artifacts/fork/'+name)
 # These directories are generated assets: remove only files absent from the source
 # so superseded mesh formats do not linger in the publication checkout.

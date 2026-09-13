@@ -1,0 +1,10 @@
+{
+  "serviceId": "srv-dajf0h0jo6nc73dk2880",
+  "deployId": "dep-dajf0h8jo6nc73dk2920",
+  "commit": "b04bdce6bd23e160711dcc94088a3976474a49d5",
+  "status": "live",
+  "url": "https://streetwise-cppv.onrender.com",
+  "plan": "free",
+  "health": "passed",
+  "autoDeploy": false
+}
