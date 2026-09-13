@@ -1,5 +1,7 @@
 if (!location.search) history.replaceState(null, '', '?robot=1');
-if (new URLSearchParams(location.search).has('robot')) {
+if (new URLSearchParams(location.search).has('compare')) {
+  import('./fork/compare').catch(error => { console.error(error); document.querySelector('#app')!.textContent='Comparison could not load. Reload to retry.'; });
+} else if (new URLSearchParams(location.search).has('robot')) {
   import('./fork/robot-app').catch(error => { console.error(error); document.querySelector('#app')!.textContent='STREETWISE could not load. Reload to retry.'; });
 } else if (new URLSearchParams(location.search).has('fork')) {
   import('./fork/app').catch(error => { console.error(error); document.querySelector('#app')!.textContent='STREETWISE could not load. Reload to try again.'; });

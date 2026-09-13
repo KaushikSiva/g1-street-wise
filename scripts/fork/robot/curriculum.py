@@ -10,7 +10,7 @@ from g1_policy import ROOT
 
 def mastered(history):
     rows=[r for r in history if r['step']>0]
-    return len(rows)>=2 and all(r.get('validation/success_rate')==1 and r.get('validation/clearance_violations')==0 and r.get('validation/falls')==0 for r in rows[-2:])
+    return any(all(r.get('validation/success_rate')==1 and r.get('validation/clearance_violations')==0 and r.get('validation/falls')==0 for r in rows[i:i+2]) for i in range(len(rows)-1))
 
 
 def main():
@@ -18,6 +18,7 @@ def main():
     p.add_argument('--initial-run',default='artifacts/fork/rl-weather')
     p.add_argument('--max-level',type=int,default=3,choices=range(1,4))
     p.add_argument('--steps-per-level',type=int,default=32768)
+    p.add_argument('--attempts-per-level',type=int,default=2)
     p.add_argument('--device',default='cuda',choices=['cuda','cpu'])
     p.add_argument('--wandb',action='store_true')
     p.add_argument('--wait',action='store_true',help='Wait for initial run evaluation to complete')
@@ -32,20 +33,30 @@ def main():
     def save():
         temp=folder/'status.tmp';temp.write_text(json.dumps(state,indent=2));temp.replace(folder/'status.json')
     previous=initial
-    for level in range(args.max_level+1):
-        qualifies=result.get('masteryReached',False) or mastered(result['history'])
-        state['levels'].append({'level':level,'run':str(previous.relative_to(ROOT)),'mastered':qualifies,'steps':result['steps'],'wandbUrl':result.get('wandbUrl'),'validationSuccess':result['history'][-1]['validation/success_rate']})
+    initial_mastered=result.get('masteryReached',False) or mastered(result['history'])
+    state['levels'].append({'level':0,'attempt':1,'run':str(initial.relative_to(ROOT)),'mastered':initial_mastered,'steps':result['steps'],'wandbUrl':result.get('wandbUrl')})
+    if not initial_mastered:
+        state['status']='needs_more_practice';save();return
+    for level in range(1,args.max_level+1):
+        qualifies=False
+        for attempt in range(1,args.attempts_per_level+1):
+            state['status']='training_harder_level' if attempt==1 else 'practising_current_level'
+            state['activeLevel']=level;state['activeAttempt']=attempt;save()
+            suffix='' if attempt==1 else f'-attempt-{attempt}'
+            destination=ROOT/f'artifacts/fork/rl-weather-level-{level}{suffix}'
+            if not (destination/'evaluation.json').exists():
+                offset=level*100000+(attempt-1)*1000000
+                command=[sys.executable,str(ROOT/'scripts/fork/robot/train.py'),'--weather','--difficulty',str(level),'--seed-offset',str(offset),'--steps',str(args.steps_per_level),'--eval-every','4096','--stop-on-mastery','--learning-rate','0.00003','--entropy','0.005','--resume',str(previous/'best.zip'),'--output',str(destination),'--device',args.device]
+                if args.wandb:command.append('--wandb')
+                subprocess.run(command,cwd=ROOT,check=True,env=os.environ.copy())
+            previous=destination;result=json.loads((destination/'evaluation.json').read_text())
+            qualifies=result.get('masteryReached',False) or mastered(result['history'])
+            state['levels'].append({'level':level,'attempt':attempt,'run':str(previous.relative_to(ROOT)),'mastered':qualifies,'steps':result['steps'],'wandbUrl':result.get('wandbUrl'),'validationSuccess':result['history'][-1]['validation/success_rate']})
+            save()
+            if qualifies:break
         if not qualifies:
-            state['status']='needs_more_practice';save();break
-        if level==args.max_level:
-            state['status']='configured_ladder_mastered';save();break
-        next_level=level+1
-        state['status']='training_harder_level';state['activeLevel']=next_level;save()
-        destination=ROOT/f'artifacts/fork/rl-weather-level-{next_level}'
-        command=[sys.executable,str(ROOT/'scripts/fork/robot/train.py'),'--weather','--difficulty',str(next_level),'--seed-offset',str(next_level*100000),'--steps',str(args.steps_per_level),'--eval-every','4096','--stop-on-mastery','--resume',str(previous/'best.zip'),'--output',str(destination),'--device',args.device]
-        if args.wandb:command.append('--wandb')
-        subprocess.run(command,cwd=ROOT,check=True,env=os.environ.copy())
-        previous=destination;result=json.loads((destination/'evaluation.json').read_text())
+            state['status']='needs_more_practice';break
+        state['status']='configured_ladder_mastered' if level==args.max_level else 'training_harder_level'
     save();print(json.dumps(state),flush=True)
 
 

@@ -1,0 +1,17 @@
+{
+  "actualRecordedConditions": true,
+  "samples": [
+    {
+      "condition": "rain",
+      "friction": 0.513826,
+      "range": 6,
+      "fog": 0.013
+    },
+    {
+      "condition": "fog",
+      "friction": 1,
+      "range": 3.283575,
+      "fog": 0.045
+    }
+  ]
+}

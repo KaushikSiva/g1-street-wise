@@ -1,0 +1,19 @@
+{
+  "sameSeed": true,
+  "synchronized": true,
+  "pause": true,
+  "mobile": true,
+  "errors": [],
+  "states": [
+    {
+      "time": 4,
+      "seed": 20001,
+      "mode": "before"
+    },
+    {
+      "time": 4,
+      "seed": 20001,
+      "mode": "after"
+    }
+  ]
+}

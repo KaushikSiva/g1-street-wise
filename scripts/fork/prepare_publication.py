@@ -13,7 +13,7 @@ def copy(name):
  else:shutil.copy2(source,target)
 for name in ['src','public','package.json','package-lock.json','tsconfig.json','vite.config.ts','index.html','.env.example','scripts/fork','notebooks/streetwise_lab.py','notebooks/streetwise_cloud.py','docs/fork']:
  copy(name)
-for name in ['rl-corridor-v2','rl-hazards-v2','media','lab-data.json','experiment-lab.html','browser-verification.json','fresh-install-verification.json','unitree-sdk-verification.json','g1-policy-smoke.json','checkpoint-reproduction.json']:
+for name in ['rl-corridor-v2','rl-hazards-v2','rl-weather','curriculum','media','lab-data.json','experiment-lab.html','browser-verification.json','fresh-install-verification.json','unitree-sdk-verification.json','g1-policy-smoke.json','checkpoint-reproduction.json']:
  copy('artifacts/fork/'+name)
 # Remove the superseded exploratory hazard artifacts from the generated package.
 if (dest/'artifacts/fork/rl-hazards').exists():shutil.rmtree(dest/'artifacts/fork/rl-hazards')

@@ -9,7 +9,7 @@ export function buildPrashanthServices(){
  const dark=new THREE.MeshStandardMaterial({color:0x343c35,roughness:.9});
  const cable=new THREE.MeshStandardMaterial({color:0x32342d,roughness:.86});
  const buckets=new Map<THREE.Material,THREE.BufferGeometry[]>();
- const add=(g:THREE.BufferGeometry,m:THREE.Material)=>{if(!buckets.has(m))buckets.set(m,[]);buckets.get(m)!.push(g);};
+ const add=(g:THREE.BufferGeometry,m:THREE.Material)=>{if(g.index){const original=g;g=g.toNonIndexed();original.dispose();}g.clearGroups();if(!buckets.has(m))buckets.set(m,[]);buckets.get(m)!.push(g);};
  function box(x:number,y:number,z:number,w:number,h:number,d:number,m=paint){const g=new THREE.BoxGeometry(w,h,d);g.translate(x,y,z);add(g,m);}
  function rod(a:number[],b:number[],r:number,m=edge){const start=new THREE.Vector3(...a),end=new THREE.Vector3(...b),delta=end.clone().sub(start);const g=new THREE.CylinderGeometry(r,r,delta.length(),6);g.applyQuaternion(new THREE.Quaternion().setFromUnitVectors(new THREE.Vector3(0,1,0),delta.normalize()));g.translate(...start.add(end).multiplyScalar(.5).toArray());add(g,m);}
  // The photograph has a circular fan on the left, not a full-width bar grille.

@@ -1,0 +1,906 @@
+{
+  "source": "Actual Chennai Three.js geometry within 38 m of station 75, transformed into the robot physics coordinate system. Flat material colors; textures and browser postprocessing are not transferred. Decorative only, no collision changes.",
+  "collision": "Decorative meshes only; collision model is unchanged.",
+  "meshes": [
+    {
+      "file": "street-000-0.stl",
+      "color": [
+        0.4,
+        0.4,
+        0.34
+      ],
+      "triangles": 108
+    },
+    {
+      "file": "street-001-0.stl",
+      "color": [
+        0.53,
+        0.27,
+        0.3
+      ],
+      "triangles": 768
+    },
+    {
+      "file": "street-002-0.stl",
+      "color": [
+        0.13,
+        0.14,
+        0.12
+      ],
+      "triangles": 132
+    },
+    {
+      "file": "street-003-0.stl",
+      "color": [
+        0.76,
+        0.73,
+        0.64
+      ],
+      "triangles": 2024
+    },
+    {
+      "file": "street-004-0.stl",
+      "color": [
+        0.14,
+        0.19,
+        0.18
+      ],
+      "triangles": 108
+    },
+    {
+      "file": "street-005-0.stl",
+      "color": [
+        0.12,
+        0.06,
+        0.05
+      ],
+      "triangles": 576
+    },
+    {
+      "file": "street-006-0.stl",
+      "color": [
+        0.02,
+        0.03,
+        0.03
+      ],
+      "triangles": 14978
+    },
+    {
+      "file": "street-007-0.stl",
+      "color": [
+        0.3,
+        0.09,
+        0.05
+      ],
+      "triangles": 492
+    },
+    {
+      "file": "street-008-0.stl",
+      "color": [
+        0.17,
+        0.08,
+        0.06
+      ],
+      "triangles": 36
+    },
+    {
+      "file": "street-009-0.stl",
+      "color": [
+        0.47,
+        0.33,
+        0.06
+      ],
+      "triangles": 210
+    },
+    {
+      "file": "street-010-0.stl",
+      "color": [
+        0.26,
+        0.27,
+        0.22
+      ],
+      "triangles": 10464
+    },
+    {
+      "file": "street-011-0.stl",
+      "color": [
+        0.27,
+        0.26,
+        0.22
+      ],
+      "triangles": 60
+    },
+    {
+      "file": "street-012-0.stl",
+      "color": [
+        0.64,
+        0.62,
+        0.53
+      ],
+      "triangles": 8932
+    },
+    {
+      "file": "street-013-0.stl",
+      "color": [
+        0.22,
+        0.19,
+        0.22
+      ],
+      "triangles": 468
+    },
+    {
+      "file": "street-014-0.stl",
+      "color": [
+        0.55,
+        0.36,
+        0.08
+      ],
+      "triangles": 24
+    },
+    {
+      "file": "street-015-0.stl",
+      "color": [
+        0.03,
+        0.04,
+        0.03
+      ],
+      "triangles": 41380
+    },
+    {
+      "file": "street-016-0.stl",
+      "color": [
+        0.49,
+        0.44,
+        0.26
+      ],
+      "triangles": 2808
+    },
+    {
+      "file": "street-017-0.stl",
+      "color": [
+        0.09,
+        0.12,
+        0.09
+      ],
+      "triangles": 864
+    },
+    {
+      "file": "street-018-0.stl",
+      "color": [
+        0.45,
+        0.14,
+        0.08
+      ],
+      "triangles": 404
+    },
+    {
+      "file": "street-019-0.stl",
+      "color": [
+        0.39,
+        0.3,
+        0.12
+      ],
+      "triangles": 11168
+    },
+    {
+      "file": "street-020-0.stl",
+      "color": [
+        0.05,
+        0.09,
+        0.11
+      ],
+      "triangles": 4000
+    },
+    {
+      "file": "street-021-0.stl",
+      "color": [
+        0.17,
+        0.05,
+        0.03
+      ],
+      "triangles": 7256
+    },
+    {
+      "file": "street-022-0.stl",
+      "color": [
+        0.03,
+        0.03,
+        0.03
+      ],
+      "triangles": 40572
+    },
+    {
+      "file": "street-023-0.stl",
+      "color": [
+        0.01,
+        0.01,
+        0.02
+      ],
+      "triangles": 36
+    },
+    {
+      "file": "street-024-0.stl",
+      "color": [
+        0.45,
+        0.14,
+        0.01
+      ],
+      "triangles": 120
+    },
+    {
+      "file": "street-025-0.stl",
+      "color": [
+        0.35,
+        0.36,
+        0.32
+      ],
+      "triangles": 684
+    },
+    {
+      "file": "street-026-0.stl",
+      "color": [
+        0.27,
+        0.01,
+        0
+      ],
+      "triangles": 808
+    },
+    {
+      "file": "street-027-0.stl",
+      "color": [
+        0.02,
+        0.02,
+        0.02
+      ],
+      "triangles": 15764
+    },
+    {
+      "file": "street-028-0.stl",
+      "color": [
+        0.31,
+        0.33,
+        0.34
+      ],
+      "triangles": 2340
+    },
+    {
+      "file": "street-029-0.stl",
+      "color": [
+        0.66,
+        0.68,
+        0.65
+      ],
+      "triangles": 3320
+    },
+    {
+      "file": "street-030-0.stl",
+      "color": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 55046
+    },
+    {
+      "file": "street-031-0.stl",
+      "color": [
+        0.31,
+        0.32,
+        0.28
+      ],
+      "triangles": 24
+    },
+    {
+      "file": "street-032-0.stl",
+      "color": [
+        0.71,
+        0.73,
+        0.67
+      ],
+      "triangles": 4410
+    },
+    {
+      "file": "street-033-0.stl",
+      "color": [
+        0.13,
+        0.15,
+        0.12
+      ],
+      "triangles": 524
+    },
+    {
+      "file": "street-034-0.stl",
+      "color": [
+        0.14,
+        0.23,
+        0.2
+      ],
+      "triangles": 288
+    },
+    {
+      "file": "street-035-0.stl",
+      "color": [
+        0.56,
+        0.64,
+        0.58
+      ],
+      "triangles": 2124
+    },
+    {
+      "file": "street-036-0.stl",
+      "color": [
+        0.08,
+        0.16,
+        0.25
+      ],
+      "triangles": 2472
+    },
+    {
+      "file": "street-037-0.stl",
+      "color": [
+        0.07,
+        0.21,
+        0.16
+      ],
+      "triangles": 6120
+    },
+    {
+      "file": "street-038-0.stl",
+      "color": [
+        0.32,
+        0.34,
+        0.3
+      ],
+      "triangles": 7416
+    },
+    {
+      "file": "street-039-0.stl",
+      "color": [
+        0.05,
+        0.07,
+        0.07
+      ],
+      "triangles": 4452
+    },
+    {
+      "file": "street-040-0.stl",
+      "color": [
+        0.45,
+        0.37,
+        0.3
+      ],
+      "triangles": 12
+    },
+    {
+      "file": "street-041-0.stl",
+      "color": [
+        0.46,
+        0.13,
+        0.08
+      ],
+      "triangles": 11520
+    },
+    {
+      "file": "street-042-0.stl",
+      "color": [
+        0.04,
+        0.14,
+        0.3
+      ],
+      "triangles": 768
+    },
+    {
+      "file": "street-043-0.stl",
+      "color": [
+        0.55,
+        0.58,
+        0.5
+      ],
+      "triangles": 1212
+    },
+    {
+      "file": "street-044-0.stl",
+      "color": [
+        0.56,
+        0.57,
+        0.42
+      ],
+      "triangles": 108
+    },
+    {
+      "file": "street-045-0.stl",
+      "color": [
+        0.03,
+        0.04,
+        0.04
+      ],
+      "triangles": 3452
+    },
+    {
+      "file": "street-046-0.stl",
+      "color": [
+        0.17,
+        0.2,
+        0.17
+      ],
+      "triangles": 296
+    },
+    {
+      "file": "street-047-0.stl",
+      "color": [
+        0.06,
+        0.07,
+        0.05
+      ],
+      "triangles": 24
+    },
+    {
+      "file": "street-048-0.stl",
+      "color": [
+        0.09,
+        0.09,
+        0.07
+      ],
+      "triangles": 36
+    },
+    {
+      "file": "street-049-0.stl",
+      "color": [
+        0.49,
+        0.53,
+        0.38
+      ],
+      "triangles": 124
+    },
+    {
+      "file": "street-050-0.stl",
+      "color": [
+        0.58,
+        0.58,
+        0.45
+      ],
+      "triangles": 24
+    },
+    {
+      "file": "street-051-0.stl",
+      "color": [
+        0.08,
+        0.1,
+        0.08
+      ],
+      "triangles": 244
+    },
+    {
+      "file": "street-052-0.stl",
+      "color": [
+        0.3,
+        0.31,
+        0.26
+      ],
+      "triangles": 72
+    },
+    {
+      "file": "street-053-0.stl",
+      "color": [
+        0.13,
+        0.15,
+        0.09
+      ],
+      "triangles": 240
+    },
+    {
+      "file": "street-054-0.stl",
+      "color": [
+        0.69,
+        0.68,
+        0.52
+      ],
+      "triangles": 1592
+    },
+    {
+      "file": "street-055-0.stl",
+      "color": [
+        0.09,
+        0.12,
+        0.11
+      ],
+      "triangles": 240
+    },
+    {
+      "file": "street-056-0.stl",
+      "color": [
+        0.25,
+        0.26,
+        0.13
+      ],
+      "triangles": 136
+    },
+    {
+      "file": "street-057-0.stl",
+      "color": [
+        0.6,
+        0.63,
+        0.46
+      ],
+      "triangles": 420
+    },
+    {
+      "file": "street-058-0.stl",
+      "color": [
+        0.4,
+        0.4,
+        0.33
+      ],
+      "triangles": 66
+    },
+    {
+      "file": "street-059-0.stl",
+      "color": [
+        0.76,
+        0.73,
+        0.52
+      ],
+      "triangles": 1964
+    },
+    {
+      "file": "street-060-0.stl",
+      "color": [
+        0.18,
+        0.17,
+        0.14
+      ],
+      "triangles": 252
+    },
+    {
+      "file": "street-061-0.stl",
+      "color": [
+        0.59,
+        0.45,
+        0.36
+      ],
+      "triangles": 564
+    },
+    {
+      "file": "street-062-0.stl",
+      "color": [
+        0.13,
+        0.2,
+        0.19
+      ],
+      "triangles": 120
+    },
+    {
+      "file": "street-063-0.stl",
+      "color": [
+        0.11,
+        0.04,
+        0.03
+      ],
+      "triangles": 756
+    },
+    {
+      "file": "street-064-0.stl",
+      "color": [
+        0.13,
+        0.03,
+        0.02
+      ],
+      "triangles": 12
+    },
+    {
+      "file": "street-065-0.stl",
+      "color": [
+        0.81,
+        0.79,
+        0.69
+      ],
+      "triangles": 1928
+    },
+    {
+      "file": "street-066-0.stl",
+      "color": [
+        0.4,
+        0.4,
+        0.32
+      ],
+      "triangles": 284
+    },
+    {
+      "file": "street-067-0.stl",
+      "color": [
+        0.03,
+        0.05,
+        0.04
+      ],
+      "triangles": 148
+    },
+    {
+      "file": "street-068-0.stl",
+      "color": [
+        0.17,
+        0.19,
+        0.15
+      ],
+      "triangles": 2437
+    },
+    {
+      "file": "street-069-0.stl",
+      "color": [
+        0.3,
+        0.3,
+        0.25
+      ],
+      "triangles": 92
+    },
+    {
+      "file": "street-070-0.stl",
+      "color": [
+        0.67,
+        0.31,
+        0.06
+      ],
+      "triangles": 856
+    },
+    {
+      "file": "street-071-0.stl",
+      "color": [
+        0.05,
+        0.06,
+        0.04
+      ],
+      "triangles": 108
+    },
+    {
+      "file": "street-072-0.stl",
+      "color": [
+        0.08,
+        0.14,
+        0.12
+      ],
+      "triangles": 84
+    },
+    {
+      "file": "street-073-0.stl",
+      "color": [
+        0.58,
+        0.58,
+        0.47
+      ],
+      "triangles": 396
+    },
+    {
+      "file": "street-074-0.stl",
+      "color": [
+        0.54,
+        0.6,
+        0.46
+      ],
+      "triangles": 1028
+    },
+    {
+      "file": "street-075-0.stl",
+      "color": [
+        0.54,
+        0.55,
+        0.42
+      ],
+      "triangles": 120
+    },
+    {
+      "file": "street-076-0.stl",
+      "color": [
+        0.43,
+        0.4,
+        0.33
+      ],
+      "triangles": 130
+    },
+    {
+      "file": "street-077-0.stl",
+      "color": [
+        0.47,
+        0.46,
+        0.4
+      ],
+      "triangles": 68
+    },
+    {
+      "file": "street-078-0.stl",
+      "color": [
+        0.03,
+        0.06,
+        0.07
+      ],
+      "triangles": 54
+    },
+    {
+      "file": "street-079-0.stl",
+      "color": [
+        0.21,
+        0.21,
+        0.18
+      ],
+      "triangles": 48
+    },
+    {
+      "file": "street-080-0.stl",
+      "color": [
+        0.4,
+        0.34,
+        0.25
+      ],
+      "triangles": 552
+    },
+    {
+      "file": "street-081-0.stl",
+      "color": [
+        0.08,
+        0.1,
+        0.09
+      ],
+      "triangles": 1572
+    },
+    {
+      "file": "street-082-0.stl",
+      "color": [
+        0.06,
+        0.06,
+        0.05
+      ],
+      "triangles": 480
+    },
+    {
+      "file": "street-083-0.stl",
+      "color": [
+        0.09,
+        0.1,
+        0.09
+      ],
+      "triangles": 108
+    },
+    {
+      "file": "street-084-0.stl",
+      "color": [
+        0.69,
+        0.72,
+        0.65
+      ],
+      "triangles": 1296
+    },
+    {
+      "file": "street-085-0.stl",
+      "color": [
+        0.1,
+        0.13,
+        0.12
+      ],
+      "triangles": 108
+    },
+    {
+      "file": "street-086-0.stl",
+      "color": [
+        0.33,
+        0.4,
+        0.37
+      ],
+      "triangles": 540
+    },
+    {
+      "file": "street-087-0.stl",
+      "color": [
+        0.25,
+        0.27,
+        0.23
+      ],
+      "triangles": 24
+    },
+    {
+      "file": "street-088-0.stl",
+      "color": [
+        0.55,
+        0.58,
+        0.51
+      ],
+      "triangles": 12
+    },
+    {
+      "file": "street-089-0.stl",
+      "color": [
+        0.43,
+        0.47,
+        0.42
+      ],
+      "triangles": 84
+    },
+    {
+      "file": "street-090-0.stl",
+      "color": [
+        0.58,
+        0.21,
+        0.01
+      ],
+      "triangles": 376
+    },
+    {
+      "file": "street-091-0.stl",
+      "color": [
+        0.23,
+        0.42,
+        0.39
+      ],
+      "triangles": 856
+    },
+    {
+      "file": "street-092-0.stl",
+      "color": [
+        0.55,
+        0.57,
+        0.49
+      ],
+      "triangles": 940
+    },
+    {
+      "file": "street-093-0.stl",
+      "color": [
+        0.38,
+        0.01,
+        0.01
+      ],
+      "triangles": 752
+    },
+    {
+      "file": "street-094-0.stl",
+      "color": [
+        0.01,
+        0.02,
+        0.02
+      ],
+      "triangles": 20716
+    },
+    {
+      "file": "street-095-0.stl",
+      "color": [
+        0.68,
+        0.7,
+        0.66
+      ],
+      "triangles": 5284
+    },
+    {
+      "file": "street-096-0.stl",
+      "color": [
+        0.34,
+        0.37,
+        0.38
+      ],
+      "triangles": 5004
+    },
+    {
+      "file": "street-097-0.stl",
+      "color": [
+        0.15,
+        0.25,
+        0.08
+      ],
+      "triangles": 150000
+    },
+    {
+      "file": "street-097-1.stl",
+      "color": [
+        0.15,
+        0.25,
+        0.08
+      ],
+      "triangles": 150000
+    },
+    {
+      "file": "street-097-2.stl",
+      "color": [
+        0.15,
+        0.25,
+        0.08
+      ],
+      "triangles": 58400
+    }
+  ]
+}

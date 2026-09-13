@@ -1,0 +1,7 @@
+import {chromium} from '@playwright/test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs/promises';
+const b=await chromium.launch({channel:'chrome',headless:true});const p=await b.newPage({viewport:{width:1700,height:1000}});const errors=[];p.on('pageerror',e=>errors.push(e.message));await p.goto('http://127.0.0.1:5189/?compare=1');await p.waitForFunction(()=>window.streetwiseCompare?.ready,null,{timeout:90000});await p.evaluate(()=>window.streetwiseCompare.seek(4));
+const states=await p.evaluate(()=>['left','right'].map(id=>{const r=document.getElementById(id).contentWindow.forkRobot;return {time:r.time,seed:r.current.seed,mode:r.mode};}));assert.equal(states[0].seed,states[1].seed);assert.equal(states[0].time,states[1].time);assert.deepEqual(states.map(s=>s.mode),['before','after']);await p.screenshot({path:'artifacts/fork/media/side-by-side.png'});
+await p.locator('#play').click();await p.waitForTimeout(500);await p.locator('#play').click();const t=await p.evaluate(()=>window.streetwiseCompare.time);await p.waitForTimeout(200);assert.equal(await p.evaluate(()=>window.streetwiseCompare.time),t);
+await p.setViewportSize({width:390,height:844});assert(await p.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));assert.deepEqual(errors,[]);await fs.writeFile('artifacts/fork/media/comparison-verification.json',JSON.stringify({sameSeed:true,synchronized:true,pause:true,mobile:true,errors,states},null,2));await b.close();console.log('PASS synchronized two-policy replay, pause, mobile');

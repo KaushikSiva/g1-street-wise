@@ -88,6 +88,39 @@ Completion requires passing the crossing by 1 m within 12 seconds without a clea
 
 The expanded held-out test completed 64/64 encounters versus 28/64 for constant forward motion. Violations fell from 35 to zero and falls remained zero. The corrected car path keeps the full vehicle body clear of the van. This curriculum was warm-started from a prior navigation checkpoint, then refined for 65,536 additional control steps. A second curriculum adds moving cars and a road-defect keep-out zone, plus left/right velocity options. Its separate [GPU run](https://wandb.ai/kaushik-siva88/Unitree%20G1/runs/aer2e51j) runs on the user's molab RTX PRO 6000 Blackwell. MuJoCo and the frozen gait remain on CPU; PPO uses CUDA. A small MLP does not fully utilize this GPU. The pothole is an avoidance footprint, not physically deformed terrain.
 
+## Rain, fog and an automatic challenge ladder
+
+The weather curriculum mixes pedestrians, crossing cars and marked road defects across dry, wet-road and low-visibility conditions. Rain changes **actual MuJoCo ground-contact friction** (0.40–0.65); fog restricts actor tracking to 2.5–4 m. Browser rain streaks and fog illustrate those recorded conditions. Water flow, puddle hydrodynamics and camera-based perception are not simulated.
+
+The first weather run completed **63/64** held-out encounters versus **28/64** for constant forward motion. It retained the starting checkpoint: additional training did **not** improve the selected policy in this run. One rain encounter still violated clearance. [Inspect the measured run](https://wandb.ai/kaushik-siva88/Unitree%20G1/runs/7ohoavvn).
+
+The automatic ladder raises difficulty after two consecutive validation checkpoints reach 100% completion with no violations or falls. It reduces friction and tracking range and increases crossing speed and hesitation. Each stage gets disjoint validation and test seeds; test performance never decides promotion. The configured ladder has three harder levels and a per-stage training budget. A stage that is not mastered is reported as needing more practice, rather than being declared solved.
+
+```sh
+.venv-fork/bin/python scripts/fork/robot/train.py --weather --resume artifacts/fork/rl-hazards-v2/best.zip --steps 32768 --eval-every 4096 --device cuda --wandb --output artifacts/fork/rl-weather
+.venv-fork/bin/python scripts/fork/robot/curriculum.py --initial-run artifacts/fork/rl-weather --max-level 3 --steps-per-level 32768 --device cuda --wandb
+```
+
+## Compare two policies, or run live MuJoCo
+
+Open **http://127.0.0.1:5189/?compare=1** for synchronized before/after views. Choose one scenario, play or pause both together, and scrub the same simulation time. Completed episodes freeze while the other policy continues.
+
+The browser renders saved joint trajectories. To execute a policy against **fresh native MuJoCo physics**, use:
+
+```sh
+# macOS: mjpython is required for the native viewer's main-thread event loop.
+.venv-fork/bin/mjpython scripts/fork/robot/viewer.py --policy after --chennai --seed 20002
+# Linux: use .venv-fork/bin/python in place of mjpython.
+# Run the baseline in another native window if you want both policies open.
+.venv-fork/bin/mjpython scripts/fork/robot/viewer.py --policy before --chennai --seed 20002
+# Other task and condition choices:
+.venv-fork/bin/mjpython scripts/fork/robot/viewer.py --environment weather --policy after --chennai --seed 20001
+```
+
+**Space** pauses/resumes; **R** restarts the same encounter. Native windows run independently; the browser comparison provides synchronized controls. Add `--headless` for a fresh physics episode without a window, or `--checkpoint path/to/best.zip` to inspect another compatible policy.
+
+`--chennai` loads the actual nearby street and building mesh geometry exported from the browser scene. Native MuJoCo uses flat material colors and its own lighting; browser textures and postprocessing are not transferred. Imported scenery is visual only, so it does not change the training collision model. The native pedestrian retains its simple physics geometry.
+
 ## Reproduce training and evaluation
 
 ```sh

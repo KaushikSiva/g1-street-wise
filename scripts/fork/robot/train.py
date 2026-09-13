@@ -91,6 +91,8 @@ def main():
     parser.add_argument('--difficulty',type=int,default=0,choices=range(4))
     parser.add_argument('--stop-on-mastery',action='store_true')
     parser.add_argument('--seed-offset',type=int,default=0)
+    parser.add_argument('--learning-rate',type=float,default=None)
+    parser.add_argument('--entropy',type=float,default=None)
     parser.add_argument('--output', default='artifacts/fork/rl')
     args = parser.parse_args()
     global CentralAvenueG1, VALIDATION, TEST
@@ -127,6 +129,11 @@ def main():
                  policy_kwargs={'net_arch':dict(pi=[64,64],vf=[64,64])}, verbose=0)
     if args.resume:
         policy = PPO.load(ROOT/args.resume, env=env, device=args.device)
+    if args.learning_rate is not None:
+        from stable_baselines3.common.utils import FloatSchedule
+        policy.learning_rate=args.learning_rate
+        policy.lr_schedule=FloatSchedule(args.learning_rate)
+    if args.entropy is not None:policy.ent_coef=args.entropy
     policy.save(folder/'initial')
     baseline, _, _ = evaluate(None, VALIDATION)
     initial, _, _ = evaluate(policy, VALIDATION)
