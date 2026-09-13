@@ -1,0 +1,8 @@
+services:
+  - type: web
+    name: streetwise
+    runtime: docker
+    plan: free
+    region: oregon
+    healthCheckPath: /live-api/health
+    autoDeployTrigger: off

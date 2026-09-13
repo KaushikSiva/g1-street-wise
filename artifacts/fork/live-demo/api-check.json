@@ -1,0 +1,29 @@
+{
+  "sameSeed": 30001,
+  "freshPhysics": true,
+  "invalidSeedRejected": true,
+  "crossOriginRejected": true,
+  "seconds": 0.26,
+  "outcomes": {
+    "before": {
+      "scenario_seed": 30001,
+      "contact": false,
+      "fall": false,
+      "success": true,
+      "min_clearance": 0.03779671418375641,
+      "progress": 4.316802257066065,
+      "return": 18.98437657886969,
+      "elapsed": 8.199999999999914
+    },
+    "after": {
+      "scenario_seed": 30001,
+      "contact": false,
+      "fall": false,
+      "success": true,
+      "min_clearance": 0.11780532153421397,
+      "progress": 4.2795025366453245,
+      "return": 18.98977713802821,
+      "elapsed": 7.799999999999922
+    }
+  }
+}

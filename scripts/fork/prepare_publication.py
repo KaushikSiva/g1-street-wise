@@ -11,7 +11,7 @@ def copy(name):
  target.parent.mkdir(parents=True,exist_ok=True)
  if source.is_dir():shutil.copytree(source,target,dirs_exist_ok=True,ignore=shutil.ignore_patterns('__pycache__','.DS_Store'))
  else:shutil.copy2(source,target)
-for name in ['src','public','package.json','package-lock.json','tsconfig.json','vite.config.ts','index.html','.env.example','scripts/fork','notebooks/streetwise_lab.py','notebooks/streetwise_cloud.py','docs/fork']:
+for name in ['src','public','package.json','package-lock.json','tsconfig.json','vite.config.ts','Dockerfile','.dockerignore','render.yaml','index.html','.env.example','scripts/fork','notebooks/streetwise_lab.py','notebooks/streetwise_cloud.py','docs/fork']:
  copy(name)
 for name in ['rl-corridor-v2','rl-hazards-v2','rl-weather','curriculum','media','lab-data.json','experiment-lab.html','browser-verification.json','fresh-install-verification.json','unitree-sdk-verification.json','g1-policy-smoke.json','checkpoint-reproduction.json']:
  copy('artifacts/fork/'+name)
@@ -21,7 +21,7 @@ copy('artifacts/central-avenue/streetwise-finish')
 copy('artifacts/web-city-realism')
 copy('docs/districts/central-avenue-neighbors.md')
 copy('docs/districts/central-avenue-neighbors-revision-4.md')
-for name in ['streetlife', 'streetlife-multiple-shelters', 'emergencies-v1']:
+for name in ['streetlife', 'streetlife-multiple-shelters', 'emergencies-v1', 'live-demo']:
  copy('artifacts/fork/'+name)
 # These directories are generated assets: remove only files absent from the source
 # so superseded mesh formats do not linger in the publication checkout.
