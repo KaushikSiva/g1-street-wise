@@ -1,5 +1,5 @@
-"""Attach actual exported Chennai visual meshes without altering collision physics."""
-import json,os
+"""Attach textured Chennai visual meshes; all imported scenery is non-colliding."""
+import base64,json,os
 from pathlib import Path
 import xml.etree.ElementTree as ET
 from environment import ROOT,make_scene
@@ -18,14 +18,23 @@ def decorate(environment='crossing'):
     if asset is None:asset=ET.SubElement(root,'asset')
     world=root.find('worldbody')
     for geom in world.findall('geom'):
-        if geom.get('name','').startswith('frontage_') or geom.get('name')=='parked_van':geom.set('rgba','0 0 0 0')
+        if geom.get('name','').startswith('frontage_') or geom.get('name') in ('parked_van','central_avenue_road'):geom.set('rgba','0 0 0 0')
+    # A visual ground apron closes the view outside the captured map; physics plane stays intact.
+    ET.SubElement(world,'geom',name='chennai_visual_ground',type='plane',size='100 100 .01',pos='0 0 -.14',rgba='.44 .40 .32 1',contype='0',conaffinity='0',group='2',density='0')
+    for i,entry in enumerate(data.get('textures',[])):
+        ET.SubElement(asset,'texture',name=entry['name'],type='2d',file=str(ASSETS/entry['file']),nchannel='4',vflip='true' if entry.get('flipY') else 'false')
     for i,entry in enumerate(data['meshes']):
         name=f'chennai_visual_{i}'
         ET.SubElement(asset,'mesh',name=name,file=str(ASSETS/entry['file']),inertia='shell')
-        ET.SubElement(world,'geom',name=name,type='mesh',mesh=name,rgba=' '.join(map(str,entry['color']+[1])),contype='0',conaffinity='0',group='2',density='0')
+        kwargs={'name':name+'_material','rgba':' '.join(map(str,entry['color']+[1])),'specular':str(max(.03,(1-entry.get('roughness',.8))*.4)),'shininess':str(max(.01,(1-entry.get('roughness',.8))*.5))}
+        if entry.get('texture'):kwargs.update(texture=entry['texture'],texuniform='false',texrepeat='1 1')
+        ET.SubElement(asset,'material',**kwargs)
+        ET.SubElement(world,'geom',name=name,type='mesh',mesh=name,material=name+'_material',contype='0',conaffinity='0',group='2',density='0')
     visual=root.find('visual')
     if visual is None:visual=ET.SubElement(root,'visual')
-    headlight=ET.SubElement(visual,'headlight',ambient='.5 .5 .5',diffuse='.6 .6 .6',specular='.1 .1 .1')
+    headlight=visual.find('headlight')
+    if headlight is None:headlight=ET.SubElement(visual,'headlight')
+    headlight.set('ambient','.35 .35 .35');headlight.set('diffuse','.55 .55 .55');headlight.set('specular','.08 .08 .08')
     ET.SubElement(asset,'texture',name='streetwise_sky',type='skybox',builtin='gradient',rgb1='.65 .75 .82',rgb2='.93 .94 .91',width='256',height='1536')
     global_=visual.find('global')
     if global_ is None:global_=ET.SubElement(visual,'global')
@@ -35,26 +44,38 @@ def decorate(environment='crossing'):
 
 def prepare():
     import numpy as np
-    import trimesh
     data=json.loads((ROOT/'.fork-runs/robot/chennai-native.json').read_text())
-    ASSETS.mkdir(parents=True,exist_ok=True);meshes=[]
+    ASSETS.mkdir(parents=True,exist_ok=True);meshes=[];textures=[];lookup={}
+    for i,texture in enumerate(data.get('textures',[])):
+        file=f'texture-{i:03}.png';name=f'chennai_texture_{i}';(ASSETS/file).write_bytes(base64.b64decode(texture['png']));lookup[texture['id']]=name
+        textures.append({'file':file,'name':name,'flipY':texture['flipY'],'width':texture['width'],'height':texture['height']})
     for i,group in enumerate(data['groups']):
-        vertices=np.array(group['vertices']).reshape(-1,3);faces=np.array(group['faces']).reshape(-1,3)
-        if len(faces)<4:continue
-        # STL removes unused vertices and transfers the real triangle surface.
-        mesh=trimesh.Trimesh(vertices=vertices,faces=faces,process=False)
-        if np.linalg.matrix_rank(vertices-vertices.mean(axis=0))<3:continue
+        vertices=np.array(group['vertices'],dtype=np.float32).reshape(-1,3);faces=np.array(group['faces'],dtype=np.int32).reshape(-1,3)
+        normals=np.array(group.get('normals',[]),dtype=np.float32).reshape(-1,3);uvs=np.array(group.get('uvs',[]),dtype=np.float32).reshape(-1,2)
+        if not len(faces):continue
+        if len(normals)!=len(vertices):normals=np.tile([0,0,1],(len(vertices),1)).astype(np.float32)
+        if len(uvs)!=len(vertices):uvs=np.zeros((len(vertices),2),dtype=np.float32)
         for part,start in enumerate(range(0,len(faces),150000)):
-            chunk=trimesh.Trimesh(vertices=vertices,faces=faces[start:start+150000],process=False)
-            chunk.remove_unreferenced_vertices()
-            if np.linalg.matrix_rank(chunk.vertices-chunk.vertices.mean(axis=0))<3:continue
-            name=f'street-{i:03}-{part}.stl';chunk.export(ASSETS/name)
-            meshes.append({'file':name,'color':group['color'],'triangles':len(chunk.faces)})
-    keep={m['file'] for m in meshes}
-    for old in ASSETS.glob('street-*.stl'):
-        if old.name not in keep:old.unlink()
-    (ASSETS/'manifest.json').write_text(json.dumps({'source':data['source'],'collision':'Decorative meshes only; collision model is unchanged.','meshes':meshes},indent=2))
-    print({'meshes':len(meshes),'triangles':sum(m['triangles'] for m in meshes)})
-
+            source_faces=faces[start:start+150000];used,inverse=np.unique(source_faces.ravel(),return_inverse=True);v=vertices[used];n=normals[used];uv=uvs[used];f=inverse.reshape(-1,3).astype(np.int32)
+            # Discard degenerate triangles before the native mesh compiler sees them.
+            valid=np.linalg.norm(np.cross(v[f[:,1]]-v[f[:,0]],v[f[:,2]]-v[f[:,0]]),axis=1)>2e-10;f=f[valid]
+            if not len(f):continue
+            planar=np.linalg.matrix_rank(v-v.mean(axis=0),tol=1e-5)<3
+            if planar:
+                # MuJoCo requires a 3-D hull. Add a 2 mm visual backing to one triangle;
+                # the original visible surface and every collision property are retained.
+                face=f[0];normal=np.cross(v[face[1]]-v[face[0]],v[face[2]]-v[face[0]]);normal/=np.linalg.norm(normal)
+                index=len(v);v=np.vstack([v,v[face].mean(axis=0)-normal*.002]).astype(np.float32);n=np.vstack([n,-normal]).astype(np.float32);uv=np.vstack([uv,uv[face].mean(axis=0)]).astype(np.float32)
+                f=np.vstack([f,[face[1],face[0],index],[face[2],face[1],index],[face[0],face[2],index]]).astype(np.int32)
+            file=f'street-{i:03}-{part}.msh'
+            with (ASSETS/file).open('wb') as stream:
+                np.array([len(v),len(n),len(uv),len(f)],dtype=np.int32).tofile(stream);v.tofile(stream);n.tofile(stream);uv.tofile(stream);f.tofile(stream)
+            meshes.append({'file':file,'name':group.get('name',''),'color':group['color'],'texture':lookup.get(group.get('texture')),'roughness':group.get('roughness',.8),'triangles':len(f),'visualBacking':bool(planar)})
+    keep={m['file'] for m in meshes}|{t['file'] for t in textures}
+    for pattern in ['street-*.stl','street-*.msh','texture-*.png']:
+        for old in ASSETS.glob(pattern):
+            if old.name not in keep:old.unlink()
+    manifest={'source':data['source'],'collision':'Decorative meshes only, contype=conaffinity=0 and density=0. Original road, van and frontage collision geoms retained with transparent rendering.','limits':'Native OpenGL lighting differs from the web renderer; shader-only weathering, AO and normal mapping are not transferred. Foliage uses alpha-sampled triangle trimming instead of browser alpha testing. Planar visual faces use a 2 mm backing for mesh compilation.','textures':textures,'meshes':meshes,'exportWarnings':data.get('warnings',[])}
+    (ASSETS/'manifest.json').write_text(json.dumps(manifest,indent=2));print({'meshes':len(meshes),'textures':len(textures),'triangles':sum(m['triangles'] for m in meshes)})
 
 if __name__=='__main__':prepare()

@@ -1,0 +1,43 @@
+{
+  "status": "passed",
+  "nq": 19,
+  "nv": 18,
+  "nu": 12,
+  "unchangedPhysicsArrays": [
+    "body_mass",
+    "body_inertia",
+    "body_ipos",
+    "body_iquat",
+    "jnt_type",
+    "jnt_axis",
+    "jnt_pos",
+    "jnt_range",
+    "dof_damping",
+    "dof_armature",
+    "actuator_gainprm",
+    "actuator_biasprm",
+    "actuator_gear"
+  ],
+  "unchangedNamedGeomFields": [
+    "geom_contype",
+    "geom_conaffinity",
+    "geom_friction",
+    "geom_solref",
+    "geom_solimp",
+    "geom_size",
+    "geom_pos",
+    "geom_quat"
+  ],
+  "nonCollidingVisualGeoms": 122,
+  "nativeEpisode": {
+    "scenarioSeed": 20002,
+    "contact": false,
+    "fall": false,
+    "success": true,
+    "return": 17.882279310554022,
+    "progress": 3.6857536229082313,
+    "elapsed": 7.39999999999993
+  },
+  "comparison": "The identical baseline and decorated headless policy runs produced the same reported outcome, clearance, progress, return and elapsed time.",
+  "limits": "One deterministic seed parity check; rendering is approximate native OpenGL, with albedo/UV transfer and alpha-centroid triangle trimming. No hardware test."
+}

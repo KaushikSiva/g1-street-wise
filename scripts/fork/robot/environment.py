@@ -59,6 +59,7 @@ def visible(rx, ry, px, py):
 
 class CentralAvenueG1(gym.Env):
     metadata = {'render_modes': []}
+    horizon = HORIZON
 
     def __init__(self, record=False):
         self.robot = G1Controller(make_scene())
@@ -66,6 +67,7 @@ class CentralAvenueG1(gym.Env):
         self.observation_space = spaces.Box(-10, 10, (10,), dtype=np.float32)
         self.record = record
         self.episode_index = 0
+        self.frame_callback = None
 
     def reset(self, *, seed=None, options=None):
         super().reset(seed=seed)
@@ -113,7 +115,7 @@ class CentralAvenueG1(gym.Env):
         return np.clip(np.array([
             d.qpos[0]/4, d.qpos[1]/3, d.qvel[0], self.crossing/2,
             estimated_y/4, self.last_v, min(self.age, 4)/4,
-            float(seen), self.t/HORIZON, d.qpos[2],
+            float(seen), self.t/self.horizon, d.qpos[2],
         ], dtype=np.float32), -10, 10)
 
     def _pedestrian_step(self):
@@ -141,9 +143,16 @@ class CentralAvenueG1(gym.Env):
     def command_for_action(self, action):
         return [ACTION_SPEEDS[action], 0, 0]
 
+    def goal_reached(self):
+        return self.robot.data.qpos[0] > self.crossing+1
+
+    def extra_reward(self, old_position):
+        return 0.
+
     def step(self, action):
         action = int(action)
         old_x = float(self.robot.data.qpos[0])
+        old_position = self.robot.data.qpos[:2].copy()
         command=self.command_for_action(action)
         self.decisions.append({'t': round(self.t, 3), 'action': action, 'speed': command[0], 'command': command})
         for _ in range(10):
@@ -151,15 +160,16 @@ class CentralAvenueG1(gym.Env):
             self.t += .02
             self.age += .02
             self._observe()
+            if self.frame_callback:self.frame_callback(self)
             if self.record:
                 self._frame(action)
         d = self.robot.data
         self.fall = bool(d.qpos[2] < .48 or gravity(d.qpos[3:7])[2] > -.4)
         offroad = abs(d.qpos[1]) > 2.5
-        success = bool(d.qpos[0] > self.crossing+1 and not self.contact and not self.fall and not offroad)
+        success = bool(self.goal_reached() and not self.contact and not self.fall and not offroad)
         terminated = bool(self.contact or self.fall or offroad or success)
-        truncated = bool(self.t >= HORIZON-1e-6 and not terminated)
-        reward = 2*(float(d.qpos[0])-old_x)-.04
+        truncated = bool(self.t >= self.horizon-1e-6 and not terminated)
+        reward = 2*(float(d.qpos[0])-old_x)-.04+self.extra_reward(old_position)
         if self.contact or self.fall or offroad:
             reward -= 20
         elif success:

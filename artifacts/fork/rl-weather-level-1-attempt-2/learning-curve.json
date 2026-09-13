@@ -1,0 +1,38 @@
+[
+  {
+    "step": 0,
+    "validation/episodes": 32,
+    "validation/success_rate": 1.0,
+    "validation/clearance_violations": 0,
+    "validation/falls": 0,
+    "validation/mean_return": 19.035007107381954,
+    "validation/mean_progress": 4.325143359462667,
+    "validation/mean_elapsed": 8.031249999999918
+  },
+  {
+    "step": 4096,
+    "wall_seconds": 36.59128713607788,
+    "train/mean_return": 16.767818079999998,
+    "train/success_rate": 0.94,
+    "validation/episodes": 32,
+    "validation/success_rate": 1.0,
+    "validation/clearance_violations": 0,
+    "validation/falls": 0,
+    "validation/mean_return": 19.040598845985425,
+    "validation/mean_progress": 4.327939228764402,
+    "validation/mean_elapsed": 8.031249999999918
+  },
+  {
+    "step": 8192,
+    "wall_seconds": 72.86698508262634,
+    "train/mean_return": 19.009639019999998,
+    "train/success_rate": 1.0,
+    "validation/episodes": 32,
+    "validation/success_rate": 1.0,
+    "validation/clearance_violations": 0,
+    "validation/falls": 0,
+    "validation/mean_return": 19.023424414666245,
+    "validation/mean_progress": 4.315602013104813,
+    "validation/mean_elapsed": 7.993749999999919
+  }
+]

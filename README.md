@@ -96,7 +96,7 @@ The weather curriculum mixes pedestrians, crossing cars and marked road defects 
 
 The first weather run completed **63/64** held-out encounters versus **28/64** for constant forward motion. It retained the starting checkpoint: additional training did **not** improve the selected policy in this run. One rain encounter still violated clearance. [Inspect the measured run](https://wandb.ai/kaushik-siva88/Unitree%20G1/runs/7ohoavvn).
 
-The automatic ladder raises difficulty after two consecutive validation checkpoints reach 100% completion with no violations or falls. It reduces friction and tracking range and increases crossing speed and hesitation. Each stage gets disjoint validation and test seeds; test performance never decides promotion. The configured ladder has three harder levels and a per-stage training budget. A stage that is not mastered is reported as needing more practice, rather than being declared solved.
+The automatic ladder raises difficulty after two consecutive validation checkpoints reach 100% completion with no violations or falls. It reduces friction and tracking range and increases crossing speed and hesitation. Each stage gets disjoint validation and test seeds; test performance never decides promotion. The configured ladder has three harder levels, a per-attempt training budget and up to two attempts per level. Refinement uses smaller learning updates to preserve the existing skill. A stage that is not mastered is reported as needing more practice, rather than being declared solved.
 
 ```sh
 .venv-fork/bin/python scripts/fork/robot/train.py --weather --resume artifacts/fork/rl-hazards-v2/best.zip --steps 32768 --eval-every 4096 --device cuda --wandb --output artifacts/fork/rl-weather
@@ -121,7 +121,11 @@ The browser renders saved joint trajectories. To execute a policy against **fres
 
 **Space** pauses/resumes; **R** restarts the same encounter. Native windows run independently; the browser comparison provides synchronized controls. Add `--headless` for a fresh physics episode without a window, or `--checkpoint path/to/best.zip` to inspect another compatible policy.
 
-`--chennai` loads the actual nearby street and building mesh geometry exported from the browser scene. Native MuJoCo uses flat material colors and its own lighting; browser textures and postprocessing are not transferred. Imported scenery is visual only, so it does not change the training collision model. The native pedestrian retains its simple physics geometry.
+`--chennai` loads the actual nearby street and building mesh geometry exported from the browser scene. Native MuJoCo includes transferred bark, facade and road textures, plus the same skinned FBX person and walking animation. Its lighting and transparency remain different from the browser. Imported scenery is visual only, so it does not change the training collision model. The original pedestrian collision capsule remains active underneath the visual human skin.
+
+![Native MuJoCo with textured Chennai geometry and animated human](artifacts/fork/media/native-human.png)
+
+![Synchronized policy comparison](artifacts/fork/media/side-by-side.png)
 
 ## Reproduce training and evaluation
 
@@ -166,3 +170,7 @@ W&B/Weave and marimo are used. ARIA is not integrated. No claims are made about 
 Try an unseen scenario, reproduce a result, or contribute a new measured road condition. Useful contributions include better perception, additional street layouts, stronger locomotion, and reproducible failure cases. Please include the scenario seed, checkpoint and expected/observed behavior when [opening an issue](https://github.com/KaushikSiva/g1-street-wise/issues).
 
 If this is useful for your robotics work, star the repository to follow its progress. Built by **Kaushik Sivakumar**.
+
+## Regenerate the local narration
+
+The demo uses synthetic Fish Audio narration from the public [South Indian Male voice](https://fish.audio/app/text-to-speech/?modelId=324f49797a924f60a3004950b40d0f0e). Set `FISH_AUDIO_API_KEY` in private `.env`, then run `.venv-fork/bin/python scripts/fork/render_fish_narration.py`. The script, timed narration, captions and voice provenance are included. [Fish Audio API documentation](https://docs.fish.audio/api-reference/endpoint/openapi-v1/text-to-speech).

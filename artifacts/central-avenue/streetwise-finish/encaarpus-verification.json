@@ -1,0 +1,161 @@
+{
+  "errors": [],
+  "proof": {
+    "services": {
+      "sourceSha256": "0b02fddb8fcfeeb9b8552d5e12927ffea82ff016f3cf67bb972e8c735dd4bb99",
+      "observed": "Loose slender runs beside both upper central grey piers and a small coil on the left beside the curved balcony.",
+      "runs": [
+        [
+          [
+            -2.27,
+            15.75,
+            0.075
+          ],
+          [
+            -2.25,
+            14.28,
+            0.07
+          ],
+          [
+            -2.19,
+            12.92,
+            0.075
+          ],
+          [
+            -2.18,
+            12.46,
+            0.065
+          ],
+          [
+            -2.05,
+            12.1,
+            0.085
+          ],
+          [
+            -1.73,
+            11.95,
+            0.09
+          ]
+        ],
+        [
+          [
+            -1.73,
+            11.95,
+            0.09
+          ],
+          [
+            -1.7,
+            11.78,
+            0.11
+          ],
+          [
+            -1.91,
+            11.74,
+            0.12
+          ],
+          [
+            -2.03,
+            11.9,
+            0.11
+          ],
+          [
+            -1.99,
+            12.11,
+            0.1
+          ],
+          [
+            -1.76,
+            12.14,
+            0.095
+          ],
+          [
+            -1.62,
+            11.97,
+            0.09
+          ],
+          [
+            -1.69,
+            11.79,
+            0.09
+          ],
+          [
+            -1.88,
+            11.71,
+            0.1
+          ]
+        ],
+        [
+          [
+            2.3,
+            13.04,
+            0.073
+          ],
+          [
+            2.36,
+            12.4,
+            0.09
+          ],
+          [
+            2.26,
+            11.7,
+            0.09
+          ],
+          [
+            2.38,
+            10.85,
+            0.08
+          ],
+          [
+            2.35,
+            10.3,
+            0.1
+          ],
+          [
+            2.17,
+            10.03,
+            0.09
+          ],
+          [
+            2.13,
+            9.88,
+            0.085
+          ],
+          [
+            2.24,
+            9.79,
+            0.085
+          ],
+          [
+            2.31,
+            9.92,
+            0.078
+          ],
+          [
+            2.24,
+            10.17,
+            0.07
+          ]
+        ]
+      ],
+      "diameterMeters": 0.012,
+      "limits": "Partial source-visible cable study. Metric routing, diameter, material and slack curves are inferred. No electrical connectivity, current installation, road-spanning wire, brand or surveyed dimension is asserted. Separate geometry preserves existing facade and AO receiver meshes."
+    },
+    "invalid": 0,
+    "vertices": 1218,
+    "ambientVisibility": {
+      "enabled": true,
+      "revision": 2,
+      "receivers": 15,
+      "resolution": [
+        2048,
+        2048
+      ],
+      "uvBytes": 1030368,
+      "uvSha256": "9f02202a032a49394374686abf42cc51755396b081da8a032b8ab16884a22313",
+      "atlasSha256": "b250047ed81dc224813e54ba5e608644407d0a31ddccd32667986c8619b8fca0",
+      "scope": "Scalar visibility for indirect illumination only; direct sunlight and shadows remain dynamic",
+      "limits": "Finite-distance local-model AO, not directional sky transport or multiple-bounce GI. Neighboring buildings, vegetation and the wider ground are omitted. Building dimensions and hidden parking/room layout remain inferred."
+    },
+    "buildingCount": 1173
+  }
+}

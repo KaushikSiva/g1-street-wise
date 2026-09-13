@@ -48,56 +48,52 @@ from twenty-two to zero, with no robot falls.
 
 13
 00:00:58,000 --> 00:01:03,000
-We then broadened training on a molab Blackwell GPU. The robot now
+Training on a molab Blackwell GPU adds lateral movement, moving cars and
 
 14
 00:01:03,000 --> 00:01:08,000
-chooses lateral movement as well as speed, facing moving cars and a
+road defects. Mixed-hazard completion rises from twenty-eight to sixty-four out of sixty-four.
 
 15
 00:01:08,000 --> 00:01:13,000
-marked road-defect zone. On the mixed held-out test, completion rises from twenty-eight
+Rain changes ground friction; fog limits tracking range. The first weather test
 
 16
 00:01:13,000 --> 00:01:18,000
-to sixty-four out of sixty-four.
+still has one failure.
 
 17
-00:01:18,000 --> 00:01:22,500
-A second experiment asks: what might happen next? The learned world model
+00:01:18,000 --> 00:01:24,000
+A separate world-model lab predicts futures and learns from simulated experience, with
 
 18
-00:01:22,500 --> 00:01:27,000
-predicts three action-conditioned futures, compares its prediction with a separate simulator, and
+00:01:24,000 --> 00:01:30,000
+Weave tracing its analyst. For robot training, a challenge ladder introduces harder
 
 19
-00:01:27,000 --> 00:01:31,500
-updates from experience. A Weave-traced analyst selects the training focus; validation controls
+00:01:30,000 --> 00:01:36,000
+conditions after two perfect validation checks. Test results never control advancement.
 
 20
-00:01:31,500 --> 00:01:36,000
-promotion.
+00:01:36,000 --> 00:01:40,000
+Compare both policies side by side, or run live MuJoCo with Chennai
 
 21
-00:01:36,000 --> 00:01:40,000
-Marimo exposes the experiment and its evidence. The official Unitree SDK exchanges
+00:01:40,000 --> 00:01:44,000
+geometry. Marimo, checkpoints, official SDK evidence and startup instructions make the results
 
 22
-00:01:40,000 --> 00:01:44,000
-checked commands and feedback with simulated joints. Code, selected checkpoints and startup
+00:01:44,000 --> 00:01:48,000
+inspectable.
 
 23
-00:01:44,000 --> 00:01:48,000
-instructions are included, so judges can inspect and rerun the work.
-
-24
 00:01:48,000 --> 00:01:51,333
 This is simulation, not a physical robot safety claim. STREETWISE helps teams
 
-25
+24
 00:01:51,333 --> 00:01:54,666
 discover navigation mistakes before street deployment. Robots that learn the street before
 
-26
+25
 00:01:54,666 --> 00:01:58,000
 they enter it.

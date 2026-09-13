@@ -1,0 +1,17 @@
+{
+  "freshPhysics": true,
+  "nativeGuiLaunch": "passed with mjpython",
+  "decorativeGeometryPreservesOutcome": true,
+  "seed": 20002,
+  "outcome": {
+    "scenario_seed": 20002,
+    "contact": false,
+    "fall": false,
+    "success": true,
+    "min_clearance": 0.1907067393637527,
+    "progress": 3.6857536229082313,
+    "return": 17.882279310554022,
+    "elapsed": 7.39999999999993
+  },
+  "geometry": "Actual Chennai Three.js geometry within 38 m of station 75, transformed into the robot physics coordinate system. Flat material colors; textures and browser postprocessing are not transferred. Decorative only, no collision changes."
+}

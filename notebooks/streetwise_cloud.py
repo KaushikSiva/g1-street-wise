@@ -153,5 +153,31 @@ def refinement_run(
     return
 
 
+@app.cell(hide_code=True)
+def weather_review_control(mo):
+    weather_review_refresh = mo.ui.run_button(label="Refresh automatic curriculum results")
+    weather_review_refresh
+    return (weather_review_refresh,)
+
+
+@app.cell(hide_code=True)
+def weather_curriculum_evidence(
+    json,
+    mo,
+    streetwise_root,
+    weather_review_refresh,
+):
+    weather_review_refresh
+    _weather_rows=[]
+    for _folder in sorted((streetwise_root/'artifacts/fork').glob('rl-weather*')):
+        _file=_folder/'evaluation.json'
+        if _file.exists():
+            _run=json.loads(_file.read_text())
+            _weather_rows.append({'run':_folder.name,'steps':_run['steps'],'baseline / 64':round(_run['baseline']['success_rate']*64),'starting checkpoint / 64':round(_run['untrained']['success_rate']*64),'selected checkpoint / 64':round(_run['trained']['success_rate']*64),'W&B':_run.get('wandbUrl')})
+    _weather_status=streetwise_root/'artifacts/fork/curriculum/status.json'
+    mo.vstack([mo.md("## A street that gets harder\nRain changes actual contact friction. Fog limits actor tracking. Two perfect validation checks unlock the next level; independent test results do not decide advancement."),mo.ui.table(_weather_rows),mo.md("Starting and selected checkpoints are compared explicitly: a retained checkpoint is not a new improvement."),mo.json(json.loads(_weather_status.read_text())) if _weather_status.exists() else mo.md("Curriculum has not started.")])
+    return
+
+
 if __name__ == "__main__":
     app.run()

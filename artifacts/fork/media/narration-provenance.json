@@ -1,0 +1,58 @@
+{
+  "provider": "Fish Audio",
+  "model": "s2.1-pro-free",
+  "voiceId": "324f49797a924f60a3004950b40d0f0e",
+  "voiceTitle": "South Indian Male",
+  "catalogDescription": "Male, middle-aged, calm, clear, professional narration.",
+  "synthetic": true,
+  "segments": [
+    {
+      "segment": 0,
+      "sourceDuration": 10.135458,
+      "tempo": 1.0,
+      "textSha256": "82e5dad125470ce81bb7957821207948d73eeb660952f46b15fe25c88107de69"
+    },
+    {
+      "segment": 1,
+      "sourceDuration": 12.590958,
+      "tempo": 1.0,
+      "textSha256": "c54ef83881ee7d1ecb0bae5c5fad90039bec48e2a64a5cd8c6a93321a212b41e"
+    },
+    {
+      "segment": 2,
+      "sourceDuration": 12.173,
+      "tempo": 1.0,
+      "textSha256": "e1127809d6114b8c3dfa85c092d4e188400abb690d8290ccf1aa6d8f27654a9e"
+    },
+    {
+      "segment": 3,
+      "sourceDuration": 13.635875,
+      "tempo": 1.0,
+      "textSha256": "63c044ee0be4f654381bc46f9378e73bafdbff8634e28a5289fdc1f4ec1b5f0c"
+    },
+    {
+      "segment": 4,
+      "sourceDuration": 16.509333,
+      "tempo": 1.0,
+      "textSha256": "cda25c2d9057fa5a21c02e8942d8e671b375309c4fb9e48feb1c122b7a6fad98"
+    },
+    {
+      "segment": 5,
+      "sourceDuration": 14.053833,
+      "tempo": 1.0,
+      "textSha256": "0dc300c8495a25fff42f4769116a6ab344fe4c5f37aeba4529aae68656a6d312"
+    },
+    {
+      "segment": 6,
+      "sourceDuration": 10.73625,
+      "tempo": 1.0,
+      "textSha256": "fbb84605a46e3718c23dd27c00359187f7d097e3bfc75d20c326b48d87db5d81"
+    },
+    {
+      "segment": 7,
+      "sourceDuration": 10.422792,
+      "tempo": 1.08008207253886,
+      "textSha256": "1d82d6ffb708ada160cc6d79ea789d7865ea8ad3f48797080c5a9bae5c75cbe1"
+    }
+  ]
+}

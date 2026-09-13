@@ -86,6 +86,8 @@ def main():
     parser.add_argument('--wandb', action='store_true')
     parser.add_argument('--resume')
     parser.add_argument('--hazards',action='store_true')
+    parser.add_argument('--streetlife',action='store_true')
+    parser.add_argument('--adversarial-seeds',help='JSON list of training-only seeds to replay')
     parser.add_argument('--weather',action='store_true',help='Mixed hazards under dry, wet-road and fog conditions')
     parser.add_argument('--eval-every',type=int,default=2048)
     parser.add_argument('--difficulty',type=int,default=0,choices=range(4))
@@ -98,7 +100,16 @@ def main():
     global CentralAvenueG1, VALIDATION, TEST
     VALIDATION=[s+args.seed_offset for s in VALIDATION]
     TEST=[s+args.seed_offset for s in TEST]
-    if args.weather:
+    if args.streetlife:
+        from streetlife import CentralAvenueStreetlife
+        CentralAvenueStreetlife.difficulty=args.difficulty
+        if args.adversarial_seeds:
+            pool=json.loads((ROOT/args.adversarial_seeds).read_text())
+            assert all(isinstance(s,int) and 1<=s<9000 for s in pool), "Adversarial pool must contain only training seeds"
+            CentralAvenueStreetlife.adversarial_seeds=pool
+        CentralAvenueG1=CentralAvenueStreetlife
+        args.weather=True;args.hazards=True
+    elif args.weather:
         from weather import CentralAvenueWeather
         CentralAvenueWeather.difficulty=args.difficulty
         CentralAvenueG1=CentralAvenueWeather
@@ -111,24 +122,36 @@ def main():
     torch.set_num_threads(1)
     folder = ROOT/args.output
     folder.mkdir(parents=True, exist_ok=True)
+    import shutil
+    snapshots=folder/'sources';snapshots.mkdir(exist_ok=True)
+    for source_file in Path(__file__).parent.glob('*.py'):shutil.copy2(source_file,snapshots/source_file.name)
     run = None
     if args.wandb:
         run = wandb.init(entity=os.getenv('WANDB_ENTITY'), project=os.getenv('WANDB_PROJECT','Unitree G1'),
-            name=f'STREETWISE-PPO-{"weather" if args.weather else "hazards" if args.hazards else "crossing"}-{args.seed}', job_type='navigation-rl', dir=str(ROOT/'.fork-runs'),
+            name=f'STREETWISE-PPO-{"streetlife" if args.streetlife else "weather" if args.weather else "hazards" if args.hazards else "crossing"}-{args.seed}', job_type='navigation-rl', dir=str(ROOT/'.fork-runs'),
             config={'algorithm':'PPO', 'difficulty':args.difficulty, 'steps':args.steps, 'seed':args.seed, 'device':args.device,
                     'physics':'MuJoCo', 'base_policy':'official Unitree G1 LSTM, frozen',
                     'action':'5 Hz velocity options; lateral steering included for hazards' if args.hazards else 'forward speed at 5 Hz', 'train_seed_range':[1,8999],
                     'validation_seeds':VALIDATION, 'test_seeds':TEST,
                     'scene':'Central Avenue corridor v2: 4.7 m van behind crossing; pedestrian never intersects van',
                     'reward':'2*forward_delta - .04 per step; +12 success; -20 violation/fall; -4 timeout',
-                    'scope':'Navigation RL; base locomotion weights unchanged; simulation only','curriculum':'dry+wet_road+fog across pedestrian/car/road-defect' if args.weather else 'pedestrian+moving_car+pothole_keepout' if args.hazards else 'pedestrian'})
+                    'scope':'Navigation RL; base locomotion weights unchanged; simulation only','curriculum':'multiple pedestrians and rain-to-shelter' if args.streetlife else 'dry+wet_road+fog across pedestrian/car/road-defect' if args.weather else 'pedestrian+moving_car+pothole_keepout' if args.hazards else 'pedestrian'})
     env = Monitor(CentralAvenueG1(), info_keywords=('success','contact','fall'))
     policy = PPO('MlpPolicy', env, seed=args.seed, device=args.device,
                  n_steps=512, batch_size=64, n_epochs=10, learning_rate=3e-4,
                  gamma=.99, gae_lambda=.95, ent_coef=.02,
                  policy_kwargs={'net_arch':dict(pi=[64,64],vf=[64,64])}, verbose=0)
     if args.resume:
-        policy = PPO.load(ROOT/args.resume, env=env, device=args.device)
+        if args.streetlife:
+            source=PPO.load(ROOT/args.resume,device=args.device)
+            target=policy.policy.state_dict()
+            for key,value in source.policy.state_dict().items():
+                if target[key].shape==value.shape:target[key]=value
+                elif value.ndim==2 and target[key].shape[0]==value.shape[0] and target[key].shape[1]>value.shape[1]:
+                    target[key].zero_();target[key][:,:value.shape[1]]=value
+                else:raise ValueError(f'Unsupported checkpoint transfer shape for {key}')
+            policy.policy.load_state_dict(target)
+        else:policy = PPO.load(ROOT/args.resume, env=env, device=args.device)
     if args.learning_rate is not None:
         from stable_baselines3.common.utils import FloatSchedule
         policy.learning_rate=args.learning_rate
@@ -155,12 +178,14 @@ def main():
     result = {'schema':'fork-g1-rl-v1','algorithm':'PPO','basePolicy':'Official frozen Unitree G1 motion.pt',
               'scope':'Navigation speed selection trained through G1 MuJoCo outcomes; not base locomotion retraining.',
               'masteryReached':callback.mastered,'difficulty':args.difficulty,
-              'initialPolicyKind':'resumed checkpoint' if args.resume else 'random initialization','steps':policy.num_timesteps,'seed':args.seed,'device':args.device,'curriculum':'weather' if args.weather else 'hazards' if args.hazards else 'pedestrian',
+              'initialPolicyKind':'resumed checkpoint' if args.resume else 'random initialization','steps':policy.num_timesteps,'seed':args.seed,'device':args.device,'curriculum':'streetlife' if args.streetlife else 'weather' if args.weather else 'hazards' if args.hazards else 'pedestrian',
               'baseline':before,'untrained':untrained,'trained':after,
               'validationSelection':callback.best_score,'history':callback.history,
               'seeds':{'validation':VALIDATION,'test':TEST},
               'beforeRows':before_rows,'afterRows':after_rows,'wandbUrl':run.url if run else None,
               'limits':'Synthetic actors; pedestrian 0.55 m center envelope, moving car rectangular envelope, pothole keep-out zone without terrain deformation. No physical robot trial.' if args.hazards else 'Synthetic pedestrian. Clearance violation uses 0.55 m center-distance threshold; no physical robot trial.'}
+    if args.streetlife:
+        result['streetlifeScope']='Multiple synthetic pedestrian tracks, rain-to-shelter goal, 37 observations; previous navigation weights transferred, extra observation weights zero-initialized. Frozen gait. Adversarial resampling uses training-only seeds.'
     if args.weather:
         result['conditions'] = {}
         for condition in ['dry', 'rain', 'fog']:
@@ -177,6 +202,7 @@ def main():
         artifact = wandb.Artifact('fork-g1-navigation',type='model',metadata={'base_policy_frozen':True,'seed':args.seed})
         for name in ['best.zip','initial.zip','evaluation.json','learning-curve.json']:
             artifact.add_file(str(folder/name))
+        artifact.add_dir(str(folder/'sources'),name='sources')
         run.log_artifact(artifact)
         run.finish()
     print(json.dumps({'baseline':before,'trained':after,'untrained':untrained,'wandb':result['wandbUrl']}),flush=True)

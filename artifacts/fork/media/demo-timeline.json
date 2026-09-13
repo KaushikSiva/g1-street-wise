@@ -26,20 +26,20 @@
   {
     "start": 58,
     "end": 78,
-    "screen": "Moving-car before/after, road-defect avoidance",
-    "text": "We then broadened training on a molab Blackwell GPU. The robot now chooses lateral movement as well as speed, facing moving cars and a marked road-defect zone. On the mixed held-out test, completion rises from twenty-eight to sixty-four out of sixty-four."
+    "screen": "Moving-car before/after, then recorded wet-road encounter",
+    "text": "Training on a molab Blackwell GPU adds lateral movement, moving cars and road defects. Mixed-hazard completion rises from twenty-eight to sixty-four out of sixty-four. Rain changes ground friction; fog limits tracking range. The first weather test still has one failure."
   },
   {
     "start": 78,
     "end": 96,
-    "screen": "Three possible futures, run encounter, update model",
-    "text": "A second experiment asks: what might happen next? The learned world model predicts three action-conditioned futures, compares its prediction with a separate simulator, and updates from experience. A Weave-traced analyst selects the training focus; validation controls promotion."
+    "screen": "Separate world-model run and update",
+    "text": "A separate world-model lab predicts futures and learns from simulated experience, with Weave tracing its analyst. For robot training, a challenge ladder introduces harder conditions after two perfect validation checks. Test results never control advancement."
   },
   {
     "start": 96,
     "end": 108,
-    "screen": "marimo graphs, SDK evidence, architecture",
-    "text": "Marimo exposes the experiment and its evidence. The official Unitree SDK exchanges checked commands and feedback with simulated joints. Code, selected checkpoints and startup instructions are included, so judges can inspect and rerun the work."
+    "screen": "Actual native MuJoCo screenshot, simple architecture",
+    "text": "Compare both policies side by side, or run live MuJoCo with Chennai geometry. Marimo, checkpoints, official SDK evidence and startup instructions make the results inspectable."
   },
   {
     "start": 108,

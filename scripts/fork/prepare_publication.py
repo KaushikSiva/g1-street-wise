@@ -15,6 +15,9 @@ for name in ['src','public','package.json','package-lock.json','tsconfig.json','
  copy(name)
 for name in ['rl-corridor-v2','rl-hazards-v2','rl-weather','curriculum','media','lab-data.json','experiment-lab.html','browser-verification.json','fresh-install-verification.json','unitree-sdk-verification.json','g1-policy-smoke.json','checkpoint-reproduction.json']:
  copy('artifacts/fork/'+name)
+for folder in sorted((ROOT/'artifacts/fork').glob('rl-weather-level-*')):
+ copy(str(folder.relative_to(ROOT)))
+copy('artifacts/central-avenue/streetwise-finish')
 # Remove the superseded exploratory hazard artifacts from the generated package.
 if (dest/'artifacts/fork/rl-hazards').exists():shutil.rmtree(dest/'artifacts/fork/rl-hazards')
 # Remove only non-deliverable files from this generated publication copy.

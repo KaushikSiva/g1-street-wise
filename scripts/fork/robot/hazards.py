@@ -37,7 +37,7 @@ class CentralAvenueHazards(CentralAvenueG1):
     def reset(self,*,seed=None,options=None):
         self.kind=int(seed%3) if seed is not None else int(self.np_random.integers(0,3))
         _,info=super().reset(seed=seed,options=options)
-        self.robot.data.mocap_pos[1:]=[[0,100,.75],[0,100,-.02]]
+        self.robot.data.mocap_pos[1:3]=[[0,100,.75],[0,100,-.02]]
         rng=np.random.default_rng(self.scenario_seed+50000)
         if self.kind==1:
             # Keep the full 1.7 m-wide car beyond the parked van's front bumper.
