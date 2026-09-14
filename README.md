@@ -38,6 +38,7 @@ Both pictures show the same pedestrian scenario, **20002**, four seconds into a 
 | W&B | The experiment scorebook: training curves, checkpoints and test results. |
 | Weave + W&B-hosted Qwen | A traced analyst for the separate world-model experiment. |
 | marimo / molab | An interactive lab notebook and the GPU training workspace. |
+| Wasmer | Runs generated scenario code in an isolated sandbox before MuJoCo tests the robot. |
 | Three.js | The Chennai street you see, replaying recorded robot joint positions. |
 
 The **world-model lab is a separate experiment** that predicts possible futures and learns from new encounters. Its predictions do not currently feed into the robot's PPO policy.
@@ -79,6 +80,14 @@ Stop an already running preview before using the combined launcher. It preserves
 | Interactive learned world model | `http://127.0.0.1:5189/?fork=1` |
 | marimo evidence lab | `http://127.0.0.1:2718` |
 | Experiment health | `http://127.0.0.1:8191/health` |
+
+## Wasmer scenario sandbox
+
+We can also ask AI to write new car-crossing tests. Wasmer runs that Python code in a sandbox, and STREETWISE checks the resulting scenarios before trying them in MuJoCo. Each test compares walking straight with the trained policy from the same starting position.
+
+This runs separately from the demo. It creates and evaluates new challenges; it does not retrain the robot. The bundled generator works without an API key, and the optional AI author uses W&B inference.
+
+See [the Wasmer experiment](experiments/wasmer/README.md) for installation, commands and tests.
 
 ## Benchmark history
 
