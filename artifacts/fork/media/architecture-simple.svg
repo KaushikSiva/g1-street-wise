@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="710" viewBox="0 0 1500 710" role="img" aria-labelledby="title desc">
-<title id="title">How STREETWISE learns</title><desc id="desc">Notice the street, choose a move, use the existing walking skill, practise in physics, score the result, and improve the decision model with PPO. W&amp;B records evidence and marimo hosts the lab.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="980" viewBox="0 0 1500 980" role="img" aria-labelledby="title desc">
+<title id="title">How STREETWISE learns</title><desc id="desc">Notice the street, choose a move, use the existing walking skill, practise in physics, score the result, and improve the decision model with PPO. W&amp;B records evidence and marimo hosts the lab. Separately, optional W&amp;B inference writes test code, Wasmer runs it in isolation, and checked scenarios are evaluated in MuJoCo without retraining.</desc>
 <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="#36755d"/></marker></defs>
-<rect width="1500" height="710" rx="20" fill="#f2f0e7"/>
+<rect width="1500" height="980" rx="20" fill="#f2f0e7"/>
 <g font-family="Arial,sans-serif" fill="#203e33"><text x="60" y="80" font-size="43" font-weight="700">A robot learns one better decision at a time.</text><text x="60" y="123" font-size="23">The walking skill is already learned. We teach it when and where to move.</text></g>
 <g fill="#fffef8" stroke="#cbd6c9" stroke-width="2"><rect x="60" y="195" width="245" height="200" rx="14"/><rect x="345" y="195" width="245" height="200" rx="14"/><rect x="630" y="195" width="245" height="200" rx="14"/><rect x="915" y="195" width="245" height="200" rx="14"/></g>
 <rect x="1200" y="195" width="240" height="200" rx="14" fill="#284f3d"/>
@@ -9,6 +9,14 @@
 <g font-family="Arial,sans-serif" fill="#203e33" font-size="25" font-weight="700"><text x="82" y="240">1. NOTICE</text><text x="367" y="240">2. CHOOSE</text><text x="652" y="240">3. WALK</text><text x="937" y="240">4. PRACTISE</text></g>
 <g font-family="Arial,sans-serif" fill="#415c4c" font-size="21"><text x="82" y="291">Where am I?</text><text x="82" y="325">Where is the hazard?</text><text x="82" y="370" font-size="17">Last-seen observations</text><text x="367" y="291">Wait, slow down,</text><text x="367" y="325">or move around it.</text><text x="367" y="370" font-size="17">Trainable navigation policy</text><text x="652" y="291">Move the legs</text><text x="652" y="325">with an existing skill.</text><text x="652" y="370" font-size="17">Frozen Unitree policy</text><text x="937" y="291">Try the choice in</text><text x="937" y="325">a physics simulator.</text><text x="937" y="370" font-size="17">MuJoCo robot dynamics</text></g>
 <g font-family="Arial,sans-serif" fill="#fffbee"><text x="1222" y="240" font-size="25" font-weight="700">5. SCORE</text><text x="1222" y="291" font-size="21">Safe progress: +</text><text x="1222" y="325" font-size="21">Too close or fall: −</text><text x="1222" y="370" font-size="17">Measured rewards</text></g>
-<rect x="630" y="451" width="523" height="50" fill="#f2f0e7"/>
+<rect x="630" y="451" width="610" height="50" fill="#f2f0e7"/>
 <text x="650" y="483" font-family="Arial,sans-serif" font-size="23" fill="#284f3d" font-weight="700">PPO: make small improvements, then try again.</text>
-<path d="M60 550 H1440" stroke="#cbd6c9"/><g font-family="Arial,sans-serif" fill="#415c4c" font-size="22"><text x="60" y="594">W&amp;B keeps the scorebook.</text><text x="570" y="594">marimo opens the lab.</text><text x="1040" y="594">Three.js shows the street.</text><text x="60" y="649" font-size="21">Final exam: new encounters the policy never trained on. All results are simulation results.</text></g></svg>
+<path d="M60 550 H1440" stroke="#cbd6c9"/><g font-family="Arial,sans-serif" fill="#415c4c" font-size="22"><text x="60" y="594">W&amp;B keeps the scorebook.</text><text x="570" y="594">marimo opens the lab.</text><text x="1040" y="594">Three.js shows the street.</text><text x="60" y="649" font-size="21">Final exam: new encounters the policy never trained on. All results are simulation results.</text></g>
+<path d="M60 700 H1440" stroke="#cbd6c9"/>
+<g font-family="Arial,sans-serif" fill="#203e33">
+<text x="60" y="748" font-size="26" font-weight="700">A separate experiment: create new tests with Wasmer.</text>
+<g fill="#fffef8" stroke="#cbd6c9"><rect x="60" y="780" width="285" height="105" rx="10"/><rect x="405" y="780" width="285" height="105" rx="10"/><rect x="750" y="780" width="285" height="105" rx="10"/><rect x="1095" y="780" width="345" height="105" rx="10"/></g>
+<g font-size="23" font-weight="700"><text x="82" y="821">Write test code</text><text x="427" y="821">Run in Wasmer</text><text x="772" y="821">Check the scenarios</text><text x="1117" y="821">Try both robot policies</text></g>
+<g font-size="18" fill="#415c4c"><text x="82" y="857">Example or W&amp;B AI author</text><text x="427" y="857">Isolated Python sandbox</text><text x="772" y="857">Strict JSON + value checks</text><text x="1117" y="857">Same starts in native MuJoCo</text></g>
+<text x="60" y="937" font-size="20" fill="#415c4c">The sandbox creates challenges. This experiment evaluates existing policies; it does not retrain them.</text>
+</g><g stroke="#36755d" stroke-width="3" fill="none" marker-end="url(#arrow)"><path d="M350 832 H398"/><path d="M695 832 H743"/><path d="M1040 832 H1088"/></g></svg>

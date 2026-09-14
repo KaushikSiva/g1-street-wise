@@ -21,7 +21,7 @@ Both pictures show the same pedestrian scenario, **20002**, four seconds into a 
 
 ## How it works — think of learning to cross a street
 
-![Simple architecture: notice the street, choose a move, let the walking controller move the legs, practise in simulation, and learn from the score](artifacts/fork/media/architecture-simple.svg)
+![Simple architecture: notice the street, choose a move, let the walking controller move the legs, practise in simulation, and learn from the score; a separate Wasmer sandbox generates new test scenarios](artifacts/fork/media/architecture-simple.svg)
 
 1. **Observe:** Read the robot’s motion and nearby obstacles from the simulator. The live policies currently use simulator state.
 2. **Choose:** A small decision-making model picks “wait,” “slow,” “forward,” or “move sideways.”
@@ -46,7 +46,7 @@ The **world-model lab is a separate experiment** that predicts possible futures 
 <details>
 <summary>Detailed architecture</summary>
 
-![Detailed architecture](artifacts/fork/media/architecture.svg)
+![Detailed architecture including the separate Wasmer scenario sandbox](artifacts/fork/media/architecture.svg)
 
 </details>
 
